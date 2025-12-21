@@ -1,26 +1,65 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
+
 public class Controller : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-    public float turnAngle = 10f;
+    [Header("Stats")]
+    public float acceleration = 10f;
+    public float maxSpeed = 8f;
+    public float turnSpeed = 120f;
+    public float driftTurnMultiplier = 1.5f;
+    public float driftFactor = 0.9f;
+    public float driftSlide = 0.5f;
+    public float minTurnSpeed = 0.2f;
+
+    private Rigidbody2D rb;
+    private bool drifting;
+    private float steerInput;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        rb.gravityScale = 0f;
+    }
 
     void Update()
     {
-        // forward movement
-        transform.Translate(Vector3.down * moveSpeed * Time.deltaTime, Space.Self);
+        drifting = Input.GetKey(KeyCode.LeftShift);
 
-        // turning
-        if (Input.GetKey(KeyCode.A))
-        {
-            transform.Rotate(0f, 0f, turnAngle * Time.deltaTime);
-        }
-
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.Rotate(0f, 0f, -turnAngle * Time.deltaTime);
-        }
+        steerInput = 0f;
+        if (Input.GetKey(KeyCode.A)) steerInput = 1f;
+        if (Input.GetKey(KeyCode.D)) steerInput = -1f;
     }
+
+    void FixedUpdate()
+    {
+        if (rb.linearVelocity.magnitude < maxSpeed)
+        {
+            rb.AddForce(-transform.up * acceleration);
+        }
+
+        if (rb.linearVelocity.magnitude > minTurnSpeed)
+        {
+            float currentTurnSpeed = drifting
+                ? turnSpeed * driftTurnMultiplier
+                : turnSpeed;
+
+            rb.MoveRotation(rb.rotation + steerInput * currentTurnSpeed * Time.fixedDeltaTime);
+        }
+
+        Vector2 velocity = rb.linearVelocity;
+
+        Vector2 forwardDir = -transform.up;
+        Vector2 rightDir = transform.right;
+
+        float forwardMag = Vector2.Dot(velocity, forwardDir);
+        float sideMag = Vector2.Dot(velocity, rightDir);
+
+        float targetGrip = drifting ? driftSlide : driftFactor;
+
+        // smooth lateral grip instead of instant cut
+        sideMag = Mathf.Lerp(sideMag, sideMag * targetGrip, Time.fixedDeltaTime * 5f);
+
+        rb.linearVelocity = forwardDir * forwardMag + rightDir * sideMag;
+    }
+
 }
