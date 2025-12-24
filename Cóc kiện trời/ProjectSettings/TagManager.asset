@@ -9,6 +9,7 @@ TagManager:
   - LowerPathDisabler
   - LowerRoad
   - RefreshDisabler
+  - Animation
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - UpperPathDisabler
   - LowerPathDisabler
   - RefreshDisabler
-  - 
+  - animation
   - 
   - 
   - 
