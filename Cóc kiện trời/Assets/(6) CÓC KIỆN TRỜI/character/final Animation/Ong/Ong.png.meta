@@ -1,0 +1,6669 @@
+fileFormatVersion: 2
+guid: 075e45fd73096e747be9a4b99ab9d5e9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4438150663761175254
+    second: Ong_0
+  - first:
+      213: 6395915562455989677
+    second: Ong_1
+  - first:
+      213: -2465673578981472675
+    second: Ong_2
+  - first:
+      213: -363674187691773159
+    second: Ong_3
+  - first:
+      213: -1421611309173152381
+    second: Ong_4
+  - first:
+      213: 4376717535563312654
+    second: Ong_5
+  - first:
+      213: 5802040102668434956
+    second: Ong_6
+  - first:
+      213: 8903922557460789883
+    second: Ong_7
+  - first:
+      213: 6946918672278019145
+    second: Ong_8
+  - first:
+      213: 1090334590368961063
+    second: Ong_9
+  - first:
+      213: 4285871305578610205
+    second: Ong_10
+  - first:
+      213: 1165475047592342458
+    second: Ong_11
+  - first:
+      213: 5175685112660468023
+    second: Ong_12
+  - first:
+      213: -2081544367829021252
+    second: Ong_13
+  - first:
+      213: 632835384063485479
+    second: Ong_14
+  - first:
+      213: 5179483574269200329
+    second: Ong_15
+  - first:
+      213: -6043259098637733657
+    second: Ong_16
+  - first:
+      213: -6514717723221372236
+    second: Ong_17
+  - first:
+      213: 2097591904446368016
+    second: Ong_18
+  - first:
+      213: 810411386073370490
+    second: Ong_19
+  - first:
+      213: -1793270177373472658
+    second: Ong_20
+  - first:
+      213: 150270931836144712
+    second: Ong_21
+  - first:
+      213: 6996955871199451665
+    second: Ong_22
+  - first:
+      213: -7756979688850664118
+    second: Ong_23
+  - first:
+      213: -1569143509492339357
+    second: Ong_24
+  - first:
+      213: 6384042475806466350
+    second: Ong_25
+  - first:
+      213: -5170101457007645768
+    second: Ong_26
+  - first:
+      213: 8753955473690837251
+    second: Ong_27
+  - first:
+      213: -5471648021656378667
+    second: Ong_28
+  - first:
+      213: -1556769468975617083
+    second: Ong_29
+  - first:
+      213: -1060083657092513629
+    second: Ong_30
+  - first:
+      213: -8914676085065715329
+    second: Ong_31
+  - first:
+      213: -7939019929262429941
+    second: Ong_32
+  - first:
+      213: -703486865765401785
+    second: Ong_33
+  - first:
+      213: -9037987641451155799
+    second: Ong_34
+  - first:
+      213: -7670826209816831422
+    second: Ong_35
+  - first:
+      213: -3822955453734706365
+    second: Ong_36
+  - first:
+      213: 608243705055836287
+    second: Ong_37
+  - first:
+      213: 2816807696025026469
+    second: Ong_38
+  - first:
+      213: -1826833106386288292
+    second: Ong_39
+  - first:
+      213: 6110835987155291430
+    second: Ong_40
+  - first:
+      213: 6764605581730484910
+    second: Ong_41
+  - first:
+      213: -9075306739132241382
+    second: Ong_42
+  - first:
+      213: -4465841818945333284
+    second: Ong_43
+  - first:
+      213: 1785798212026971426
+    second: Ong_44
+  - first:
+      213: 3980812337613126352
+    second: Ong_45
+  - first:
+      213: -4606277385484196922
+    second: Ong_46
+  - first:
+      213: -5577245459919989029
+    second: Ong_47
+  - first:
+      213: -1490826253056391871
+    second: Ong_48
+  - first:
+      213: 5382800380000406234
+    second: Ong_49
+  - first:
+      213: 31970414171631111
+    second: Ong_50
+  - first:
+      213: -6717312856729162830
+    second: Ong_51
+  - first:
+      213: -9115939744586989587
+    second: Ong_52
+  - first:
+      213: -2138451557040995348
+    second: Ong_53
+  - first:
+      213: -676188497567368786
+    second: Ong_54
+  - first:
+      213: -7553426782016955362
+    second: Ong_55
+  - first:
+      213: -5086334273404270927
+    second: Ong_56
+  - first:
+      213: -9084640153397625317
+    second: Ong_57
+  - first:
+      213: 2200580866773426689
+    second: Ong_58
+  - first:
+      213: 7306995472838712521
+    second: Ong_59
+  - first:
+      213: 7736927546157797640
+    second: Ong_60
+  - first:
+      213: -6494452020320463005
+    second: Ong_61
+  - first:
+      213: 6206889343570621518
+    second: Ong_62
+  - first:
+      213: -7497716089332641823
+    second: Ong_63
+  - first:
+      213: -4875419098744661263
+    second: Ong_64
+  - first:
+      213: 4511374509265947345
+    second: Ong_65
+  - first:
+      213: -1370232265718444782
+    second: Ong_66
+  - first:
+      213: 8395095778956535487
+    second: Ong_67
+  - first:
+      213: -1605284610174985786
+    second: Ong_68
+  - first:
+      213: 7921441135974355047
+    second: Ong_69
+  - first:
+      213: -61885610690378032
+    second: Ong_70
+  - first:
+      213: -5490808354472825931
+    second: Ong_71
+  - first:
+      213: 731661400360782012
+    second: Ong_72
+  - first:
+      213: 4789386536573725549
+    second: Ong_73
+  - first:
+      213: 6369693094378625062
+    second: Ong_74
+  - first:
+      213: 3690485023245155602
+    second: Ong_75
+  - first:
+      213: 6544829491023891643
+    second: Ong_76
+  - first:
+      213: 1796129429316814724
+    second: Ong_77
+  - first:
+      213: -7943127687873497074
+    second: Ong_78
+  - first:
+      213: 4237058307733061492
+    second: Ong_79
+  - first:
+      213: -6571538993601299823
+    second: Ong_80
+  - first:
+      213: 2244848633008352833
+    second: Ong_81
+  - first:
+      213: 3764328766496731448
+    second: Ong_82
+  - first:
+      213: 9100181834194537916
+    second: Ong_83
+  - first:
+      213: 7973890849516929382
+    second: Ong_84
+  - first:
+      213: 5346138147464185632
+    second: Ong_85
+  - first:
+      213: -1398029577933587586
+    second: Ong_86
+  - first:
+      213: -4472565608468600140
+    second: Ong_87
+  - first:
+      213: 2446624859484199449
+    second: Ong_88
+  - first:
+      213: 7064372176732391910
+    second: Ong_89
+  - first:
+      213: -742549644927936792
+    second: Ong_90
+  - first:
+      213: -6019747460313274711
+    second: Ong_91
+  - first:
+      213: -8103751987380429868
+    second: Ong_92
+  - first:
+      213: -682900418583115597
+    second: Ong_93
+  - first:
+      213: -6102516928753360644
+    second: Ong_94
+  - first:
+      213: -4538500144007777582
+    second: Ong_95
+  - first:
+      213: -2158500717479799798
+    second: Ong_96
+  - first:
+      213: -7714758439966248549
+    second: Ong_97
+  - first:
+      213: -5051698577681769501
+    second: Ong_98
+  - first:
+      213: -8185954358393276245
+    second: Ong_99
+  - first:
+      213: 4708822802186026518
+    second: Ong_100
+  - first:
+      213: 5601065871587329984
+    second: Ong_101
+  - first:
+      213: -6740696579409202421
+    second: Ong_102
+  - first:
+      213: 1282446419763308876
+    second: Ong_103
+  - first:
+      213: -3301249707683679604
+    second: Ong_104
+  - first:
+      213: 1431374506350239038
+    second: Ong_105
+  - first:
+      213: 8014369081040354495
+    second: Ong_106
+  - first:
+      213: -3114345631053253644
+    second: Ong_107
+  - first:
+      213: 2354119663535252613
+    second: Ong_108
+  - first:
+      213: -1995183179855485927
+    second: Ong_109
+  - first:
+      213: -7716771805013456365
+    second: Ong_110
+  - first:
+      213: 7058364590384179712
+    second: Ong_111
+  - first:
+      213: 6142538863711884305
+    second: Ong_112
+  - first:
+      213: 249147838266087961
+    second: Ong_113
+  - first:
+      213: 1154288243837036007
+    second: Ong_114
+  - first:
+      213: 3522632521574418320
+    second: Ong_115
+  - first:
+      213: -5709408261896797227
+    second: Ong_116
+  - first:
+      213: -6218506490662657970
+    second: Ong_117
+  - first:
+      213: -8130169287085900183
+    second: Ong_118
+  - first:
+      213: 3192279494346253285
+    second: Ong_119
+  - first:
+      213: 5391607240461460399
+    second: Ong_120
+  - first:
+      213: -7715105499219870460
+    second: Ong_121
+  - first:
+      213: 254961234091031213
+    second: Ong_122
+  - first:
+      213: 114443793043175189
+    second: Ong_123
+  - first:
+      213: -9144334500327821114
+    second: Ong_124
+  - first:
+      213: 3927351536572210651
+    second: Ong_125
+  - first:
+      213: -5227627138330917997
+    second: Ong_126
+  - first:
+      213: 2328193786583439308
+    second: Ong_127
+  - first:
+      213: -7726406579705774116
+    second: Ong_128
+  - first:
+      213: 1139539651231126691
+    second: Ong_129
+  - first:
+      213: 6866855709773039637
+    second: Ong_130
+  - first:
+      213: -22274166363472158
+    second: Ong_131
+  - first:
+      213: -5122439687998012112
+    second: Ong_132
+  - first:
+      213: -1359573355093880143
+    second: Ong_133
+  - first:
+      213: 1956619255962295587
+    second: Ong_134
+  - first:
+      213: 6914497624411476797
+    second: Ong_135
+  - first:
+      213: -5173300531386931167
+    second: Ong_136
+  - first:
+      213: 9171153776264540594
+    second: Ong_137
+  - first:
+      213: -729199613421054236
+    second: Ong_138
+  - first:
+      213: 1214621658000050608
+    second: Ong_139
+  - first:
+      213: 5033839441349812981
+    second: Ong_140
+  - first:
+      213: 5438339006630908516
+    second: Ong_141
+  - first:
+      213: -5505713253923612093
+    second: Ong_142
+  - first:
+      213: 6179960147306752914
+    second: Ong_143
+  - first:
+      213: 3447966691139706074
+    second: Ong_144
+  - first:
+      213: -8816609711062607956
+    second: Ong_145
+  - first:
+      213: -7031109449179753100
+    second: Ong_146
+  - first:
+      213: 4166702715308645169
+    second: Ong_147
+  - first:
+      213: 2763562910202380251
+    second: Ong_148
+  - first:
+      213: 1162676058661300635
+    second: Ong_149
+  - first:
+      213: 4522786641803387427
+    second: Ong_150
+  - first:
+      213: 1510396114128919900
+    second: Ong_151
+  - first:
+      213: -7994139062767527682
+    second: Ong_152
+  - first:
+      213: -376430290028120436
+    second: Ong_153
+  - first:
+      213: 8845408747671687300
+    second: Ong_154
+  - first:
+      213: 8282359952201468941
+    second: Ong_155
+  - first:
+      213: 1292500374589978
+    second: Ong_156
+  - first:
+      213: -2556154659318797329
+    second: Ong_157
+  - first:
+      213: 5363249986498039199
+    second: Ong_158
+  - first:
+      213: -8261820529872012676
+    second: Ong_159
+  - first:
+      213: -2395246561282481063
+    second: Ong_160
+  - first:
+      213: -2232593142035642858
+    second: Ong_161
+  - first:
+      213: 8352466930314156008
+    second: Ong_162
+  - first:
+      213: 8747514807385321957
+    second: Ong_163
+  - first:
+      213: 3279563319569763408
+    second: Ong_164
+  - first:
+      213: 9115917602210141047
+    second: Ong_165
+  - first:
+      213: 5165548134143519286
+    second: Ong_166
+  - first:
+      213: 4184766560912241713
+    second: Ong_167
+  - first:
+      213: -4430916099537709434
+    second: Ong_168
+  - first:
+      213: 2571324129987312984
+    second: Ong_169
+  - first:
+      213: -8632243245245385679
+    second: Ong_170
+  - first:
+      213: 4093499449972915432
+    second: Ong_171
+  - first:
+      213: 2515615627830950791
+    second: Ong_172
+  - first:
+      213: 6590110397704792329
+    second: Ong_173
+  - first:
+      213: 2582180608024765804
+    second: Ong_174
+  - first:
+      213: 743054343885994248
+    second: Ong_175
+  - first:
+      213: -2810922493543130613
+    second: Ong_176
+  - first:
+      213: -2576745039832304108
+    second: Ong_177
+  - first:
+      213: 4059184005191567949
+    second: Ong_178
+  - first:
+      213: -1715851867540528864
+    second: Ong_179
+  - first:
+      213: -8120757466319154358
+    second: Ong_180
+  - first:
+      213: -1468300250356774064
+    second: Ong_181
+  - first:
+      213: -3313580624836800320
+    second: Ong_182
+  - first:
+      213: -53231368592009320
+    second: Ong_183
+  - first:
+      213: -4304122435328814565
+    second: Ong_184
+  - first:
+      213: 3327776140295728032
+    second: Ong_185
+  - first:
+      213: 443787493010268456
+    second: Ong_186
+  - first:
+      213: 5382008360017681147
+    second: Ong_187
+  - first:
+      213: -4383898979774634319
+    second: Ong_188
+  - first:
+      213: -5843790784664674058
+    second: Ong_189
+  - first:
+      213: -7724218457504187738
+    second: Ong_190
+  - first:
+      213: 1627953547373933478
+    second: Ong_191
+  - first:
+      213: 535062260146816439
+    second: Ong_192
+  - first:
+      213: 7661842068022132488
+    second: Ong_193
+  - first:
+      213: 7925322826825656006
+    second: Ong_194
+  - first:
+      213: -1526861491040444562
+    second: Ong_195
+  - first:
+      213: 7617266182637188466
+    second: Ong_196
+  - first:
+      213: -7796858987457310888
+    second: Ong_197
+  - first:
+      213: 2400108081040346792
+    second: Ong_198
+  - first:
+      213: 4542678718818770837
+    second: Ong_199
+  - first:
+      213: -2302473838398234709
+    second: Ong_200
+  - first:
+      213: -33512249337858676
+    second: Ong_201
+  - first:
+      213: 3035106034795454587
+    second: Ong_202
+  - first:
+      213: -1136397122437123278
+    second: Ong_203
+  - first:
+      213: -7356241317429690957
+    second: Ong_204
+  - first:
+      213: -4342787933559457524
+    second: Ong_205
+  - first:
+      213: 7279856880588065745
+    second: Ong_206
+  - first:
+      213: -3937830925475562668
+    second: Ong_207
+  - first:
+      213: -6689268508998738482
+    second: Ong_208
+  - first:
+      213: -827739327671813970
+    second: Ong_209
+  - first:
+      213: -403458071598601984
+    second: Ong_210
+  - first:
+      213: 8738772638874535720
+    second: Ong_211
+  - first:
+      213: 7252845608718079315
+    second: Ong_212
+  - first:
+      213: 1534884486175795920
+    second: Ong_213
+  - first:
+      213: 7944360079133033983
+    second: Ong_214
+  - first:
+      213: 2572046385697931885
+    second: Ong_215
+  - first:
+      213: -7661671827375448255
+    second: Ong_216
+  - first:
+      213: -7893367554318240304
+    second: Ong_217
+  - first:
+      213: 6123108829321704031
+    second: Ong_218
+  - first:
+      213: 573559463272857424
+    second: Ong_219
+  - first:
+      213: 6022673508168300062
+    second: Ong_220
+  - first:
+      213: -5647833287473699990
+    second: Ong_221
+  - first:
+      213: -6458521069587388460
+    second: Ong_222
+  - first:
+      213: 1437606899381339964
+    second: Ong_223
+  - first:
+      213: -7461324419980744764
+    second: Ong_224
+  - first:
+      213: 7450766922955730269
+    second: Ong_225
+  - first:
+      213: -2003912048905878719
+    second: Ong_226
+  - first:
+      213: 8103070982164638587
+    second: Ong_227
+  - first:
+      213: -6150828692264390247
+    second: Ong_228
+  - first:
+      213: -2772386715899014479
+    second: Ong_229
+  - first:
+      213: 1401360267506908654
+    second: Ong_230
+  - first:
+      213: 4405756152583417354
+    second: Ong_231
+  - first:
+      213: -4222498609492438439
+    second: Ong_232
+  - first:
+      213: 6163853253080512180
+    second: Ong_233
+  - first:
+      213: -5476153766934115735
+    second: Ong_234
+  - first:
+      213: -190766243118796274
+    second: Ong_235
+  - first:
+      213: -820586821953569902
+    second: Ong_236
+  - first:
+      213: 7431296702517524845
+    second: Ong_237
+  - first:
+      213: 2190813977867848083
+    second: Ong_238
+  - first:
+      213: -8172602564108356122
+    second: Ong_239
+  - first:
+      213: -2325571552984248299
+    second: Ong_240
+  - first:
+      213: 7918604191070453683
+    second: Ong_241
+  - first:
+      213: 3361307705583536954
+    second: Ong_242
+  - first:
+      213: 5568847661437814688
+    second: Ong_243
+  - first:
+      213: 4440772192952641354
+    second: Ong_244
+  - first:
+      213: 6850847708250105020
+    second: Ong_245
+  - first:
+      213: -4874304198359933406
+    second: Ong_246
+  - first:
+      213: -5784080030367265074
+    second: Ong_247
+  - first:
+      213: 2340223053301222783
+    second: Ong_248
+  - first:
+      213: 7960989170846513580
+    second: Ong_249
+  - first:
+      213: 294881273712708134
+    second: Ong_250
+  - first:
+      213: -7795092397406317026
+    second: Ong_251
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ong_0
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 3324
+        width: 214
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2dd9d25c758862c0800000000000000
+      internalID: -4438150663761175254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_1
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 3423
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dadf499215bd2c850800000000000000
+      internalID: 6395915562455989677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_2
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 3323
+        width: 219
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d564eb091fa28cdd0800000000000000
+      internalID: -2465673578981472675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_3
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 3422
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91337acc048f3faf0800000000000000
+      internalID: -363674187691773159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_4
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 3321
+        width: 228
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3856e0cdb0c654ce0800000000000000
+      internalID: -1421611309173152381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_5
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 3319
+        width: 214
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0e6975e8693dbc30800000000000000
+      internalID: 4376717535563312654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_6
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 3419
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0e7f1c9bbcf48050800000000000000
+      internalID: 5802040102668434956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_7
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 3316
+        width: 214
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7ab9091466119b70800000000000000
+      internalID: 8903922557460789883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_8
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 3417
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94cd8a0e9b9686060800000000000000
+      internalID: 6946918672278019145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_9
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 3314
+        width: 219
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72253497885a12f00800000000000000
+      internalID: 1090334590368961063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_10
+      rect:
+        serializedVersion: 2
+        x: 1746
+        y: 3416
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1e7d02be397a7b30800000000000000
+      internalID: 4285871305578610205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_11
+      rect:
+        serializedVersion: 2
+        x: 1832
+        y: 3312
+        width: 228
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab3b25e71699c2010800000000000000
+      internalID: 1165475047592342458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_12
+      rect:
+        serializedVersion: 2
+        x: 2143
+        y: 3310
+        width: 214
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 731a761203ab3d740800000000000000
+      internalID: 5175685112660468023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_13
+      rect:
+        serializedVersion: 2
+        x: 2346
+        y: 3415
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbd065b0d6edc13e0800000000000000
+      internalID: -2081544367829021252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_14
+      rect:
+        serializedVersion: 2
+        x: 2443
+        y: 3308
+        width: 214
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 726e66ccd6848c800800000000000000
+      internalID: 632835384063485479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_15
+      rect:
+        serializedVersion: 2
+        x: 2646
+        y: 3415
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c749446ed831e740800000000000000
+      internalID: 5179483574269200329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_16
+      rect:
+        serializedVersion: 2
+        x: 2738
+        y: 3306
+        width: 219
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e0fc0c4ed7022ca0800000000000000
+      internalID: -6043259098637733657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_17
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 3415
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b2d2774fb21795a0800000000000000
+      internalID: -6514717723221372236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_18
+      rect:
+        serializedVersion: 2
+        x: 3032
+        y: 3306
+        width: 228
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 019c24c39b42c1d10800000000000000
+      internalID: 2097591904446368016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_19
+      rect:
+        serializedVersion: 2
+        x: 3343
+        y: 3305
+        width: 214
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7fc5d4acd82f3b00800000000000000
+      internalID: 810411386073370490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_20
+      rect:
+        serializedVersion: 2
+        x: 3546
+        y: 3415
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e683a5b56460d17e0800000000000000
+      internalID: -1793270177373472658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_21
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 3005
+        width: 214
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84c0928cd9ed51200800000000000000
+      internalID: 150270931836144712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_22
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 3115
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11a5deb1b4e2a1160800000000000000
+      internalID: 6996955871199451665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_23
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 3005
+        width: 219
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a45d22c321ca95490800000000000000
+      internalID: -7756979688850664118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_24
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 3115
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36d6913ba48493ae0800000000000000
+      internalID: -1569143509492339357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_25
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 3006
+        width: 228
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e212371cecca89850800000000000000
+      internalID: 6384042475806466350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_26
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 3006
+        width: 214
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bb64520e1c1048b0800000000000000
+      internalID: -5170101457007645768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_27
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 3116
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 301cde47f1c4c7970800000000000000
+      internalID: 8753955473690837251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_28
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 3008
+        width: 214
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d2e3354d1dc014b0800000000000000
+      internalID: -5471648021656378667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_29
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 3117
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cbe8848a6e356ae0800000000000000
+      internalID: -1556769468975617083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_30
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 3010
+        width: 219
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a0cdcac783d941f0800000000000000
+      internalID: -1060083657092513629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_31
+      rect:
+        serializedVersion: 2
+        x: 1746
+        y: 3118
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f71fcf52555b84480800000000000000
+      internalID: -8914676085065715329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_32
+      rect:
+        serializedVersion: 2
+        x: 1832
+        y: 3012
+        width: 228
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b09e093ef6fe2d190800000000000000
+      internalID: -7939019929262429941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_33
+      rect:
+        serializedVersion: 2
+        x: 2143
+        y: 3014
+        width: 214
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74b76ed3c66bc36f0800000000000000
+      internalID: -703486865765401785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_34
+      rect:
+        serializedVersion: 2
+        x: 2346
+        y: 3119
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aeeeea102e929280800000000000000
+      internalID: -9037987641451155799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_35
+      rect:
+        serializedVersion: 2
+        x: 2443
+        y: 3016
+        width: 214
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24a9c163430cb8590800000000000000
+      internalID: -7670826209816831422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_36
+      rect:
+        serializedVersion: 2
+        x: 2646
+        y: 3119
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 343200c054222fac0800000000000000
+      internalID: -3822955453734706365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_37
+      rect:
+        serializedVersion: 2
+        x: 2738
+        y: 3018
+        width: 219
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7878b85d6ae07800800000000000000
+      internalID: 608243705055836287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_38
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 3120
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5af782aecaf471720800000000000000
+      internalID: 2816807696025026469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_39
+      rect:
+        serializedVersion: 2
+        x: 3032
+        y: 3021
+        width: 228
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c510cedf7f8c5a6e0800000000000000
+      internalID: -1826833106386288292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_40
+      rect:
+        serializedVersion: 2
+        x: 3343
+        y: 3023
+        width: 214
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62d801724fc0ec450800000000000000
+      internalID: 6110835987155291430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_41
+      rect:
+        serializedVersion: 2
+        x: 3546
+        y: 3122
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea29ba8afe4b0ed50800000000000000
+      internalID: 6764605581730484910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_42
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 2724
+        width: 214
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1a60529a980e0280800000000000000
+      internalID: -9075306739132241382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_43
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 2823
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd7dda6d6842602c0800000000000000
+      internalID: -4465841818945333284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_44
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 2726
+        width: 219
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2253564230e68c810800000000000000
+      internalID: 1785798212026971426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_45
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 2824
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0da3ce4dabfae3730800000000000000
+      internalID: 3980812337613126352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_46
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 2726
+        width: 228
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c3ac4d7f173310c0800000000000000
+      internalID: -4606277385484196922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_47
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 2727
+        width: 214
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd61f40cdc4a992b0800000000000000
+      internalID: -5577245459919989029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_48
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 2827
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1454fbceb658f4be0800000000000000
+      internalID: -1490826253056391871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_49
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 2727
+        width: 214
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ada03c22d6c83ba40800000000000000
+      internalID: 5382800380000406234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_50
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 2827
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70ea50c1ce4917000800000000000000
+      internalID: 31970414171631111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_51
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 2726
+        width: 219
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bb6e71fb8f47c2a0800000000000000
+      internalID: -6717312856729162830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_52
+      rect:
+        serializedVersion: 2
+        x: 1746
+        y: 2829
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deff602c91dad7180800000000000000
+      internalID: -9115939744586989587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_53
+      rect:
+        serializedVersion: 2
+        x: 1832
+        y: 2726
+        width: 228
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce3c03d83a1b252e0800000000000000
+      internalID: -2138451557040995348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_54
+      rect:
+        serializedVersion: 2
+        x: 2143
+        y: 2725
+        width: 214
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea9ba41e422bd96f0800000000000000
+      internalID: -676188497567368786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_55
+      rect:
+        serializedVersion: 2
+        x: 2346
+        y: 2830
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1c15fc8c56dc2790800000000000000
+      internalID: -7553426782016955362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_56
+      rect:
+        serializedVersion: 2
+        x: 2443
+        y: 2724
+        width: 214
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b608d84de5b969b0800000000000000
+      internalID: -5086334273404270927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_57
+      rect:
+        serializedVersion: 2
+        x: 2646
+        y: 2830
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1efb78b9efdce180800000000000000
+      internalID: -9084640153397625317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_58
+      rect:
+        serializedVersion: 2
+        x: 2738
+        y: 2722
+        width: 219
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1022d8f93a80a8e10800000000000000
+      internalID: 2200580866773426689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_59
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 2830
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cc50fd1ba9a76560800000000000000
+      internalID: 7306995472838712521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_60
+      rect:
+        serializedVersion: 2
+        x: 3032
+        y: 2721
+        width: 228
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8019ba97c961f5b60800000000000000
+      internalID: 7736927546157797640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_61
+      rect:
+        serializedVersion: 2
+        x: 3343
+        y: 2720
+        width: 214
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3671bfdeb421fd5a0800000000000000
+      internalID: -6494452020320463005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_62
+      rect:
+        serializedVersion: 2
+        x: 3546
+        y: 2830
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e443fa3f8fc432650800000000000000
+      internalID: 6206889343570621518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_63
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 2418
+        width: 214
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1efc89cf0f2c2f790800000000000000
+      internalID: -7497716089332641823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_64
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 2528
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fa5b282928075cb0800000000000000
+      internalID: -4875419098744661263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_65
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 2417
+        width: 219
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1da8c81c63f9b9e30800000000000000
+      internalID: 4511374509265947345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_66
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 2527
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21dc21e9305fbfce0800000000000000
+      internalID: -1370232265718444782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_67
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 2416
+        width: 228
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb6e510c12f518470800000000000000
+      internalID: 8395095778956535487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_68
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 2415
+        width: 214
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c95e17f622e8b9e0800000000000000
+      internalID: -1605284610174985786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_69
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 2524
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7601bea5ebc9eed60800000000000000
+      internalID: 7921441135974355047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_70
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 2413
+        width: 214
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d6871e6d53242ff0800000000000000
+      internalID: -61885610690378032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_71
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 2522
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bb66e5a4eabcc3b0800000000000000
+      internalID: -5490808354472825931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_72
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 2412
+        width: 219
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb88e58ca22672a00800000000000000
+      internalID: 731661400360782012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_73
+      rect:
+        serializedVersion: 2
+        x: 1746
+        y: 2520
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6be3840ea1577240800000000000000
+      internalID: 4789386536573725549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_74
+      rect:
+        serializedVersion: 2
+        x: 1832
+        y: 2412
+        width: 228
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62852ba0f12b56850800000000000000
+      internalID: 6369693094378625062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_75
+      rect:
+        serializedVersion: 2
+        x: 2143
+        y: 2411
+        width: 214
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21d3d6b539c373330800000000000000
+      internalID: 3690485023245155602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_76
+      rect:
+        serializedVersion: 2
+        x: 2346
+        y: 2516
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbccafffeb7e3da50800000000000000
+      internalID: 6544829491023891643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_77
+      rect:
+        serializedVersion: 2
+        x: 2443
+        y: 2411
+        width: 214
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 487cd0d13322de810800000000000000
+      internalID: 1796129429316814724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_78
+      rect:
+        serializedVersion: 2
+        x: 2646
+        y: 2514
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e08fabec37754c190800000000000000
+      internalID: -7943127687873497074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_79
+      rect:
+        serializedVersion: 2
+        x: 2738
+        y: 2410
+        width: 219
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47ffb0df41e0dca30800000000000000
+      internalID: 4237058307733061492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_80
+      rect:
+        serializedVersion: 2
+        x: 3032
+        y: 2410
+        width: 228
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19a34c25a143dc4a0800000000000000
+      internalID: -6571538993601299823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_81
+      rect:
+        serializedVersion: 2
+        x: 3343
+        y: 2410
+        width: 214
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14eebf020fd472f10800000000000000
+      internalID: 2244848633008352833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_82
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 2512
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83172d0a1159d3430800000000000000
+      internalID: 3764328766496731448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_83
+      rect:
+        serializedVersion: 2
+        x: 3546
+        y: 2510
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbdc0a2d9275a4e70800000000000000
+      internalID: 9100181834194537916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_84
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 2111
+        width: 214
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 661c13bea73f8ae60800000000000000
+      internalID: 7973890849516929382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_85
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 2111
+        width: 219
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02784cfe15c413a40800000000000000
+      internalID: 5346138147464185632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_86
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 2111
+        width: 228
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7b77c58183399ce0800000000000000
+      internalID: -1398029577933587586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_87
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 2111
+        width: 214
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4baa99896414ee1c0800000000000000
+      internalID: -4472565608468600140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_88
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 2111
+        width: 214
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91a1230d85824f120800000000000000
+      internalID: 2446624859484199449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_89
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 2111
+        width: 219
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e9894be011b90260800000000000000
+      internalID: 7064372176732391910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_90
+      rect:
+        serializedVersion: 2
+        x: 1746
+        y: 2214
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e65af9380fe1b5f0800000000000000
+      internalID: -742549644927936792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_91
+      rect:
+        serializedVersion: 2
+        x: 1832
+        y: 2112
+        width: 228
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a6a77e249f857ca0800000000000000
+      internalID: -6019747460313274711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_92
+      rect:
+        serializedVersion: 2
+        x: 2143
+        y: 2112
+        width: 214
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dbd254c080b98f80800000000000000
+      internalID: -8103751987380429868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_93
+      rect:
+        serializedVersion: 2
+        x: 2346
+        y: 2218
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b8436dffa9d586f0800000000000000
+      internalID: -682900418583115597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_94
+      rect:
+        serializedVersion: 2
+        x: 2443
+        y: 2113
+        width: 214
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf029d19f218f4ba0800000000000000
+      internalID: -6102516928753360644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_95
+      rect:
+        serializedVersion: 2
+        x: 2646
+        y: 2220
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d27b5f3a220401c0800000000000000
+      internalID: -4538500144007777582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_96
+      rect:
+        serializedVersion: 2
+        x: 2738
+        y: 2115
+        width: 219
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a04d03f98077b02e0800000000000000
+      internalID: -2158500717479799798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_97
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 2223
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b917dd9c21cafe490800000000000000
+      internalID: -7714758439966248549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_98
+      rect:
+        serializedVersion: 2
+        x: 3032
+        y: 2116
+        width: 228
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3eb9eec98e2c4e9b0800000000000000
+      internalID: -5051698577681769501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_99
+      rect:
+        serializedVersion: 2
+        x: 3343
+        y: 2117
+        width: 214
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba87860d1e5a56e80800000000000000
+      internalID: -8185954358393276245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_100
+      rect:
+        serializedVersion: 2
+        x: 3546
+        y: 2227
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61ebe82e369195140800000000000000
+      internalID: 4708822802186026518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_101
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 2209
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c7c6870cbbfabd40800000000000000
+      internalID: 5601065871587329984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_102
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 2209
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b03bf9dbc2c3472a0800000000000000
+      internalID: -6740696579409202421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_103
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 2211
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c49a67d593a2cc110800000000000000
+      internalID: 1282446419763308876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_104
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 2212
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c82f6a2b1ea9f22d0800000000000000
+      internalID: -3301249707683679604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_105
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 1818
+        width: 214
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3d5e8f97834dd310800000000000000
+      internalID: 1431374506350239038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_106
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 1928
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbcb84e9732c83f60800000000000000
+      internalID: 8014369081040354495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_107
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 1820
+        width: 219
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f3f749262f97c4d0800000000000000
+      internalID: -3114345631053253644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_108
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 1930
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 584e7cf7c538ba020800000000000000
+      internalID: 2354119663535252613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_109
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 1821
+        width: 228
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91421e6087faf44e0800000000000000
+      internalID: -1995183179855485927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_110
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 1822
+        width: 214
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31a4c65bde488e490800000000000000
+      internalID: -7716771805013456365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_111
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 1932
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00a6b09b23954f160800000000000000
+      internalID: 7058364590384179712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_112
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 1823
+        width: 214
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 114149e4d8eae3550800000000000000
+      internalID: 6142538863711884305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_113
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 1933
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91a186c83a6257300800000000000000
+      internalID: 249147838266087961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_114
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 1825
+        width: 219
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e5e056ca0bd40010800000000000000
+      internalID: 1154288243837036007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_115
+      rect:
+        serializedVersion: 2
+        x: 1746
+        y: 1933
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0978eaa5d97e2e030800000000000000
+      internalID: 3522632521574418320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_116
+      rect:
+        serializedVersion: 2
+        x: 1832
+        y: 1825
+        width: 228
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d306ff7f6b14c0b0800000000000000
+      internalID: -5709408261896797227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_117
+      rect:
+        serializedVersion: 2
+        x: 2143
+        y: 1826
+        width: 214
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4067963b4d63b9a0800000000000000
+      internalID: -6218506490662657970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_118
+      rect:
+        serializedVersion: 2
+        x: 2346
+        y: 1931
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96e347fdb16db2f80800000000000000
+      internalID: -8130169287085900183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_119
+      rect:
+        serializedVersion: 2
+        x: 2443
+        y: 1826
+        width: 214
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e3a54469414d4c20800000000000000
+      internalID: 3192279494346253285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_120
+      rect:
+        serializedVersion: 2
+        x: 2646
+        y: 1930
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa321202836d2da40800000000000000
+      internalID: 5391607240461460399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_121
+      rect:
+        serializedVersion: 2
+        x: 2738
+        y: 1826
+        width: 219
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40d3652cc607ee490800000000000000
+      internalID: -7715105499219870460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_122
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 1928
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daabd7d34edc98300800000000000000
+      internalID: 254961234091031213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_123
+      rect:
+        serializedVersion: 2
+        x: 3032
+        y: 1826
+        width: 228
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 517361ff506969100800000000000000
+      internalID: 114443793043175189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_124
+      rect:
+        serializedVersion: 2
+        x: 3343
+        y: 1825
+        width: 214
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c07c90883cc81180800000000000000
+      internalID: -9144334500327821114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_125
+      rect:
+        serializedVersion: 2
+        x: 3546
+        y: 1925
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdd987d1a61c08630800000000000000
+      internalID: 3927351536572210651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_126
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 1524
+        width: 214
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 393089990dcb377b0800000000000000
+      internalID: -5227627138330917997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_127
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 1623
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc7d391e9e76f4020800000000000000
+      internalID: 2328193786583439308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_128
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 1523
+        width: 219
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdf756ae62a46c490800000000000000
+      internalID: -7726406579705774116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_129
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 1622
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a49a17764570df00800000000000000
+      internalID: 1139539651231126691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_130
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 1521
+        width: 228
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51882e8c2e8fb4f50800000000000000
+      internalID: 6866855709773039637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_131
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 1519
+        width: 214
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eebc3283cdd0bff0800000000000000
+      internalID: -22274166363472158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_132
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 1619
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 035048d5e3079e8b0800000000000000
+      internalID: -5122439687998012112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_133
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 1516
+        width: 214
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b21b83ac33d12de0800000000000000
+      internalID: -1359573355093880143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_134
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 1617
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32d5250c8de472b10800000000000000
+      internalID: 1956619255962295587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_135
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 1514
+        width: 219
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d33145f64fa35ff50800000000000000
+      internalID: 6914497624411476797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_136
+      rect:
+        serializedVersion: 2
+        x: 1746
+        y: 1616
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 128a756739eb438b0800000000000000
+      internalID: -5173300531386931167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_137
+      rect:
+        serializedVersion: 2
+        x: 1832
+        y: 1512
+        width: 228
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b1fab6c4cb764f70800000000000000
+      internalID: 9171153776264540594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_138
+      rect:
+        serializedVersion: 2
+        x: 2143
+        y: 1510
+        width: 214
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e69fa7a0dc51e5f0800000000000000
+      internalID: -729199613421054236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_139
+      rect:
+        serializedVersion: 2
+        x: 2346
+        y: 1615
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b9c69d66f33bd010800000000000000
+      internalID: 1214621658000050608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_140
+      rect:
+        serializedVersion: 2
+        x: 2443
+        y: 1508
+        width: 214
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f2a10e2d4acbd540800000000000000
+      internalID: 5033839441349812981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_141
+      rect:
+        serializedVersion: 2
+        x: 2646
+        y: 1615
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 462d262538cd87b40800000000000000
+      internalID: 5438339006630908516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_142
+      rect:
+        serializedVersion: 2
+        x: 2738
+        y: 1506
+        width: 219
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34a19b057f6c793b0800000000000000
+      internalID: -5505713253923612093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_143
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 1614
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29b2a4ad201a3c550800000000000000
+      internalID: 6179960147306752914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_144
+      rect:
+        serializedVersion: 2
+        x: 3032
+        y: 1506
+        width: 228
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adcd2ceff63a9df20800000000000000
+      internalID: 3447966691139706074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_145
+      rect:
+        serializedVersion: 2
+        x: 3343
+        y: 1505
+        width: 214
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca79ad02e2c15a580800000000000000
+      internalID: -8816609711062607956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_146
+      rect:
+        serializedVersion: 2
+        x: 3546
+        y: 1615
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4759fb8553b7c6e90800000000000000
+      internalID: -7031109449179753100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_147
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 1205
+        width: 214
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13b90ae1b0a13d930800000000000000
+      internalID: 4166702715308645169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_148
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 1315
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdfbe0923d52a5620800000000000000
+      internalID: 2763562910202380251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_149
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 1205
+        width: 219
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b99ab5917b7a22010800000000000000
+      internalID: 1162676058661300635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_150
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 1315
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 322a29bec7a24ce30800000000000000
+      internalID: 4522786641803387427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_151
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 1206
+        width: 228
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5dd8cc634106f410800000000000000
+      internalID: 1510396114128919900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_152
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 1206
+        width: 214
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef8daae80ec1f0190800000000000000
+      internalID: -7994139062767527682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_153
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 1316
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c863d2845a6a6caf0800000000000000
+      internalID: -376430290028120436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_154
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 1208
+        width: 214
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4809a1a146431ca70800000000000000
+      internalID: 8845408747671687300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_155
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 1317
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0cc3e4ae7ad0f270800000000000000
+      internalID: 8282359952201468941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_156
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 1210
+        width: 219
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1213b1b587940000800000000000000
+      internalID: 1292500374589978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_157
+      rect:
+        serializedVersion: 2
+        x: 1746
+        y: 1318
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: febe75461e6b68cd0800000000000000
+      internalID: -2556154659318797329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_158
+      rect:
+        serializedVersion: 2
+        x: 1832
+        y: 1212
+        width: 228
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9d85de62771e6a40800000000000000
+      internalID: 5363249986498039199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_159
+      rect:
+        serializedVersion: 2
+        x: 2143
+        y: 1214
+        width: 214
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7af2f6400e185d80800000000000000
+      internalID: -8261820529872012676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_160
+      rect:
+        serializedVersion: 2
+        x: 2346
+        y: 1319
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 954284d61ff52ced0800000000000000
+      internalID: -2395246561282481063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_161
+      rect:
+        serializedVersion: 2
+        x: 2443
+        y: 1216
+        width: 214
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6160ef8bd5c3401e0800000000000000
+      internalID: -2232593142035642858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_162
+      rect:
+        serializedVersion: 2
+        x: 2646
+        y: 1320
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e7929b7b6ce9e370800000000000000
+      internalID: 8352466930314156008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_163
+      rect:
+        serializedVersion: 2
+        x: 2738
+        y: 1218
+        width: 219
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e1fba9fe5a656970800000000000000
+      internalID: 8747514807385321957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_164
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 1321
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05c4b599679538d20800000000000000
+      internalID: 3279563319569763408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_165
+      rect:
+        serializedVersion: 2
+        x: 3032
+        y: 1221
+        width: 228
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7735771d2ce328e70800000000000000
+      internalID: 9115917602210141047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_166
+      rect:
+        serializedVersion: 2
+        x: 3343
+        y: 1223
+        width: 214
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63a6ec5e8a6bfa740800000000000000
+      internalID: 5165548134143519286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_167
+      rect:
+        serializedVersion: 2
+        x: 3546
+        y: 1322
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1347b1be307431a30800000000000000
+      internalID: 4184766560912241713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_168
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 924
+        width: 214
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 686de7198493282c0800000000000000
+      internalID: -4430916099537709434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_169
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 1023
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85db84a3cad2fa320800000000000000
+      internalID: 2571324129987312984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_170
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 926
+        width: 219
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1343268018c143880800000000000000
+      internalID: -8632243245245385679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_171
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 1024
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ec74ebbf080fc830800000000000000
+      internalID: 4093499449972915432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_172
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 926
+        width: 228
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78bf840d51349e220800000000000000
+      internalID: 2515615627830950791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_173
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 927
+        width: 214
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9096dc5ad76c47b50800000000000000
+      internalID: 6590110397704792329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_174
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 1027
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c65e73ff49fb5d320800000000000000
+      internalID: 2582180608024765804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_175
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 927
+        width: 214
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 809b2282dfbdf4a00800000000000000
+      internalID: 743054343885994248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_176
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 1027
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0ad43192e89df8d0800000000000000
+      internalID: -2810922493543130613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_177
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 926
+        width: 219
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 416bb08d9009d3cd0800000000000000
+      internalID: -2576745039832304108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_178
+      rect:
+        serializedVersion: 2
+        x: 1746
+        y: 1029
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4a0463a85e155830800000000000000
+      internalID: 4059184005191567949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_179
+      rect:
+        serializedVersion: 2
+        x: 1832
+        y: 926
+        width: 228
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0216e0441d11038e0800000000000000
+      internalID: -1715851867540528864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_180
+      rect:
+        serializedVersion: 2
+        x: 2143
+        y: 925
+        width: 214
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4312f82c164d4f80800000000000000
+      internalID: -8120757466319154358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_181
+      rect:
+        serializedVersion: 2
+        x: 2346
+        y: 1030
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05b0ed1a3bc8f9be0800000000000000
+      internalID: -1468300250356774064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_182
+      rect:
+        serializedVersion: 2
+        x: 2443
+        y: 924
+        width: 214
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c05cf15afbc302d0800000000000000
+      internalID: -3313580624836800320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_183
+      rect:
+        serializedVersion: 2
+        x: 2646
+        y: 1030
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8975a203a52e24ff0800000000000000
+      internalID: -53231368592009320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_184
+      rect:
+        serializedVersion: 2
+        x: 2738
+        y: 922
+        width: 219
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b12df64037fa444c0800000000000000
+      internalID: -4304122435328814565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_185
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 1030
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0abe85ea4c2ae2e20800000000000000
+      internalID: 3327776140295728032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_186
+      rect:
+        serializedVersion: 2
+        x: 3032
+        y: 921
+        width: 228
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82163a4af56a82600800000000000000
+      internalID: 443787493010268456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_187
+      rect:
+        serializedVersion: 2
+        x: 3343
+        y: 920
+        width: 214
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfa590d961cb0ba40800000000000000
+      internalID: 5382008360017681147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_188
+      rect:
+        serializedVersion: 2
+        x: 3546
+        y: 1030
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b6e553da134923c0800000000000000
+      internalID: -4383898979774634319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_189
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 618
+        width: 214
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f06c5a3e3fa6eea0800000000000000
+      internalID: -5843790784664674058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_190
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 728
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6aa72f0dc301ec490800000000000000
+      internalID: -7724218457504187738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_191
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 617
+        width: 219
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a37f064027a79610800000000000000
+      internalID: 1627953547373933478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_192
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 727
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b5c4cc6a4cec6700800000000000000
+      internalID: 535062260146816439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_193
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 616
+        width: 228
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80f7a9544c4545a60800000000000000
+      internalID: 7661842068022132488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_194
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 615
+        width: 214
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c6ec3fee176cfd60800000000000000
+      internalID: 7925322826825656006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_195
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 724
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6f9f45409f7fcae0800000000000000
+      internalID: -1526861491040444562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_196
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 613
+        width: 214
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2757faf2c37f5b960800000000000000
+      internalID: 7617266182637188466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_197
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 722
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85f8bc87f0efbc390800000000000000
+      internalID: -7796858987457310888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_198
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 612
+        width: 219
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ae44f85595ee4120800000000000000
+      internalID: 2400108081040346792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_199
+      rect:
+        serializedVersion: 2
+        x: 1746
+        y: 720
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59f5be30a36da0f30800000000000000
+      internalID: 4542678718818770837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_200
+      rect:
+        serializedVersion: 2
+        x: 1832
+        y: 612
+        width: 228
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baf94a53e38fb00e0800000000000000
+      internalID: -2302473838398234709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_201
+      rect:
+        serializedVersion: 2
+        x: 2143
+        y: 611
+        width: 214
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c85b79a69c0f88ff0800000000000000
+      internalID: -33512249337858676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_202
+      rect:
+        serializedVersion: 2
+        x: 2346
+        y: 716
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b70a0a3abdcde1a20800000000000000
+      internalID: 3035106034795454587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_203
+      rect:
+        serializedVersion: 2
+        x: 2443
+        y: 611
+        width: 214
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 233fb5986d4ba30f0800000000000000
+      internalID: -1136397122437123278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_204
+      rect:
+        serializedVersion: 2
+        x: 2646
+        y: 714
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bd3d803f7169e990800000000000000
+      internalID: -7356241317429690957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_205
+      rect:
+        serializedVersion: 2
+        x: 2738
+        y: 610
+        width: 219
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c09f55d22615bb3c0800000000000000
+      internalID: -4342787933559457524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_206
+      rect:
+        serializedVersion: 2
+        x: 3032
+        y: 610
+        width: 228
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1db8227334f370560800000000000000
+      internalID: 7279856880588065745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_207
+      rect:
+        serializedVersion: 2
+        x: 3343
+        y: 610
+        width: 214
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45b3b7503a30a59c0800000000000000
+      internalID: -3937830925475562668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_208
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 712
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecd5ce97bb1fa23a0800000000000000
+      internalID: -6689268508998738482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_209
+      rect:
+        serializedVersion: 2
+        x: 3546
+        y: 710
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea8308f87774384f0800000000000000
+      internalID: -827739327671813970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_210
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 311
+        width: 214
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 009e9908501a66af0800000000000000
+      internalID: -403458071598601984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_211
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 311
+        width: 219
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82705014a6b564970800000000000000
+      internalID: 8738772638874535720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_212
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 311
+        width: 228
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 355946667a847a460800000000000000
+      internalID: 7252845608718079315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_213
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 311
+        width: 214
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0da24c9de410d4510800000000000000
+      internalID: 1534884486175795920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_214
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 311
+        width: 214
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff5c484a669004e60800000000000000
+      internalID: 7944360079133033983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_215
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 311
+        width: 219
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d624a5d7f8eb1b320800000000000000
+      internalID: 2572046385697931885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_216
+      rect:
+        serializedVersion: 2
+        x: 1746
+        y: 414
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14f1ba7f0164ca590800000000000000
+      internalID: -7661671827375448255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_217
+      rect:
+        serializedVersion: 2
+        x: 1832
+        y: 312
+        width: 228
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d5744bb700257290800000000000000
+      internalID: -7893367554318240304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_218
+      rect:
+        serializedVersion: 2
+        x: 2143
+        y: 312
+        width: 214
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5237c4e907a9f450800000000000000
+      internalID: 6123108829321704031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_219
+      rect:
+        serializedVersion: 2
+        x: 2346
+        y: 418
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05f31f10b41b5f700800000000000000
+      internalID: 573559463272857424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_220
+      rect:
+        serializedVersion: 2
+        x: 2443
+        y: 313
+        width: 214
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e16f68c65a5d49350800000000000000
+      internalID: 6022673508168300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_221
+      rect:
+        serializedVersion: 2
+        x: 2646
+        y: 420
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a63e08d6c8dde91b0800000000000000
+      internalID: -5647833287473699990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_222
+      rect:
+        serializedVersion: 2
+        x: 2738
+        y: 315
+        width: 219
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d72ed05e49be56a0800000000000000
+      internalID: -6458521069587388460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_223
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 423
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c378644bbd763f310800000000000000
+      internalID: 1437606899381339964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_224
+      rect:
+        serializedVersion: 2
+        x: 3032
+        y: 316
+        width: 228
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c7a919c8fc047890800000000000000
+      internalID: -7461324419980744764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_225
+      rect:
+        serializedVersion: 2
+        x: 3343
+        y: 317
+        width: 214
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5da1036a01766760800000000000000
+      internalID: 7450766922955730269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_226
+      rect:
+        serializedVersion: 2
+        x: 3546
+        y: 427
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14307d3db9ca034e0800000000000000
+      internalID: -2003912048905878719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_227
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 409
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7be2b95024e37070800000000000000
+      internalID: 8103070982164638587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_228
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 409
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 991fc4394edd3aaa0800000000000000
+      internalID: -6150828692264390247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_229
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 411
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b2d3da78f08689d0800000000000000
+      internalID: -2772386715899014479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_230
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 412
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eed78131db1a27310800000000000000
+      internalID: 1401360267506908654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_231
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 18
+        width: 214
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0ee9b9c0e3642d30800000000000000
+      internalID: 4405756152583417354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_232
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 128
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9525f9ce2eba665c0800000000000000
+      internalID: -4222498609492438439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_233
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 20
+        width: 219
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b6ff7d40e76a8550800000000000000
+      internalID: 6163853253080512180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_234
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 130
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96a8972b92bc004b0800000000000000
+      internalID: -5476153766934115735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_235
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 21
+        width: 228
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e02b4c3dc134a5df0800000000000000
+      internalID: -190766243118796274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_236
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 22
+        width: 214
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29b371212a0bc94f0800000000000000
+      internalID: -820586821953569902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_237
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 132
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d69b61e6af4412760800000000000000
+      internalID: 7431296702517524845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_238
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 23
+        width: 214
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39906c794b5576e10800000000000000
+      internalID: 2190813977867848083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_239
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 133
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e5ffdba445159e80800000000000000
+      internalID: -8172602564108356122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_240
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 25
+        width: 219
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 510de947ef8e9bfd0800000000000000
+      internalID: -2325571552984248299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_241
+      rect:
+        serializedVersion: 2
+        x: 1746
+        y: 133
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bf7ca5ae8884ed60800000000000000
+      internalID: 7918604191070453683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_242
+      rect:
+        serializedVersion: 2
+        x: 1832
+        y: 25
+        width: 228
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3b071c9c83c5ae20800000000000000
+      internalID: 3361307705583536954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_243
+      rect:
+        serializedVersion: 2
+        x: 2143
+        y: 26
+        width: 214
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a7044c6175884d40800000000000000
+      internalID: 5568847661437814688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_244
+      rect:
+        serializedVersion: 2
+        x: 2346
+        y: 131
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a47ef5108cac0ad30800000000000000
+      internalID: 4440772192952641354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_245
+      rect:
+        serializedVersion: 2
+        x: 2443
+        y: 26
+        width: 214
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb4eb8c71b9131f50800000000000000
+      internalID: 6850847708250105020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_246
+      rect:
+        serializedVersion: 2
+        x: 2646
+        y: 130
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22e9f81282efa5cb0800000000000000
+      internalID: -4874304198359933406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_247
+      rect:
+        serializedVersion: 2
+        x: 2738
+        y: 26
+        width: 219
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ece47859bd1dabfa0800000000000000
+      internalID: -5784080030367265074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_248
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 128
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7d033bc7742a7020800000000000000
+      internalID: 2340223053301222783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_249
+      rect:
+        serializedVersion: 2
+        x: 3032
+        y: 26
+        width: 228
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca9b905c87d1b7e60800000000000000
+      internalID: 7960989170846513580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_250
+      rect:
+        serializedVersion: 2
+        x: 3343
+        y: 25
+        width: 214
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62a8f82c4f0a71400800000000000000
+      internalID: 294881273712708134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ong_251
+      rect:
+        serializedVersion: 2
+        x: 3546
+        y: 125
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e169f35c3c442d390800000000000000
+      internalID: -7795092397406317026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Ong_0: -4438150663761175254
+      Ong_1: 6395915562455989677
+      Ong_10: 4285871305578610205
+      Ong_100: 4708822802186026518
+      Ong_101: 5601065871587329984
+      Ong_102: -6740696579409202421
+      Ong_103: 1282446419763308876
+      Ong_104: -3301249707683679604
+      Ong_105: 1431374506350239038
+      Ong_106: 8014369081040354495
+      Ong_107: -3114345631053253644
+      Ong_108: 2354119663535252613
+      Ong_109: -1995183179855485927
+      Ong_11: 1165475047592342458
+      Ong_110: -7716771805013456365
+      Ong_111: 7058364590384179712
+      Ong_112: 6142538863711884305
+      Ong_113: 249147838266087961
+      Ong_114: 1154288243837036007
+      Ong_115: 3522632521574418320
+      Ong_116: -5709408261896797227
+      Ong_117: -6218506490662657970
+      Ong_118: -8130169287085900183
+      Ong_119: 3192279494346253285
+      Ong_12: 5175685112660468023
+      Ong_120: 5391607240461460399
+      Ong_121: -7715105499219870460
+      Ong_122: 254961234091031213
+      Ong_123: 114443793043175189
+      Ong_124: -9144334500327821114
+      Ong_125: 3927351536572210651
+      Ong_126: -5227627138330917997
+      Ong_127: 2328193786583439308
+      Ong_128: -7726406579705774116
+      Ong_129: 1139539651231126691
+      Ong_13: -2081544367829021252
+      Ong_130: 6866855709773039637
+      Ong_131: -22274166363472158
+      Ong_132: -5122439687998012112
+      Ong_133: -1359573355093880143
+      Ong_134: 1956619255962295587
+      Ong_135: 6914497624411476797
+      Ong_136: -5173300531386931167
+      Ong_137: 9171153776264540594
+      Ong_138: -729199613421054236
+      Ong_139: 1214621658000050608
+      Ong_14: 632835384063485479
+      Ong_140: 5033839441349812981
+      Ong_141: 5438339006630908516
+      Ong_142: -5505713253923612093
+      Ong_143: 6179960147306752914
+      Ong_144: 3447966691139706074
+      Ong_145: -8816609711062607956
+      Ong_146: -7031109449179753100
+      Ong_147: 4166702715308645169
+      Ong_148: 2763562910202380251
+      Ong_149: 1162676058661300635
+      Ong_15: 5179483574269200329
+      Ong_150: 4522786641803387427
+      Ong_151: 1510396114128919900
+      Ong_152: -7994139062767527682
+      Ong_153: -376430290028120436
+      Ong_154: 8845408747671687300
+      Ong_155: 8282359952201468941
+      Ong_156: 1292500374589978
+      Ong_157: -2556154659318797329
+      Ong_158: 5363249986498039199
+      Ong_159: -8261820529872012676
+      Ong_16: -6043259098637733657
+      Ong_160: -2395246561282481063
+      Ong_161: -2232593142035642858
+      Ong_162: 8352466930314156008
+      Ong_163: 8747514807385321957
+      Ong_164: 3279563319569763408
+      Ong_165: 9115917602210141047
+      Ong_166: 5165548134143519286
+      Ong_167: 4184766560912241713
+      Ong_168: -4430916099537709434
+      Ong_169: 2571324129987312984
+      Ong_17: -6514717723221372236
+      Ong_170: -8632243245245385679
+      Ong_171: 4093499449972915432
+      Ong_172: 2515615627830950791
+      Ong_173: 6590110397704792329
+      Ong_174: 2582180608024765804
+      Ong_175: 743054343885994248
+      Ong_176: -2810922493543130613
+      Ong_177: -2576745039832304108
+      Ong_178: 4059184005191567949
+      Ong_179: -1715851867540528864
+      Ong_18: 2097591904446368016
+      Ong_180: -8120757466319154358
+      Ong_181: -1468300250356774064
+      Ong_182: -3313580624836800320
+      Ong_183: -53231368592009320
+      Ong_184: -4304122435328814565
+      Ong_185: 3327776140295728032
+      Ong_186: 443787493010268456
+      Ong_187: 5382008360017681147
+      Ong_188: -4383898979774634319
+      Ong_189: -5843790784664674058
+      Ong_19: 810411386073370490
+      Ong_190: -7724218457504187738
+      Ong_191: 1627953547373933478
+      Ong_192: 535062260146816439
+      Ong_193: 7661842068022132488
+      Ong_194: 7925322826825656006
+      Ong_195: -1526861491040444562
+      Ong_196: 7617266182637188466
+      Ong_197: -7796858987457310888
+      Ong_198: 2400108081040346792
+      Ong_199: 4542678718818770837
+      Ong_2: -2465673578981472675
+      Ong_20: -1793270177373472658
+      Ong_200: -2302473838398234709
+      Ong_201: -33512249337858676
+      Ong_202: 3035106034795454587
+      Ong_203: -1136397122437123278
+      Ong_204: -7356241317429690957
+      Ong_205: -4342787933559457524
+      Ong_206: 7279856880588065745
+      Ong_207: -3937830925475562668
+      Ong_208: -6689268508998738482
+      Ong_209: -827739327671813970
+      Ong_21: 150270931836144712
+      Ong_210: -403458071598601984
+      Ong_211: 8738772638874535720
+      Ong_212: 7252845608718079315
+      Ong_213: 1534884486175795920
+      Ong_214: 7944360079133033983
+      Ong_215: 2572046385697931885
+      Ong_216: -7661671827375448255
+      Ong_217: -7893367554318240304
+      Ong_218: 6123108829321704031
+      Ong_219: 573559463272857424
+      Ong_22: 6996955871199451665
+      Ong_220: 6022673508168300062
+      Ong_221: -5647833287473699990
+      Ong_222: -6458521069587388460
+      Ong_223: 1437606899381339964
+      Ong_224: -7461324419980744764
+      Ong_225: 7450766922955730269
+      Ong_226: -2003912048905878719
+      Ong_227: 8103070982164638587
+      Ong_228: -6150828692264390247
+      Ong_229: -2772386715899014479
+      Ong_23: -7756979688850664118
+      Ong_230: 1401360267506908654
+      Ong_231: 4405756152583417354
+      Ong_232: -4222498609492438439
+      Ong_233: 6163853253080512180
+      Ong_234: -5476153766934115735
+      Ong_235: -190766243118796274
+      Ong_236: -820586821953569902
+      Ong_237: 7431296702517524845
+      Ong_238: 2190813977867848083
+      Ong_239: -8172602564108356122
+      Ong_24: -1569143509492339357
+      Ong_240: -2325571552984248299
+      Ong_241: 7918604191070453683
+      Ong_242: 3361307705583536954
+      Ong_243: 5568847661437814688
+      Ong_244: 4440772192952641354
+      Ong_245: 6850847708250105020
+      Ong_246: -4874304198359933406
+      Ong_247: -5784080030367265074
+      Ong_248: 2340223053301222783
+      Ong_249: 7960989170846513580
+      Ong_25: 6384042475806466350
+      Ong_250: 294881273712708134
+      Ong_251: -7795092397406317026
+      Ong_26: -5170101457007645768
+      Ong_27: 8753955473690837251
+      Ong_28: -5471648021656378667
+      Ong_29: -1556769468975617083
+      Ong_3: -363674187691773159
+      Ong_30: -1060083657092513629
+      Ong_31: -8914676085065715329
+      Ong_32: -7939019929262429941
+      Ong_33: -703486865765401785
+      Ong_34: -9037987641451155799
+      Ong_35: -7670826209816831422
+      Ong_36: -3822955453734706365
+      Ong_37: 608243705055836287
+      Ong_38: 2816807696025026469
+      Ong_39: -1826833106386288292
+      Ong_4: -1421611309173152381
+      Ong_40: 6110835987155291430
+      Ong_41: 6764605581730484910
+      Ong_42: -9075306739132241382
+      Ong_43: -4465841818945333284
+      Ong_44: 1785798212026971426
+      Ong_45: 3980812337613126352
+      Ong_46: -4606277385484196922
+      Ong_47: -5577245459919989029
+      Ong_48: -1490826253056391871
+      Ong_49: 5382800380000406234
+      Ong_5: 4376717535563312654
+      Ong_50: 31970414171631111
+      Ong_51: -6717312856729162830
+      Ong_52: -9115939744586989587
+      Ong_53: -2138451557040995348
+      Ong_54: -676188497567368786
+      Ong_55: -7553426782016955362
+      Ong_56: -5086334273404270927
+      Ong_57: -9084640153397625317
+      Ong_58: 2200580866773426689
+      Ong_59: 7306995472838712521
+      Ong_6: 5802040102668434956
+      Ong_60: 7736927546157797640
+      Ong_61: -6494452020320463005
+      Ong_62: 6206889343570621518
+      Ong_63: -7497716089332641823
+      Ong_64: -4875419098744661263
+      Ong_65: 4511374509265947345
+      Ong_66: -1370232265718444782
+      Ong_67: 8395095778956535487
+      Ong_68: -1605284610174985786
+      Ong_69: 7921441135974355047
+      Ong_7: 8903922557460789883
+      Ong_70: -61885610690378032
+      Ong_71: -5490808354472825931
+      Ong_72: 731661400360782012
+      Ong_73: 4789386536573725549
+      Ong_74: 6369693094378625062
+      Ong_75: 3690485023245155602
+      Ong_76: 6544829491023891643
+      Ong_77: 1796129429316814724
+      Ong_78: -7943127687873497074
+      Ong_79: 4237058307733061492
+      Ong_8: 6946918672278019145
+      Ong_80: -6571538993601299823
+      Ong_81: 2244848633008352833
+      Ong_82: 3764328766496731448
+      Ong_83: 9100181834194537916
+      Ong_84: 7973890849516929382
+      Ong_85: 5346138147464185632
+      Ong_86: -1398029577933587586
+      Ong_87: -4472565608468600140
+      Ong_88: 2446624859484199449
+      Ong_89: 7064372176732391910
+      Ong_9: 1090334590368961063
+      Ong_90: -742549644927936792
+      Ong_91: -6019747460313274711
+      Ong_92: -8103751987380429868
+      Ong_93: -682900418583115597
+      Ong_94: -6102516928753360644
+      Ong_95: -4538500144007777582
+      Ong_96: -2158500717479799798
+      Ong_97: -7714758439966248549
+      Ong_98: -5051698577681769501
+      Ong_99: -8185954358393276245
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
