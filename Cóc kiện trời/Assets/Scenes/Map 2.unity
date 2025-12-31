@@ -721,7 +721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1109251515}
-  baseOffset: {x: 0, y: 0, z: -5}
+  baseOffset: {x: 0, y: 0, z: -10}
   followSmooth: 8
   lookAheadDistance: 2
   lookAheadSmooth: 6
@@ -2021,10 +2021,11 @@ MonoBehaviour:
   driftTurnMultiplier: 2.2
   driftFactor: 0.6
   driftSlide: 0.7
-  minTurnSpeed: 0.4
+  minTurnSpeed: 0.1
+  minDriftSpeed: 3
   animator: {fileID: 2116468606}
   minAnimSpeed: 0.2
-  maxAnimSpeed: 1.25
+  maxAnimSpeed: 1
 --- !u!114 &1109251511
 MonoBehaviour:
   m_ObjectHideFlags: 0
