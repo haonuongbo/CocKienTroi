@@ -163,6 +163,7 @@ GameObject:
   - component: {fileID: 197057368}
   - component: {fileID: 197057367}
   - component: {fileID: 197057366}
+  - component: {fileID: 197057369}
   m_Layer: 0
   m_Name: "g\u1EA5u_0"
   m_TagString: Untagged
@@ -262,6 +263,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &197057369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197057365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fde98af4455fa854f934366a3b5ef5d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acceleration: 3.5
+  maxSpeed: 6.75
+  turnSpeed: 45
+  driftTurnMultiplier: 2.2
+  driftFactor: 0.6
+  driftSlide: 0.675
+  minTurnSpeed: 0.4
 --- !u!1 &200919162
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,10 +292,10 @@ GameObject:
   m_Component:
   - component: {fileID: 200919168}
   - component: {fileID: 200919167}
-  - component: {fileID: 200919166}
   - component: {fileID: 200919165}
   - component: {fileID: 200919164}
   - component: {fileID: 200919163}
+  - component: {fileID: 200919170}
   m_Layer: 3
   m_Name: Coc
   m_TagString: Player
@@ -359,25 +379,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &200919166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 200919162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fde98af4455fa854f934366a3b5ef5d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  acceleration: 3.5
-  maxSpeed: 6.75
-  turnSpeed: 45
-  driftTurnMultiplier: 2.2
-  driftFactor: 0.6
-  driftSlide: 0.65
-  minTurnSpeed: 0.4
 --- !u!212 &200919167
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -450,6 +451,28 @@ Transform:
   - {fileID: 2024040692}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -92.523}
+--- !u!114 &200919170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200919162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3d53241587331548aceba4addeaaf20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acceleration: 3.5
+  maxSpeed: 6.75
+  turnSpeed: 45
+  driftTurnMultiplier: 2.2
+  driftFactor: 0.6
+  driftSlide: 0.675
+  minTurnSpeed: 0.4
+  animator: {fileID: 2024040695}
+  minAnimSpeed: 0.2
+  maxAnimSpeed: 1.25
 --- !u!1 &374263878
 GameObject:
   m_ObjectHideFlags: 0
@@ -1750,6 +1773,7 @@ GameObject:
   - component: {fileID: 1399441171}
   - component: {fileID: 1399441170}
   - component: {fileID: 1399441169}
+  - component: {fileID: 1399441172}
   m_Layer: 3
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1875,6 +1899,23 @@ Camera:
   m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1399441172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399441167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ad20a9b9a61f9f499db3f251d584f53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 200919168}
+  baseOffset: {x: 0, y: 0, z: -10}
+  followSmooth: 1
+  lookAheadDistance: 2
+  lookAheadSmooth: 1
 --- !u!1 &1434727338
 GameObject:
   m_ObjectHideFlags: 0
