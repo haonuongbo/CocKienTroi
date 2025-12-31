@@ -11,6 +11,9 @@ public class Controller : MonoBehaviour
     public float driftSlide = 0.5f;
     public float minTurnSpeed = 0.2f;
 
+    [Header("Drift")]
+    public float minDriftSpeed = 3f;   // speed required to allow drifting
+
     private Rigidbody2D rb;
     private bool drifting;
     private float steerInput;
@@ -23,29 +26,44 @@ public class Controller : MonoBehaviour
 
     void Update()
     {
-        drifting = Input.GetKey(KeyCode.LeftShift);
-
+        // steering input
         steerInput = 0f;
         if (Input.GetKey(KeyCode.A)) steerInput = 1f;
         if (Input.GetKey(KeyCode.D)) steerInput = -1f;
+
+        // drift allowed ONLY if speed threshold is reached
+        if (Input.GetKey(KeyCode.LeftShift) &&
+            rb.linearVelocity.magnitude >= minDriftSpeed)
+        {
+            drifting = true;
+        }
+        else
+        {
+            drifting = false;
+        }
     }
 
     void FixedUpdate()
     {
+        // acceleration up to max speed
         if (rb.linearVelocity.magnitude < maxSpeed)
         {
             rb.AddForce(-transform.up * acceleration);
         }
 
+        // steering
         if (rb.linearVelocity.magnitude > minTurnSpeed)
         {
             float currentTurnSpeed = drifting
                 ? turnSpeed * driftTurnMultiplier
                 : turnSpeed;
 
-            rb.MoveRotation(rb.rotation + steerInput * currentTurnSpeed * Time.fixedDeltaTime);
+            rb.MoveRotation(
+                rb.rotation + steerInput * currentTurnSpeed * Time.fixedDeltaTime
+            );
         }
 
+        // drift physics
         Vector2 velocity = rb.linearVelocity;
 
         Vector2 forwardDir = -transform.up;
@@ -56,10 +74,12 @@ public class Controller : MonoBehaviour
 
         float targetGrip = drifting ? driftSlide : driftFactor;
 
-        // smooth lateral grip instead of instant cut
-        sideMag = Mathf.Lerp(sideMag, sideMag * targetGrip, Time.fixedDeltaTime * 5f);
+        sideMag = Mathf.Lerp(
+            sideMag,
+            sideMag * targetGrip,
+            Time.fixedDeltaTime * 5f
+        );
 
         rb.linearVelocity = forwardDir * forwardMag + rightDir * sideMag;
     }
-
 }

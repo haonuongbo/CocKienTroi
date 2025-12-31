@@ -4,6 +4,8 @@ public class CameraFollow : MonoBehaviour
 {
     public Transform target;
     public Vector3 baseOffset = new Vector3(0f, 0f, -7.5f);
+    [Header("Drift")]
+    public float minDriftSpeed = 3f;
 
     [Header("Follow")]
     public float followSmooth = 5f;
