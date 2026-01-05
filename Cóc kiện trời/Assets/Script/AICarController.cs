@@ -4,7 +4,7 @@ public class AICarController : MonoBehaviour
 {
     [Header("Cài đặt AI - Đường đi")]
     public WaypointCircuit circuit;
-    public float waypointThreshold = 4f; // Khoảng cách chuyển mục tiêu
+    public float waypointThreshold = 3f; 
 
     [Header("Thông số Vật Lý (Phải giống hệt Controller.cs)")]
     public float acceleration = 10f;
@@ -18,109 +18,107 @@ public class AICarController : MonoBehaviour
     private Rigidbody2D rb;
     private int currentWaypointIndex = 0;
 
-    // --- CÁC BIẾN MÔ PHỎNG NÚT BẤM ---
-    private float inputVertical;   // Thay cho W (1) hoặc S (-1)
-    private float inputHorizontal; // Thay cho A (-1) hoặc D (1)
-    private bool inputDrift;       // Thay cho Space
+    private float inputVertical;   
+    private float inputHorizontal; 
+    private bool inputDrift;       
 
-    // Biến xử lý khi xe bị kẹt
     private float stuckTimer;
     private bool isStuck;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        // Đảm bảo Rigidbody không bị rơi
         rb.gravityScale = 0f;
 
-        // Tự tìm đường nếu quên kéo vào
-        if (circuit == null) circuit = FindFirstObjectByType<WaypointCircuit>();
+        // Tìm Circuit nếu chưa kéo vào Inspector
+        if (circuit == null) 
+        {
+            circuit = GameObject.FindObjectOfType<WaypointCircuit>();
+        }
     }
 
     void Update()
     {
-        if (circuit == null || circuit.waypoints.Count == 0) return;
+        // Kiểm tra an toàn: Nếu không có đường đi hoặc danh sách điểm trống thì thoát ngay
+        if (circuit == null || circuit.waypoints == null || circuit.waypoints.Count == 0) return;
 
-        // 1. Xác định điểm đến tiếp theo
+        // 1. Lấy điểm mục tiêu
         Transform targetNode = circuit.waypoints[currentWaypointIndex];
-        if (Vector2.Distance(transform.position, targetNode.position) < waypointThreshold)
+        
+        // Kiểm tra nếu Node bị xóa hoặc mất
+        if (targetNode == null) return;
+
+        // 2. Kiểm tra khoảng cách để chuyển sang điểm tiếp theo
+        float distanceToTarget = Vector2.Distance(transform.position, targetNode.position);
+        if (distanceToTarget < waypointThreshold)
         {
             currentWaypointIndex = (currentWaypointIndex + 1) % circuit.waypoints.Count;
         }
 
-        // 2. Tính toán Input (AI "bấm" nút gì?)
+        // 3. Tính toán điều khiển
         CalculateVirtualInput(targetNode.position);
 
-        // 3. Kiểm tra xem xe có đang kẹt không để lùi lại
+        // 4. Kiểm tra kẹt
         CheckStuck();
+    }
+
+    public void SwitchCircuit(WaypointCircuit newCircuit, int newStartNodeIndex)
+    {
+        if (newCircuit == null) return;
+        circuit = newCircuit;
+        currentWaypointIndex = Mathf.Clamp(newStartNodeIndex, 0, newCircuit.waypoints.Count - 1);
+        stuckTimer = 0f; 
+        isStuck = false;
     }
 
     void CalculateVirtualInput(Vector3 targetPos)
     {
-        if (isStuck) return; // Nếu đang kẹt thì để hàm gỡ kẹt điều khiển
+        if (isStuck) return;
 
         Vector2 vectorToTarget = targetPos - transform.position;
-        Vector2 forwardDirection = -transform.up; // Hướng xe của bạn là trục Y âm
+        // HƯỚNG XE: Theo code gốc của bạn là -transform.up
+        Vector2 forwardDirection = -transform.up; 
 
-        // Tính góc lệch (-180 đến 180 độ)
+        // Tính góc giữa hướng xe và hướng đến đích
         float angleToTarget = Vector2.SignedAngle(forwardDirection, vectorToTarget);
 
-        // --- MÔ PHỎNG NÚT A/D (Lái) ---
-        // Chia góc cho 45 để ra giá trị từ -1 đến 1 (mượt hơn bấm phím)
-        // Nếu xe rẽ ngược chiều, hãy thêm dấu trừ (-) trước phép tính này
+        // --- SỬA LỖI LÁI ---
+        // Nếu xe rẽ ngược hướng, hãy bỏ dấu trừ (-) ở dòng dưới
         inputHorizontal = Mathf.Clamp(angleToTarget / 45f, -1f, 1f);
 
-        // --- MÔ PHỎNG NÚT W (Ga) ---
-        // Nếu góc cua quá gắt (> 60 độ) thì giảm ga để không văng
-        if (Mathf.Abs(angleToTarget) > 60f)
-        {
-            inputVertical = 0.5f; 
-        }
-        else
-        {
-            inputVertical = 1f; // Chạy hết tốc lực
-        }
+        // --- GA (Luôn tiến tới) ---
+        inputVertical = 1f;
 
-        // --- MÔ PHỎNG NÚT SPACE (Drift) ---
-        // Nếu góc cua gắt hơn 30 độ -> AI tự động drift
+        // --- DRIFT (Nếu cua gắt > 30 độ) ---
         inputDrift = Mathf.Abs(angleToTarget) > 30f;
         
-        // Mẹo: Khi drift, AI nên bẻ lái gắt hơn
-        if (inputDrift && Mathf.Abs(inputHorizontal) < 0.8f)
+        if (inputDrift)
         {
+            // Ép lái mạnh hơn khi drift
             inputHorizontal = (angleToTarget > 0) ? 1f : -1f;
         }
     }
 
     void FixedUpdate()
     {
-        // =========================================================
-        // PHẦN VẬT LÝ - COPY Y HỆT TỪ CONTROLLER.CS GỐC CỦA BẠN
-        // (Chỉ thay thế Input.GetKey bằng các biến input ảo)
-        // =========================================================
-
-        // 1. Xử lý di chuyển (Thay cho Input.GetKey(KeyCode.W))
+        // 1. Xử lý lực đẩy (Thêm Force)
         if (rb.linearVelocity.magnitude < maxSpeed)
         {
-            if (inputVertical > 0) // Đang ga tới
-            {
-                rb.AddForce(-transform.up * acceleration * inputVertical);
-            }
-            else if (inputVertical < 0) // Đang lùi (khi kẹt)
-            {
-                rb.AddForce(transform.up * acceleration * Mathf.Abs(inputVertical));
-            }
+            // Lực luôn tác động theo hướng tới của xe (-transform.up)
+            Vector2 thrustDir = (inputVertical >= 0) ? -transform.up : transform.up;
+            rb.AddForce(thrustDir * acceleration * Mathf.Abs(inputVertical));
         }
 
-        // 2. Xử lý xoay xe
+        // 2. Xử lý xoay xe (Rotation)
         if (rb.linearVelocity.magnitude > minTurnSpeed || isStuck)
         {
             float currentTurnSpeed = inputDrift ? turnSpeed * driftTurnMultiplier : turnSpeed;
-            
-            // inputHorizontal đóng vai trò là chiều xoay (như bấm A/D)
+            // Áp dụng xoay
             rb.MoveRotation(rb.rotation + inputHorizontal * currentTurnSpeed * Time.fixedDeltaTime);
         }
 
-        // 3. Xử lý Drift và độ bám đường (Thay cho Input.GetKey(KeyCode.Space))
+        // 3. Xử lý trượt ngang (Ma sát bên)
         Vector2 velocity = rb.linearVelocity;
         Vector2 forwardDir = -transform.up;
         Vector2 rightDir = transform.right;
@@ -129,32 +127,24 @@ public class AICarController : MonoBehaviour
         float sideMag = Vector2.Dot(velocity, rightDir);
 
         float targetGrip = inputDrift ? driftSlide : driftFactor;
-        
-        // Lerp để trượt mượt mà
         sideMag = Mathf.Lerp(sideMag, sideMag * targetGrip, Time.fixedDeltaTime * 5f);
 
-        // Cập nhật lại vận tốc
         rb.linearVelocity = forwardDir * forwardMag + rightDir * sideMag;
     }
 
-    // Logic gỡ kẹt: Nếu xe đứng yên quá 1 giây thì tự lùi
     void CheckStuck()
     {
-        if (rb.linearVelocity.magnitude < 0.2f)
+        // Nếu xe gần như đứng yên trong khi đang đạp ga
+        if (rb.linearVelocity.magnitude < 0.3f && !isStuck)
         {
             stuckTimer += Time.deltaTime;
-        }
-        else
-        {
-            stuckTimer = 0f;
-        }
-
-        if (stuckTimer > 1f)
-        {
-            isStuck = true;
-            inputVertical = -1f; // Lùi lại
-            inputHorizontal = -inputHorizontal; // Bẻ lái ngược lại
-            Invoke("ResetStuck", 1.5f); // Lùi trong 1.5 giây
+            if (stuckTimer > 1.2f)
+            {
+                isStuck = true;
+                inputVertical = -1f; // Lùi
+                inputHorizontal = -inputHorizontal; // Lái ngược
+                Invoke("ResetStuck", 1.0f); 
+            }
         }
     }
 
@@ -162,11 +152,12 @@ public class AICarController : MonoBehaviour
     {
         isStuck = false;
         stuckTimer = 0f;
+        inputVertical = 1f;
     }
 
     void OnDrawGizmos()
     {
-        if (circuit != null && circuit.waypoints.Count > 0)
+        if (circuit != null && circuit.waypoints != null && circuit.waypoints.Count > 0)
         {
             Gizmos.color = Color.green;
             Gizmos.DrawLine(transform.position, circuit.waypoints[currentWaypointIndex].position);
