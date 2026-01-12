@@ -1559,7 +1559,7 @@ Transform:
   m_GameObject: {fileID: 638878182}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.012555197, w: 0.9999212}
-  m_LocalPosition: {x: 0.12, y: -0.68, z: 0}
+  m_LocalPosition: {x: 0.08, y: -0.93, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1720,7 +1720,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1013583069
 Transform:
   m_ObjectHideFlags: 0
@@ -1734,7 +1734,6 @@ Transform:
   m_LocalScale: {x: 0.53499997, y: 0.53499997, z: 0.535}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 1150430667}
   - {fileID: 1251217850}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -92.523}
@@ -1750,13 +1749,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3d53241587331548aceba4addeaaf20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: 3.5
+  acceleration: 3.75
   maxSpeed: 6.75
-  turnSpeed: 45
-  driftTurnMultiplier: 2.2
-  driftFactor: 0.6
-  driftSlide: 0.675
-  minTurnSpeed: 0.4
+  turnSpeed: 60
+  driftTurnMultiplier: 2
+  driftFactor: 0.3
+  driftSlide: 0.7
+  minTurnSpeed: 0.3
   minDriftSpeed: 3.3
   animator: {fileID: 1251217853}
   minAnimSpeed: 0.2
@@ -1833,9 +1832,9 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!212 &1013583074
 SpriteRenderer:
@@ -2007,13 +2006,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1150430666}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.67053837, w: 0.7418749}
-  m_LocalPosition: {x: 0.049972083, y: -3.3499799, z: 0.31559113}
-  m_LocalScale: {x: -0.15489425, y: 1.7724789, z: 7.3203316}
+  m_LocalRotation: {x: -0, y: -0, z: -0.9996625, w: 0.025979104}
+  m_LocalPosition: {x: -2.2016785, y: 10.662176, z: 0.16884126}
+  m_LocalScale: {x: -0.08286841, y: 0.9482763, z: 3.9163775}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1013583069}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -60.558}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -84.5}
 --- !u!114 &1150430668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2027,10 +2026,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1013583069}
-  baseOffset: {x: 0, y: 0, z: -5}
-  followSmooth: 8
+  baseOffset: {x: 0, y: 0, z: -7.5}
+  followSmooth: 3.7
   lookAheadDistance: 2
-  lookAheadSmooth: 6
+  lookAheadSmooth: 3.05
 --- !u!114 &1150430669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2054,8 +2053,8 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
-  m_Antialiasing: 0
+  m_RenderPostProcessing: 1
+  m_Antialiasing: 2
   m_AntialiasingQuality: 2
   m_StopNaN: 0
   m_Dithering: 0
@@ -2482,7 +2481,7 @@ Transform:
   m_GameObject: {fileID: 1281840452}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.9137084, w: -0.4063706}
-  m_LocalPosition: {x: -32.53834, y: 6.754183, z: 0.25626802}
+  m_LocalPosition: {x: -31.47, y: 7.75, z: 0.25626802}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2583,10 +2582,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1987742066}
-  baseOffset: {x: 0, y: 0, z: -5}
-  followSmooth: 8
+  baseOffset: {x: 0, y: 0, z: -7.5}
+  followSmooth: 5
   lookAheadDistance: 2
-  lookAheadSmooth: 6
+  lookAheadSmooth: 3
 --- !u!114 &1394444347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3047,7 +3046,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1987742061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3480,6 +3479,7 @@ EdgeCollider2D:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1150430667}
   - {fileID: 1877056614}
   - {fileID: 199221772}
   - {fileID: 139763583}

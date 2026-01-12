@@ -569,8 +569,8 @@ Transform:
   m_LocalScale: {x: 0.535, y: 0.535, z: 0.535}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 1399441168}
   - {fileID: 2024040692}
+  - {fileID: 1399441168}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -92.523}
 --- !u!114 &200919170
@@ -2501,13 +2501,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1399441167}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.67053837, w: 0.7418749}
-  m_LocalPosition: {x: 0.049972083, y: -3.3499799, z: 0.31559113}
-  m_LocalScale: {x: -0.15489425, y: 1.7724789, z: 7.3203316}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7225009, w: 0.69136995}
+  m_LocalPosition: {x: 0.049972128, y: -3.3499796, z: -18.691587}
+  m_LocalScale: {x: -0.15489443, y: 1.7724807, z: 7.3203316}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 200919168}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -60.558}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1399441169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2525,14 +2525,14 @@ MonoBehaviour:
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
   m_Cameras: []
-  m_RendererIndex: 0
+  m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
-  m_Antialiasing: 0
+  m_RenderPostProcessing: 1
+  m_Antialiasing: 3
   m_AntialiasingQuality: 2
   m_StopNaN: 0
   m_Dithering: 0
@@ -2624,10 +2624,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 200919168}
-  baseOffset: {x: 0, y: 0, z: -5}
-  followSmooth: 8
-  lookAheadDistance: 2
-  lookAheadSmooth: 6
+  targetRb: {fileID: 200919165}
+  followSpeed: 8
+  lookAheadDistance: 1.5
+  baseOrthoSize: 3.37
+  zoomAmount: 0.4
+  maxSpeed: 10
+  maxTilt: 3
+  shakeDuration: 0.15
+  shakeStrength: 0
+  minBounds: {x: -100, y: -100}
+  maxBounds: {x: 100, y: 100}
 --- !u!1 &1420204237
 GameObject:
   m_ObjectHideFlags: 0
