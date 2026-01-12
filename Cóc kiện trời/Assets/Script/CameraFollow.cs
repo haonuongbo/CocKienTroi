@@ -5,6 +5,7 @@ public class TopDownCameraFollow : MonoBehaviour
     [Header("Target")]
     public Transform target;
     public Rigidbody2D targetRb;
+    private Vector3 currentVelocity;
 
     [Header("Follow")]
     public float followSpeed = 8f;
