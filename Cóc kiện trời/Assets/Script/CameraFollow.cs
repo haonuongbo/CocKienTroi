@@ -1,11 +1,11 @@
 using UnityEngine;
+
 [RequireComponent(typeof(Camera))]
 public class TopDownCameraFollow : MonoBehaviour
 {
     [Header("Target")]
     public Transform target;
     public Rigidbody2D targetRb;
-    private Vector3 currentVelocity;
 
     [Header("Follow")]
     public float followSpeed = 8f;
@@ -17,7 +17,9 @@ public class TopDownCameraFollow : MonoBehaviour
     public float maxSpeed = 10f;
 
     [Header("Tilt")]
-    public float maxTilt = 5f;
+    public float normalTilt = 3f;     // A / D
+    public float driftTilt = 7f;      // Shift + A / D
+    public float tiltLerpSpeed = 6f;
 
     [Header("Shake")]
     public float shakeDuration = 0.15f;
@@ -46,12 +48,13 @@ public class TopDownCameraFollow : MonoBehaviour
         Vector3 lookAhead = Vector3.zero;
 
         if (velocity.magnitude > 0.1f)
-        {
             lookAhead = (Vector3)(velocity.normalized * lookAheadDistance);
-        }
 
         Vector3 targetPos = target.position + lookAhead;
         targetPos.z = transform.position.z;
+
+        targetPos.x = Mathf.Clamp(targetPos.x, minBounds.x, maxBounds.x);
+        targetPos.y = Mathf.Clamp(targetPos.y, minBounds.y, maxBounds.y);
 
         Vector3 smoothPos = Vector3.Lerp(
             transform.position,
@@ -59,11 +62,7 @@ public class TopDownCameraFollow : MonoBehaviour
             followSpeed * Time.deltaTime
         );
 
-        smoothPos.x = Mathf.Clamp(smoothPos.x, minBounds.x, maxBounds.x);
-        smoothPos.y = Mathf.Clamp(smoothPos.y, minBounds.y, maxBounds.y);
-
         UpdateShake();
-
         transform.position = smoothPos + shakeOffset;
 
         UpdateZoom(velocity.magnitude);
@@ -82,14 +81,17 @@ public class TopDownCameraFollow : MonoBehaviour
 
     void UpdateTilt()
     {
-        float steerInput = Input.GetAxis("Horizontal");
-        float tiltZ = -steerInput * maxTilt;
+        float steerInput = Input.GetAxisRaw("Horizontal");
+        bool isDrifting = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
+
+        float tiltAmount = isDrifting ? driftTilt : normalTilt;
+        float tiltZ = -steerInput * tiltAmount;
 
         Quaternion targetRot = Quaternion.Euler(0f, 0f, tiltZ);
         transform.rotation = Quaternion.Lerp(
             transform.rotation,
             targetRot,
-            Time.deltaTime * 6f
+            Time.deltaTime * tiltLerpSpeed
         );
     }
 

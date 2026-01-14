@@ -587,12 +587,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   acceleration: 3.5
   maxSpeed: 6.75
-  turnSpeed: 60
-  driftTurnMultiplier: 2
+  turnSpeed: 70
+  driftTurnMultiplier: 1.85
   driftFactor: 0.6
   driftSlide: 0.675
   minTurnSpeed: 0.4
-  minDriftSpeed: 3.3
+  minDriftSpeed: 4
   animator: {fileID: 2024040695}
   minAnimSpeed: 0.2
   maxAnimSpeed: 1.25
@@ -1586,7 +1586,7 @@ Transform:
   m_GameObject: {fileID: 617423054}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.9137084, w: -0.4063706}
-  m_LocalPosition: {x: -32.53834, y: 6.754183, z: 0.25626802}
+  m_LocalPosition: {x: -32.01, y: 7.25, z: 0.25626802}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2769,7 +2769,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 3.37
+  orthographic size: 2.2466667
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2799,14 +2799,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 200919168}
   targetRb: {fileID: 200919165}
-  followSpeed: 14.3
+  followSpeed: 4.8
   lookAheadDistance: 1.33
-  baseOrthoSize: 3.37
-  zoomAmount: 0.4
-  maxSpeed: 12
-  maxTilt: 2
-  shakeDuration: 2
-  shakeStrength: 13.24
+  baseOrthoSize: 2.2466667
+  zoomAmount: 0.5
+  maxSpeed: 1
+  normalTilt: 0.3
+  driftTilt: 1
+  tiltLerpSpeed: 2.09
+  shakeDuration: 0.15
+  shakeStrength: 2
   minBounds: {x: -100, y: -100}
   maxBounds: {x: 100, y: 100}
 --- !u!1 &1420204237
