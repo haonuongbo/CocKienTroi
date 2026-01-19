@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,7 +6,7 @@ public class LapManager2D : MonoBehaviour
 {
     public int maxLap = 3;
     public int currentLap = 0;
-    public Text lapText;
+    public TextMeshProUGUI lapText;
 
     private bool canCount = true;
 

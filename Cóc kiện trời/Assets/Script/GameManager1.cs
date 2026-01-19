@@ -24,8 +24,9 @@ public class GameManager : MonoBehaviour
     private float raceTime = 0f;     // Biến lưu thời gian chạy
     private bool isRacing = false;   // Biến cờ: True = Đang đua, False = Dừng
     private float uiUpdateTimer = 0f;
-    private Controller playerCar;                // Script lái xe
+    private ControlSpeedAnim  playerCar;                // Script lái xe
     private TopDownCameraFollow cameraFollow;   // Script camera
+    private Animator playerAnimator;
 
     void Start()
     {
@@ -48,10 +49,11 @@ public class GameManager : MonoBehaviour
         }
 
         // Lấy ControlSpeedAnim script
-        playerCar = FindObjectOfType<Controller>();
+        playerCar = FindObjectOfType<ControlSpeedAnim>();
         if (playerCar == null)
         {
             Debug.LogWarning("[GameManager] Không tìm thấy Controller script! Vui lòng thêm vào Player/Xe.");
+            playerAnimator = playerCar.GetComponent<Animator>();
         }
 
         // Lấy TopDownCameraFollow script
@@ -90,19 +92,18 @@ public class GameManager : MonoBehaviour
 
     IEnumerator StartCountdown()
     {
-        // 1. KHÓA XE & CAMERA & RESET
+        // 1. DISABLE CAR, ANIMATION, CAMERA
         if (playerCar != null) playerCar.enabled = false;
-        if (cameraFollow != null) cameraFollow.enabled = false;
+        if (playerAnimator != null) playerAnimator.speed = 0f;
+        if (cameraFollow != null) cameraFollow.enabled = true;
+
         if (numberDisplay) numberDisplay.gameObject.SetActive(true);
         if (goHolder) goHolder.SetActive(false);
 
-        // Cập nhật UI responsive (chỉ reset Number và GO, không reset TimeText)
         if (canvasResponsive != null)
-        {
             canvasResponsive.ResetNumberAndGO();
-        }
 
-        // 2. ĐẾM 3 -> 2 -> 1
+        // 2. COUNTDOWN 3-2-1
         for (int i = 0; i < numberSprites.Length; i++)
         {
             if (numberDisplay)
@@ -110,34 +111,28 @@ public class GameManager : MonoBehaviour
                 numberDisplay.sprite = numberSprites[i];
                 numberDisplay.SetNativeSize();
             }
-            
-            // Phát âm thanh bíp
+
             if (audioSource != null && beepSound != null)
-            {
                 audioSource.PlayOneShot(beepSound);
-            }
-            
+
             yield return new WaitForSeconds(1f);
         }
 
-        // 3. HIỆN CHỮ GO!
+        // 3. SHOW GO
         if (numberDisplay) numberDisplay.gameObject.SetActive(false);
         if (goHolder) goHolder.SetActive(true);
 
-        // Phát âm thanh GO
         if (audioSource != null && goSound != null)
-        {
             audioSource.PlayOneShot(goSound);
-        }
 
-        // 4. CHỜ 1 GIÂY
         yield return new WaitForSeconds(1f);
 
-        // 5. BẮT ĐẦU ĐUA (Start Game)
+        // 4. ENABLE CAR, ANIMATION, CAMERA
         if (goHolder) goHolder.SetActive(false);
         if (playerCar != null) playerCar.enabled = true;
+        if (playerAnimator != null) playerAnimator.speed = 1f;
         if (cameraFollow != null) cameraFollow.enabled = true;
 
-        isRacing = true; // Kích hoạt đồng hồ đếm giờ
-    }
+        isRacing = true;
+    }   
 }

@@ -1705,7 +1705,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1536117265}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a66719d6891e2034c9d164d521f58ec3, type: 3}
+  m_Script: {fileID: 11500000, guid: 7adc42a56fd3acc4eaceec87b3f13109, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   numberDisplay: {fileID: 5273694284895882402}
@@ -1715,7 +1715,6 @@ MonoBehaviour:
   - {fileID: -385505819896812756, guid: 588b3c56ba479144c804c998f2f0d8f1, type: 3}
   - {fileID: -7855406645237050754, guid: 9a8f0b7d0f3493340a37f798e71570cd, type: 3}
   - {fileID: 8423626923605789382, guid: 0688ea95b020a014cab3fa23338ef665, type: 3}
-  playerCar: {fileID: 0}
   beepSound: {fileID: 8300000, guid: 37bb275a52f79944d8c0309facdd50b5, type: 3}
   goSound: {fileID: 8300000, guid: 3420f3376935448488bf42157b9aa87e, type: 3}
 --- !u!4 &1536117267
