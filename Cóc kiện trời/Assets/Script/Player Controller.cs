@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
          RGB = GetComponent<Rigidbody2D>();
-         surfaceEffector2D = FindObjectOfType<SurfaceEffector2D>();
+        surfaceEffector2D = Object.FindFirstObjectByType<SurfaceEffector2D>();
     }
 
     void RotatePlayer()
