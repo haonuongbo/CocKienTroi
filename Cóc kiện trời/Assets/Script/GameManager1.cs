@@ -12,9 +12,6 @@ public class GameManager : MonoBehaviour
 
     public Sprite[] numberSprites;   // Ảnh 3, 2, 1
 
-    [Header("---- CÀI ĐẶT XE ----")]
-    public Controller playerCar;     // Script lái xe
-
     [Header("---- CÀI ĐẶT ÂM THANH ----")]
     public AudioClip beepSound;      // Âm thanh bíp cho 3-2-1
     public AudioClip goSound;        // Âm thanh GO riêng
@@ -27,6 +24,8 @@ public class GameManager : MonoBehaviour
     private float raceTime = 0f;     // Biến lưu thời gian chạy
     private bool isRacing = false;   // Biến cờ: True = Đang đua, False = Dừng
     private float uiUpdateTimer = 0f;
+    private Controller playerCar;                // Script lái xe
+    private TopDownCameraFollow cameraFollow;   // Script camera
 
     void Start()
     {
@@ -46,6 +45,20 @@ public class GameManager : MonoBehaviour
         if (canvasResponsive == null)
         {
             Debug.LogWarning("[GameManager] Không tìm thấy CanvasResponsive script! Vui lòng thêm vào Canvas.");
+        }
+
+        // Lấy ControlSpeedAnim script
+        playerCar = FindObjectOfType<Controller>();
+        if (playerCar == null)
+        {
+            Debug.LogWarning("[GameManager] Không tìm thấy Controller script! Vui lòng thêm vào Player/Xe.");
+        }
+
+        // Lấy TopDownCameraFollow script
+        cameraFollow = FindObjectOfType<TopDownCameraFollow>();
+        if (cameraFollow == null)
+        {
+            Debug.LogWarning("[GameManager] Không tìm thấy TopDownCameraFollow script! Vui lòng thêm vào Camera.");
         }
 
         StartCoroutine(StartCountdown());
@@ -77,8 +90,9 @@ public class GameManager : MonoBehaviour
 
     IEnumerator StartCountdown()
     {
-        // 1. KHÓA XE & RESET
+        // 1. KHÓA XE & CAMERA & RESET
         if (playerCar != null) playerCar.enabled = false;
+        if (cameraFollow != null) cameraFollow.enabled = false;
         if (numberDisplay) numberDisplay.gameObject.SetActive(true);
         if (goHolder) goHolder.SetActive(false);
 
@@ -122,6 +136,7 @@ public class GameManager : MonoBehaviour
         // 5. BẮT ĐẦU ĐUA (Start Game)
         if (goHolder) goHolder.SetActive(false);
         if (playerCar != null) playerCar.enabled = true;
+        if (cameraFollow != null) cameraFollow.enabled = true;
 
         isRacing = true; // Kích hoạt đồng hồ đếm giờ
     }
