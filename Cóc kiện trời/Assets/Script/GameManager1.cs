@@ -1,7 +1,8 @@
-using UnityEngine;
-using UnityEngine.UI;
 using System.Collections;
 using TMPro;
+using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -26,42 +27,30 @@ public class GameManager : MonoBehaviour
     private float uiUpdateTimer = 0f;
     private ControlSpeedAnim  playerCar;                // Script lái xe
     private TopDownCameraFollow cameraFollow;   // Script camera
-    private Animator playerAnimator;
+
+    [Header("---- Disalbe Animation ----")]
+    public Animator playerAnimator;
 
     void Start()
     {
-        // Reset thời gian về 0
         raceTime = 0f;
         isRacing = false;
 
-        // Khởi tạo AudioSource
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
-        {
             audioSource = gameObject.AddComponent<AudioSource>();
-        }
 
-        // Lấy CanvasResponsive script
         canvasResponsive = FindObjectOfType<CanvasResponsive>();
-        if (canvasResponsive == null)
-        {
-            Debug.LogWarning("[GameManager] Không tìm thấy CanvasResponsive script! Vui lòng thêm vào Canvas.");
-        }
 
-        // Lấy ControlSpeedAnim script
         playerCar = FindObjectOfType<ControlSpeedAnim>();
-        if (playerCar == null)
-        {
-            Debug.LogWarning("[GameManager] Không tìm thấy Controller script! Vui lòng thêm vào Player/Xe.");
+        if (playerCar != null)
             playerAnimator = playerCar.GetComponent<Animator>();
-        }
 
-        // Lấy TopDownCameraFollow script
         cameraFollow = FindObjectOfType<TopDownCameraFollow>();
-        if (cameraFollow == null)
-        {
-            Debug.LogWarning("[GameManager] Không tìm thấy TopDownCameraFollow script! Vui lòng thêm vào Camera.");
-        }
+
+        // Disable UI input during countdown
+        if (EventSystem.current != null)
+            EventSystem.current.enabled = false;
 
         StartCoroutine(StartCountdown());
     }
@@ -87,12 +76,13 @@ public class GameManager : MonoBehaviour
                     timeText.text = string.Format("{0:00}:{1:00}:{2:00}", minutes, seconds, milliseconds);
                 }
             }
+            
         }
     }
 
     IEnumerator StartCountdown()
     {
-        // 1. DISABLE CAR, ANIMATION, CAMERA
+        // 1. DISABLE GAMEPLAY
         if (playerCar != null) playerCar.enabled = false;
         if (playerAnimator != null) playerAnimator.speed = 0f;
         if (cameraFollow != null) cameraFollow.enabled = true;
@@ -103,7 +93,7 @@ public class GameManager : MonoBehaviour
         if (canvasResponsive != null)
             canvasResponsive.ResetNumberAndGO();
 
-        // 2. COUNTDOWN 3-2-1
+        // 2. COUNTDOWN
         for (int i = 0; i < numberSprites.Length; i++)
         {
             if (numberDisplay)
@@ -112,27 +102,31 @@ public class GameManager : MonoBehaviour
                 numberDisplay.SetNativeSize();
             }
 
-            if (audioSource != null && beepSound != null)
+            if (beepSound != null)
                 audioSource.PlayOneShot(beepSound);
 
             yield return new WaitForSeconds(1f);
         }
 
-        // 3. SHOW GO
+        // 3. GO
         if (numberDisplay) numberDisplay.gameObject.SetActive(false);
         if (goHolder) goHolder.SetActive(true);
 
-        if (audioSource != null && goSound != null)
+        if (goSound != null)
             audioSource.PlayOneShot(goSound);
 
         yield return new WaitForSeconds(1f);
 
-        // 4. ENABLE CAR, ANIMATION, CAMERA
+        // 4. ENABLE GAMEPLAY
         if (goHolder) goHolder.SetActive(false);
         if (playerCar != null) playerCar.enabled = true;
         if (playerAnimator != null) playerAnimator.speed = 1f;
         if (cameraFollow != null) cameraFollow.enabled = true;
 
+        if (EventSystem.current != null)
+            EventSystem.current.enabled = true;
+
         isRacing = true;
-    }   
+    }
+
 }
