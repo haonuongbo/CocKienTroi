@@ -399,14 +399,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   circuit: {fileID: 1727552164}
-  waypointThreshold: 3
-  acceleration: 12
-  maxSpeed: 10
-  turnSpeed: 150
-  driftTurnMultiplier: 1.5
-  driftFactor: 0.95
-  driftSlide: 0.4
-  minTurnSpeed: 0.2
+  waypointThreshold: 4
+  acceleration: 3.5
+  maxSpeed: 6.75
+  turnSpeed: 45
+  driftTurnMultiplier: 2.2
+  driftFactor: 0.6
+  driftSlide: 0.675
+  minTurnSpeed: 0.4
 --- !u!114 &316401426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2166,14 +2166,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   circuit: {fileID: 1727552164}
-  waypointThreshold: 3
-  acceleration: 12
-  maxSpeed: 10
-  turnSpeed: 150
-  driftTurnMultiplier: 1.5
-  driftFactor: 0.95
-  driftSlide: 0.4
-  minTurnSpeed: 0.2
+  waypointThreshold: 4
+  acceleration: 3.5
+  maxSpeed: 6.75
+  turnSpeed: 45
+  driftTurnMultiplier: 2.2
+  driftFactor: 0.6
+  driftSlide: 0.675
+  minTurnSpeed: 0.4
 --- !u!114 &623282932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2753,14 +2753,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   circuit: {fileID: 1727552164}
-  waypointThreshold: 3
-  acceleration: 12
-  maxSpeed: 10
-  turnSpeed: 150
-  driftTurnMultiplier: 1.5
-  driftFactor: 0.95
-  driftSlide: 0.4
-  minTurnSpeed: 0.2
+  waypointThreshold: 4
+  acceleration: 3.5
+  maxSpeed: 6.75
+  turnSpeed: 45
+  driftTurnMultiplier: 2.2
+  driftFactor: 0.6
+  driftSlide: 0.675
+  minTurnSpeed: 0.4
 --- !u!114 &858216285
 MonoBehaviour:
   m_ObjectHideFlags: 0
