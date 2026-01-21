@@ -832,8 +832,8 @@ GameObject:
   - component: {fileID: 196531731}
   - component: {fileID: 196531730}
   - component: {fileID: 196531729}
-  - component: {fileID: 196531728}
   - component: {fileID: 196531727}
+  - component: {fileID: 196531734}
   m_Layer: 3
   m_Name: Gau
   m_TagString: Player
@@ -855,29 +855,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentLap: 0
   totalLap: 3
---- !u!114 &196531728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 196531726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3d53241587331548aceba4addeaaf20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  acceleration: 3.5
-  maxSpeed: 6.75
-  turnSpeed: 80
-  driftTurnMultiplier: 1.6
-  driftFactor: 0.6
-  driftSlide: 0.675
-  minTurnSpeed: 0
-  minDriftSpeed: 4
-  animator: {fileID: 1283764898}
-  minAnimSpeed: 1
-  maxAnimSpeed: 1.5
 --- !u!114 &196531729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1025,6 +1002,29 @@ Transform:
   - {fileID: 1283764902}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -92.523}
+--- !u!114 &196531734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196531726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3c7a4158f92ab54ba07f19b09568167, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acceleration: 3.5
+  maxSpeed: 6.75
+  turnSpeed: 80
+  driftTurnMultiplier: 1.6
+  driftFactor: 0.6
+  driftSlide: 0.675
+  minTurnSpeed: 0
+  minDriftSpeed: 4
+  animator: {fileID: 2024040695}
+  minAnimSpeed: 0.2
+  maxAnimSpeed: 1.25
 --- !u!1 &200919162
 GameObject:
   m_ObjectHideFlags: 0
@@ -1038,8 +1038,8 @@ GameObject:
   - component: {fileID: 200919165}
   - component: {fileID: 200919164}
   - component: {fileID: 200919163}
-  - component: {fileID: 200919170}
   - component: {fileID: 200919171}
+  - component: {fileID: 200919172}
   m_Layer: 3
   m_Name: Coc
   m_TagString: Player
@@ -1194,29 +1194,6 @@ Transform:
   - {fileID: 2024040692}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -92.523}
---- !u!114 &200919170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 200919162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3d53241587331548aceba4addeaaf20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  acceleration: 3.5
-  maxSpeed: 6.75
-  turnSpeed: 80
-  driftTurnMultiplier: 1.6
-  driftFactor: 0.6
-  driftSlide: 0.675
-  minTurnSpeed: 0
-  minDriftSpeed: 4
-  animator: {fileID: 2024040695}
-  minAnimSpeed: 0.2
-  maxAnimSpeed: 1.25
 --- !u!114 &200919171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1231,6 +1208,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentLap: 0
   totalLap: 3
+--- !u!114 &200919172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200919162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3c7a4158f92ab54ba07f19b09568167, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acceleration: 3.5
+  maxSpeed: 6.75
+  turnSpeed: 80
+  driftTurnMultiplier: 1.6
+  driftFactor: 0.6
+  driftSlide: 0.675
+  minTurnSpeed: 0
+  minDriftSpeed: 4
+  animator: {fileID: 2024040695}
+  minAnimSpeed: 0.2
+  maxAnimSpeed: 1.25
 --- !u!1 &374263878
 GameObject:
   m_ObjectHideFlags: 0
@@ -1654,8 +1654,8 @@ GameObject:
   - component: {fileID: 511005293}
   - component: {fileID: 511005292}
   - component: {fileID: 511005291}
-  - component: {fileID: 511005290}
   - component: {fileID: 511005289}
+  - component: {fileID: 511005296}
   m_Layer: 3
   m_Name: Cop
   m_TagString: Player
@@ -1677,29 +1677,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentLap: 0
   totalLap: 3
---- !u!114 &511005290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 511005288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3d53241587331548aceba4addeaaf20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  acceleration: 3.5
-  maxSpeed: 6.75
-  turnSpeed: 80
-  driftTurnMultiplier: 1.6
-  driftFactor: 0.6
-  driftSlide: 0.675
-  minTurnSpeed: 0
-  minDriftSpeed: 4
-  animator: {fileID: 1496565978}
-  minAnimSpeed: 0.5
-  maxAnimSpeed: 1.5
 --- !u!114 &511005291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1847,6 +1824,29 @@ Transform:
   - {fileID: 1496565982}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -92.523}
+--- !u!114 &511005296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511005288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3c7a4158f92ab54ba07f19b09568167, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acceleration: 3.5
+  maxSpeed: 6.75
+  turnSpeed: 80
+  driftTurnMultiplier: 1.6
+  driftFactor: 0.6
+  driftSlide: 0.675
+  minTurnSpeed: 0
+  minDriftSpeed: 4
+  animator: {fileID: 2024040695}
+  minAnimSpeed: 0.2
+  maxAnimSpeed: 1.25
 --- !u!1 &545464267
 GameObject:
   m_ObjectHideFlags: 0
@@ -1901,35 +1901,11 @@ MonoBehaviour:
   - eventID: 2
     callback:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 200919170}
-          m_TargetAssemblyTypeName: ControlSpeedAnim, Assembly-CSharp
-          m_MethodName: DriftDown
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
   - eventID: 3
     callback:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 200919170}
-          m_TargetAssemblyTypeName: ControlSpeedAnim, Assembly-CSharp
-          m_MethodName: DriftRelease
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
 --- !u!114 &545464270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2245,7 +2221,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &619155323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2267,7 +2243,7 @@ MonoBehaviour:
   - {fileID: 8423626923605789382, guid: 0688ea95b020a014cab3fa23338ef665, type: 3}
   beepSound: {fileID: 8300000, guid: 37bb275a52f79944d8c0309facdd50b5, type: 3}
   goSound: {fileID: 8300000, guid: 3420f3376935448488bf42157b9aa87e, type: 3}
-  playerAnimator: {fileID: 0}
+  playerAnimator: {fileID: 2024040695}
 --- !u!4 &619155324
 Transform:
   m_ObjectHideFlags: 0
@@ -2744,8 +2720,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4281646847
+  m_fontColor: {r: 1, g: 0.7437828, b: 0.2028302, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3458,8 +3434,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4282826493
+  m_fontColor: {r: 0.990566, g: 0.743569, b: 0.2756764, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3855,35 +3831,11 @@ MonoBehaviour:
   - eventID: 2
     callback:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 200919170}
-          m_TargetAssemblyTypeName: ControlSpeedAnim, Assembly-CSharp
-          m_MethodName: TurnRightDown
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
   - eventID: 3
     callback:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 200919170}
-          m_TargetAssemblyTypeName: ControlSpeedAnim, Assembly-CSharp
-          m_MethodName: TurnRelease
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
 --- !u!114 &1255607094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6396,8 +6348,8 @@ GameObject:
   - component: {fileID: 1895765680}
   - component: {fileID: 1895765679}
   - component: {fileID: 1895765678}
-  - component: {fileID: 1895765677}
   - component: {fileID: 1895765676}
+  - component: {fileID: 1895765683}
   m_Layer: 3
   m_Name: Cao
   m_TagString: Player
@@ -6419,29 +6371,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentLap: 0
   totalLap: 3
---- !u!114 &1895765677
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1895765675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3d53241587331548aceba4addeaaf20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  acceleration: 3.5
-  maxSpeed: 6.75
-  turnSpeed: 80
-  driftTurnMultiplier: 1.6
-  driftFactor: 0.6
-  driftSlide: 0.675
-  minTurnSpeed: 0
-  minDriftSpeed: 4
-  animator: {fileID: 1063531929}
-  minAnimSpeed: 3.5
-  maxAnimSpeed: 5
 --- !u!114 &1895765678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6589,6 +6518,29 @@ Transform:
   - {fileID: 1063531933}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -92.523}
+--- !u!114 &1895765683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895765675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3c7a4158f92ab54ba07f19b09568167, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acceleration: 3.5
+  maxSpeed: 6.75
+  turnSpeed: 80
+  driftTurnMultiplier: 1.6
+  driftFactor: 0.6
+  driftSlide: 0.675
+  minTurnSpeed: 0
+  minDriftSpeed: 4
+  animator: {fileID: 2024040695}
+  minAnimSpeed: 0.2
+  maxAnimSpeed: 1.25
 --- !u!1 &1920563739
 GameObject:
   m_ObjectHideFlags: 0
@@ -6718,35 +6670,11 @@ MonoBehaviour:
   - eventID: 2
     callback:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 200919170}
-          m_TargetAssemblyTypeName: ControlSpeedAnim, Assembly-CSharp
-          m_MethodName: TurnLeftDown
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
   - eventID: 3
     callback:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 200919170}
-          m_TargetAssemblyTypeName: ControlSpeedAnim, Assembly-CSharp
-          m_MethodName: TurnRelease
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
 --- !u!114 &1922181352
 MonoBehaviour:
   m_ObjectHideFlags: 0
