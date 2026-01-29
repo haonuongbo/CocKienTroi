@@ -40,13 +40,20 @@ public class GameManager : MonoBehaviour
         if (audioSource == null)
             audioSource = gameObject.AddComponent<AudioSource>();
 
-        canvasResponsive = FindObjectOfType<CanvasResponsive>();
+        canvasResponsive = FindFirstObjectByType<CanvasResponsive>();
 
-        playerCar = FindObjectOfType<ControlSpeedAnim>();
+        playerCar = FindFirstObjectByType<ControlSpeedAnim>();
+        canvasResponsive = FindFirstObjectByType<CanvasResponsive>();
+
+        playerCar = FindFirstObjectByType<ControlSpeedAnim>();
         if (playerCar != null)
             playerAnimator = playerCar.GetComponent<Animator>();
 
-        cameraFollow = FindObjectOfType<TopDownCameraFollow>();
+        cameraFollow = FindFirstObjectByType<TopDownCameraFollow>();
+        if (playerCar != null)
+            playerAnimator = playerCar.GetComponent<Animator>();
+
+        cameraFollow = FindFirstObjectByType<TopDownCameraFollow>();
 
         // Disable UI input during countdown
         if (EventSystem.current != null)
