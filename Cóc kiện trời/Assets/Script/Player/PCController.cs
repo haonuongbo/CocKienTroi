@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
-
-public class PCController : MonoBehaviour
+using Unity.Netcode;
+public class PCController : NetworkBehaviour
 {
     [Header("Stats")] public float acceleration = 10.1f;
     public float maxSpeed = 8f;
@@ -21,8 +21,10 @@ public class PCController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>(); rb.gravityScale = 0f;
     }
+   
     void Update()
     {
+       
         // steering input 
         steerInput = 0f;
         if (Input.GetKey(KeyCode.A)) steerInput = 1f;
@@ -55,6 +57,7 @@ public class PCController : MonoBehaviour
     }
     void FixedUpdate()
  {
+        if(!IsOwner) return;
         // accelerate to fixed max speed 
         if (rb.linearVelocity.magnitude < maxSpeed)
         {
