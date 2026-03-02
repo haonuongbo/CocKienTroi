@@ -1,8 +1,7 @@
 using UnityEngine;
-using Unity.Netcode;
 
 
-public class AICarController : NetworkBehaviour 
+public class AICarController : MonoBehaviour 
 {
     [Header("Cài đặt AI - Đường đi")]
     public WaypointCircuit circuit;
@@ -40,53 +39,7 @@ public class AICarController : NetworkBehaviour
         rb.gravityScale = 0f;
     }
 
-    public override void OnNetworkSpawn()
-    {
-         Debug.Log($"AICar OnNetworkSpawn IsServer:{IsServer} IsOwner:{IsOwner} IsHost:{IsHost} IsClient:{IsClient}");
-    Debug.Log($"circuit:{(circuit!=null)} animator:{(animator!=null)} rb:{(rb!=null)}");
-        base.OnNetworkSpawn();
-
-        if (circuit == null)
-        {   
-            GameObject circuitObj = null;
-            // Try tag-based lookup first (safer if you tag your Main circuit as 'MainCircuit')
-            try
-            {
-                circuitObj = GameObject.FindWithTag("MainCircuit");
-            }
-            catch (UnityException)
-            {
-                // Tag may not exist in project; ignore and fall back
-            }
-
-            if (circuitObj != null)
-            {
-                WaypointCircuit found = circuitObj.GetComponent<WaypointCircuit>();
-                if (found != null) circuit = found;
-            }
-
-            // Fallback to named object (if provided) or any circuit in scene
-            if (circuit == null && !string.IsNullOrEmpty(circuitName))
-            {
-                GameObject go = GameObject.Find(circuitName);
-                if (go != null) circuit = go.GetComponent<WaypointCircuit>();
-            }
-
-            if (circuit == null)
-                circuit = FindObjectOfType<WaypointCircuit>();
-        }
-
-        // Auto-find animator if not set on the inspector
-        if (animator == null)
-        {
-            animator = GetComponent<Animator>();
-            if (animator == null)
-                animator = GetComponentInChildren<Animator>();
-            if (animator == null)
-                animator = FindFirstObjectByType<Animator>(); // last resort: any animator in scene
-        }
-    }
-
+    
     void Update()
     {
         if (circuit == null || circuit.waypoints.Count == 0) return;
@@ -153,7 +106,7 @@ public class AICarController : NetworkBehaviour
 
     void FixedUpdate()
     {
-      if (!IsOwner) return;
+      
         if (rb.linearVelocity.magnitude < maxSpeed)
         {
             rb.AddForce(-transform.up * acceleration * throttleInput);
