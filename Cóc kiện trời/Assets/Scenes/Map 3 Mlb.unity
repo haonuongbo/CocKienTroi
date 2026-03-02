@@ -663,24 +663,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d007e5f0162875458542bc6311a5970, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  racers:
-  - {fileID: 200919168}
-  - {fileID: 511005295}
-  - {fileID: 196531733}
-  - {fileID: 620513090}
-  - {fileID: 1895765682}
-  racerNames:
-  - "C\xF3c"
-  - "C\u1ECDp"
-  - "G\u1EA5u"
-  - Ong
-  - "C\xE1o"
-  nameCards:
-  - {fileID: 104113226}
-  - {fileID: 1650219541}
-  - {fileID: 1358093647}
-  - {fileID: 1845550098}
-  - {fileID: 1422440602}
+  trackers: []
+  rankedCarIndex: 0000000000000000000000000000000000000000
 --- !u!1 &178065762
 GameObject:
   m_ObjectHideFlags: 0
@@ -2406,9 +2390,7 @@ MonoBehaviour:
   - {fileID: -385505819896812756, guid: 588b3c56ba479144c804c998f2f0d8f1, type: 3}
   - {fileID: -7855406645237050754, guid: 9a8f0b7d0f3493340a37f798e71570cd, type: 3}
   - {fileID: 8423626923605789382, guid: 0688ea95b020a014cab3fa23338ef665, type: 3}
-  beepSound: {fileID: 8300000, guid: 37bb275a52f79944d8c0309facdd50b5, type: 3}
-  goSound: {fileID: 8300000, guid: 3420f3376935448488bf42157b9aa87e, type: 3}
-  playerAnimator: {fileID: 0}
+  countdownGoSound: {fileID: 0}
 --- !u!4 &619155324
 Transform:
   m_ObjectHideFlags: 0
@@ -5097,6 +5079,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad20a9b9a61f9f499db3f251d584f53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
   target: {fileID: 200919168}
   targetRb: {fileID: 200919165}
   followSpeed: 6.54
@@ -5222,7 +5205,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 51, y: -99}
   m_SizeDelta: {x: 571.9183, y: 606.2906}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1434727338
