@@ -1,8 +1,7 @@
-using System.Collections;
 using UnityEngine;
-using Unity.Netcode;
+
 [RequireComponent(typeof(Camera))]
-public class TopDownCameraFollow : NetworkBehaviour
+public class TopDownCameraFollow : MonoBehaviour
 {
     [Header("Target")]
     public Transform target;
@@ -34,99 +33,15 @@ public class TopDownCameraFollow : NetworkBehaviour
     private Vector3 shakeOffset;
     private float shakeTimer;
 
-    void Awake()
-    {
-        cam = GetComponent<Camera>();
-        cam.orthographic = true;
-        cam.orthographicSize = baseOrthoSize;
-    }
+   void Awake()
+{
+    cam = GetComponent<Camera>();
+    cam.orthographic = true;
+    cam.orthographicSize = baseOrthoSize;
 
-    public override void OnNetworkSpawn()
-    {
-        base.OnNetworkSpawn();
-
-        // Try to pick a sensible target on spawn (local player if available)
-        SetupTarget();
-
-        if (NetworkManager.Singleton != null)
-        {
-            // Listen for client connects so we can re-try finding a local player if needed
-            NetworkManager.Singleton.OnClientConnectedCallback += OnClientConnected;
-        }
-    }
-
-    public override void OnNetworkDespawn()
-    {
-        base.OnNetworkDespawn();
-        if (NetworkManager.Singleton != null)
-        {
-            NetworkManager.Singleton.OnClientConnectedCallback -= OnClientConnected;
-        }
-    }
-
-    void OnClientConnected(ulong clientId)
-    {
-        // If this client connected and we don't yet have a target, try finding our player.
-        if (NetworkManager.Singleton == null) return;
-        if (clientId == NetworkManager.Singleton.LocalClientId)
-        {
-            StartCoroutine(DelayedSetup());
-        }
-    }
-
-    IEnumerator DelayedSetup()
-    {
-        // Wait a frame to let player spawn complete
-        yield return null;
-        SetupTarget();
-    }
-
-    void SetupTarget()
-    {
-        if (target != null && targetRb != null) return; // already set
-
-        // Try to find the local player's PCController by matching OwnerClientId
-        if (NetworkManager.Singleton != null)
-        {
-            ulong localId = NetworkManager.Singleton.LocalClientId;
-            var players = FindObjectsOfType<PCController>();
-            foreach (var p in players)
-            {
-                if (p.NetworkObject != null && p.NetworkObject.OwnerClientId == localId)
-                {
-                    SetTargetToPlayer(p.transform, p.GetComponent<Rigidbody2D>());
-                    return;
-                }
-            }
-
-            // If we're the server/host and didn't find a local-owned player, try following the host player's object
-            if (NetworkManager.Singleton.IsServer)
-            {
-                foreach (var p in players)
-                {
-                    if (p.NetworkObject != null && p.NetworkObject.OwnerClientId == NetworkManager.ServerClientId)
-                    {
-                        SetTargetToPlayer(p.transform, p.GetComponent<Rigidbody2D>());
-                        return;
-                    }
-                }
-            }
-        }
-
-        // Fallback: try any PCController in scene
-        var anyPlayer = FindObjectOfType<PCController>();
-        if (anyPlayer != null)
-        {
-            SetTargetToPlayer(anyPlayer.transform, anyPlayer.GetComponent<Rigidbody2D>());
-        }
-    }
-
-    void SetTargetToPlayer(Transform t, Rigidbody2D rb2d)
-    {
-        target = t;
-        targetRb = rb2d;
-    }
-
+    // Lock local rotation at spawn
+    transform.localRotation = Quaternion.identity;
+}
     void LateUpdate()
     {
         if (target == null || targetRb == null) return;

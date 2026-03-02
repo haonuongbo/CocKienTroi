@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 1547442995
+  GlobalObjectIdHash: 1394603386
   InScenePlacedSourceGlobalObjectIdHash: 2600957464
   DeferredDespawnTick: 0
   Ownership: 1
@@ -251,9 +251,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 239fafb764f1e274aa59829278105ff6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShowTopMostFoldoutHeaderGroup: 1
   circuit: {fileID: 0}
   waypointThreshold: 5
+  circuitName: Map_3Circuit
   acceleration: 2.8
   maxSpeed: 7
   turnSpeed: 40
@@ -264,7 +264,6 @@ MonoBehaviour:
   animator: {fileID: 0}
   minAnimSpeed: 0.2
   maxAnimSpeed: 1.25
-  circuitName: Map_3Circuit
 --- !u!114 &9185849926971821139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -682,13 +681,14 @@ MonoBehaviour:
   baseOrthoSize: 3.37
   zoomAmount: 0
   maxSpeed: 0
+  lockRotation: 1
   normalTilt: 0
   driftTilt: 0
   tiltLerpSpeed: 0
   shakeDuration: 0
   shakeStrength: 0
-  minBounds: {x: -100, y: -100}
-  maxBounds: {x: 100, y: 100}
+  minBounds: {x: -1000, y: -1000}
+  maxBounds: {x: 1000, y: 1000}
 --- !u!114 &1119543625982437076
 MonoBehaviour:
   m_ObjectHideFlags: 0

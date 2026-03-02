@@ -1,11 +1,13 @@
 using UnityEngine;
 
-
-public class AICarController : MonoBehaviour 
+public class AICarController : MonoBehaviour
 {
     [Header("Cài đặt AI - Đường đi")]
     public WaypointCircuit circuit;
     public float waypointThreshold = 3f;
+
+    [Tooltip("Optional name used when auto-finding a circuit (e.g. Map3_Circuit)")]
+    public string circuitName = "Map3_Circuit";
 
     [Header("Stats (Giống Controller.cs)")]
     public float acceleration = 12f;
@@ -31,15 +33,42 @@ public class AICarController : MonoBehaviour
     private bool isStuck;
     private float throttleInput = 1f;
 
-    public string circuitName = "Map_3Circuit";
-
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0f;
+
+        if (circuit == null)
+        {
+            // try to locate circuit via tag
+            GameObject circObj = null;
+            try
+            {
+                circObj = GameObject.FindWithTag("MainCircuit");
+            }
+            catch (UnityException)
+            {
+                // no such tag
+            }
+            if (circObj != null)
+            {
+                circuit = circObj.GetComponent<WaypointCircuit>();
+            }
+
+            // if still null and we have a name to look for
+            if (circuit == null && !string.IsNullOrEmpty(circuitName))
+            {
+                GameObject named = GameObject.Find(circuitName);
+                if (named != null)
+                    circuit = named.GetComponent<WaypointCircuit>();
+            }
+
+            // fallback to any in scene
+            if (circuit == null)
+                circuit = FindObjectOfType<WaypointCircuit>();
+        }
     }
 
-    
     void Update()
     {
         if (circuit == null || circuit.waypoints.Count == 0) return;
@@ -106,7 +135,6 @@ public class AICarController : MonoBehaviour
 
     void FixedUpdate()
     {
-      
         if (rb.linearVelocity.magnitude < maxSpeed)
         {
             rb.AddForce(-transform.up * acceleration * throttleInput);
