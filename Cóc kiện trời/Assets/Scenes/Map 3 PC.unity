@@ -2322,9 +2322,7 @@ MonoBehaviour:
   - {fileID: -385505819896812756, guid: 588b3c56ba479144c804c998f2f0d8f1, type: 3}
   - {fileID: -7855406645237050754, guid: 9a8f0b7d0f3493340a37f798e71570cd, type: 3}
   - {fileID: 8423626923605789382, guid: 0688ea95b020a014cab3fa23338ef665, type: 3}
-  beepSound: {fileID: 8300000, guid: 37bb275a52f79944d8c0309facdd50b5, type: 3}
-  goSound: {fileID: 8300000, guid: 3420f3376935448488bf42157b9aa87e, type: 3}
-  playerAnimator: {fileID: 2024040695}
+  countdownGoSound: {fileID: 0}
 --- !u!4 &619155324
 Transform:
   m_ObjectHideFlags: 0
@@ -4745,7 +4743,7 @@ RectTransform:
   m_GameObject: {fileID: 1382540638}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.65522, y: 0.65522, z: 0.65522}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2102098823}
@@ -4754,7 +4752,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -72, y: -69}
+  m_AnchoredPosition: {x: 155, y: -141}
   m_SizeDelta: {x: 532.4561, y: 294.5}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1382540640
@@ -5098,7 +5096,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 55, y: -104}
   m_SizeDelta: {x: 571.9183, y: 606.2906}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1434727338
