@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -10,55 +11,59 @@ public class GameManager : MonoBehaviour
     public Image numberDisplay;      // Ảnh số 3-2-1
     public GameObject goHolder;      // Cụm chữ GO
     public TMP_Text timeText;        // Kéo cái Txt_Time vào đây
-
     public Sprite[] numberSprites;   // Ảnh 3, 2, 1
 
     [Header("---- CÀI ĐẶT ÂM THANH ----")]
-    public AudioClip beepSound;      // Âm thanh bíp cho 3-2-1
-    public AudioClip goSound;        // Âm thanh GO riêng
+    public AudioClip countdownGoSound;  // Âm thanh 3-2-1 bíp + GO (khoảng 4 giây)
     private AudioSource audioSource;
 
     [Header("---- CÀI ĐẶT RESPONSIVE UI ----")]
     private CanvasResponsive canvasResponsive; // Reference tới script CanvasResponsive
 
-    // [BIẾN HỆ THỐNG]
-    private float raceTime = 0f;     // Biến lưu thời gian chạy
-    private bool isRacing = false;   // Biến cờ: True = Đang đua, False = Dừng
-    private float uiUpdateTimer = 0f;
-    private ControlSpeedAnim  playerCar;                // Script lái xe
+    [Header("---- CÀI ĐẶT CAMERA ----")]
     private TopDownCameraFollow cameraFollow;   // Script camera
 
-    [Header("---- Disalbe Animation ----")]
-    public Animator playerAnimator;
+    // [BIẾN HỆ THỐNG]
+    private float raceTime = 0f;
+    private bool isRacing = false;
+    private float uiUpdateTimer = 0f;
+
+    // [BIẾN QUẢN LÍ XE]
+    private ControlSpeedAnim playerCar;           // Script lái xe player
+    private Animator playerAnimator;              // Animator xe player
+    private AICarController[] aiCars;             // Mảng các xe AI
+    private Rigidbody2D[] aiCarRigidbodies;       // Rigidbody của các xe AI
 
     void Start()
     {
         raceTime = 0f;
         isRacing = false;
 
+        // ===== SETUP AUDIO =====
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
             audioSource = gameObject.AddComponent<AudioSource>();
 
+        // ===== SETUP CANVAS & CAMERA =====
         canvasResponsive = FindFirstObjectByType<CanvasResponsive>();
-
-        playerCar = FindFirstObjectByType<ControlSpeedAnim>();
-        canvasResponsive = FindFirstObjectByType<CanvasResponsive>();
-
-        playerCar = FindFirstObjectByType<ControlSpeedAnim>();
-        if (playerCar != null)
-            playerAnimator = playerCar.GetComponent<Animator>();
-
-        cameraFollow = FindFirstObjectByType<TopDownCameraFollow>();
-        if (playerCar != null)
-            playerAnimator = playerCar.GetComponent<Animator>();
-
         cameraFollow = FindFirstObjectByType<TopDownCameraFollow>();
 
-        // Disable UI input during countdown
-        if (EventSystem.current != null)
-            EventSystem.current.enabled = false;
+        // ===== SETUP PLAYER CAR =====
+        playerCar = FindFirstObjectByType<ControlSpeedAnim>();
+        if (playerCar != null)
+        {
+            playerAnimator = playerCar.GetComponent<Animator>();
+        }
 
+        // ===== SETUP AI CARS =====
+        aiCars = FindObjectsOfType<AICarController>();
+        aiCarRigidbodies = new Rigidbody2D[aiCars.Length];
+        for (int i = 0; i < aiCars.Length; i++)
+        {
+            aiCarRigidbodies[i] = aiCars[i].GetComponent<Rigidbody2D>();
+        }
+
+        // Bắt đầu countdown (Time.timeScale sẽ được set = 0 trong coroutine)
         StartCoroutine(StartCountdown());
     }
 
@@ -83,57 +88,86 @@ public class GameManager : MonoBehaviour
                     timeText.text = string.Format("{0:00}:{1:00}:{2:00}", minutes, seconds, milliseconds);
                 }
             }
-            
         }
     }
 
     IEnumerator StartCountdown()
     {
-        // 1. DISABLE GAMEPLAY
-        if (playerCar != null) playerCar.enabled = false;
-        if (playerAnimator != null) playerAnimator.speed = 0f;
-        if (cameraFollow != null) cameraFollow.enabled = true;
-
+        // ===== 1. DỪNG GAME BẰNG TIME.TIMESCALE =====
+        Time.timeScale = 0f;  // Dừng mọi vật lý & animation
+        
+        // Hiển thị UI countdown
         if (numberDisplay) numberDisplay.gameObject.SetActive(true);
         if (goHolder) goHolder.SetActive(false);
+        if (canvasResponsive != null) canvasResponsive.ResetNumberAndGO();
 
-        if (canvasResponsive != null)
-            canvasResponsive.ResetNumberAndGO();
+        yield return new WaitForSecondsRealtime(0.3f);
 
-        // 2. COUNTDOWN
-        for (int i = 0; i < numberSprites.Length; i++)
+        // ===== 2. PHÁT ÂM THANH 3-2-1-GO =====
+        if (countdownGoSound != null)
         {
-            if (numberDisplay)
-            {
-                numberDisplay.sprite = numberSprites[i];
-                numberDisplay.SetNativeSize();
-            }
-
-            if (beepSound != null)
-                audioSource.PlayOneShot(beepSound);
-
-            yield return new WaitForSeconds(1f);
+            audioSource.PlayOneShot(countdownGoSound);
         }
 
-        // 3. GO
-        if (numberDisplay) numberDisplay.gameObject.SetActive(false);
-        if (goHolder) goHolder.SetActive(true);
+        float totalDuration = countdownGoSound != null ? countdownGoSound.length : 4f;
+        float countdownPortion = 3f;  // 3 giây cho 3-2-1
+        float startTime = Time.realtimeSinceStartup;
+        int currentNumber = -1;
+        bool goShown = false;
 
-        if (goSound != null)
-            audioSource.PlayOneShot(goSound);
+        while (Time.realtimeSinceStartup - startTime < totalDuration)
+        {
+            float elapsedTime = Time.realtimeSinceStartup - startTime;
+            
+            // ===== HIỂN THỊ 3-2-1 (0-3 giây) =====
+            if (elapsedTime < countdownPortion)
+            {
+                int newNumber = Mathf.FloorToInt(elapsedTime);
+                if (newNumber != currentNumber && newNumber < numberSprites.Length)
+                {
+                    if (numberDisplay)
+                    {
+                        numberDisplay.sprite = numberSprites[newNumber];
+                        numberDisplay.SetNativeSize();
+                    }
+                    currentNumber = newNumber;
+                }
+            }
+            // ===== HIỂN THỊ GO (từ giây thứ 3 trở đi) =====
+            else if (!goShown)
+            {
+                if (numberDisplay) numberDisplay.gameObject.SetActive(false);
+                if (goHolder) goHolder.SetActive(true);
+                goShown = true;
+            }
 
-        yield return new WaitForSeconds(1f);
+            yield return null;
+        }
 
-        // 4. ENABLE GAMEPLAY
+        // ===== 3. BẮT ĐẦU GAME LẠI =====
+        Time.timeScale = 1f;  // Resume game
+        
         if (goHolder) goHolder.SetActive(false);
-        if (playerCar != null) playerCar.enabled = true;
-        if (playerAnimator != null) playerAnimator.speed = 1f;
-        if (cameraFollow != null) cameraFollow.enabled = true;
 
-        if (EventSystem.current != null)
-            EventSystem.current.enabled = true;
+        yield return new WaitForSeconds(0.2f);
 
         isRacing = true;
+    }
+
+    /// <summary>
+    /// Dừng tất cả các xe (Player + AI) - không cần gọi, timeScale đã dừng mọi thứ
+    /// </summary>
+    private void StopAllCars()
+    {
+        // Code này giữ lại nhưng không dùng, vì Time.timeScale = 0 dừng mọi thứ rồi
+    }
+
+    /// <summary>
+    /// Khởi động tất cả các xe (Player + AI) - không cần gọi, timeScale đã khởi động mọi thứ
+    /// </summary>
+    private void StartAllCars()
+    {
+        // Code này giữ lại nhưng không dùng, vì Time.timeScale = 1 khởi động mọi thứ rồi
     }
 
 }
