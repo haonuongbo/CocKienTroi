@@ -5,21 +5,21 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Map 2 hao.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
     path: Assets/Scenes/Character Selection.unity
     guid: f7a97c28f954f4b4cb1f70ede2201a4a
   - enabled: 1
+    path: Assets/Scenes/AI map 3.unity
+    guid: d85fa3663d9d32949a3c8f5e16d52e4a
+  - enabled: 0
     path: Assets/Scenes/Map 3 Mlb.unity
     guid: fc3a13fef626a2e4baa64965f20471ea
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Map 1 hao.unity
     guid: 6b3a49bb430f29f4f9d9dcb8f9b35215
-  - enabled: 1
-    path: Assets/Scenes/Test Network.unity
-    guid: 9417d21fef0797e4c844945b0fc97ac3
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
