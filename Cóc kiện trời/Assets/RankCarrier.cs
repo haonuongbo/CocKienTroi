@@ -13,7 +13,7 @@ public class RankCarrier : MonoBehaviour
         [SerializeField] public Sprite winSprite; // optional, can be null
 
         // useful ctor if you want to build the list in code
-        public RankEntry(int r, GameObject obj, Sprite win = null)
+            public RankEntry(int r, GameObject obj, Sprite win = null)
         {
             rank = r;
             gameObject = obj;
