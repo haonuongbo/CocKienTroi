@@ -89,12 +89,6 @@ public class TopDownCameraFollow : MonoBehaviour
         float tiltAmount = isDrifting ? driftTilt : normalTilt;
         float tiltZ = -steerInput * tiltAmount;
 
-        Quaternion targetRot = Quaternion.Euler(0f, 0f, tiltZ);
-        transform.rotation = Quaternion.Lerp(
-            transform.rotation,
-            targetRot,
-            Time.deltaTime * tiltLerpSpeed
-        );
     }
 
     void UpdateShake()
