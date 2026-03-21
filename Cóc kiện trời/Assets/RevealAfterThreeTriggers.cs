@@ -18,9 +18,9 @@ public class RevealAfterThreeTriggers : MonoBehaviour
 
         if (triggerCount >= 1)
         {
-            // send the final ranking information to the carrier singleton
+            // capture the final ranking information so other scenes can query it
             if (raceRankUI != null)
-                raceRankUI.SendRankingsToCarrier();
+                raceRankUI.CaptureRankData();
 
             // optional: stop other scripts if you still want
             foreach (var script in scriptsToDisable)

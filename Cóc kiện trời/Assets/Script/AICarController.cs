@@ -33,6 +33,7 @@ public class AICarController : MonoBehaviour
     private bool isStuck;
     private float throttleInput = 1f;
 
+    [System.Obsolete]
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();

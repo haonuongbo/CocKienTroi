@@ -4822,23 +4822,23 @@ PrefabInstance:
     - target: {fileID: 1475427588440417492, guid: 7af2b9f0441bce8439241d8ade673b61, type: 3}
       propertyPath: 'trackers.Array.data[0]'
       value: 
-      objectReference: {fileID: 858216292}
+      objectReference: {fileID: 1530884322}
     - target: {fileID: 1475427588440417492, guid: 7af2b9f0441bce8439241d8ade673b61, type: 3}
       propertyPath: 'trackers.Array.data[1]'
       value: 
-      objectReference: {fileID: 1530884322}
+      objectReference: {fileID: 2105384732082522936}
     - target: {fileID: 1475427588440417492, guid: 7af2b9f0441bce8439241d8ade673b61, type: 3}
       propertyPath: 'trackers.Array.data[2]'
       value: 
-      objectReference: {fileID: 2105384732082522936}
+      objectReference: {fileID: 623282939}
     - target: {fileID: 1475427588440417492, guid: 7af2b9f0441bce8439241d8ade673b61, type: 3}
       propertyPath: 'trackers.Array.data[3]'
       value: 
-      objectReference: {fileID: 623282939}
+      objectReference: {fileID: 658897201}
     - target: {fileID: 1475427588440417492, guid: 7af2b9f0441bce8439241d8ade673b61, type: 3}
       propertyPath: 'trackers.Array.data[4]'
       value: 
-      objectReference: {fileID: 658897201}
+      objectReference: {fileID: 858216292}
     - target: {fileID: 2744150169377912203, guid: 7af2b9f0441bce8439241d8ade673b61, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -6061,6 +6061,10 @@ PrefabInstance:
     - target: {fileID: 7365549047130768719, guid: ceb0652bd3f95014096c7155bc4b60c4, type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7365549047130768719, guid: ceb0652bd3f95014096c7155bc4b60c4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

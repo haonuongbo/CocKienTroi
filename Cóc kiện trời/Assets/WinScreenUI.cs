@@ -1,9 +1,9 @@
-﻿using UnityEngine;
+using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System.Collections.Generic;
 
-public class RaceRankUI : MonoBehaviour
+public class WinScreenUI : MonoBehaviour
 {
     // Optional: keep this UI alive across scene loads so stored rank data / references don't get lost.
     // If you have multiple RaceRankUI instances across scenes, only the first will persist.

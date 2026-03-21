@@ -1,36 +1,67 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class LapManager2D : MonoBehaviour
 {
     public int maxLap = 3;
+    public GameObject finishCanvas;
+    public GameObject winCanvasData; // WinCnCanvasData
+
+    public bool hideFinishCanvasOnStart = true;
+
     public int currentLap = 0;
     public TextMeshProUGUI lapText;
 
     private bool canCount = true;
+    private bool hasFinished = false;
 
     void Start()
     {
         UpdateLapText();
+
+        if (hideFinishCanvasOnStart && finishCanvas != null)
+            finishCanvas.SetActive(false);
+
+        if (winCanvasData != null)
+            winCanvasData.SetActive(true); // đảm bảo đang hoạt động lúc đầu
     }
 
     public void CountLap()
     {
-        if (!canCount) return;
+        if (!canCount || hasFinished) return;
 
         currentLap++;
-        if (currentLap > maxLap)
-            currentLap = maxLap;
 
-        UpdateLapText();
+        if (currentLap <= maxLap)
+        {
+            UpdateLapText();
+        }
+
+        if (currentLap > maxLap)
+        {
+            hasFinished = true;
+
+            // show win UI
+            if (finishCanvas != null)
+                finishCanvas.SetActive(true);
+
+            // stop updating WinCnCanvasData
+            if (winCanvasData != null)
+            {
+                MonoBehaviour[] scripts = winCanvasData.GetComponentsInChildren<MonoBehaviour>();
+                foreach (var s in scripts)
+                    s.enabled = false;
+            }
+        }
+
         canCount = false;
         Invoke(nameof(ResetCount), 1.5f);
     }
 
     void UpdateLapText()
     {
-        lapText.text = "Lap " + currentLap + "/" + maxLap;
+        if (lapText != null)
+            lapText.text = "Lap " + currentLap + "/" + maxLap;
     }
 
     void ResetCount()

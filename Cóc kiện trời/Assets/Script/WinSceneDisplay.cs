@@ -24,16 +24,10 @@ public class WinSceneDisplay : MonoBehaviour
     /// </summary>
     void DisplayTopThreeRacers()
     {
-        if (RankCarrier.Instance == null)
-        {
-            Debug.LogError("RankCarrier singleton not found!");
-            return;
-        }
-
-        // fetch win sprites for positions 1, 2, 3
-        Sprite firstSprite = RankCarrier.Instance.GetWinSprite(1);
-        Sprite secondSprite = RankCarrier.Instance.GetWinSprite(2);
-        Sprite thirdSprite = RankCarrier.Instance.GetWinSprite(3);
+        // fetch win sprites for positions 1, 2, 3 (captured by RaceRankUI)
+        Sprite firstSprite = RaceRankUI.RaceRankData.GetWinSprite(1);
+        Sprite secondSprite = RaceRankUI.RaceRankData.GetWinSprite(2);
+        Sprite thirdSprite = RaceRankUI.RaceRankData.GetWinSprite(3);
 
         // assign to placeholders
         if (firstPlaceImage != null && firstSprite != null)
