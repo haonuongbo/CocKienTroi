@@ -12,11 +12,16 @@ public class LapManager2D : MonoBehaviour
     public int currentLap = 0;
     public TextMeshProUGUI lapText;
 
-    private bool canCount = true;
     private bool hasFinished = false;
+    private float nextAllowedCountTime;
+    private MonoBehaviour[] winCanvasBehaviours;
+    private const float CountCooldownSeconds = 1.5f;
 
     void Start()
     {
+        if (winCanvasData != null)
+            winCanvasBehaviours = winCanvasData.GetComponentsInChildren<MonoBehaviour>(true);
+
         UpdateLapText();
 
         if (hideFinishCanvasOnStart && finishCanvas != null)
@@ -28,16 +33,12 @@ public class LapManager2D : MonoBehaviour
 
     public void CountLap()
     {
-        if (!canCount || hasFinished) return;
+        if (hasFinished || Time.time < nextAllowedCountTime) return;
 
         currentLap++;
+        UpdateLapText();
 
-        if (currentLap <= maxLap)
-        {
-            UpdateLapText();
-        }
-
-        if (currentLap > maxLap)
+        if (currentLap >= maxLap)
         {
             hasFinished = true;
 
@@ -46,26 +47,19 @@ public class LapManager2D : MonoBehaviour
                 finishCanvas.SetActive(true);
 
             // stop updating WinCnCanvasData
-            if (winCanvasData != null)
+            if (winCanvasBehaviours != null)
             {
-                MonoBehaviour[] scripts = winCanvasData.GetComponentsInChildren<MonoBehaviour>();
-                foreach (var s in scripts)
+                foreach (var s in winCanvasBehaviours)
                     s.enabled = false;
             }
         }
 
-        canCount = false;
-        Invoke(nameof(ResetCount), 1.5f);
+        nextAllowedCountTime = Time.time + CountCooldownSeconds;
     }
 
     void UpdateLapText()
     {
         if (lapText != null)
-            lapText.text = "Lap " + currentLap + "/" + maxLap;
-    }
-
-    void ResetCount()
-    {
-        canCount = true;
+            lapText.text = "Lap " + Mathf.Min(currentLap, maxLap) + "/" + maxLap;
     }
 }

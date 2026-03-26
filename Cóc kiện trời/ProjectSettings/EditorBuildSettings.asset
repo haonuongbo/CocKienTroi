@@ -6,29 +6,35 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Character Selection.unity
+    path: Assets/Scenes/Complete/StartUpScene.unity
+    guid: 3e208ecec3a4065468c221e01d54645b
+  - enabled: 1
+    path: Assets/Scenes/Complete/Character Selection.unity
     guid: f7a97c28f954f4b4cb1f70ede2201a4a
   - enabled: 1
-    path: Assets/Scenes/Unlock.unity
+    path: Assets/Scenes/Complete/ChonMap.unity
     guid: f2ba624a15c81b642b46c39107f7a5d6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Map 2 hao.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/AI map 3.unity
     guid: d85fa3663d9d32949a3c8f5e16d52e4a
   - enabled: 1
-    path: Assets/Scenes/Loading.unity
+    path: Assets/Scenes/Complete/Loading.unity
     guid: 6535e0232cda2504586d551d67534871
   - enabled: 0
     path: Assets/Scenes/Map 3 Mlb.unity
     guid: fc3a13fef626a2e4baa64965f20471ea
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Map 1 hao.unity
     guid: 6b3a49bb430f29f4f9d9dcb8f9b35215
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Win.unity
     guid: 9e4e8ab78644b1d46a3e4836c9b94123
+  - enabled: 1
+    path: Assets/Scenes/Complete/MAP 3WIN.unity
+    guid: bdef92565fa5eeb40a91d325fd911087
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

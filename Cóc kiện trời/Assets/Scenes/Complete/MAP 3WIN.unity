@@ -383,7 +383,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &152497908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3622,7 +3622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2adc8a48ecc425b458c6f40bc9b32927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLap: 0
+  maxLap: 2
   finishCanvas: {fileID: 152497907}
   winCanvasData: {fileID: 853570200}
   hideFinishCanvasOnStart: 1
@@ -3805,7 +3805,12 @@ MonoBehaviour:
   - {fileID: 531938039}
   - {fileID: 1450829120}
   - {fileID: 1560803366}
-  childObjectNames: []
+  childObjectNames:
+  - 
+  - 
+  - 
+  - 
+  - 
 --- !u!1 &858216283
 GameObject:
   m_ObjectHideFlags: 0
@@ -8675,7 +8680,7 @@ PrefabInstance:
       objectReference: {fileID: 7317873633084279544}
     - target: {fileID: 4184315315520949932, guid: ceb0652bd3f95014096c7155bc4b60c4, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4184315315520949932, guid: ceb0652bd3f95014096c7155bc4b60c4, type: 3}
       propertyPath: numberDisplay
