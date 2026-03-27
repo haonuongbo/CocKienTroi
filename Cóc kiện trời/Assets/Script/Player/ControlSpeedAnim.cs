@@ -23,6 +23,7 @@ public class ControlSpeedAnim : MonoBehaviour
 
     // mobile input states
     private float steerInput; // -1 = right, 1 = left
+    private float keyboardSteer;  // from A/D keys
     private bool drifting;
 
     void Start()
@@ -33,6 +34,25 @@ public class ControlSpeedAnim : MonoBehaviour
 
     void Update()
     {
+        // keyboard steering (A = left, D = right)
+        // Shift + A/D = drift
+        bool shiftHeld = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
+
+        if (Input.GetKey(KeyCode.A))
+            keyboardSteer = 1f;
+        else if (Input.GetKey(KeyCode.D))
+            keyboardSteer = -1f;
+        else
+            keyboardSteer = 0f;
+
+        // keyboard drift: engage when Shift + A or D, disengage otherwise
+        if (shiftHeld && keyboardSteer != 0f && rb.linearVelocity.magnitude >= minDriftSpeed)
+            drifting = true;
+        else if (shiftHeld && keyboardSteer == 0f)
+            drifting = false;
+        else if (!shiftHeld && drifting && keyboardSteer != 0f)
+            drifting = false;
+
         // animation control
         if (animator != null)
         {
@@ -57,7 +77,8 @@ public class ControlSpeedAnim : MonoBehaviour
             rb.AddForce(-transform.up * acceleration);
         }
 
-        // steering
+        // steering — keyboard takes priority over UI buttons
+        float effectiveSteer = keyboardSteer != 0f ? keyboardSteer : steerInput;
         if (rb.linearVelocity.magnitude > minTurnSpeed)
         {
             float currentTurnSpeed = drifting
@@ -65,7 +86,7 @@ public class ControlSpeedAnim : MonoBehaviour
                 : turnSpeed;
 
             rb.MoveRotation(
-                rb.rotation + steerInput * currentTurnSpeed * Time.fixedDeltaTime
+                rb.rotation + effectiveSteer * currentTurnSpeed * Time.fixedDeltaTime
             );
         }
 
