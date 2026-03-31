@@ -189,6 +189,10 @@ public class CharacterSelection : MonoBehaviour
         }
     }
 
+    [Header("Cấu hình Scene Tiếp Theo")]
+    [Tooltip("Tên Scene Chọn Map (VD: ChonMap)")]
+    public string nextSceneName = "ChonMap";
+
     public void ConfirmAndPlay()
     {
         int costPerGame = 10;
@@ -197,9 +201,13 @@ public class CharacterSelection : MonoBehaviour
         if (currentEnergy >= costPerGame)
         {
             PlayerPrefs.SetInt("TotalEnergy", currentEnergy - costPerGame);
+            
+            // ĐÂY LÀ DÒNG LƯU NHÂN VẬT! Phải chạy qua đây máy mới nhớ là Cáo!
             PlayerPrefs.SetInt("SelectedCharacter", selectedIndex);
             PlayerPrefs.Save();
-            SceneManager.LoadScene("SampleScene");
+            
+            // Chuyển sang màn hình chọn Map thay vì SampleScene
+            SceneManager.LoadScene(nextSceneName);
         }
         else
         {

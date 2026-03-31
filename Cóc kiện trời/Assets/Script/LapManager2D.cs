@@ -6,6 +6,9 @@ public class LapManager2D : MonoBehaviour
     public int maxLap = 3;
     public GameObject finishCanvas;
     public GameObject winCanvasData; // WinCnCanvasData
+    
+    [Header("---- WIN CANVAS UI ----")]
+    public TextMeshProUGUI winLapText; // Kéo thẻ RaceLapText ở WinCanvas vào đây
 
     public bool hideFinishCanvasOnStart = true;
 
@@ -45,6 +48,16 @@ public class LapManager2D : MonoBehaviour
             // show win UI
             if (finishCanvas != null)
                 finishCanvas.SetActive(true);
+
+            // Dừng game manager đếm giờ và lấy giờ đẩy lên Win Canvas
+            if (GameManager.Instance != null)
+                GameManager.Instance.StopRaceTime();
+
+            // Cập nhật thẻ chữ Lap ở Win Canvas
+            if (winLapText != null)
+            {
+                winLapText.text = "LAPS: " + maxLap.ToString() + " / " + maxLap.ToString();
+            }
 
             // stop updating WinCnCanvasData
             if (winCanvasBehaviours != null)

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public class RaceProgressTracker : MonoBehaviour
 {
@@ -25,19 +25,26 @@ public class RaceProgressTracker : MonoBehaviour
         checkpointsPassed = 0;
     }
 
-    // Called by checkpoint trigger
     public void OnCheckpointHit(int checkpointIndex)
     {
         int expectedIndex = checkpointsPassed % checkpoints.Length;
+        int diff = checkpointIndex - expectedIndex;
 
-        if (checkpointIndex != expectedIndex)
-            return;
-
-        checkpointsPassed++;
-
-        if (checkpointIndex == checkpoints.Length - 1)
+        // Nếu hiệu số âm, tức là xe nhảy từ cuối vòng (vd 23) qua đầu vòng mới (vd 0)
+        if (diff < 0)
         {
-            currentLap++;
+            diff += checkpoints.Length;
+        }
+
+        // Cho phép xe nhảy cóc tối đa quá ngã rẽ 1 nửa vòng đua (Nửa map). 
+        // Lớn hơn thì bị coi là xe đi chui ngược vòng (Hack điểm).
+        if (diff >= 0 && diff <= (checkpoints.Length / 2))
+        {
+            // Cộng bù luôn số điểm bị thiếu nếu lỡ rẽ nhánh bỏ qua vài Node!
+            checkpointsPassed += (diff + 1);
+
+            // Bắt vòng tự động từ tổng điểm, đếm chóp luôn cả nút đích bị nhảy cóc
+            currentLap = checkpointsPassed / checkpoints.Length;
         }
     }
 

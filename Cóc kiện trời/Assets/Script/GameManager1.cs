@@ -12,6 +12,11 @@ public class GameManager : MonoBehaviour
     public GameObject goHolder;      // Cụm chữ GO
     public TMP_Text timeText;        // Kéo cái Txt_Time vào đây
     public Sprite[] numberSprites;   // Ảnh 3, 2, 1
+    
+    [Header("---- WIN CANVAS UI ----")]
+    public TMP_Text winTimeText;     // Kéo thẻ RaceTimeText ở WinCanvas vào đây
+
+    public static GameManager Instance;
 
     [Header("---- CÀI ĐẶT ÂM THANH ----")]
     public AudioClip countdownGoSound;  // Âm thanh 3-2-1 bíp + GO (khoảng 4 giây)
@@ -33,6 +38,11 @@ public class GameManager : MonoBehaviour
     private Animator playerAnimator;              // Animator xe player
     private AICarController[] aiCars;             // Mảng các xe AI
     private Rigidbody2D[] aiCarRigidbodies;       // Rigidbody của các xe AI
+
+    void Awake()
+    {
+        Instance = this;
+    }
 
     void Start()
     {
@@ -160,6 +170,20 @@ public class GameManager : MonoBehaviour
     private void StopAllCars()
     {
         // Code này giữ lại nhưng không dùng, vì Time.timeScale = 0 dừng mọi thứ rồi
+    }
+
+    /// <summary>
+    /// Dừng đếm thời gian và cập nhật UI bảng Win
+    /// </summary>
+    public void StopRaceTime()
+    {
+        isRacing = false;
+        
+        // Đẩy thẳng thời gian cuối cùng sang màn hình Win Nếu có gắn thẻ winTimeText
+        if (winTimeText != null && timeText != null)
+        {
+            winTimeText.text = timeText.text;
+        }
     }
 
     /// <summary>

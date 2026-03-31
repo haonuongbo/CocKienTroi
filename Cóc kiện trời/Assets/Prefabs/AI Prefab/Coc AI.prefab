@@ -359,6 +359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   circuit: {fileID: 0}
   waypointThreshold: 5
+  circuitName: Map3_Circuit
   acceleration: 2.8
   maxSpeed: 7
   turnSpeed: 50
@@ -369,7 +370,6 @@ MonoBehaviour:
   animator: {fileID: 0}
   minAnimSpeed: 0.2
   maxAnimSpeed: 1.25
-  circuitName: Map_3Circuit
 --- !u!114 &3924009891047178505
 MonoBehaviour:
   m_ObjectHideFlags: 0

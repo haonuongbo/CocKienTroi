@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
@@ -7,7 +7,8 @@ public class Checkpoint : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        RaceProgressTracker tracker = other.GetComponent<RaceProgressTracker>();
+        // Dùng GetComponentInParent phòng trường hợp Collider của xe AI nằm ở object con
+        RaceProgressTracker tracker = other.GetComponentInParent<RaceProgressTracker>();
         if (tracker == null) return;
 
         tracker.OnCheckpointHit(checkpointIndex);
