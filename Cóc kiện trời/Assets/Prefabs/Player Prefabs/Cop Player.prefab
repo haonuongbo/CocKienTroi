@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 8153932350556136673}
   - component: {fileID: 1692278141546079792}
   - component: {fileID: 4984390548207413603}
-  - component: {fileID: -7934537740134687482}
   m_Layer: 3
   m_Name: Cop Player
   m_TagString: Player
@@ -249,23 +248,6 @@ MonoBehaviour:
   animator: {fileID: 5433723886574307450}
   minAnimSpeed: 0.2
   maxAnimSpeed: 1.25
---- !u!114 &-7934537740134687482
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1760142152373480722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7dec2d90c10bbc4ba797a71016dcf92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPlayer: 1
-  bananaPrefab: {fileID: 8829317573807326267, guid: ebfab8b959708684d865860ab6276ffd, type: 3}
-  lightningVFX: {fileID: 2230007012303043514, guid: 343bea8da1799534f96c01a3e81975e1, type: 3}
-  hammerVFX: {fileID: 7112477439379457316, guid: 9522340619ca8dc40b6acf090fb64f74, type: 3}
-  rainVFX: {fileID: 3980493328950275890, guid: 4dad153f040c1624fa55c2847fe27621, type: 3}
 --- !u!1 &8740812582171312388
 GameObject:
   m_ObjectHideFlags: 0

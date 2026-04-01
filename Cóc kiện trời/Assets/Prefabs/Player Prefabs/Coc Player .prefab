@@ -177,7 +177,6 @@ GameObject:
   - component: {fileID: 4610235564448294220}
   - component: {fileID: 4260434720095055151}
   - component: {fileID: 5320094413453681565}
-  - component: {fileID: -5111635270596531978}
   m_Layer: 3
   m_Name: 'Coc Player '
   m_TagString: Player
@@ -410,20 +409,3 @@ MonoBehaviour:
   currentLap: 0
   checkpointsPassed: 59
   distanceToNext: 27.91988
---- !u!114 &-5111635270596531978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6234176288421995197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7dec2d90c10bbc4ba797a71016dcf92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPlayer: 1
-  bananaPrefab: {fileID: 8829317573807326267, guid: ebfab8b959708684d865860ab6276ffd, type: 3}
-  lightningVFX: {fileID: 2230007012303043514, guid: 343bea8da1799534f96c01a3e81975e1, type: 3}
-  hammerVFX: {fileID: 7112477439379457316, guid: 9522340619ca8dc40b6acf090fb64f74, type: 3}
-  rainVFX: {fileID: 3980493328950275890, guid: 4dad153f040c1624fa55c2847fe27621, type: 3}
