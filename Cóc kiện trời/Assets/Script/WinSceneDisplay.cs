@@ -12,6 +12,7 @@ public class WinSceneDisplay : MonoBehaviour
     [SerializeField] private Image firstPlaceImage;   // 1st place racer image
     [SerializeField] private Image secondPlaceImage;  // 2nd place racer image
     [SerializeField] private Image thirdPlaceImage;   // 3rd place racer image
+    [SerializeField] private Image winnerNameImage;   // Ảnh chữ vinh danh Top 1 (WinnerName)
 
     void Start()
     {
@@ -28,6 +29,14 @@ public class WinSceneDisplay : MonoBehaviour
         Sprite firstSprite = RaceRankUI.RaceRankData.GetWinSprite(1);
         Sprite secondSprite = RaceRankUI.RaceRankData.GetWinSprite(2);
         Sprite thirdSprite = RaceRankUI.RaceRankData.GetWinSprite(3);
+
+        // Nạp ảnh chữ Winner Name (nếu có)
+        Sprite winnerNameSprite = RaceRankUI.RaceRankData.WinnerNameSprite;
+        if (winnerNameImage != null && winnerNameSprite != null)
+        {
+            winnerNameImage.sprite = winnerNameSprite;
+            winnerNameImage.SetNativeSize(); // Gọi hàm này để tỷ lệ chữ không bị méo lệch
+        }
 
         // assign to placeholders
         if (firstPlaceImage != null && firstSprite != null)

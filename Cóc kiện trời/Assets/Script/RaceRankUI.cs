@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System.Collections.Generic;
@@ -16,11 +16,18 @@ public class RaceRankUI : MonoBehaviour
     public Transform[] nameCards;     // 5 cards (each has Image + TMP_Text)
     public Transform[] rankSlots;     // 5 placeholders (1st → 5th)
 
+    [Header("UI Styling")]
+    public float top1FontSize = 38f;
+    public float normalFontSize = 28f; // Bạn có thể chỉnh lại số này trong Inspector nếu chữ nhỏ quá
+
     // Lưu tên object con trong mỗi rank slot (dùng khi cần truyền dữ liệu qua scene khác)
     public List<string> childObjectNames = new List<string>();
 
     // Cache của thứ tự mới nhất (dùng để tránh update không cần thiết mỗi frame)
     int[] lastRankedCarIndex;
+    
+    // Lưu lại vị trí Y gốc của các đoạn text
+    float[] originalTextY;
 
     void Awake()
     {
@@ -42,6 +49,23 @@ public class RaceRankUI : MonoBehaviour
     {
         if (rankSlots != null)
             lastRankedCarIndex = new int[rankSlots.Length];
+            
+        if (nameCards != null)
+        {
+            originalTextY = new float[nameCards.Length];
+            for (int i = 0; i < nameCards.Length; i++)
+            {
+                if (nameCards[i] != null)
+                {
+                    TMP_Text txt = nameCards[i].GetComponentInChildren<TMP_Text>();
+                    if (txt != null)
+                    {
+                        RectTransform textRect = txt.GetComponent<RectTransform>();
+                        if (textRect != null) originalTextY[i] = textRect.anchoredPosition.y;
+                    }
+                }
+            }
+        }
     }
 
     bool NeedsRefresh()
@@ -107,7 +131,28 @@ public class RaceRankUI : MonoBehaviour
             card.SetParent(slot, false);
             card.localPosition = Vector3.zero;
             card.localRotation = Quaternion.identity;
-            card.localScale = Vector3.one;
+            
+            // Xử lý phóng to và cỡ chữ cho Top 1
+            TMP_Text nameText = card.GetComponentInChildren<TMP_Text>();
+
+            if (rank == 0)
+            {
+                // Phóng to thẻ Top 1 (bạn có thể điều chỉnh số 1.3f to nhỏ tùy ý)
+                card.localScale = new Vector3(1.3f, 1.3f, 1f); 
+                if (nameText != null) 
+                {
+                    nameText.fontSize = top1FontSize;
+                }
+            }
+            else
+            {
+                // Các thẻ còn lại giữ nguyên kích thước gốc
+                card.localScale = Vector3.one;
+                if (nameText != null) 
+                {
+                    nameText.fontSize = normalFontSize;
+                }
+            }
         }
 
         if (lastRankedCarIndex != null && current.Length == lastRankedCarIndex.Length)
@@ -141,23 +186,17 @@ public class RaceRankUI : MonoBehaviour
                 continue;
             }
 
+            // Mượn đỡ tấm hình trên nameCard
             Transform card = nameCards[carIndex];
-            if (card == null)
+            if (card != null)
+            {
+                var img = card.GetComponentInChildren<Image>();
+                winSprites.Add(img != null ? img.sprite : null);
+            }
+            else
             {
                 winSprites.Add(null);
-                continue;
             }
-
-            var img = card.GetComponentInChildren<Image>();
-            if (img == null || img.sprite == null)
-            {
-                winSprites.Add(null);
-                continue;
-            }
-
-            string spriteName = img.sprite.name;
-            string winName = spriteName.Replace("1", "2");
-            winSprites.Add(Resources.Load<Sprite>(winName));
         }
 
         return winSprites;
@@ -202,6 +241,7 @@ public class RaceRankUI : MonoBehaviour
     {
         public static List<string> ChildObjectNames { get; set; } = new List<string>();
         public static List<Sprite> WinSprites { get; set; } = new List<Sprite>();
+        public static Sprite WinnerNameSprite { get; set; } // Ảnh chứa chữ của Top 1
 
         public static Sprite GetWinSprite(int rank)
         {

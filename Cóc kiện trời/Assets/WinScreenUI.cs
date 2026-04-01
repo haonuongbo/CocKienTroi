@@ -16,6 +16,13 @@ public class WinScreenUI : MonoBehaviour
     public Transform[] nameCards;     // 5 cards (each has Image + TMP_Text)
     public Transform[] rankSlots;     // 5 placeholders (1st → 5th)
 
+    [Header("Win Scene Sprites")]
+    public Sprite[] winCharacterSprites; // Kéo thả 5 hình nhân vật Win (Cáo, Cóc...)
+    public Sprite[] winNameSprites;      // Kéo thả 5 hình CHỮ TÊN (Cáo, Cóc...) dùng cho Top 1
+    
+    [Header("Win Canvas Element")]
+    public Image winnerNameImageDisplay; // Kéo thả cục ảnh WinnerName vào đây!
+
     // Lưu tên object con trong mỗi rank slot (dùng khi cần truyền dữ liệu qua scene khác)
     public List<string> childObjectNames = new List<string>();
 
@@ -104,6 +111,36 @@ public class WinScreenUI : MonoBehaviour
             if (slot == null)
                 continue;
 
+            // Đổi mặt hình nhân vật cho Win Scene (Vì Win Scene dùng hình nhân vật lớn thay vì hình Avatar nhỏ)
+            if (winCharacterSprites != null && carIndex < winCharacterSprites.Length && winCharacterSprites[carIndex] != null)
+            {
+                // DỌN RÁC: Ẩn TOÀN BỘ các khung viền, avatar con, và chữ của thẻ Race Rank cũ
+                Image[] allImages = card.GetComponentsInChildren<Image>(true);
+                for (int j = 0; j < allImages.Length; j++)
+                {
+                    allImages[j].enabled = false;
+                    
+                    // Phá luôn Mask nếu có để không bị phạt cắt tròn ảnh
+                    Mask mask = allImages[j].GetComponent<Mask>();
+                    if (mask != null) Destroy(mask);
+                }
+
+                // DÙNG DUY NHẤT 1 BỨC TRANH LÀ ẢNH GỐC
+                if (allImages.Length > 0)
+                {
+                    allImages[0].enabled = true;
+                    allImages[0].sprite = winCharacterSprites[carIndex];
+                    allImages[0].color = Color.white;
+                }
+
+                // Dọn luôn mấy cái chữ tên nhỏ xíu ở dưới xe (vì đã có tên Winner Name bự rồi)
+                TMP_Text[] allTexts = card.GetComponentsInChildren<TMP_Text>(true);
+                for (int j = 0; j < allTexts.Length; j++)
+                {
+                    allTexts[j].enabled = false;
+                }
+            }
+
             card.SetParent(slot, false);
             card.localPosition = Vector3.zero;
             card.localRotation = Quaternion.identity;
@@ -112,6 +149,17 @@ public class WinScreenUI : MonoBehaviour
 
         if (lastRankedCarIndex != null && current.Length == lastRankedCarIndex.Length)
             System.Array.Copy(current, lastRankedCarIndex, current.Length);
+
+        // --- Cập nhật Win Name ---
+        if (winnerNameImageDisplay != null && winNameSprites != null && current.Length > 0)
+        {
+            int top1CarIndex = current[0];
+            if (top1CarIndex >= 0 && top1CarIndex < winNameSprites.Length && winNameSprites[top1CarIndex] != null)
+            {
+                winnerNameImageDisplay.sprite = winNameSprites[top1CarIndex];
+                // KHÔNG call SetNativeSize() nữa để giữ nguyên khung hình Width/Height gốc do user scale tay!
+            }
+        }
     }
 
     void CacheRankData()
