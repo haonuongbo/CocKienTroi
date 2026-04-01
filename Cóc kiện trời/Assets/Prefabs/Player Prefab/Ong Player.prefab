@@ -399,7 +399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2011672950
+  GlobalObjectIdHash: 2776479579
   InScenePlacedSourceGlobalObjectIdHash: 2243047556
   DeferredDespawnTick: 0
   Ownership: 1
@@ -425,7 +425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   acceleration: 3
-  maxSpeed: 7
+  maxSpeed: 7.2
   turnSpeed: 70
   driftTurnMultiplier: 1.8
   driftFactor: 0.6
