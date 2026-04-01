@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class LapManager2D : MonoBehaviour
 {
-    public int maxLap = 3;
+    public int maxLap = 2;
     public GameObject finishCanvas;
     public GameObject winCanvasData; // WinCnCanvasData
     
@@ -22,6 +22,9 @@ public class LapManager2D : MonoBehaviour
 
     void Start()
     {
+        // Force race rule: must complete exactly 2 laps before finish.
+        maxLap = 2;
+
         if (winCanvasData != null)
             winCanvasBehaviours = winCanvasData.GetComponentsInChildren<MonoBehaviour>(true);
 
