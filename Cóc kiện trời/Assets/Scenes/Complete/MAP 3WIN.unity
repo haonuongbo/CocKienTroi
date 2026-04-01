@@ -517,7 +517,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &152497908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2099,7 +2099,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstPlaceImage: {fileID: 539201025}
   secondPlaceImage: {fileID: 2098249719}
-  thirdPlaceImage: {fileID: 0}
+  thirdPlaceImage: {fileID: 563547548}
   winnerNameImage: {fileID: 1830638145}
 --- !u!1 &502638482
 GameObject:
