@@ -711,6 +711,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   circuit: {fileID: 1727552164}
   waypointThreshold: 5
+  circuitName: Map3_Circuit
   acceleration: 3.7
   maxSpeed: 7.2
   turnSpeed: 38
@@ -2367,6 +2368,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   circuit: {fileID: 1727552164}
   waypointThreshold: 5
+  circuitName: Map3_Circuit
   acceleration: 3.5
   maxSpeed: 6.75
   turnSpeed: 45
@@ -2632,6 +2634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   circuit: {fileID: 1727552164}
   waypointThreshold: 5
+  circuitName: Map3_Circuit
   acceleration: 3.5
   maxSpeed: 6.75
   turnSpeed: 45
@@ -3190,6 +3193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   circuit: {fileID: 1727552164}
   waypointThreshold: 5
+  circuitName: Map3_Circuit
   acceleration: 4
   maxSpeed: 6.5
   turnSpeed: 47
@@ -6241,7 +6245,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2094281901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6331,15 +6335,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad20a9b9a61f9f499db3f251d584f53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShowTopMostFoldoutHeaderGroup: 1
   target: {fileID: 0}
   targetRb: {fileID: 0}
   followSpeed: 6.54
   lookAheadDistance: 2.2
   baseOrthoSize: 3.37
   zoomAmount: 0
-  maxSpeed: 0
-  lockRotation: 1
+  maxSpeed: 0.01
   normalTilt: 0
   driftTilt: 0
   tiltLerpSpeed: 0
@@ -6347,6 +6349,7 @@ MonoBehaviour:
   shakeStrength: 0
   minBounds: {x: -100, y: -100}
   maxBounds: {x: 100, y: 100}
+  lockToInitialRotation: 1
 --- !u!20 &2094281905
 Camera:
   m_ObjectHideFlags: 0

@@ -1,0 +1,1001 @@
+fileFormatVersion: 2
+guid: c2b7541c247b3d646887235fba2c519e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9086022564828864408
+    second: NewCAYY_0
+  - first:
+      213: 7835465225520418604
+    second: NewCAYY_1
+  - first:
+      213: 6458873070597243878
+    second: NewCAYY_2
+  - first:
+      213: 5370165692008842305
+    second: NewCAYY_3
+  - first:
+      213: -8560105263338779413
+    second: NewCAYY_4
+  - first:
+      213: 7545086485340527681
+    second: NewCAYY_5
+  - first:
+      213: -4846974386738911726
+    second: NewCAYY_6
+  - first:
+      213: -1757418682261022349
+    second: NewCAYY_7
+  - first:
+      213: -7034461802440910694
+    second: NewCAYY_8
+  - first:
+      213: 2740001257217575594
+    second: NewCAYY_9
+  - first:
+      213: 725440185250700115
+    second: NewCAYY_10
+  - first:
+      213: -5031829169856896744
+    second: NewCAYY_11
+  - first:
+      213: 4388549216529967820
+    second: NewCAYY_12
+  - first:
+      213: 752916290838297713
+    second: NewCAYY_13
+  - first:
+      213: -1041372313798781376
+    second: NewCAYY_14
+  - first:
+      213: 2534048410204530796
+    second: NewCAYY_15
+  - first:
+      213: -8454642743401761248
+    second: NewCAYY_16
+  - first:
+      213: -7696770476068200707
+    second: NewCAYY_17
+  - first:
+      213: -1823116941497588006
+    second: NewCAYY_18
+  - first:
+      213: -8442083837809566977
+    second: NewCAYY_19
+  - first:
+      213: -3339460979464194549
+    second: NewCAYY_20
+  - first:
+      213: -782819508059689764
+    second: NewCAYY_21
+  - first:
+      213: 4692507397623602185
+    second: NewCAYY_22
+  - first:
+      213: 4839625051716123806
+    second: NewCAYY_23
+  - first:
+      213: -151591220680001058
+    second: NewCAYY_24
+  - first:
+      213: -6393443760283784880
+    second: NewCAYY_25
+  - first:
+      213: -7586494264330006998
+    second: NewCAYY_26
+  - first:
+      213: 7844124588421635762
+    second: NewCAYY_27
+  - first:
+      213: 5229949343721282612
+    second: NewCAYY_28
+  - first:
+      213: -7468776344353105416
+    second: NewCAYY_29
+  - first:
+      213: -4998659786837103210
+    second: NewCAYY_30
+  - first:
+      213: 2387673027248198520
+    second: NewCAYY_31
+  - first:
+      213: -2772138844387120375
+    second: NewCAYY_32
+  - first:
+      213: 7864931928828152260
+    second: NewCAYY_33
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: NewCAYY_0
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 6303
+        width: 844
+        height: 1372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 860213afd96f7e180800000000000000
+      internalID: -9086022564828864408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCAYY_1
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 6516
+        width: 1274
+        height: 1245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2f0219cb1a2dbc60800000000000000
+      internalID: 7835465225520418604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCAYY_2
+      rect:
+        serializedVersion: 2
+        x: 2235
+        y: 7212
+        width: 588
+        height: 606
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e3094e46d682a950800000000000000
+      internalID: 6458873070597243878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCAYY_3
+      rect:
+        serializedVersion: 2
+        x: 3607
+        y: 6814
+        width: 2364
+        height: 1104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1444d299e39a68a40800000000000000
+      internalID: 5370165692008842305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCAYY_4
+      rect:
+        serializedVersion: 2
+        x: 7076
+        y: 6939
+        width: 518
+        height: 501
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bec8dbacd95643980800000000000000
+      internalID: -8560105263338779413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCAYY_5
+      rect:
+        serializedVersion: 2
+        x: 1673
+        y: 4579
+        width: 2458
+        height: 1756
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14c925ece2885b860800000000000000
+      internalID: 7545086485340527681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCAYY_6
+      rect:
+        serializedVersion: 2
+        x: 6257
+        y: 5747
+        width: 1116
+        height: 585
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 216a203c9761cbcb0800000000000000
+      internalID: -4846974386738911726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCAYY_7
+      rect:
+        serializedVersion: 2
+        x: 7370
+        y: 5779
+        width: 511
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 379523a05056c97e0800000000000000
+      internalID: -1757418682261022349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCAYY_8
+      rect:
+        serializedVersion: 2
+        x: 9279
+        y: 5691
+        width: 610
+        height: 654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a989477c242906e90800000000000000
+      internalID: -7034461802440910694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCAYY_9
+      rect:
+        serializedVersion: 2
+        x: 10173
+        y: 5784
+        width: 638
+        height: 621
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaac39450a0760620800000000000000
+      internalID: 2740001257217575594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCAYY_10
+      rect:
+        serializedVersion: 2
+        x: 10796
+        y: 4904
+        width: 1488
+        height: 1522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35b59a34108411a00800000000000000
+      internalID: 725440185250700115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCAYY_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2913
+        width: 1164
+        height: 2182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8112b30a70a5b2ab0800000000000000
+      internalID: -5031829169856896744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCAYY_12
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 5066
+        width: 593
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cca669ac24247ec30800000000000000
+      internalID: 4388549216529967820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCAYY_13
+      rect:
+        serializedVersion: 2
+        x: 4358
+        y: 3192
+        width: 2158
+        height: 1942
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17c750d9065e27a00800000000000000
+      internalID: 752916290838297713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCAYY_14
+      rect:
+        serializedVersion: 2
+        x: 7257
+        y: 4564
+        width: 544
+        height: 564
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 046d815e56d4c81f0800000000000000
+      internalID: -1041372313798781376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCAYY_15
+      rect:
+        serializedVersion: 2
+        x: 10294
+        y: 4524
+        width: 711
+        height: 721
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6862e56a9fba2320800000000000000
+      internalID: 2534048410204530796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCAYY_16
+      rect:
+        serializedVersion: 2
+        x: 1686
+        y: 4099
+        width: 793
+        height: 738
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02634b038331baa80800000000000000
+      internalID: -8454642743401761248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCAYY_17
+      rect:
+        serializedVersion: 2
+        x: 2472
+        y: 3473
+        width: 939
+        height: 857
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfe9d3008049f2590800000000000000
+      internalID: -7696770476068200707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCAYY_18
+      rect:
+        serializedVersion: 2
+        x: 8612
+        y: 4199
+        width: 668
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad62a0e0dccf2b6e0800000000000000
+      internalID: -1823116941497588006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCAYY_19
+      rect:
+        serializedVersion: 2
+        x: 11229
+        y: 4196
+        width: 770
+        height: 772
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffa5b434a71b7da80800000000000000
+      internalID: -8442083837809566977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCAYY_20
+      rect:
+        serializedVersion: 2
+        x: 6854
+        y: 3018
+        width: 570
+        height: 531
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0632c1bee9d7a1d0800000000000000
+      internalID: -3339460979464194549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCAYY_21
+      rect:
+        serializedVersion: 2
+        x: 7777
+        y: 3251
+        width: 487
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdc2bd21ecdd225f0800000000000000
+      internalID: -782819508059689764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCAYY_22
+      rect:
+        serializedVersion: 2
+        x: 10035
+        y: 1968
+        width: 2416
+        height: 1841
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90c5f3dbd922f1140800000000000000
+      internalID: 4692507397623602185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCAYY_23
+      rect:
+        serializedVersion: 2
+        x: 10591
+        y: 3457
+        width: 673
+        height: 699
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9cfe95d75dc92340800000000000000
+      internalID: 4839625051716123806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCAYY_24
+      rect:
+        serializedVersion: 2
+        x: 1611
+        y: 2312
+        width: 964
+        height: 836
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed9fc44869075edf0800000000000000
+      internalID: -151591220680001058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCAYY_25
+      rect:
+        serializedVersion: 2
+        x: 3275
+        y: 2074
+        width: 1264
+        height: 1087
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 059e8d026cce547a0800000000000000
+      internalID: -6393443760283784880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCAYY_26
+      rect:
+        serializedVersion: 2
+        x: 5610
+        y: 3056
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2e421c59ab57b690800000000000000
+      internalID: -7586494264330006998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCAYY_27
+      rect:
+        serializedVersion: 2
+        x: 5680
+        y: 3077
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2be57c2d0cdebdc60800000000000000
+      internalID: 7844124588421635762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCAYY_28
+      rect:
+        serializedVersion: 2
+        x: 6043
+        y: 1909
+        width: 1976
+        height: 1219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43c5bc9f733849840800000000000000
+      internalID: 5229949343721282612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCAYY_29
+      rect:
+        serializedVersion: 2
+        x: 3681
+        y: 693
+        width: 1889
+        height: 1506
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f91eff6c73995890800000000000000
+      internalID: -7468776344353105416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCAYY_30
+      rect:
+        serializedVersion: 2
+        x: 5737
+        y: 922
+        width: 875
+        height: 783
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69d6b8c686131aab0800000000000000
+      internalID: -4998659786837103210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCAYY_31
+      rect:
+        serializedVersion: 2
+        x: 7929
+        y: 212
+        width: 1460
+        height: 1482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87319e4c7f7b22120800000000000000
+      internalID: 2387673027248198520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCAYY_32
+      rect:
+        serializedVersion: 2
+        x: 9631
+        y: 530
+        width: 975
+        height: 955
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90b6e3098626789d0800000000000000
+      internalID: -2772138844387120375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCAYY_33
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 62
+        width: 921
+        height: 755
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c90e684be9d52d60800000000000000
+      internalID: 7864931928828152260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      NewCAYY_0: -9086022564828864408
+      NewCAYY_1: 7835465225520418604
+      NewCAYY_10: 725440185250700115
+      NewCAYY_11: -5031829169856896744
+      NewCAYY_12: 4388549216529967820
+      NewCAYY_13: 752916290838297713
+      NewCAYY_14: -1041372313798781376
+      NewCAYY_15: 2534048410204530796
+      NewCAYY_16: -8454642743401761248
+      NewCAYY_17: -7696770476068200707
+      NewCAYY_18: -1823116941497588006
+      NewCAYY_19: -8442083837809566977
+      NewCAYY_2: 6458873070597243878
+      NewCAYY_20: -3339460979464194549
+      NewCAYY_21: -782819508059689764
+      NewCAYY_22: 4692507397623602185
+      NewCAYY_23: 4839625051716123806
+      NewCAYY_24: -151591220680001058
+      NewCAYY_25: -6393443760283784880
+      NewCAYY_26: -7586494264330006998
+      NewCAYY_27: 7844124588421635762
+      NewCAYY_28: 5229949343721282612
+      NewCAYY_29: -7468776344353105416
+      NewCAYY_3: 5370165692008842305
+      NewCAYY_30: -4998659786837103210
+      NewCAYY_31: 2387673027248198520
+      NewCAYY_32: -2772138844387120375
+      NewCAYY_33: 7864931928828152260
+      NewCAYY_4: -8560105263338779413
+      NewCAYY_5: 7545086485340527681
+      NewCAYY_6: -4846974386738911726
+      NewCAYY_7: -1757418682261022349
+      NewCAYY_8: -7034461802440910694
+      NewCAYY_9: 2740001257217575594
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
