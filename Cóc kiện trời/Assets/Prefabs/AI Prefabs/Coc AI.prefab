@@ -173,13 +173,13 @@ GameObject:
   - component: {fileID: 8039037341278055609}
   - component: {fileID: 8188151661219270531}
   - component: {fileID: 8191475388306752159}
-  - component: {fileID: 4820997977387039766}
   - component: {fileID: 4544027630899308938}
   - component: {fileID: 7694571961572211309}
   - component: {fileID: 3924009891047178505}
+  - component: {fileID: -5803439545872994481}
   m_Layer: 3
   m_Name: Coc AI
-  m_TagString: Player
+  m_TagString: AI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -319,18 +319,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.07848093, y: -0.021590024}
   m_Size: {x: 1.1503224, y: 2.1312287}
   m_Direction: 0
---- !u!114 &4820997977387039766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5132635946344110034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16accdaf345cb584d898eb7a6e76344c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4544027630899308938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -411,3 +399,15 @@ MonoBehaviour:
   currentLap: 0
   checkpointsPassed: 0
   distanceToNext: 0
+--- !u!114 &-5803439545872994481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5132635946344110034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eebe070672025b499bdf53b5b7b353d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

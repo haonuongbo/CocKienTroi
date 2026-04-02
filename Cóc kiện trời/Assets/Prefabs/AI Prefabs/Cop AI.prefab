@@ -12,13 +12,13 @@ GameObject:
   - component: {fileID: 4257544358987937662}
   - component: {fileID: 3067836652125180493}
   - component: {fileID: 4893269851928491589}
-  - component: {fileID: 133594462026002232}
   - component: {fileID: 1545973764821146439}
   - component: {fileID: 7622573867441556901}
   - component: {fileID: 7922434007261653979}
+  - component: {fileID: 7195512231661400737}
   m_Layer: 3
   m_Name: Cop AI
-  m_TagString: Player
+  m_TagString: AI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,18 +158,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.07848093, y: -0.021590024}
   m_Size: {x: 1.1503224, y: 2.1312287}
   m_Direction: 0
---- !u!114 &133594462026002232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 36048206740407760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16accdaf345cb584d898eb7a6e76344c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1545973764821146439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,7 +220,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 36048206740407760}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 239fafb764f1e274aa59829278105ff6, type: 3}
   m_Name: 
@@ -250,6 +238,18 @@ MonoBehaviour:
   animator: {fileID: 2542539060620892130}
   minAnimSpeed: 0.5
   maxAnimSpeed: 2
+--- !u!114 &7195512231661400737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36048206740407760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eebe070672025b499bdf53b5b7b353d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &261471734638972020
 GameObject:
   m_ObjectHideFlags: 0

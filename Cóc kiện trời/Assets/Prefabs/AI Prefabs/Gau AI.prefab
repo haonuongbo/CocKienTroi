@@ -173,13 +173,13 @@ GameObject:
   - component: {fileID: 6264198489456901467}
   - component: {fileID: 1008404509103915124}
   - component: {fileID: 5404071150779192629}
-  - component: {fileID: 1887801256521825071}
   - component: {fileID: 1709501119557286154}
   - component: {fileID: 8245990612792276004}
   - component: {fileID: 3289269236866365478}
+  - component: {fileID: -5044447697300115453}
   m_Layer: 3
   m_Name: Gau AI
-  m_TagString: Player
+  m_TagString: AI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -319,18 +319,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.07848093, y: -0.092941575}
   m_Size: {x: 1.1503187, y: 2.3252046}
   m_Direction: 0
---- !u!114 &1887801256521825071
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3391146218972146595}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16accdaf345cb584d898eb7a6e76344c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1709501119557286154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -411,3 +399,15 @@ MonoBehaviour:
   currentLap: 0
   checkpointsPassed: 0
   distanceToNext: 0
+--- !u!114 &-5044447697300115453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3391146218972146595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eebe070672025b499bdf53b5b7b353d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -15,6 +15,7 @@ public class LapTriggerChild : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Debug.Log(other.name + " đã chạm vào vạch đích!");
             // Chỉ bắt vòng của Người Chơi
             if (other.GetComponent<ControlSpeedAnim>() != null)
             {
