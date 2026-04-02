@@ -34,9 +34,11 @@ public class LapManager2D : MonoBehaviour
             winCanvasData.SetActive(true); // đảm bảo đang hoạt động lúc đầu
     }
 
-    public void CountLap()
+    public bool CountLap()
     {
-        if (hasFinished || Time.time < nextAllowedCountTime) return;
+        if (hasFinished) return false;
+        
+        if (Time.time < nextAllowedCountTime) return false;
 
         currentLap++;
         UpdateLapText();
@@ -68,6 +70,7 @@ public class LapManager2D : MonoBehaviour
         }
 
         nextAllowedCountTime = Time.time + CountCooldownSeconds;
+        return true;
     }
 
     void UpdateLapText()

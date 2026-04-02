@@ -3,13 +3,13 @@
 public class ControlSpeedAnim : MonoBehaviour
 {
     [Header("Stats")]
-    public float acceleration = 10.1f;
-    public float maxSpeed = 8f;
-    public float turnSpeed = 120f;
-    public float driftTurnMultiplier = 1.5f;
-    public float driftFactor = 0.9f;
-    public float driftSlide = 0.6f;
-    public float minTurnSpeed = 0.2f;
+    public float acceleration = 3f  ;
+    public float maxSpeed = 7f;
+    public float turnSpeed = 70f;
+    public float driftTurnMultiplier = 1.8f;
+    public float driftFactor = 0.6f;
+    public float driftSlide = 0.7f;
+    public float minTurnSpeed = 0f;
 
     [Header("Drift")]
     public float minDriftSpeed = 3f;
@@ -17,7 +17,7 @@ public class ControlSpeedAnim : MonoBehaviour
     [Header("Animation")]
     public Animator animator;
     public float minAnimSpeed = 0.5f;
-    public float maxAnimSpeed = 2.0f;
+    public float maxAnimSpeed = 1.25f;
 
     private Rigidbody2D rb;
 

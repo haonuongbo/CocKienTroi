@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5766786731220779805}
   - component: {fileID: 6515536765807034079}
   - component: {fileID: 281869244987575518}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: Animation
   m_TagString: Animation
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 7694571961572211309}
   - component: {fileID: 3924009891047178505}
   - component: {fileID: -5803439545872994481}
-  m_Layer: 3
+  m_Layer: 12
   m_Name: Coc AI
   m_TagString: AI
   m_Icon: {fileID: 0}
@@ -243,7 +243,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -348,9 +348,9 @@ MonoBehaviour:
   circuit: {fileID: 0}
   waypointThreshold: 5
   circuitName: Map3_Circuit
-  acceleration: 2.8
-  maxSpeed: 7
-  turnSpeed: 50
+  acceleration: 2.6
+  maxSpeed: 6
+  turnSpeed: 70
   driftTurnMultiplier: 2.1
   driftFactor: 0.6
   driftSlide: 0.7

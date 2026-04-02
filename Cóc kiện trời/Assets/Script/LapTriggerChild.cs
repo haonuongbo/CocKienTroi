@@ -15,7 +15,7 @@ public class LapTriggerChild : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log(other.name + " đã chạm vào vạch đích!");
+            Debug.Log(other.name + " đã chạm vào vạch đích!");  
             // Chỉ bắt vòng của Người Chơi
             if (other.GetComponent<ControlSpeedAnim>() != null)
             {
@@ -25,8 +25,8 @@ public class LapTriggerChild : MonoBehaviour
                 // Nếu xe vừa xuất phát dẫm trúng vạch, tracker.CurrentLap vẫn là 0, nó sẽ bỏ qua!
                 if (tracker != null && tracker.CurrentLap > lastTrackerLap)
                 {
-                    lastTrackerLap = tracker.CurrentLap;
-                    lapManager.CountLap();
+                    if (lapManager.CountLap())
+                        lastTrackerLap = tracker.CurrentLap;
                 }
             }
         }

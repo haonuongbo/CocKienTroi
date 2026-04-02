@@ -1774,6 +1774,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3cff3f7f589b8a46a8a7ca790f861f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1262793831
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 803343290074004062, guid: 1b1503a4dec82724bb4f3e9d52c6909e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1234.3391
+      objectReference: {fileID: 0}
+    - target: {fileID: 803343290074004062, guid: 1b1503a4dec82724bb4f3e9d52c6909e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 411.06885
+      objectReference: {fileID: 0}
+    - target: {fileID: 803343290074004062, guid: 1b1503a4dec82724bb4f3e9d52c6909e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.1908228
+      objectReference: {fileID: 0}
+    - target: {fileID: 803343290074004062, guid: 1b1503a4dec82724bb4f3e9d52c6909e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 803343290074004062, guid: 1b1503a4dec82724bb4f3e9d52c6909e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 803343290074004062, guid: 1b1503a4dec82724bb4f3e9d52c6909e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 803343290074004062, guid: 1b1503a4dec82724bb4f3e9d52c6909e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 803343290074004062, guid: 1b1503a4dec82724bb4f3e9d52c6909e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 803343290074004062, guid: 1b1503a4dec82724bb4f3e9d52c6909e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 803343290074004062, guid: 1b1503a4dec82724bb4f3e9d52c6909e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4793365521834880779, guid: 1b1503a4dec82724bb4f3e9d52c6909e, type: 3}
+      propertyPath: m_Name
+      value: ResolutionManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1b1503a4dec82724bb4f3e9d52c6909e, type: 3}
 --- !u!1 &1332681282
 GameObject:
   m_ObjectHideFlags: 0
@@ -2387,7 +2444,7 @@ MonoBehaviour:
     shadowImage: {fileID: 2730344355299136158, guid: 1d6956eb1cd5fdf49ad44aaf56e4eb99, type: 3}
     speedStat: {fileID: 7435342204968646302, guid: 13d6f39c2149255468f00a632c3af5b3, type: 3}
     driftStat: {fileID: 694080031154793656, guid: 2f9ac289265a76b4fbf22338f3d9aa51, type: 3}
-    accelStat: {fileID: -3414187302364121641, guid: ba5d0c9b5c9359d47abfa3a36aada01a, type: 3}
+    accelStat: {fileID: -7889450532623705253, guid: e35de138b1050f24d8164492429b1439, type: 3}
     description: "G\u1EA5u l\xE0 tay \u0111ua m\u1EA1nh m\u1EBD v\xE0 v\u1EEFng v\xE0ng,
       ch\u1EB3ng ng\u1EA1i va ch\u1EA1m v\xE0 lu\xF4n gi\u1EEF v\u1EEFng v\u1ECB
       tr\xED tr\xEAn \u0111\u01B0\u1EDDng \u0111ua. G\u1EA5u \xE9p \u0111\u01B0\u1EDDng
@@ -2397,9 +2454,9 @@ MonoBehaviour:
     tabImage: {fileID: -7760846135778312838, guid: 41a77bbd6085e0043bc35604b95d78a1, type: 3}
     previewImage: {fileID: -5590046621623114549, guid: 98be18ed6df10e346badd8d835e5080c, type: 3}
     shadowImage: {fileID: 2730344355299136158, guid: 1d6956eb1cd5fdf49ad44aaf56e4eb99, type: 3}
-    speedStat: {fileID: 7435342204968646302, guid: 13d6f39c2149255468f00a632c3af5b3, type: 3}
-    driftStat: {fileID: 5610661148772111863, guid: c4e71234851202e488502dfbc84ccd34, type: 3}
-    accelStat: {fileID: -2386827859208472495, guid: ff88313b95dd6504d893c2fb13542556, type: 3}
+    speedStat: {fileID: -7928431545376462364, guid: c32bb0d6372e64949bc8bb74e4fb7feb, type: 3}
+    driftStat: {fileID: -3505526392984974390, guid: cc22f4e6bf4183949a1c62bbe63f5167, type: 3}
+    accelStat: {fileID: -7889450532623705253, guid: e35de138b1050f24d8164492429b1439, type: 3}
     description: "C\xE1o l\xE0 tay \u0111ua tinh ranh, t\xEDnh to\xE1n v\xE0 th\xEDch
       ch\u01A1i tr\xF2 t\xE2m l\xFD, lu\xF4n khi\u1EBFn \u0111\u1ED1i th\u1EE7 l\xFAng
       t\xFAng tr\u01B0\u1EDBc khi tung c\xFA v\u01B0\u1EE3t. V\u1EDBi c\xE1o, chi\u1EBFn
@@ -2410,8 +2467,8 @@ MonoBehaviour:
     previewImage: {fileID: 8132612752382221523, guid: 47958dfa6f6fd1c4cbb55aaed03f8a2b, type: 3}
     shadowImage: {fileID: 2730344355299136158, guid: 1d6956eb1cd5fdf49ad44aaf56e4eb99, type: 3}
     speedStat: {fileID: 2737600013733139776, guid: c7bae350820ecca47a77a99fcb208f25, type: 3}
-    driftStat: {fileID: 5610661148772111863, guid: c4e71234851202e488502dfbc84ccd34, type: 3}
-    accelStat: {fileID: -3761586570865565471, guid: f65d1d08df5f2784185a55cb5282a129, type: 3}
+    driftStat: {fileID: -6505340615616452186, guid: 99ade93ffe60f1e48a95615807e426c5, type: 3}
+    accelStat: {fileID: -2386827859208472495, guid: ff88313b95dd6504d893c2fb13542556, type: 3}
     description: "Ong l\xE0 tay \u0111ua nh\u1ECF b\xE9 nh\u01B0ng c\u1EF1c nhanh
       nh\u1EB9n. Ong l\xE1i xe m\xE1y nh\u01B0 \u0111ang khi\xEAu v\u0169 gi\u1EEFa
       \u0111\u01B0\u1EDDng \u0111ua, m\u1ED7i c\xFA t\u0103ng t\u1ED1c l\xE0 m\u1ED9t
@@ -2422,8 +2479,8 @@ MonoBehaviour:
     previewImage: {fileID: -8741337210212082326, guid: 8dac25e1e4f3d42459c335bf6721e930, type: 3}
     shadowImage: {fileID: 2730344355299136158, guid: 1d6956eb1cd5fdf49ad44aaf56e4eb99, type: 3}
     speedStat: {fileID: -6468724459208449361, guid: 73deda3bddd850b40af196b4deaed4d6, type: 3}
-    driftStat: {fileID: 694080031154793656, guid: 2f9ac289265a76b4fbf22338f3d9aa51, type: 3}
-    accelStat: {fileID: -3414187302364121641, guid: ba5d0c9b5c9359d47abfa3a36aada01a, type: 3}
+    driftStat: {fileID: 4063427252465558995, guid: 9f993aeae503b124c8ddf2cbfbcd491b, type: 3}
+    accelStat: {fileID: -3761586570865565471, guid: f65d1d08df5f2784185a55cb5282a129, type: 3}
     description: "C\u1ECDp l\xE0 tay \u0111ua m\u1EA1nh m\u1EBD v\xE0 t\xE1o b\u1EA1o,
       m\u1ED7i c\xFA nh\u1EA5n ga nh\u01B0 ti\u1EBFng g\u1EA7m vang d\u1ED9i kh\u1EAFp
       \u0111\u01B0\u1EDDng \u0111ua. M\u1ED9t khi \u0111\xE3 t\u0103ng t\u1ED1c,
@@ -2985,3 +3042,4 @@ SceneRoots:
   - {fileID: 861943662}
   - {fileID: 1576683034}
   - {fileID: 1405821152}
+  - {fileID: 1262793831}

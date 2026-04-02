@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3227953143713073730}
   - component: {fileID: 9163316690532173911}
   - component: {fileID: 8961756796222817792}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: Animation
   m_TagString: Animation
   m_Icon: {fileID: 0}
@@ -175,9 +175,10 @@ GameObject:
   - component: {fileID: 5478728883651145252}
   - component: {fileID: 4207475036087779046}
   - component: {fileID: 6294447317784484808}
+  - component: {fileID: -6371413946725416826}
   - component: {fileID: 6057447336283604712}
   - component: {fileID: 8738395516476033716}
-  m_Layer: 3
+  m_Layer: 12
   m_Name: Cao AI
   m_TagString: AI
   m_Icon: {fileID: 0}
@@ -243,7 +244,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 1
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -340,7 +341,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6913995479947177016}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 239fafb764f1e274aa59829278105ff6, type: 3}
   m_Name: 
@@ -348,9 +349,9 @@ MonoBehaviour:
   circuit: {fileID: 0}
   waypointThreshold: 5
   circuitName: Map3_Circuit
-  acceleration: 4
-  maxSpeed: 6.5
-  turnSpeed: 47
+  acceleration: 2.85
+  maxSpeed: 6.2
+  turnSpeed: 70
   driftTurnMultiplier: 2.2
   driftFactor: 0.6
   driftSlide: 0.65
@@ -358,6 +359,31 @@ MonoBehaviour:
   animator: {fileID: 3227953143713073730}
   minAnimSpeed: 0.5
   maxAnimSpeed: 1
+--- !u!114 &-6371413946725416826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6913995479947177016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d92a279ef7621ca4294e3fddb50e455e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  circuit: {fileID: 0}
+  waypointThreshold: 5
+  circuitName: Map3_Circuit
+  acceleration: 4.2
+  maxSpeed: 7.3
+  turnSpeed: 70
+  driftTurnMultiplier: 1.4
+  driftFactor: 0.7
+  driftSlide: 0.6
+  minTurnSpeed: 0
+  animator: {fileID: 3227953143713073730}
+  minAnimSpeed: 0.5
+  maxAnimSpeed: 1.7
 --- !u!114 &6057447336283604712
 MonoBehaviour:
   m_ObjectHideFlags: 0

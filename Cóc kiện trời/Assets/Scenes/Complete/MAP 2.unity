@@ -574,7 +574,7 @@ Transform:
   m_GameObject: {fileID: 144233043}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.37, y: 10.39, z: 0}
+  m_LocalPosition: {x: -13.81, y: 10.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -809,7 +809,7 @@ Transform:
   m_GameObject: {fileID: 335818055}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -42.86, y: -5.46, z: 0}
+  m_LocalPosition: {x: -42.72, y: -5.52, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1142,7 +1142,7 @@ Transform:
   m_GameObject: {fileID: 443421732}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -41.87, y: 7.67, z: 0}
+  m_LocalPosition: {x: -41.62, y: 7.52, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2212,7 +2212,7 @@ Transform:
   m_GameObject: {fileID: 706594590}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -42.67, y: 6.06, z: 0}
+  m_LocalPosition: {x: -42.61, y: 5.79, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3471,7 +3471,7 @@ Transform:
   m_GameObject: {fileID: 1283054069}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -32.47, y: 10.36, z: 0}
+  m_LocalPosition: {x: -32.39, y: 10.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3800,7 +3800,7 @@ Transform:
   m_GameObject: {fileID: 1452713783}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -43.38, y: 0, z: 0}
+  m_LocalPosition: {x: -43.18, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4295,13 +4295,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1726858392}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.510685, w: 0.85976785}
   m_LocalPosition: {x: 0.51, y: 5.97, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 519537270}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -61.419}
 --- !u!61 &1726858394
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4432,11 +4432,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1612542367261194147, guid: 6667027e796730a469017120b32bb124, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1346.12
+      value: 1346.27
       objectReference: {fileID: 0}
     - target: {fileID: 1612542367261194147, guid: 6667027e796730a469017120b32bb124, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -697.53
+      value: -699.24
       objectReference: {fileID: 0}
     - target: {fileID: 1612542367261194147, guid: 6667027e796730a469017120b32bb124, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4448,15 +4448,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1612542367261194147, guid: 6667027e796730a469017120b32bb124, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1612542367261194147, guid: 6667027e796730a469017120b32bb124, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1612542367261194147, guid: 6667027e796730a469017120b32bb124, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1612542367261194147, guid: 6667027e796730a469017120b32bb124, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4485,6 +4485,10 @@ PrefabInstance:
     - target: {fileID: 2690567843276105404, guid: 6667027e796730a469017120b32bb124, type: 3}
       propertyPath: minBounds.y
       value: -100000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3776877225590032773, guid: 6667027e796730a469017120b32bb124, type: 3}
+      propertyPath: orthographic size
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 9100332043930651714, guid: 6667027e796730a469017120b32bb124, type: 3}
       propertyPath: GlobalObjectIdHash

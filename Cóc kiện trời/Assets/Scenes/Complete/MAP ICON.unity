@@ -2999,7 +2999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2adc8a48ecc425b458c6f40bc9b32927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLap: 0
+  maxLap: 2
   finishCanvas: {fileID: 152497907}
   winCanvasData: {fileID: 853570200}
   winLapText: {fileID: 711575796}
@@ -3732,7 +3732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28a7401f09e077e4eb1f8fe2bbaeb94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextCircuit: {fileID: 202295858}
+  nextCircuit: {fileID: 0}
   nextNodeIndex: 0
   switchProbability: 50
 --- !u!61 &896828228
@@ -5297,7 +5297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28a7401f09e077e4eb1f8fe2bbaeb94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextCircuit: {fileID: 1727552164}
+  nextCircuit: {fileID: 0}
   nextNodeIndex: 13
   switchProbability: 100
 --- !u!61 &1559909463
@@ -6890,7 +6890,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9100332043930651714, guid: 6667027e796730a469017120b32bb124, type: 3}
       propertyPath: GlobalObjectIdHash
-      value: 1432887338
+      value: 1133982715
       objectReference: {fileID: 0}
     - target: {fileID: 9100332043930651714, guid: 6667027e796730a469017120b32bb124, type: 3}
       propertyPath: SceneMigrationSynchronization
@@ -7081,7 +7081,7 @@ Transform:
   m_GameObject: {fileID: 5038160762123754739}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1044.9314, y: -660.97687, z: -1.3496947}
+  m_LocalPosition: {x: -1044.88, y: -661.26, z: -1.3496947}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -178,6 +178,7 @@ GameObject:
   - component: {fileID: 7472385758805237822}
   - component: {fileID: 3430471588276711663}
   - component: {fileID: 1259551525854140081}
+  - component: {fileID: 5072533464531146404}
   m_Layer: 3
   m_Name: Ong Player
   m_TagString: Player
@@ -244,7 +245,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 1
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -345,7 +346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLap: 0
-  totalLap: 3
+  totalLap: 2
 --- !u!114 &7472385758805237822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -419,7 +420,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8136141329948524801}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f3d53241587331548aceba4addeaaf20, type: 3}
   m_Name: 
@@ -434,4 +435,30 @@ MonoBehaviour:
   minDriftSpeed: 4
   animator: {fileID: 0}
   minAnimSpeed: 0.2
+  maxAnimSpeed: 1.25
+--- !u!114 &5072533464531146404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8136141329948524801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f69565d8113fff344b76eb479c0a0fc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acceleration: 3
+  maxSpeed: 7
+  turnSpeed: 70
+  driftTurnMultiplier: 1.8
+  driftFactor: 0.6
+  driftSlide: 0.7
+  minTurnSpeed: 0
+  btnLeftName: Nut_Trai
+  btnRightName: Nut_Phai
+  btnDriftName: Nut_Drift
+  minDriftSpeed: 3
+  animator: {fileID: 8276197770231853667, guid: 960578fd41cf2e344bbc1361e819d9ef, type: 3}
+  minAnimSpeed: 0.5
   maxAnimSpeed: 1.25

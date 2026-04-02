@@ -23,18 +23,13 @@ public class MapManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Khởi tạo: Map 1 luôn mở, Map 2 và 3 bị khóa
+    /// Khởi tạo: Tất cả map đều mở
     /// </summary>
     private void InitializeUnlockedMaps()
     {
-        if (!PlayerPrefs.HasKey("MapUnlocked_1"))
+        for (int i = 1; i <= totalMaps; i++)
         {
-            // Lần đầu chơi
-            for (int i = 1; i <= totalMaps; i++)
-            {
-                bool isUnlocked = (i == 1); // Chỉ Map 1 mở
-                SetMapUnlocked(i, isUnlocked);
-            }
+            SetMapUnlocked(i, true);
         }
     }
 

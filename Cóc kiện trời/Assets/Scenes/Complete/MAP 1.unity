@@ -146,7 +146,7 @@ PrefabInstance:
     - target: {fileID: 1805538076264299237, guid: 046f307dbfe668e4da5c5e0bb55af847, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 3339241210800670564, guid: 67767aca724dfa04e9ea26aaa08c250a, type: 3}
+      objectReference: {fileID: -7820681043358216940, guid: c2d36f701964ec14f8389e44b8725de0, type: 3}
     - target: {fileID: 3924029776971793671, guid: 046f307dbfe668e4da5c5e0bb55af847, type: 3}
       propertyPath: m_Name
       value: MINIMAP HUD
@@ -643,7 +643,7 @@ Transform:
   m_GameObject: {fileID: 335818055}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.85, y: -42.57, z: 0}
+  m_LocalPosition: {x: 5.94, y: -42.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -730,7 +730,7 @@ Transform:
   m_GameObject: {fileID: 384606942}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.86, y: -15.71, z: 0}
+  m_LocalPosition: {x: 1.18, y: -15.81, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -894,7 +894,7 @@ Transform:
   m_GameObject: {fileID: 429698406}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.26, y: -33.59, z: 0}
+  m_LocalPosition: {x: 0.71, y: -33.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2582,7 +2582,7 @@ Transform:
   m_GameObject: {fileID: 1403126063}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.67, y: -22.96, z: 0}
+  m_LocalPosition: {x: 0.96, y: -22.96, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2669,7 +2669,7 @@ Transform:
   m_GameObject: {fileID: 1452713783}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.77, y: -43.1, z: 0}
+  m_LocalPosition: {x: 10.62, y: -42.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2844,7 +2844,7 @@ Transform:
   m_GameObject: {fileID: 1648175184}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.28, y: 5.18, z: 0}
+  m_LocalPosition: {x: 12.78, y: 4.85, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3344,7 +3344,7 @@ Transform:
   m_GameObject: {fileID: 1726858392}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.42, y: 5.29, z: 0}
+  m_LocalPosition: {x: 4.34, y: 4.94, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3536,7 +3536,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3776877225590032773, guid: 6667027e796730a469017120b32bb124, type: 3}
       propertyPath: orthographic size
-      value: 2.5
+      value: 2.6
       objectReference: {fileID: 0}
     - target: {fileID: 9100332043930651714, guid: 6667027e796730a469017120b32bb124, type: 3}
       propertyPath: GlobalObjectIdHash
@@ -3574,7 +3574,7 @@ Transform:
   m_GameObject: {fileID: 1779733836}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.66, y: -19.25, z: 0}
+  m_LocalPosition: {x: 0.98, y: -19.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3656,7 +3656,7 @@ Transform:
   m_GameObject: {fileID: 1779767464}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.48, y: -27.88, z: 0}
+  m_LocalPosition: {x: 0.8, y: -27.85, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3839,7 +3839,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 6852097193253000211, guid: 15d749cd873cb03409b66a184ae970c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

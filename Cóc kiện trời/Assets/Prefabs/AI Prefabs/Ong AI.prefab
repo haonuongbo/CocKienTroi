@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6795520993123584935}
   - component: {fileID: 6322818680943045624}
   - component: {fileID: 1938319764667281670}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: Animation
   m_TagString: Animation
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 1526174387377396702}
   - component: {fileID: 1950602050159855099}
   - component: {fileID: 1056022584729432952}
-  m_Layer: 3
+  m_Layer: 12
   m_Name: Ong AI
   m_TagString: AI
   m_Icon: {fileID: 0}
@@ -244,7 +244,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 1
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -349,10 +349,10 @@ MonoBehaviour:
   circuit: {fileID: 0}
   waypointThreshold: 5
   circuitName: Map3_Circuit
-  acceleration: 3.5
-  maxSpeed: 6.75
-  turnSpeed: 45
-  driftTurnMultiplier: 2.2
+  acceleration: 2.85
+  maxSpeed: 6.15
+  turnSpeed: 70
+  driftTurnMultiplier: 1.85
   driftFactor: 0.6
   driftSlide: 0.675
   minTurnSpeed: 0.4

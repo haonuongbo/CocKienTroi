@@ -27,7 +27,7 @@ public class MapSelectionUI : MonoBehaviour
     [SerializeField] private Color lockedTextColor = Color.gray;
 
     private int currentMapIndex = 0;
-    private int totalMaps = 3;
+    private int totalMaps;
 
     private void Start()
     {
@@ -42,6 +42,9 @@ public class MapSelectionUI : MonoBehaviour
         if (nextButton != null) nextButton.onClick.AddListener(ShowNextMap);
         if (menuButton != null) menuButton.onClick.AddListener(GoToMenu);
         if (playButton != null) playButton.onClick.AddListener(PlaySelectedMap);
+
+        // Lấy tổng số map từ mảng inspector
+        totalMaps = mapPreviewSprites != null ? mapPreviewSprites.Length : 0;
 
         // Hiển thị map đầu tiên
         currentMapIndex = 0;
