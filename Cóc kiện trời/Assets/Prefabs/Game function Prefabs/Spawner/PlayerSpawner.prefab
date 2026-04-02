@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5206645206522702812
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4148069814965503661}
+  - component: {fileID: 3877582712241169856}
+  m_Layer: 0
+  m_Name: PlayerSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4148069814965503661
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5206645206522702812}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: -0.72250277, w: 0.6913681}
+  m_LocalPosition: {x: -0.33999997, y: 10.47, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -92.523}
+--- !u!114 &3877582712241169856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5206645206522702812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e7311a47bc38274eb2396f31d672c6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerPrefabs:
+  - {fileID: 6234176288421995197, guid: 3989c92bac10284438204c110526d386, type: 3}
+  - {fileID: 536155627501846788, guid: 68a857400d8584142adba56a7febd9da, type: 3}
+  - {fileID: 7358174622869808086, guid: 960578fd41cf2e344bbc1361e819d9ef, type: 3}
+  - {fileID: 8136141329948524801, guid: 349b3fadfae746544b51b0d6c3ca7470, type: 3}
+  - {fileID: 1760142152373480722, guid: 22040ce7f60a97a4caa4cb7cb8a06b56, type: 3}
+  spawnPoint: {fileID: 4148069814965503661}
+  mapCheckpoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  aiPrefabs:
+  - {fileID: 5132635946344110034, guid: 3e8e5de647415564cabe59a3ac37a659, type: 3}
+  - {fileID: 3391146218972146595, guid: 2b05b78642a4104469b90799c8c4f710, type: 3}
+  - {fileID: 6913995479947177016, guid: c5c2223fafaa8424687ccb3f1f13b963, type: 3}
+  - {fileID: 6425797484166019084, guid: 8e6a90f3075a1314bae627141a8bba2c, type: 3}
+  - {fileID: 36048206740407760, guid: 1d175ef94df46204e9b98067c80c5389, type: 3}
+  aiSpawnPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

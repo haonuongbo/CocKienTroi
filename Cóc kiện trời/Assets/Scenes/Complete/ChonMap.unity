@@ -320,7 +320,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 317243097}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1307711733}
+        m_TargetAssemblyTypeName: SceneSwitcher, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: CharacterSelection
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &317243097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -985,6 +997,7 @@ GameObject:
   - component: {fileID: 1307711730}
   - component: {fileID: 1307711729}
   - component: {fileID: 1307711732}
+  - component: {fileID: 1307711733}
   m_Layer: 5
   m_Name: MapSelectionCanvas
   m_TagString: Untagged
@@ -1108,6 +1121,18 @@ MonoBehaviour:
   - AI map 3
   unlockedTextColor: {r: 1, g: 1, b: 1, a: 1}
   lockedTextColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+--- !u!114 &1307711733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307711727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3cff3f7f589b8a46a8a7ca790f861f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1480964581
 GameObject:
   m_ObjectHideFlags: 0

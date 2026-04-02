@@ -7337,6 +7337,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4184315315520949932, guid: ceb0652bd3f95014096c7155bc4b60c4, type: 3}
+      propertyPath: winTimeText
+      value: 
+      objectReference: {fileID: 1097973792}
+    - target: {fileID: 4184315315520949932, guid: ceb0652bd3f95014096c7155bc4b60c4, type: 3}
       propertyPath: numberDisplay
       value: 
       objectReference: {fileID: 272121861174539453}
