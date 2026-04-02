@@ -2972,10 +2972,10 @@ MonoBehaviour:
   positionCalculator: {fileID: 1426019471}
   nameCards:
   - {fileID: 539201024}
-  - {fileID: 593170669}
   - {fileID: 2098249718}
-  - {fileID: 1556008579}
   - {fileID: 460640536}
+  - {fileID: 1556008579}
+  - {fileID: 593170669}
   rankSlots:
   - {fileID: 1673594464}
   - {fileID: 1692003702}
@@ -7387,6 +7387,10 @@ PrefabInstance:
     - target: {fileID: 7365549047130768719, guid: ceb0652bd3f95014096c7155bc4b60c4, type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7365549047130768719, guid: ceb0652bd3f95014096c7155bc4b60c4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
