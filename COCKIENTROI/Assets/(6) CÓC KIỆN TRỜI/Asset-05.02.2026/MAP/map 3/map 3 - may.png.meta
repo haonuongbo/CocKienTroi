@@ -58,9 +58,9 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -114,6 +114,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -122,12 +148,12 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 464
         width: 2507
-        height: 8000
+        height: 7536
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 347, w: 0}
       customData: 
       outline: []
       physicsShape: []
@@ -143,12 +169,12 @@ TextureImporter:
       name: map 3 - may_1
       rect:
         serializedVersion: 2
-        x: 3677
+        x: 2492
         y: 7165
         width: 4092
         height: 835
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -165,12 +191,12 @@ TextureImporter:
       name: map 3 - may_2
       rect:
         serializedVersion: 2
-        x: 4188
+        x: 0
         y: 0
-        width: 10034
+        width: 14222
         height: 8000
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -187,12 +213,12 @@ TextureImporter:
       name: map 3 - may_3
       rect:
         serializedVersion: 2
-        x: 1794
-        y: 4851
-        width: 2219
-        height: 1819
+        x: 0
+        y: 5090
+        width: 2275
+        height: 2877
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -209,13 +235,13 @@ TextureImporter:
       name: map 3 - may_4
       rect:
         serializedVersion: 2
-        x: 3300
-        y: 2622
-        width: 9029
-        height: 4058
+        x: 0
+        y: 0
+        width: 14222
+        height: 8000
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 14170, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
@@ -236,7 +262,7 @@ TextureImporter:
         width: 2624
         height: 844
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -253,12 +279,12 @@ TextureImporter:
       name: map 3 - may_6
       rect:
         serializedVersion: 2
-        x: 1968
+        x: 12148
         y: 0
-        width: 1442
-        height: 464
+        width: 2074
+        height: 7928
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -275,7 +301,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 7c00fc0a28baa5f4485e13caa57fa92c
     internalID: 0
     vertices: []
     indices: 

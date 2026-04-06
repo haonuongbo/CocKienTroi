@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 3721534617
+  GlobalObjectIdHash: 1231796649
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
@@ -124,14 +124,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad20a9b9a61f9f499db3f251d584f53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShowTopMostFoldoutHeaderGroup: 1
   target: {fileID: 0}
   targetRb: {fileID: 0}
   followSpeed: 6.54
   lookAheadDistance: 2.2
-  baseOrthoSize: 3.37
+  baseOrthoSize: 5
   zoomAmount: 0
-  maxSpeed: 0
+  maxSpeed: 0.01
   normalTilt: 0
   driftTilt: 0
   tiltLerpSpeed: 0
@@ -139,6 +138,7 @@ MonoBehaviour:
   shakeStrength: 0
   minBounds: {x: -100, y: -100}
   maxBounds: {x: 100, y: 100}
+  lockToInitialRotation: 1
 --- !u!114 &1626892714720905601
 MonoBehaviour:
   m_ObjectHideFlags: 0
