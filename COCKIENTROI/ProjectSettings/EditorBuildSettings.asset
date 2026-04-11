@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Complete/MAP 3.unity
     guid: f9d1558ad7a445d408a809ac256db416
+  - enabled: 1
+    path: Assets/Scenes/Complete/Intro.unity
+    guid: 50a8e17612fc70e40b9a7ba1fa230c13
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
