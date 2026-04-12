@@ -2186,8 +2186,8 @@ MonoBehaviour:
   winnerNameImageDisplay: {fileID: 1830638145}
   enableFloatingAnimation: 1
   floatingTopCount: 3
-  floatingAmplitude: 20.7
-  floatingFrequency: 1.31
+  floatingAmplitude: 10
+  floatingFrequency: 1.5
   childObjectNames:
   - "C\xF3c"
   - "G\u1EA5u"
@@ -5093,6 +5093,14 @@ PrefabInstance:
       propertyPath: finishCanvas
       value: 
       objectReference: {fileID: 152497907}
+    - target: {fileID: 1326231674907164136, guid: 0f6a5af1066b94d45a76c795c6bb6ef3, type: 3}
+      propertyPath: floatingAmplitude
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1326231674907164136, guid: 0f6a5af1066b94d45a76c795c6bb6ef3, type: 3}
+      propertyPath: floatingFrequency
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1326231674907164136, guid: 0f6a5af1066b94d45a76c795c6bb6ef3, type: 3}
       propertyPath: positionCalculator
       value: 

@@ -26,8 +26,8 @@ public class WinScreenUI : MonoBehaviour
     [Header("Floating Animation")]
     [SerializeField] private bool enableFloatingAnimation = true;
     [SerializeField] private int floatingTopCount = 3;
-    [SerializeField] private float floatingAmplitude = 8f;
-    [SerializeField] private float floatingFrequency = 1.8f;
+    [SerializeField] private float floatingAmplitude = 10f;
+    [SerializeField] private float floatingFrequency = 1.5f;
 
     // Lưu tên object con trong mỗi rank slot (dùng khi cần truyền dữ liệu qua scene khác)
     public List<string> childObjectNames = new List<string>();
