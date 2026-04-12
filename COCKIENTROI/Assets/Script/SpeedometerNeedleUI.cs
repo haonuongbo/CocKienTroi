@@ -22,7 +22,7 @@ public class SpeedometerNeedleUI : MonoBehaviour
     private void Awake()
     {
         AutoBindReferences();
-        HideSpeedText();
+        ShowSpeedText();
     }
 
     private void Start()
@@ -78,10 +78,10 @@ public class SpeedometerNeedleUI : MonoBehaviour
         }
     }
 
-    private void HideSpeedText()
+    private void ShowSpeedText()
     {
-        if (speedNumberObject != null) speedNumberObject.SetActive(false);
-        if (speedUnitObject != null) speedUnitObject.SetActive(false);
+        if (speedNumberObject != null) speedNumberObject.SetActive(true);
+        if (speedUnitObject != null) speedUnitObject.SetActive(true);
     }
 
     private void TryFindPlayerRigidbody()
