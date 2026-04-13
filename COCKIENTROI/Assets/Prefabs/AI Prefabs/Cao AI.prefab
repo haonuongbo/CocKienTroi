@@ -100,7 +100,7 @@ Animator:
   m_GameObject: {fileID: 3566314003406200908}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 96510e07600fc7042bcba15e7ebd3dc1, type: 2}
+  m_Controller: {fileID: 9100000, guid: c81aad36511a30f48abb689e1af45111, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -194,7 +194,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7225009, w: 0.69136995}
   m_LocalPosition: {x: -0.18, y: 12.38, z: 0}
-  m_LocalScale: {x: 0.535, y: 0.535, z: 0.535}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3837733386567547688}
@@ -356,8 +356,8 @@ MonoBehaviour:
   driftSlide: 0.65
   minTurnSpeed: 0.4
   animator: {fileID: 3227953143713073730}
-  minAnimSpeed: 0.5
-  maxAnimSpeed: 1
+  minAnimSpeed: 0.2
+  maxAnimSpeed: 0.45
 --- !u!114 &6057447336283604712
 MonoBehaviour:
   m_ObjectHideFlags: 0
