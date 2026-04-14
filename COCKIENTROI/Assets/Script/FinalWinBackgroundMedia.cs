@@ -104,7 +104,9 @@ public class FinalWinBackgroundMedia : MonoBehaviour
         videoPlayer.clip = backgroundVideo;
         videoPlayer.playOnAwake = true;
         videoPlayer.isLooping = loopVideo;
-        videoPlayer.renderMode = VideoRenderMode.CameraFarPlane;
+        videoPlayer.renderMode = VideoRenderMode.CameraNearPlane;
+        videoPlayer.targetCamera = targetCamera;
+        videoPlayer.aspectRatio = VideoAspectRatio.FitHorizontally;
         videoPlayer.audioOutputMode = VideoAudioOutputMode.None;
         videoPlayer.Play();
     }
