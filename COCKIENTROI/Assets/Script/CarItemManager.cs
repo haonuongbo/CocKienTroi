@@ -17,6 +17,9 @@ public class CarItemManager : MonoBehaviour
     private Rigidbody2D rb;
 
     private Controller playerController;
+    private PCController pcController;
+    private ControlSpeedAnim speedAnimController;
+    private ControlSpeedAnimMobile mobileController;
     private AICarController aiController;
     
     // Biến lưu trữ trạng thái gốc để khôi phục
@@ -26,11 +29,20 @@ public class CarItemManager : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        if (rb == null) rb = GetComponentInParent<Rigidbody2D>();
+        if (rb == null) rb = GetComponentInChildren<Rigidbody2D>();
+
         playerController = GetComponent<Controller>();
+        pcController = GetComponent<PCController>();
+        speedAnimController = GetComponent<ControlSpeedAnim>();
+        mobileController = GetComponent<ControlSpeedAnimMobile>();
         aiController = GetComponent<AICarController>();
 
         // Lưu lại tốc độ ban đầu
         if (playerController != null) originalMaxSpeed = playerController.maxSpeed;
+        if (pcController != null) originalMaxSpeed = pcController.maxSpeed;
+        if (speedAnimController != null) originalMaxSpeed = speedAnimController.maxSpeed;
+        if (mobileController != null) originalMaxSpeed = mobileController.maxSpeed;
         if (aiController != null) originalMaxSpeed = aiController.maxSpeed;
 
         // Lưu lại kích thước ban đầu của xe (để sửa lỗi teo nhỏ/phình to)
@@ -59,7 +71,12 @@ public class CarItemManager : MonoBehaviour
         currentItem = itemId;
         Debug.Log(">>> " + gameObject.name + " vừa nhặt được vật phẩm số: " + itemId);
 
-        if (!isPlayer)
+        if (isPlayer)
+        {
+            // Tự động sử dụng vật phẩm ngay lập tức khi nhặt được
+            UseItem();
+        }
+        else
         {
             StartCoroutine(AIUseItemRoutine());
         }
@@ -107,7 +124,7 @@ public class CarItemManager : MonoBehaviour
     IEnumerator SpeedBoostEffect()
     {
         ChangeMaxSpeed(5f); 
-        rb.AddForce(-transform.up * 15f, ForceMode2D.Impulse); 
+        if (rb != null) rb.AddForce(-transform.up * 15f, ForceMode2D.Impulse); 
 
         yield return new WaitForSeconds(2f); 
 
@@ -143,12 +160,19 @@ public class CarItemManager : MonoBehaviour
             Instantiate(lightningVFX, transform.position + Vector3.up * 1.5f, Quaternion.identity, transform);
 
         DisableControls(); 
-        rb.linearVelocity = rb.linearVelocity * 0.2f; 
-        rb.angularVelocity = 1000f; 
+        
+        if (rb != null) 
+        {
+            rb.linearVelocity = rb.linearVelocity * 0.2f; 
+            rb.angularVelocity = 1000f; 
+        }
 
         yield return new WaitForSeconds(1.5f); 
 
-        rb.angularVelocity = 0f; 
+        if (rb != null) 
+        {
+            rb.angularVelocity = 0f; 
+        }
         EnableControls(); 
     }
 
@@ -188,13 +212,14 @@ public class CarItemManager : MonoBehaviour
     IEnumerator SpringJump()
     {
         Collider2D col = GetComponent<Collider2D>();
+        if (col == null) col = GetComponentInParent<Collider2D>();
         
         if (col != null) col.enabled = false; 
         
         // Phóng to dựa trên kích thước gốc
         transform.localScale = originalScale * 1.5f;
 
-        rb.AddForce(-transform.up * 15f, ForceMode2D.Impulse);
+        if (rb != null) rb.AddForce(-transform.up * 15f, ForceMode2D.Impulse);
 
         yield return new WaitForSeconds(1.5f); 
 
@@ -224,11 +249,17 @@ public class CarItemManager : MonoBehaviour
 
         float oldSlide = 0.5f;
         if (playerController != null) { oldSlide = playerController.driftSlide; playerController.driftSlide = 0.1f; }
+        if (pcController != null) { oldSlide = pcController.driftSlide; pcController.driftSlide = 0.1f; }
+        if (speedAnimController != null) { oldSlide = speedAnimController.driftSlide; speedAnimController.driftSlide = 0.1f; }
+        if (mobileController != null) { oldSlide = mobileController.driftSlide; mobileController.driftSlide = 0.1f; }
         if (aiController != null) { oldSlide = aiController.driftSlide; aiController.driftSlide = 0.1f; }
 
         yield return new WaitForSeconds(3f); 
 
         if (playerController != null) playerController.driftSlide = oldSlide;
+        if (pcController != null) pcController.driftSlide = oldSlide;
+        if (speedAnimController != null) speedAnimController.driftSlide = oldSlide;
+        if (mobileController != null) mobileController.driftSlide = oldSlide;
         if (aiController != null) aiController.driftSlide = oldSlide;
     }
 
@@ -242,11 +273,17 @@ public class CarItemManager : MonoBehaviour
         if (amountAdded == 0) 
         {
             if (playerController != null) playerController.maxSpeed = originalMaxSpeed;
+            if (pcController != null) pcController.maxSpeed = originalMaxSpeed;
+            if (speedAnimController != null) speedAnimController.maxSpeed = originalMaxSpeed;
+            if (mobileController != null) mobileController.maxSpeed = originalMaxSpeed;
             if (aiController != null) aiController.maxSpeed = originalMaxSpeed;
         }
         else 
         {
             if (playerController != null) playerController.maxSpeed = originalMaxSpeed + amountAdded;
+            if (pcController != null) pcController.maxSpeed = originalMaxSpeed + amountAdded;
+            if (speedAnimController != null) speedAnimController.maxSpeed = originalMaxSpeed + amountAdded;
+            if (mobileController != null) mobileController.maxSpeed = originalMaxSpeed + amountAdded;
             if (aiController != null) aiController.maxSpeed = originalMaxSpeed + amountAdded;
         }
     }
@@ -254,12 +291,18 @@ public class CarItemManager : MonoBehaviour
     void DisableControls()
     {
         if (playerController != null) playerController.enabled = false;
+        if (pcController != null) pcController.enabled = false;
+        if (speedAnimController != null) speedAnimController.enabled = false;
+        if (mobileController != null) mobileController.enabled = false;
         if (aiController != null) aiController.enabled = false;
     }
 
     void EnableControls()
     {
         if (playerController != null) playerController.enabled = true;
+        if (pcController != null) pcController.enabled = true;
+        if (speedAnimController != null) speedAnimController.enabled = true;
+        if (mobileController != null) mobileController.enabled = true;
         if (aiController != null) aiController.enabled = true;
     }
 }

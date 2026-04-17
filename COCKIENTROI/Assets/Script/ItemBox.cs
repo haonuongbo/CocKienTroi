@@ -15,8 +15,8 @@ public class ItemBox : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        // Kiểm tra xem đối tượng chạm vào có script CarItemManager không
-        CarItemManager carItem = other.GetComponent<CarItemManager>();
+        // Kiểm tra xem đối tượng chạm vào có script CarItemManager không (tìm trong cả bản thân vật chạm và Root cha của xe)
+        CarItemManager carItem = other.GetComponentInParent<CarItemManager>();
         
         if (carItem != null && !carItem.HasItem())
         {

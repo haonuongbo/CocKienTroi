@@ -8,6 +8,7 @@ public class MiniMapUITracker : MonoBehaviour
     [SerializeField] private RectTransform miniMapRect;
     [SerializeField] private RectTransform playerDotTemplate;
     [SerializeField] private RectTransform aiDotTemplate;
+    [SerializeField] private RectTransform itemDotTemplate;
 
     [Header("World bounds mapped to mini map")]
     [SerializeField] private Vector2 worldMin = new Vector2(-1200f, -1200f);
@@ -19,6 +20,7 @@ public class MiniMapUITracker : MonoBehaviour
     [Header("Detection")]
     [SerializeField] private string playerTag = "Player";
     [SerializeField] private string aiTag = "AI";
+    [SerializeField] private string itemTag = "ItemBox";
     [SerializeField] private bool useTagDetection = true;
 
     private Transform playerTarget;
@@ -26,6 +28,9 @@ public class MiniMapUITracker : MonoBehaviour
 
     private readonly List<Transform> aiTargets = new List<Transform>();
     private readonly List<RectTransform> aiDots = new List<RectTransform>();
+
+    private readonly List<ItemBox> itemTargets = new List<ItemBox>();
+    private readonly List<RectTransform> itemDots = new List<RectTransform>();
 
     private float nextRefreshTime;
     private const float RefreshInterval = 0.75f;
@@ -57,6 +62,26 @@ public class MiniMapUITracker : MonoBehaviour
         for (int i = 0; i < aiTargets.Count; i++)
         {
             UpdateDotPosition(aiTargets[i], aiDots[i]);
+        }
+
+        for (int i = 0; i < itemTargets.Count; i++)
+        {
+            if (itemDots[i] == null) continue;
+            
+            bool isActive = itemTargets[i] != null && 
+                            itemTargets[i].gameObject.activeInHierarchy && 
+                            itemTargets[i].GetComponent<SpriteRenderer>().enabled;
+
+            if (isActive)
+            {
+                if (!itemDots[i].gameObject.activeSelf) itemDots[i].gameObject.SetActive(true);
+                UpdateDotPosition(itemTargets[i].transform, itemDots[i]);
+                itemDots[i].localScale = Vector3.one * 0.75f; // Thu nhỏ icon ItemBox một chút
+            }
+            else
+            {
+                if (itemDots[i].gameObject.activeSelf) itemDots[i].gameObject.SetActive(false);
+            }
         }
     }
 
@@ -96,6 +121,15 @@ public class MiniMapUITracker : MonoBehaviour
         SetImageColor(playerDotTemplate, Color.green);
         SetImageColor(aiDotTemplate, Color.red);
 
+        // Setup ItemBox template
+        if (itemDotTemplate == null)
+        {
+            itemDotTemplate = Instantiate(aiDotTemplate, miniMapRect);
+            itemDotTemplate.name = "Mini_Item_Template";
+            itemDotTemplate.gameObject.SetActive(false);
+        }
+        SetImageColor(itemDotTemplate, Color.yellow); // Hiển thị BoxItem với màu vàng
+
         playerDot = playerDotTemplate;
     }
 
@@ -103,7 +137,9 @@ public class MiniMapUITracker : MonoBehaviour
     {
         playerTarget = FindPlayerTarget();
         FindAiTargets(aiTargets);
+        FindItemTargets(itemTargets);
         SyncAiDotsWithTargets();
+        SyncItemDotsWithTargets();
     }
 
     private Transform FindPlayerTarget()
@@ -174,6 +210,34 @@ public class MiniMapUITracker : MonoBehaviour
         for (int i = 0; i < aiDots.Count; i++)
         {
             aiDots[i].gameObject.SetActive(i < aiTargets.Count);
+        }
+    }
+
+    private void FindItemTargets(List<ItemBox> output)
+    {
+        output.Clear();
+        ItemBox[] items = FindObjectsByType<ItemBox>(FindObjectsSortMode.None);
+        for (int i = 0; i < items.Length; i++)
+        {
+            if (items[i] != null) output.Add(items[i]);
+        }
+    }
+
+    private void SyncItemDotsWithTargets()
+    {
+        if (itemDotTemplate == null) return;
+
+        while (itemDots.Count < itemTargets.Count)
+        {
+            RectTransform newDot = Instantiate(itemDotTemplate, miniMapRect);
+            newDot.name = "Mini_Item_" + itemDots.Count;
+            SetImageColor(newDot, Color.yellow);
+            itemDots.Add(newDot);
+        }
+
+        for (int i = 0; i < itemDots.Count; i++)
+        {
+            itemDots[i].gameObject.SetActive(i < itemTargets.Count);
         }
     }
 

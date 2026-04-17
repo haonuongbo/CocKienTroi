@@ -177,6 +177,7 @@ GameObject:
   - component: {fileID: 7694571961572211309}
   - component: {fileID: 3924009891047178505}
   - component: {fileID: -5803439545872994481}
+  - component: {fileID: 5450236302189628568}
   m_Layer: 12
   m_Name: Coc AI
   m_TagString: AI
@@ -411,3 +412,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eebe070672025b499bdf53b5b7b353d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5450236302189628568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5132635946344110034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7dec2d90c10bbc4ba797a71016dcf92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayer: 0
+  bananaPrefab: {fileID: 8829317573807326267, guid: ebfab8b959708684d865860ab6276ffd, type: 3}
+  lightningVFX: {fileID: 2230007012303043514, guid: 343bea8da1799534f96c01a3e81975e1, type: 3}
+  hammerVFX: {fileID: 7112477439379457316, guid: 9522340619ca8dc40b6acf090fb64f74, type: 3}
+  rainVFX: {fileID: 3980493328950275890, guid: 4dad153f040c1624fa55c2847fe27621, type: 3}
