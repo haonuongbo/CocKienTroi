@@ -194,7 +194,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7225009, w: 0.69136995}
   m_LocalPosition: {x: -0.314, y: 11.544, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 2.08, y: 2.08, z: 2.08}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7903811434795447300}
@@ -346,14 +346,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   circuit: {fileID: 0}
-  waypointThreshold: 5
+  waypointThreshold: 8
   circuitName: Map3_Circuit
-  acceleration: 2.8
-  maxSpeed: 6.35
-  turnSpeed: 60
-  driftTurnMultiplier: 70
-  driftFactor: 0.6
-  driftSlide: 0.675
+  acceleration: 14
+  maxSpeed: 27
+  turnSpeed: 88
+  driftTurnMultiplier: 1.9
+  driftFactor: 0.61
+  driftSlide: 0.71
   minTurnSpeed: 0.4
   animator: {fileID: 6735979202222950874}
   minAnimSpeed: 0.1

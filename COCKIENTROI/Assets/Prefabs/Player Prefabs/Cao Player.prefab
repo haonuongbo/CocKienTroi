@@ -399,12 +399,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3d53241587331548aceba4addeaaf20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: 3
-  maxSpeed: 7
+  acceleration: 10
+  maxSpeed: 25
   turnSpeed: 70
   driftTurnMultiplier: 1.8
-  driftFactor: 0.6
-  driftSlide: 0.7
+  driftFactor: 0.42
+  driftSlide: 0.46
   minTurnSpeed: 0
   minDriftSpeed: 4
   animator: {fileID: 8276197770231853667}
@@ -423,7 +423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   acceleration: 3
-  maxSpeed: 7
+  maxSpeed: 14
   turnSpeed: 70
   driftTurnMultiplier: 1.8
   driftFactor: 0.6

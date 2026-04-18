@@ -226,14 +226,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   circuit: {fileID: 0}
-  waypointThreshold: 5
+  waypointThreshold: 8
   circuitName: Map3_Circuit
-  acceleration: 2.9
-  maxSpeed: 6.5
-  turnSpeed: 80
-  driftTurnMultiplier: 2.3
-  driftFactor: 0.6
-  driftSlide: 0.68
+  acceleration: 14
+  maxSpeed: 27
+  turnSpeed: 85
+  driftTurnMultiplier: 1.9
+  driftFactor: 0.62
+  driftSlide: 0.72
   minTurnSpeed: 0.4
   animator: {fileID: 2542539060620892130}
   minAnimSpeed: 0.5
