@@ -1861,7 +1861,7 @@ MonoBehaviour:
   maxNeedleAngle: 70
   smoothSpeed: 8
   playerRigidbody: {fileID: 0}
-  maxSpeedForNeedle: 10
+  maxSpeedForNeedle: 25
 --- !u!1 &4468173425322676090
 GameObject:
   m_ObjectHideFlags: 0
