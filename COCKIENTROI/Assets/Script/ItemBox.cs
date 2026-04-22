@@ -53,8 +53,8 @@ public class ItemBox : MonoBehaviour
         // CHỈ cho phép va chạm với thân xe thật (Solid Collider), bỏ qua các vùng quét (Radar) hoặc vũ khí (Trigger)
         if (other.isTrigger) return;
 
-        // Chỉ lấy CarItemManager ở đúng object đang va chạm (tránh việc vũ khí con cái va chạm lại tính cho xe mẹ)
-        CarItemManager carItem = other.GetComponent<CarItemManager>();
+        // Tìm CarItemManager ở object này hoặc object cha của nó (để hỗ trợ trường hợp Collider nằm ở object con)
+        CarItemManager carItem = other.GetComponentInParent<CarItemManager>();
         
         if (carItem != null && carItem.CanPickUpItem())
         {
