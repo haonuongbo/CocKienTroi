@@ -12,6 +12,9 @@ public class CarItemManager : MonoBehaviour
     public GameObject hammerVFX;    
     public GameObject rainVFX;      
 
+    [Header("Hiệu ứng Mưa (Sprites Mưa_0 -> Mưa_4)")]
+    public Sprite[] rainSprites;
+
     // --- Thông tin nội bộ ---
     private int currentItem = 0; // 0: Trống, 1: Tăng tốc, 2: Chuối, 3: Sét, 4: Búa, 5: Lò xo, 6: Mưa
     private Rigidbody2D rb;
@@ -301,8 +304,25 @@ public class CarItemManager : MonoBehaviour
 
     public IEnumerator ReceiveRainSlippery()
     {
+        GameObject activeRain = null;
+
         if (rainVFX != null) 
-            Instantiate(rainVFX, transform.position + Vector3.up * 2f, Quaternion.identity, transform);
+        {
+            activeRain = Instantiate(rainVFX, transform.position + Vector3.up * 2f, Quaternion.identity, transform);
+        }
+        else if (rainSprites != null && rainSprites.Length > 0)
+        {
+            // Tự động tạo hiệu ứng mưa bằng code nếu user đưa danh sách ảnh Mưa_0->4
+            activeRain = new GameObject("RainAnimation");
+            activeRain.transform.SetParent(this.transform);
+            activeRain.transform.localPosition = new Vector3(0, 1.5f, 0); // Lơ lửng trên đầu
+            
+            SpriteRenderer sr = activeRain.AddComponent<SpriteRenderer>();
+            sr.sortingLayerName = "Default";
+            sr.sortingOrder = 10;
+            
+            StartCoroutine(PlayRainAnimation(sr));
+        }
 
         slipperyCount++;
         
@@ -323,6 +343,24 @@ public class CarItemManager : MonoBehaviour
             if (speedAnimController != null) speedAnimController.driftSlide = origSpeedAnimSlide;
             if (mobileController != null) mobileController.driftSlide = origMobileSlide;
             if (aiController != null) aiController.driftSlide = origAiSlide;
+        }
+
+        // Xóa hiệu ứng mưa khi hết 3s
+        if (activeRain != null)
+        {
+            Destroy(activeRain);
+        }
+    }
+
+    IEnumerator PlayRainAnimation(SpriteRenderer sr)
+    {
+        int index = 0;
+        float delay = 0.1f; // 10 FPS
+        while (sr != null)
+        {
+            sr.sprite = rainSprites[index];
+            index = (index + 1) % rainSprites.Length;
+            yield return new WaitForSeconds(delay);
         }
     }
 
