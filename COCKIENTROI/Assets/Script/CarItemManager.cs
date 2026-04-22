@@ -131,14 +131,6 @@ public class CarItemManager : MonoBehaviour
     {
         if (currentItem == 0) return;
 
-        // TRÁNH HỖN LOẠN ĐẦU GAME: Không cho phép bất kỳ ai tung chiêu trong 3 giây đầu tiên!
-        if (Time.time - spawnTime < 3.0f)
-        {
-            Debug.Log($"[CarItemManager] {gameObject.name} hoãn dùng chiêu để chờ hết 3s đầu game!");
-            StartCoroutine(DelayedUseItem());
-            return;
-        }
-
         Debug.Log("=== " + gameObject.name + " ĐÃ SỬ DỤNG vật phẩm số: " + currentItem);
 
         switch (currentItem)
@@ -153,18 +145,6 @@ public class CarItemManager : MonoBehaviour
 
         // Dùng xong thì xóa đồ trên tay
         currentItem = 0; 
-    }
-
-    IEnumerator DelayedUseItem()
-    {
-        // Đợi đến khi nào thời gian trôi qua đủ 3 giây kể từ lúc bắt đầu
-        while (Time.time - spawnTime < 3.0f)
-        {
-            yield return null;
-        }
-        
-        // Đủ 3 giây rồi thì tung chiêu
-        UseItem();
     }
 
 
