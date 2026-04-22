@@ -64,6 +64,17 @@ public class CarItemManager : MonoBehaviour
         if (speedAnimController != null) origSpeedAnimSlide = speedAnimController.driftSlide;
         if (mobileController != null) origMobileSlide = mobileController.driftSlide;
         if (aiController != null) origAiSlide = aiController.driftSlide;
+
+        // Khởi động thời gian chờ 1.5s không cho nhặt đồ đầu game
+        StartCoroutine(EnableItemPickupCooldown());
+    }
+
+    private bool canPickUpItems = false; // Thời gian chờ đầu game
+
+    IEnumerator EnableItemPickupCooldown()
+    {
+        yield return new WaitForSeconds(1.5f);
+        canPickUpItems = true;
     }
 
     void Update()
@@ -80,10 +91,16 @@ public class CarItemManager : MonoBehaviour
         return currentItem != 0;
     }
 
+    public bool CanPickUpItem()
+    {
+        // Không cho phép nhặt nếu chưa hết thời gian chờ đầu game hoặc đã có vật phẩm
+        return canPickUpItems && !HasItem();
+    }
+
     // Hàm nhận vật phẩm (Gọi từ ItemBox)
     public void ReceiveItem(int itemId)
     {
-        if (HasItem()) return; 
+        if (!CanPickUpItem()) return; 
 
         currentItem = itemId;
         Debug.Log(">>> " + gameObject.name + " vừa nhặt được vật phẩm số: " + itemId);

@@ -56,7 +56,7 @@ public class ItemBox : MonoBehaviour
         // Chỉ lấy CarItemManager ở đúng object đang va chạm (tránh việc vũ khí con cái va chạm lại tính cho xe mẹ)
         CarItemManager carItem = other.GetComponent<CarItemManager>();
         
-        if (carItem != null && !carItem.HasItem())
+        if (carItem != null && carItem.CanPickUpItem())
         {
             isRespawning = true; // KHÓA NGAY LẬP TỨC TRONG CÙNG FRAME để tránh lỗi
             carItem.ReceiveItem(currentItem); 
