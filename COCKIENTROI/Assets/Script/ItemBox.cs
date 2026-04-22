@@ -53,7 +53,10 @@ public class ItemBox : MonoBehaviour
         // Ngăn vũ khí/hiệu ứng vô tình ăn mất hộp
         if (other.gameObject.name.Contains("Hammer") || other.gameObject.name.Contains("VFX")) return;
 
-        CarItemManager carItem = other.GetComponentInParent<CarItemManager>();
+        // Tìm CarItemManager bằng mọi cách: trên body, trên cha, hoặc trên Rigidbody
+        CarItemManager carItem = other.GetComponent<CarItemManager>();
+        if (carItem == null) carItem = other.GetComponentInParent<CarItemManager>();
+        if (carItem == null && other.attachedRigidbody != null) carItem = other.attachedRigidbody.GetComponent<CarItemManager>();
         
         if (carItem != null)
         {
@@ -65,7 +68,7 @@ public class ItemBox : MonoBehaviour
             }
             else
             {
-                Debug.Log($"[ItemBox] Xe {carItem.gameObject.name} chạm vào hộp nhưng không thể nhặt (Chưa hết 1.5s đầu game HOẶC xe đang có sẵn đồ trên tay chưa xài!)");
+                Debug.Log($"[ItemBox] Xe {carItem.gameObject.name} chạm hộp nhưng chưa ăn được (Chưa hết 1.5s đầu game hoặc đang cầm đồ).");
             }
         }
     }
