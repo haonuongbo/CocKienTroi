@@ -48,12 +48,22 @@ public class ItemBox : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (isRespawning) return; 
+        Debug.Log($"[ItemBox] Vừa va chạm với Collider của: {other.gameObject.name} (isTrigger: {other.isTrigger})");
+
+        if (isRespawning) 
+        {
+            Debug.Log("[ItemBox] Bỏ qua vì hộp đang ẩn (isRespawning = true)");
+            return; 
+        }
 
         // Ngăn vũ khí/hiệu ứng vô tình ăn mất hộp
-        if (other.gameObject.name.Contains("Hammer") || other.gameObject.name.Contains("VFX")) return;
+        if (other.gameObject.name.Contains("Hammer") || other.gameObject.name.Contains("VFX")) 
+        {
+            Debug.Log("[ItemBox] Bỏ qua vì đây là vũ khí/hiệu ứng");
+            return;
+        }
 
-        // Tìm CarItemManager bằng mọi cách: trên body, trên cha, hoặc trên Rigidbody
+        // Tìm CarItemManager bằng mọi cách
         CarItemManager carItem = other.GetComponent<CarItemManager>();
         if (carItem == null) carItem = other.GetComponentInParent<CarItemManager>();
         if (carItem == null && other.attachedRigidbody != null) carItem = other.attachedRigidbody.GetComponent<CarItemManager>();
@@ -62,14 +72,19 @@ public class ItemBox : MonoBehaviour
         {
             if (carItem.CanPickUpItem())
             {
+                Debug.Log($"[ItemBox] THÀNH CÔNG! Xe {carItem.gameObject.name} đã nhặt hộp!");
                 isRespawning = true; 
                 carItem.ReceiveItem(currentItem); 
                 StartCoroutine(RespawnRoutine());
             }
             else
             {
-                Debug.Log($"[ItemBox] Xe {carItem.gameObject.name} chạm hộp nhưng chưa ăn được (Chưa hết 1.5s đầu game hoặc đang cầm đồ).");
+                Debug.Log($"[ItemBox] THẤT BẠI: Xe {carItem.gameObject.name} bị chặn không cho nhặt (Chưa hết 1.5s HOẶC đang cầm đồ trên tay).");
             }
+        }
+        else
+        {
+            Debug.Log($"[ItemBox] THẤT BẠI: Không tìm thấy script CarItemManager trên vật thể {other.gameObject.name}!");
         }
     }
 
