@@ -48,40 +48,35 @@ public class ItemBox : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (isRespawning) return; // Nếu hộp đang ẩn thì không cho ăn nữa để tránh lỗi nhiều xe ăn cùng lúc
+        if (isRespawning) return; // Đã bị ăn rồi thì bỏ qua
 
-        // Kiểm tra xem đối tượng chạm vào có script CarItemManager không
         CarItemManager carItem = other.GetComponentInParent<CarItemManager>();
         
         if (carItem != null && !carItem.HasItem())
         {
-            carItem.ReceiveItem(currentItem); // Tặng vật phẩm cho xe
-
-            // Ẩn hộp đi và bắt đầu đếm ngược để hiện lại
+            isRespawning = true; // KHÓA NGAY LẬP TỨC TRONG CÙNG FRAME để tránh lỗi
+            carItem.ReceiveItem(currentItem); 
             StartCoroutine(RespawnRoutine());
         }
     }
 
     IEnumerator RespawnRoutine()
     {
-        isRespawning = true; // Đánh dấu là đang ẩn
-
-        // Tắt hình ảnh và va chạm của toàn bộ ItemBox và các object con
-        SpriteRenderer[] renderers = GetComponentsInChildren<SpriteRenderer>();
-        foreach (var r in renderers) r.enabled = false;
+        // Tắt toàn bộ MeshRenderer hoặc SpriteRenderer
+        Renderer[] renderers = GetComponentsInChildren<Renderer>();
+        foreach (var r in renderers) if (r != null) r.enabled = false;
 
         Collider2D[] colliders = GetComponentsInChildren<Collider2D>();
-        foreach (var c in colliders) c.enabled = false;
+        foreach (var c in colliders) if (c != null) c.enabled = false;
 
         yield return new WaitForSeconds(respawnTime); // Đợi 3s
 
-        // Tạo item mới ngẫu nhiên
         GenerateRandomItem();
 
         // Bật lại
         foreach (var r in renderers) if (r != null) r.enabled = true;
         foreach (var c in colliders) if (c != null) c.enabled = true;
         
-        isRespawning = false; // Đánh dấu là đã hiện lại
+        isRespawning = false; 
     }
 }
