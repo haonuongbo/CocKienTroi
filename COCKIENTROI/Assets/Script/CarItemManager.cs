@@ -88,15 +88,12 @@ public class CarItemManager : MonoBehaviour
         currentItem = itemId;
         Debug.Log(">>> " + gameObject.name + " vừa nhặt được vật phẩm số: " + itemId);
 
-        if (isPlayer)
+        if (!isPlayer)
         {
-            // Tự động sử dụng vật phẩm ngay lập tức khi nhặt được
-            UseItem();
-        }
-        else
-        {
+            // Chỉ AI mới tự động dùng sau một khoảng thời gian
             StartCoroutine(AIUseItemRoutine());
         }
+        // Nếu là Player, hệ thống sẽ chờ bấm phím Space ở hàm Update()
     }
 
     // Bộ não AI tự dùng đồ sau 1 đến 3 giây
