@@ -1239,11 +1239,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4759770171155042232, guid: 9875bd312157d554f90565e565597ab4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 260.85
+      value: 210.12
       objectReference: {fileID: 0}
     - target: {fileID: 4759770171155042232, guid: 9875bd312157d554f90565e565597ab4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1378.82
+      value: -1400.72
       objectReference: {fileID: 0}
     - target: {fileID: 4759770171155042232, guid: 9875bd312157d554f90565e565597ab4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1260,6 +1260,14 @@ PrefabInstance:
     - target: {fileID: 4759770171155042232, guid: 9875bd312157d554f90565e565597ab4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -180.172
+      objectReference: {fileID: 0}
+    - target: {fileID: 6050903284858450018, guid: 9875bd312157d554f90565e565597ab4, type: 3}
+      propertyPath: m_Size.y
+      value: 6.1529474
+      objectReference: {fileID: 0}
+    - target: {fileID: 6050903284858450018, guid: 9875bd312157d554f90565e565597ab4, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.3716607
       objectReference: {fileID: 0}
     - target: {fileID: 7512864150350114945, guid: 9875bd312157d554f90565e565597ab4, type: 3}
       propertyPath: maxLap
