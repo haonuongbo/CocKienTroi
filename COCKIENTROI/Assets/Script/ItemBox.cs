@@ -4,8 +4,6 @@ using System.Collections;
 public class ItemBox : MonoBehaviour
 {
     public float respawnTime = 3f; // Thời gian hộp xuất hiện lại sau khi bị ăn
-    private SpriteRenderer spriteRenderer;
-    private Collider2D boxCollider;
 
     [Header("Mini Icon Settings")]
     public Sprite[] itemIcons; // Kéo thả 6 icon vào đây: 0=Tăng tốc, 1=Chuối, 2=Sét, 3=Búa, 4=Lò xo, 5=Mưa
@@ -18,9 +16,6 @@ public class ItemBox : MonoBehaviour
 
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        boxCollider = GetComponent<Collider2D>();
-
         // Tạo một GameObject con để hiển thị mini icon
         GameObject iconObj = new GameObject("MiniItemIcon");
         iconObj.transform.SetParent(this.transform);
@@ -28,8 +23,12 @@ public class ItemBox : MonoBehaviour
         iconObj.transform.localScale = new Vector3(iconScale, iconScale, iconScale);
         
         iconSpriteRenderer = iconObj.AddComponent<SpriteRenderer>();
-        iconSpriteRenderer.sortingLayerName = spriteRenderer.sortingLayerName;
-        iconSpriteRenderer.sortingOrder = spriteRenderer.sortingLayerName == "Default" ? spriteRenderer.sortingOrder + 1 : 5;
+        SpriteRenderer mainSr = GetComponent<SpriteRenderer>();
+        if (mainSr != null)
+        {
+            iconSpriteRenderer.sortingLayerName = mainSr.sortingLayerName;
+            iconSpriteRenderer.sortingOrder = mainSr.sortingLayerName == "Default" ? mainSr.sortingOrder + 1 : 5;
+        }
 
         // Random item đầu tiên khi game bắt đầu
         GenerateRandomItem();
@@ -67,10 +66,12 @@ public class ItemBox : MonoBehaviour
     {
         isRespawning = true; // Đánh dấu là đang ẩn
 
-        // Tắt hình ảnh và va chạm
-        spriteRenderer.enabled = false;
-        boxCollider.enabled = false;
-        if (iconSpriteRenderer != null) iconSpriteRenderer.enabled = false;
+        // Tắt hình ảnh và va chạm của toàn bộ ItemBox và các object con
+        SpriteRenderer[] renderers = GetComponentsInChildren<SpriteRenderer>();
+        foreach (var r in renderers) r.enabled = false;
+
+        Collider2D[] colliders = GetComponentsInChildren<Collider2D>();
+        foreach (var c in colliders) c.enabled = false;
 
         yield return new WaitForSeconds(respawnTime); // Đợi 3s
 
@@ -78,9 +79,8 @@ public class ItemBox : MonoBehaviour
         GenerateRandomItem();
 
         // Bật lại
-        spriteRenderer.enabled = true;
-        boxCollider.enabled = true;
-        if (iconSpriteRenderer != null) iconSpriteRenderer.enabled = true;
+        foreach (var r in renderers) if (r != null) r.enabled = true;
+        foreach (var c in colliders) if (c != null) c.enabled = true;
         
         isRespawning = false; // Đánh dấu là đã hiện lại
     }
