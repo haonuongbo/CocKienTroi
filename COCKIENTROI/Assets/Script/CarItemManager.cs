@@ -85,9 +85,13 @@ public class CarItemManager : MonoBehaviour
 
     public bool CanPickUpItem()
     {
-        // Không cho phép nhặt nếu chưa hết thời gian chờ đầu game (1.5s) hoặc đã có vật phẩm
-        bool isCooldownFinished = (Time.time - spawnTime) > 1.5f;
-        return isCooldownFinished && !HasItem();
+        if (HasItem())
+        {
+            Debug.Log($"[CarItemManager] Xe {gameObject.name} bị chặn nhặt vì ĐANG CÓ vật phẩm số {currentItem} chưa xài!");
+            return false;
+        }
+
+        return true;
     }
 
     // Hàm nhận vật phẩm (Gọi từ ItemBox)
