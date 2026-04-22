@@ -208,6 +208,9 @@ public class CarItemManager : MonoBehaviour
             activeHammer.transform.localPosition = new Vector3(2f, 0, 0); // Khoảng cách búa xoay quanh xe
         }
 
+        // Dùng Dictionary để lưu thời gian bị đập của từng xe (để tránh spam mỗi frame)
+        System.Collections.Generic.Dictionary<CarItemManager, float> lastHitTimes = new System.Collections.Generic.Dictionary<CarItemManager, float>();
+
         float timer = 0f;
         while (timer < hammerDuration)
         {
@@ -230,11 +233,25 @@ public class CarItemManager : MonoBehaviour
                     
                     if (enemyRb != null && enemyCar != null)
                     {
-                        Vector2 pushDirection = (hit.transform.position - transform.position).normalized;
-                        enemyRb.AddForce(pushDirection * 20f, ForceMode2D.Impulse);
-                        
-                        // Cho kẻ địch dính sát thương
-                        enemyCar.StartCoroutine(enemyCar.ReceiveLightningShock()); 
+                        bool canHit = true;
+                        // Kiểm tra xem xe này đã bị đập gần đây chưa (cooldown 1.5 giây)
+                        if (lastHitTimes.ContainsKey(enemyCar))
+                        {
+                            if (Time.time - lastHitTimes[enemyCar] < 1.5f) 
+                            {
+                                canHit = false;
+                            }
+                        }
+
+                        if (canHit)
+                        {
+                            lastHitTimes[enemyCar] = Time.time; // Cập nhật thời gian bị đập
+                            Vector2 pushDirection = (hit.transform.position - transform.position).normalized;
+                            enemyRb.AddForce(pushDirection * 20f, ForceMode2D.Impulse);
+                            
+                            // Cho kẻ địch dính sát thương
+                            enemyCar.StartCoroutine(enemyCar.ReceiveLightningShock()); 
+                        }
                     }
                 }
             }
