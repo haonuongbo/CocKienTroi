@@ -183,13 +183,29 @@ public class CarItemManager : MonoBehaviour
         ChangeMaxSpeed(0f); 
     }
 
+    // Hàm tiện ích để tắt va chạm vật lý của VFX/Item rớt ra với chính chiếc xe đó (tránh xe bị văng ra ngoài map)
+    void MakeVFXHarmless(GameObject vfx)
+    {
+        if (vfx == null) return;
+        Collider2D[] carCols = GetComponentsInChildren<Collider2D>();
+        Collider2D[] vfxCols = vfx.GetComponentsInChildren<Collider2D>();
+        foreach (var cc in carCols)
+        {
+            foreach (var vc in vfxCols)
+            {
+                if (cc != null && vc != null) Physics2D.IgnoreCollision(cc, vc);
+            }
+        }
+    }
+
     // --- 2. VỎ CHUỐI ---
     void DropBanana()
     {
         if (bananaPrefab != null)
         {
             Vector3 dropPos = transform.position + (transform.up * 1.5f);
-            Instantiate(bananaPrefab, dropPos, transform.rotation);
+            GameObject banana = Instantiate(bananaPrefab, dropPos, transform.rotation);
+            MakeVFXHarmless(banana);
         }
     }
 
@@ -208,8 +224,12 @@ public class CarItemManager : MonoBehaviour
 
     public IEnumerator ReceiveLightningShock()
     {
+        GameObject activeLightning = null;
         if (lightningVFX != null) 
-            Instantiate(lightningVFX, transform.position + Vector3.up * 1.5f, Quaternion.identity, transform);
+        {
+            activeLightning = Instantiate(lightningVFX, transform.position + Vector3.up * 1.5f, Quaternion.identity, transform);
+            MakeVFXHarmless(activeLightning);
+        }
 
         DisableControls(); 
         
@@ -244,6 +264,7 @@ public class CarItemManager : MonoBehaviour
         {
             GameObject activeHammer = Instantiate(hammerVFX, hammerPivot.transform);
             activeHammer.transform.localPosition = new Vector3(2f, 0, 0); // Khoảng cách búa xoay quanh xe
+            MakeVFXHarmless(activeHammer);
         }
 
         // Dùng Dictionary để lưu thời gian bị đập của từng xe (để tránh spam mỗi frame)
@@ -306,10 +327,9 @@ public class CarItemManager : MonoBehaviour
     // --- 5. LÒ XO ---
     IEnumerator SpringJump()
     {
-        Collider2D col = GetComponent<Collider2D>();
-        if (col == null) col = GetComponentInParent<Collider2D>();
-        
-        if (col != null) col.enabled = false; 
+        // Tắt toàn bộ Collider của xe và các object con (tránh việc khi to ra bị kẹt vào tường và văng ra khỏi map)
+        Collider2D[] allCols = GetComponentsInChildren<Collider2D>();
+        foreach (var c in allCols) if (c != null) c.enabled = false;
         
         // Phóng to dựa trên kích thước gốc
         transform.localScale = originalScale * 1.5f;
@@ -321,7 +341,7 @@ public class CarItemManager : MonoBehaviour
         // Trả về đúng kích thước gốc
         transform.localScale = originalScale;
         
-        if (col != null) col.enabled = true; 
+        foreach (var c in allCols) if (c != null) c.enabled = true;
     }
 
     // --- 6. MƯA ---
@@ -344,6 +364,7 @@ public class CarItemManager : MonoBehaviour
         if (rainVFX != null) 
         {
             activeRain = Instantiate(rainVFX, transform.position + Vector3.up * 2f, Quaternion.identity, transform);
+            MakeVFXHarmless(activeRain);
         }
         else if (rainSprites != null && rainSprites.Length > 0)
         {
