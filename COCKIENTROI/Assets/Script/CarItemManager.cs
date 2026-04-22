@@ -194,9 +194,6 @@ public class CarItemManager : MonoBehaviour
             activeHammer.transform.localPosition = new Vector3(2f, 0, 0); // Khoảng cách búa xoay quanh xe
         }
 
-        // Phóng to dựa trên kích thước gốc
-        transform.localScale = originalScale * 1.2f; 
-
         float timer = 0f;
         while (timer < hammerDuration)
         {
@@ -230,8 +227,7 @@ public class CarItemManager : MonoBehaviour
             yield return null;
         }
 
-        // Trả về đúng kích thước gốc và xóa búa xoay
-        transform.localScale = originalScale; 
+        // Xóa búa xoay
         if (hammerPivot != null)
         {
             Destroy(hammerPivot);
