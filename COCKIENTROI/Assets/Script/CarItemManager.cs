@@ -45,8 +45,15 @@ public class CarItemManager : MonoBehaviour
         if (mobileController != null) originalMaxSpeed = mobileController.maxSpeed;
         if (aiController != null) originalMaxSpeed = aiController.maxSpeed;
 
-        // Lưu lại kích thước ban đầu của xe (để sửa lỗi teo nhỏ/phình to)
+        // Lưu lại kích thước ban đầu của xe
         originalScale = transform.localScale;
+
+        // Lưu giá trị driftSlide gốc
+        if (playerController != null) origPlayerSlide = playerController.driftSlide;
+        if (pcController != null) origPcSlide = pcController.driftSlide;
+        if (speedAnimController != null) origSpeedAnimSlide = speedAnimController.driftSlide;
+        if (mobileController != null) origMobileSlide = mobileController.driftSlide;
+        if (aiController != null) origAiSlide = aiController.driftSlide;
     }
 
     void Update()
@@ -273,20 +280,26 @@ public class CarItemManager : MonoBehaviour
         if (rainVFX != null) 
             Instantiate(rainVFX, transform.position + Vector3.up * 2f, Quaternion.identity, transform);
 
-        float oldSlide = 0.5f;
-        if (playerController != null) { oldSlide = playerController.driftSlide; playerController.driftSlide = 0.1f; }
-        if (pcController != null) { oldSlide = pcController.driftSlide; pcController.driftSlide = 0.1f; }
-        if (speedAnimController != null) { oldSlide = speedAnimController.driftSlide; speedAnimController.driftSlide = 0.1f; }
-        if (mobileController != null) { oldSlide = mobileController.driftSlide; mobileController.driftSlide = 0.1f; }
-        if (aiController != null) { oldSlide = aiController.driftSlide; aiController.driftSlide = 0.1f; }
+        slipperyCount++;
+        
+        if (playerController != null) playerController.driftSlide = 0.1f;
+        if (pcController != null) pcController.driftSlide = 0.1f;
+        if (speedAnimController != null) speedAnimController.driftSlide = 0.1f;
+        if (mobileController != null) mobileController.driftSlide = 0.1f;
+        if (aiController != null) aiController.driftSlide = 0.1f;
 
         yield return new WaitForSeconds(3f); 
 
-        if (playerController != null) playerController.driftSlide = oldSlide;
-        if (pcController != null) pcController.driftSlide = oldSlide;
-        if (speedAnimController != null) speedAnimController.driftSlide = oldSlide;
-        if (mobileController != null) mobileController.driftSlide = oldSlide;
-        if (aiController != null) aiController.driftSlide = oldSlide;
+        slipperyCount--;
+        if (slipperyCount <= 0)
+        {
+            slipperyCount = 0;
+            if (playerController != null) playerController.driftSlide = origPlayerSlide;
+            if (pcController != null) pcController.driftSlide = origPcSlide;
+            if (speedAnimController != null) speedAnimController.driftSlide = origSpeedAnimSlide;
+            if (mobileController != null) mobileController.driftSlide = origMobileSlide;
+            if (aiController != null) aiController.driftSlide = origAiSlide;
+        }
     }
 
 
@@ -314,21 +327,46 @@ public class CarItemManager : MonoBehaviour
         }
     }
 
+    private int disableCount = 0;
+    private bool wasPlayerControllerEnabled;
+    private bool wasPcControllerEnabled;
+    private bool wasSpeedAnimControllerEnabled;
+    private bool wasMobileControllerEnabled;
+    private bool wasAiControllerEnabled;
+
     void DisableControls()
     {
-        if (playerController != null) playerController.enabled = false;
-        if (pcController != null) pcController.enabled = false;
-        if (speedAnimController != null) speedAnimController.enabled = false;
-        if (mobileController != null) mobileController.enabled = false;
-        if (aiController != null) aiController.enabled = false;
+        if (disableCount == 0)
+        {
+            // Lưu trạng thái trước khi tắt
+            if (playerController != null) wasPlayerControllerEnabled = playerController.enabled;
+            if (pcController != null) wasPcControllerEnabled = pcController.enabled;
+            if (speedAnimController != null) wasSpeedAnimControllerEnabled = speedAnimController.enabled;
+            if (mobileController != null) wasMobileControllerEnabled = mobileController.enabled;
+            if (aiController != null) wasAiControllerEnabled = aiController.enabled;
+
+            // Tắt script
+            if (playerController != null) playerController.enabled = false;
+            if (pcController != null) pcController.enabled = false;
+            if (speedAnimController != null) speedAnimController.enabled = false;
+            if (mobileController != null) mobileController.enabled = false;
+            if (aiController != null) aiController.enabled = false;
+        }
+        disableCount++;
     }
 
     void EnableControls()
     {
-        if (playerController != null) playerController.enabled = true;
-        if (pcController != null) pcController.enabled = true;
-        if (speedAnimController != null) speedAnimController.enabled = true;
-        if (mobileController != null) mobileController.enabled = true;
-        if (aiController != null) aiController.enabled = true;
+        disableCount--;
+        if (disableCount <= 0)
+        {
+            disableCount = 0;
+            // Phục hồi trạng thái cũ thay vì bật mù quáng
+            if (playerController != null) playerController.enabled = wasPlayerControllerEnabled;
+            if (pcController != null) pcController.enabled = wasPcControllerEnabled;
+            if (speedAnimController != null) speedAnimController.enabled = wasSpeedAnimControllerEnabled;
+            if (mobileController != null) mobileController.enabled = wasMobileControllerEnabled;
+            if (aiController != null) aiController.enabled = wasAiControllerEnabled;
+        }
     }
 }
