@@ -1,0 +1,864 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.4/staging' branch; Version is '6000.4.1f1 (8535861f39e1) revision 8729990'; Using compiler version '194234433'; Build Type 'Release'
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-a2112" at "2026-04-12T12:37:05.9691228Z"
+OS: 'Windows 11  (10.0.26200) CoreSingleLanguage' Language: 'vi' Physical Memory: 16011 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-04-12T12:37:05Z
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.4.1f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+D:/Dai hoc dung hc dai ss2/unity/CocKienTroi/Cóc kiện trời
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+61260
+-licensingIpc
+LicenseClient-a2112
+-force-d3d12
+-job-worker-count
+9
+-background-job-worker-count
+8
+-gc-helper-count
+1
+-name
+AssetImport
+Successfully changed project path to: D:/Dai hoc dung hc dai ss2/unity/CocKienTroi/Cóc kiện trời
+D:/Dai hoc dung hc dai ss2/unity/CocKienTroi/Cóc kiện trời
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Player connection [22348]  Target information:
+
+Player connection [22348]  * "[IP] 192.168.1.151 [Port] 0 [Flags] 2 [Guid] 268803200 [EditorId] 268803200 [Version] 1048832 [Id] WindowsEditor(7,Kang) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [22348] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [22348] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 9
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 3.70 ms, found 4 plugins.
+Initialize engine version: 6000.4.1f1 (8535861f39e1)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.4.1f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Dai hoc dung hc dai ss2/unity/CocKienTroi/Cóc kiện trời/Assets
+Forcing GfxDevice: Direct3D 12
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+d3d12: failed to query info queue interface (0x80004002).
+Direct3D:
+    Version:         Direct3D 12 [level 12.2]
+    Renderer:        NVIDIA GeForce RTX 4050 Laptop GPU (ID=0x28e1)
+    Vendor:          NVIDIA
+    VRAM:            5921 MB
+    App VRAM Budget: 5153 MB
+    Driver:          32.0.15.5612
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.4.1f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.4.1f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56736
+CodeReloadManager initialized
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.4.1f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.4.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.004765 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Package Manager log level set to [2]
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.821 seconds
+Domain Reload Profiling: 1600ms
+	BeginReloadAssembly (163ms)
+	RebuildCommonClasses (63ms)
+	RebuildNativeTypeToScriptingClass (23ms)
+	initialDomainReloadingComplete (124ms)
+	LoadAllAssembliesAndSetupDomain (403ms)
+		LoadAssemblies (157ms)
+		AnalyzeDomain (388ms)
+			TypeCache.Refresh (386ms)
+				TypeCache.ScanAssembly (361ms)
+	FinalizeReload (824ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (177ms)
+			BeforeProcessingInitializeOnLoad (179ms)
+			ProcessInitializeOnLoadAttributes (255ms)
+			ProcessInitializeOnLoadMethodAttributes (106ms)
+[Licensing::Client] Error: HandshakeResponse reported an error:
+	ResponseCode: 505
+	ResponseStatus: Unsupported protocol version '1.18.1'.
+[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-a2112"
+[Licensing::IpcConnector] LicenseClient-a2112 channel disconnected successfully.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-a2112-6000.4.1" at "2026-04-12T12:37:09.7307998Z"
+========================================================================
+Worker process is ready to serve import requests
+Import Worker Mode flag is 0x00
+Begin MonoManager ReloadAssembly
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              4ecf7ba85158412585a2f5fdb0f1cd1e
+  Correlation Id:          e3e6f7a06840c772729966f2d54e615e
+  External correlation Id: 4683902251506407101
+  Machine Id:              9adQn0/zv/W3B+LmNzo8UFllXzI=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-a2112-6000.4.1" (connect: 0.00s, validation: 0.01s, handshake: 3.16s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-a2112-6000.4.1-notifications" at "2026-04-12T12:37:12.8978357Z"
+[Licensing::Module] Licensing Background thread has ended after 6.93s
+[Licensing::Module] Licensing is initialized (took 2.71s).
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 18968357843338-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+Assembly Assembly-CSharp-Editor-firstpass-testable.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass-testable.dll not valid. Loading of assembly skipped.
+Assembly Assembly-CSharp-Editor-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll not valid. Loading of assembly skipped.
+Assembly Assembly-CSharp-Editor.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor.dll not valid. Loading of assembly skipped.
+Assembly Assembly-CSharp-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll not valid. Loading of assembly skipped.
+Assembly DocCodeExamples.dll at Library/ScriptAssemblies/DocCodeExamples.dll not valid. Loading of assembly skipped.
+Assembly TestNewCustomAssembly.dll at Library/ScriptAssemblies/TestNewCustomAssembly.dll not valid. Loading of assembly skipped.
+Assembly Unity.2D.Animation.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Animation.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.2D.Aseprite.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Aseprite.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.2D.Common.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Common.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.2D.PixelPerfect.Editor.Tests.dll at Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.2D.Psdimporter.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Psdimporter.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.2D.Sprite.Package.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Sprite.Package.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.2D.SpriteShape.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.SpriteShape.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.2D.Tilemap.Package.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Tilemap.Package.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.BurstCompatibilityGen.dll at Library/ScriptAssemblies/Unity.Collections.BurstCompatibilityGen.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.DocCodeSamples.dll at Library/ScriptAssemblies/Unity.Collections.DocCodeSamples.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.PerformanceTests.dll at Library/ScriptAssemblies/Unity.Collections.PerformanceTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.Tests.dll at Library/ScriptAssemblies/Unity.Collections.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.Tests.Playmode.dll at Library/ScriptAssemblies/Unity.Collections.Tests.Playmode.dll not valid. Loading of assembly skipped.
+Assembly Unity.InputSystem.IntegrationTests.dll at Library/ScriptAssemblies/Unity.InputSystem.IntegrationTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Mathematics.Tests.dll at Library/ScriptAssemblies/Unity.Mathematics.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Multiplayer.Center.Editor.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Multiplayer.Center.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Nuget.Mono-Cecil.dll at Library/ScriptAssemblies/Unity.Nuget.Mono-Cecil.dll not valid. Loading of assembly skipped.
+Assembly Unity.PathTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.PathTracing.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Core.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Core.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Universal.Config.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Config.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Universal.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Universal.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Searcher.EditorTests.dll at Library/ScriptAssemblies/Unity.Searcher.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.ShaderGraph.Editor.Tests.dll at Library/ScriptAssemblies/Unity.ShaderGraph.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.TextMeshPro.Editor.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.TextMeshPro.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.UnifiedRayTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.UnifiedRayTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.UI.Common.Tests.dll at Library/ScriptAssemblies/UnityEditor.UI.Common.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.UI.EditorTests.dll at Library/ScriptAssemblies/UnityEditor.UI.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tests.dll not valid. Loading of assembly skipped.
+Refreshing native plugins compatible for Editor in 2.35 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.791 seconds
+Domain Reload Profiling: 6447ms
+	BeginReloadAssembly (2959ms)
+		DisableScriptedObjects (9ms)
+		CreateAndSetChildDomain (44ms)
+	RebuildCommonClasses (58ms)
+	RebuildNativeTypeToScriptingClass (23ms)
+	initialDomainReloadingComplete (139ms)
+	LoadAllAssembliesAndSetupDomain (1476ms)
+		LoadAssemblies (852ms)
+		AnalyzeDomain (731ms)
+			TypeCache.Refresh (527ms)
+				TypeCache.ScanAssembly (491ms)
+			BuildScriptInfoCaches (173ms)
+			ResolveRequiredComponents (27ms)
+	FinalizeReload (1792ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (21ms)
+			BeforeProcessingInitializeOnLoad (256ms)
+			ProcessInitializeOnLoadAttributes (685ms)
+			ProcessInitializeOnLoadMethodAttributes (460ms)
+			AfterProcessingInitializeOnLoad (18ms)
+		AwakeInstancesAfterBackupRestoration (18ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 14.21 ms, found 4 plugins.
+Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7091 unused Assets / (5.8 MB). Loaded Objects now: 7958.
+Memory consumption went from 165.1 MB to 159.3 MB.
+Total: 24.121100 ms (FindLiveObjects: 2.308700 ms CreateObjectMapping: 2.466600 ms MarkObjects: 12.632900 ms  DeleteObjects: 6.534700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 2296.834371 seconds.
+  path: Assets/(6) CÓC KIỆN TRỜI/Ingame/búa.png
+  importAddress: Guid(e96baa60372d0324f8ce4f68835b3e81) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/(6) CÓC KIỆN TRỜI/Ingame/búa.png using Guid(e96baa60372d0324f8ce4f68835b3e81) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'd366455e2814306e855759fe60536f38') in 0.3539992 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=48650b515b91fbeb0c53fde8668d5488 DependenciesID=e71ef3017139866b7f59a7a56407f252 StaticDependenciesID=b1a91565e29fac2c63ade15b770c962c 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Script/CanvasResponsive.cs
+  importAddress: Guid(f75c2c95941996a40aba487e82e1b632) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Script/CanvasResponsive.cs using Guid(f75c2c95941996a40aba487e82e1b632) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'e2992865f327863904db41bb5d9f369e') in 0.0227255 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=37387ded356f4602f6c8663c2adfc9cb DependenciesID=4f69cadc8991139d961b733cd10fe9be StaticDependenciesID=3ee32dec060108d06454592caa8ce3e0 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Script/AutoDestroy.cs
+  importAddress: Guid(b4062422577d2ac4c96cc6a3d008fb5e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Script/AutoDestroy.cs using Guid(b4062422577d2ac4c96cc6a3d008fb5e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '0b923beb3746ad9579e10d5bf6a94231') in 0.0171269 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7a68c7170107f94816fdf2494918e22c DependenciesID=f074e367c5731bb73621dd26f7d56962 StaticDependenciesID=3e81879cd3cd27c659e35b5149ba8e5c 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Script/LapTriggerChild.cs
+  importAddress: Guid(181dd3bfc2311ae4aa94b458a0952bbf) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Script/LapTriggerChild.cs using Guid(181dd3bfc2311ae4aa94b458a0952bbf) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'e52374fa8a7f9f34ed727106c783a1c1') in 0.0167355 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e892525b45105f15572b846c280e4d96 DependenciesID=4fcd05721b7cd24b37f0600c2ace1a1c StaticDependenciesID=eedebcb94e04ac7cc7d07ac8c9709cb1 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Script/LapCounter2D.cs
+  importAddress: Guid(b28499846fd7d4e43b92d68fbf34a1fc) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Script/LapCounter2D.cs using Guid(b28499846fd7d4e43b92d68fbf34a1fc) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '610eabf7c0ed8bbc0ea9671bd52329ea') in 0.0154214 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1d75c67e889a493a7072d8e8aa7c98a7 DependenciesID=b09929a80cc0ebf66586aeda42cc685b StaticDependenciesID=b809abc5ac49fbb67bef7d80595e79eb 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/(6) CÓC KIỆN TRỜI/UI - chọn nhân vật/icon cóc.png
+  importAddress: Guid(6aa692c0ad62ec648a2429358de0a9df) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/(6) CÓC KIỆN TRỜI/UI - chọn nhân vật/icon cóc.png using Guid(6aa692c0ad62ec648a2429358de0a9df) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'af052f24b9107dc27f90af1a462eab42') in 0.0375943 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e7bec753f204cec0ce936045a446e210 DependenciesID=290f9b717cdcb3381d884dd1f2ed349f StaticDependenciesID=9b91ef3bd2a68e90772fa5ece25eba6b 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Nhan vat ingame/cáo.png
+  importAddress: Guid(cea00a3e572636c48a69da12d833a67b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Nhan vat ingame/cáo.png using Guid(cea00a3e572636c48a69da12d833a67b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'c4cc593e2f0312a456dca6ef86cdc290') in 0.1605863 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=13d01ac5e64d600a25bdb30d15682740 DependenciesID=127b1a50f062d063d0fd10a97ed64439 StaticDependenciesID=9e6549e01a1884e6c0138f7103f2da85 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 39
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Scenes/Map 3.unity
+  importAddress: Guid(7b91e2137e451c64ca0104c3f88cd733) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Scenes/Map 3.unity using Guid(7b91e2137e451c64ca0104c3f88cd733) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'b2fb44d1cd70252a727d7fb994a92e6b') in 0.0384982 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1d8a90a214fa437add18ed30f0f9198a DependenciesID=dd2f2ceffcea9ce3260d74a382dfab72 StaticDependenciesID=18cfa3ecea207b035a90b9e55755c607 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/(6) CÓC KIỆN TRỜI/UI - ingame/ĐẾM SỐ (go).png
+  importAddress: Guid(5ef01df22a7b71b45b6f534583c9da6a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/(6) CÓC KIỆN TRỜI/UI - ingame/ĐẾM SỐ (go).png using Guid(5ef01df22a7b71b45b6f534583c9da6a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'cb68a860c593d94579b8082ac77cdf91') in 0.0289272 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a62306927ddb03b5e92c2fbbd36dffca DependenciesID=b63adf92653697af33cf7e45047d3414 StaticDependenciesID=4b376b2bc79c4408f54cb5074596bca8 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Sound/Sound/3 2 1 GO.mp3
+  importAddress: Guid(9e33ec431b37c07499cf4e31706fa752) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Sound/Sound/3 2 1 GO.mp3 using Guid(9e33ec431b37c07499cf4e31706fa752) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'c9327ef8ecba65a73e8721f49327861a') in 0.0404941 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=77b409428be936b1e40a17f05f62ac4a DependenciesID=77e41a3af74c525490bf929daa4bd173 StaticDependenciesID=4228d13522cbfd5e4cc9ef78b693862b 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/(6) CÓC KIỆN TRỜI/UI - ingame/000 - overview.JPG
+  importAddress: Guid(e8092502eb20ff84a837badf1e9df6b3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/(6) CÓC KIỆN TRỜI/UI - ingame/000 - overview.JPG using Guid(e8092502eb20ff84a837badf1e9df6b3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'bb4bd035168280326347513b73f10757') in 0.0462598 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=62cfa6d4784981d22f2c93aa8377b0a3 DependenciesID=e67d5fa033d049211b96db6338b4dea0 StaticDependenciesID=c5a8da564722725dce113b12665e69dd 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000080 seconds.
+  path: Assets/Scenes/Unlock.unity
+  importAddress: Guid(f2ba624a15c81b642b46c39107f7a5d6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Scenes/Unlock.unity using Guid(f2ba624a15c81b642b46c39107f7a5d6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'aa10d2b8ceb6006c7f7e61c7cc57e257') in 0.0338212 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=79f7423c7b5f84d10e5da1528e3a22ed DependenciesID=0eec22ffd7dda2161254684fc5ab3d5f StaticDependenciesID=dddab5bd92bc16b3fd84575a7dc3f9d1 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader
+  importAddress: Guid(a02a7d8c237544f1962732b55a9aebf1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader using Guid(a02a7d8c237544f1962732b55a9aebf1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '994c0e18257e4f8974ed4ea89b5d1704') in 0.0293581 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=135f86958137cca7122f2572ec296fbb DependenciesID=51510df11d46a74275b25131f5022173 StaticDependenciesID=776311549543df7b727f2d699b0406ea 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/TextMesh Pro/Shaders/SDFFunctions.hlsl
+  importAddress: Guid(96de908384869cd409c75efa351d5edf) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/TextMesh Pro/Shaders/SDFFunctions.hlsl using Guid(96de908384869cd409c75efa351d5edf) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '4454d03724bb72ac983f9053490e2da1') in 0.0264584 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ab5ead95626b3fd862e476ddc8340d77 DependenciesID=e5dcb9db32d410e5f4e7060e4c56954b StaticDependenciesID=a8e1d6bfd2150c859a38d309c983c995 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000104 seconds.
+  path: Assets/Script/LapManager2D.cs
+  importAddress: Guid(2adc8a48ecc425b458c6f40bc9b32927) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Script/LapManager2D.cs using Guid(2adc8a48ecc425b458c6f40bc9b32927) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '14632e8eb99db89291c53224dad31f76') in 0.0165487 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7d59aa35352efb5547541b05593daceb DependenciesID=7fb2235b7bdb544c4d38702ec6888e92 StaticDependenciesID=5bda2b3f4f5ba169593227040434feb1 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/(6) CÓC KIỆN TRỜI/UI - chọn nhân vật/CHƠI LẠI.png
+  importAddress: Guid(11fdedab1d8708a4da202a5f509f1e6b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/(6) CÓC KIỆN TRỜI/UI - chọn nhân vật/CHƠI LẠI.png using Guid(11fdedab1d8708a4da202a5f509f1e6b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '4a5b3029c601da77cd85bf3deb651b63') in 0.0948605 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=32f29ea8a24310d64206f10b171c075c DependenciesID=1e82bdf09072fab14442c5310919e6a7 StaticDependenciesID=10f13cc56c31362f895e877af16d6112 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/TextMesh Pro/Shaders/TMP_SDF.shader
+  importAddress: Guid(68e6db2ebdc24f95958faec2be5558d6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/TextMesh Pro/Shaders/TMP_SDF.shader using Guid(68e6db2ebdc24f95958faec2be5558d6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'd972d667df9e6b69d7fa8b488e7e2b5e') in 0.0169997 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5ee616e371c102ab38cd54700f131df9 DependenciesID=bc06f1b167d0155f19661193f6d6529f StaticDependenciesID=6fccdf5c0d40f72a0171f8fda7ff39b4 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Updated Assets/Coc Kien Troi/mini map 2.png
+  importAddress: Guid(4a0bb57c6c9e65045be0a24855abe99a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Updated Assets/Coc Kien Troi/mini map 2.png using Guid(4a0bb57c6c9e65045be0a24855abe99a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '0d3466981311cfde9ec99e3572b09b3c') in 0.027965 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a9d5cc360e367f33f2dc68aacab36d19 DependenciesID=084ed50ba0d0c69e117a3049aa15c3b9 StaticDependenciesID=60893d4f50468c73fa90415170239485 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/TextMesh Pro/Shaders/TMP_SDF-URP Unlit.shadergraph
+  importAddress: Guid(124c112a6e8f1a54e8b0870e881b56d8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/TextMesh Pro/Shaders/TMP_SDF-URP Unlit.shadergraph using Guid(124c112a6e8f1a54e8b0870e881b56d8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '75b96870192a7b1675e199cb2db7e844') in 0.0850893 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3877391e4c2f4967c2b59bf0f78e5e0b DependenciesID=86651b27f7daa8cb57291a5e18dd37f3 StaticDependenciesID=de6a800fcf5b5ebdc1658bc6a7c4c57a 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/(6) CÓC KIỆN TRỜI/Ingame/mưa.png
+  importAddress: Guid(7286d04e9f55d67489b29279a7304e26) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/(6) CÓC KIỆN TRỜI/Ingame/mưa.png using Guid(7286d04e9f55d67489b29279a7304e26) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '5bf40acb42e12468dd13194a261dea0f') in 0.02545 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2868fad01f7d93c53224a888efae91e9 DependenciesID=30ba1f28e952f42f1f8c7468041d39a7 StaticDependenciesID=ea4157d7e9293e930ec8f922cf95f5f4 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/(6) CÓC KIỆN TRỜI/UI - ingame/mini map 3.png
+  importAddress: Guid(c0bf2366ab4bf4042a089ac0f49cb809) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/(6) CÓC KIỆN TRỜI/UI - ingame/mini map 3.png using Guid(c0bf2366ab4bf4042a089ac0f49cb809) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '017455f863f57b792d74203ae6f7eefa') in 0.0285737 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=39809e0645e910fe2b2ecacae7c27d03 DependenciesID=dfadd790549f117cbaa6a8639ec03f4c StaticDependenciesID=5aa92c8fb415760bc30a681f3de13d44 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Updated Assets/Coc Kien Troi/Tốc độ.png
+  importAddress: Guid(c32bb0d6372e64949bc8bb74e4fb7feb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Updated Assets/Coc Kien Troi/Tốc độ.png using Guid(c32bb0d6372e64949bc8bb74e4fb7feb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'bf0d223de4fa7b56c2fcc802d63dac0a') in 0.0400619 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a35e567027e281c6008ec2dca87a5560 DependenciesID=b1e62232e181078128ac5bd99b34266b StaticDependenciesID=04915438fc7217121ed08b4ff169d873 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/(6) CÓC KIỆN TRỜI/UI - chọn nhân vật/infor/drift 4.png
+  importAddress: Guid(99ade93ffe60f1e48a95615807e426c5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/(6) CÓC KIỆN TRỜI/UI - chọn nhân vật/infor/drift 4.png using Guid(99ade93ffe60f1e48a95615807e426c5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '8e004878b0557c4fa247a60beb03137b') in 0.0336782 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c019e3c04fbfcc074517da3c56a39d6e DependenciesID=f3dcc63219af5f03cf13676366c9e82a StaticDependenciesID=0a66531c713a9f0f9c3c5cf9a6058861 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/(6) CÓC KIỆN TRỜI/UI - chọn nhân vật/infor/drift 2.png
+  importAddress: Guid(cc22f4e6bf4183949a1c62bbe63f5167) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/(6) CÓC KIỆN TRỜI/UI - chọn nhân vật/infor/drift 2.png using Guid(cc22f4e6bf4183949a1c62bbe63f5167) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '8c9ee34e8d0d898cc678c9b48ca5a3a2') in 0.0341334 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=cf9e3388f75d6800ffb8a8264bccd0a7 DependenciesID=055c653c81a0aa87d16826325984ea2c StaticDependenciesID=0abb5e49e58fbbe0b3b6ff646ff010f6 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000083 seconds.
+  path: Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader
+  importAddress: Guid(c8d12adcee749c344b8117cf7c7eb912) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader using Guid(c8d12adcee749c344b8117cf7c7eb912) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'ce22d6e42766c33f30baa947c5b5a6e8') in 0.016538 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9cff687726295cc423eb2fabf05ba4bc DependenciesID=4bbb8d93000b14b1999f7f87c2096cc2 StaticDependenciesID=fd6fbae28baafc967c0711bf47f39b43 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/(6) CÓC KIỆN TRỜI/Map/nền.png
+  importAddress: Guid(4f1c29dbf7901394e90532570d6c5d69) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/(6) CÓC KIỆN TRỜI/Map/nền.png using Guid(4f1c29dbf7901394e90532570d6c5d69) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'b4b3f7bba74f18716902d76e3785a295') in 0.040141 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=375b34c619ac65891d68947cc2ed41d5 DependenciesID=d8e9bce2c5ff16ac8122853ab3204c80 StaticDependenciesID=c01cde779da602a59cacdb60f658e97b 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Updated Assets/Coc Kien Troi/bóng.png
+  importAddress: Guid(b220720e63a32a04085d028f6078c2cb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Updated Assets/Coc Kien Troi/bóng.png using Guid(b220720e63a32a04085d028f6078c2cb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '6614c01095d55a0c1f95248ed5f0920b') in 0.0396796 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2aa501fe026882a1e5c8d26c8d332032 DependenciesID=693a776492ed8b642c46dc7cb33597ec StaticDependenciesID=00f703b3c136e4d73f20b106d4adf572 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Fonts/Unity - OFL.txt
+  importAddress: Guid(0251f66ebc602a944b35bccd13be2738) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/TextMesh Pro/Examples & Extras/Fonts/Unity - OFL.txt using Guid(0251f66ebc602a944b35bccd13be2738) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '80caa45bd25c97ff0c395d972d9236a5') in 0.0218002 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=36ec837fa51b9a52a5c8afd80faa1b59 DependenciesID=c1f1e299a85d0f3f114d742b93959531 StaticDependenciesID=0c052a6a83ada0c83c60eed1b6e0f79a 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Fonts/Roboto-Bold.ttf
+  importAddress: Guid(4beb055f07aaff244873dec698d0363e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/TextMesh Pro/Examples & Extras/Fonts/Roboto-Bold.ttf using Guid(4beb055f07aaff244873dec698d0363e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'f904536c70340dfd327a8185825713bb') in 0.0315303 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=174d6efc281150db13faf245455c2ba9 DependenciesID=e917afa53de09a69030768450ee72407 StaticDependenciesID=b34df6765b052422d4863cbfb4910f63 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Script/UITIme.cs
+  importAddress: Guid(cc73bf8b23087d1419420dba9bc858da) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Script/UITIme.cs using Guid(cc73bf8b23087d1419420dba9bc858da) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'ee7a13bed10e2ef59e0ac4f1eadc5f9a') in 0.0133042 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b040b2a7b076475eff911616626ba339 DependenciesID=38438da7924a623fbad0d41bebf1f8ab StaticDependenciesID=191efb174f3baeb5dd89575197355061 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/(6) CÓC KIỆN TRỜI/Ingame/lò xo.png
+  importAddress: Guid(a53e5f9b5914fa64cadc326a794beaa0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/(6) CÓC KIỆN TRỜI/Ingame/lò xo.png using Guid(a53e5f9b5914fa64cadc326a794beaa0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '7f9c7880bea4a5c75dd7153c4e87c200') in 0.0328841 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b0e00f23a1a5ded7c482ccc04c6ee7aa DependenciesID=afa9ff1700f27c843361a6556377586b StaticDependenciesID=329fa17a95301ba44267f71c09a07afe 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/(6) CÓC KIỆN TRỜI/UI - ingame/ĐẾM SỐ (2).png
+  importAddress: Guid(9a8f0b7d0f3493340a37f798e71570cd) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/(6) CÓC KIỆN TRỜI/UI - ingame/ĐẾM SỐ (2).png using Guid(9a8f0b7d0f3493340a37f798e71570cd) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '439216c9a117faad09ff778f915d7de0') in 0.0211495 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0cfe278d78acfd0d761003edb4bc17e8 DependenciesID=86a0c14b1e93ebb19f12aa40a33f4c1a StaticDependenciesID=757da66638401ae3329d7e9052910efe 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/Script/BananaTrap.cs
+  importAddress: Guid(088fdf3936ed18944a3c4e99d5d7e3b8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Script/BananaTrap.cs using Guid(088fdf3936ed18944a3c4e99d5d7e3b8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '766a809da7bd8e693d0948e3a1b588b7') in 0.0123708 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9574a5a42c4901de442e7cb94b1aeaf1 DependenciesID=d096f354020b7997cc6a14ebbd5bb4b7 StaticDependenciesID=9e815f83839a82b0f018578684fc9fbe 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Scenes/14 - Multi Font & Sprites.unity
+  importAddress: Guid(22a2fba786ad4c40ac0ba09f0b933100) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/TextMesh Pro/Examples & Extras/Scenes/14 - Multi Font & Sprites.unity using Guid(22a2fba786ad4c40ac0ba09f0b933100) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '38f733fefa21caca494d703f361f03fe') in 0.0256813 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f681a98e25a9fbbe8aee233a9db64b12 DependenciesID=1cbf1557663b9fac24c4351ee13469f5 StaticDependenciesID=17b7064b823a3f1c2762984188724054 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Scenes/20 - Input Field with Scrollbar.unity
+  importAddress: Guid(337f92480dd24675aae9e79210fb1ad9) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/TextMesh Pro/Examples & Extras/Scenes/20 - Input Field with Scrollbar.unity using Guid(337f92480dd24675aae9e79210fb1ad9) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'f688eb8be6517de96bcd5aff488bbc74') in 0.0276788 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=298d3bd680207301c5123631b199c233 DependenciesID=183652cee85aa46ce874f95bd2a86354 StaticDependenciesID=076f4b2c1cdddb9d04e4a938c4dac37c 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Scenes/17 - Old Computer Terminal.unity
+  importAddress: Guid(3e2e4d7b0bed4cf9ab827e9f32448f69) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/TextMesh Pro/Examples & Extras/Scenes/17 - Old Computer Terminal.unity using Guid(3e2e4d7b0bed4cf9ab827e9f32448f69) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'b7da810a98ec58db441d8b548a6965d2') in 0.0267465 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c7f9d90dbef480ab8a58939c88d22ea7 DependenciesID=e250a43f44a500bdecc115c55ccde4a4 StaticDependenciesID=8b43629e5943b9e52098fc96c993dadc 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Scenes/Sua HUD 2.unity
+  importAddress: Guid(49a0780c6d15a7149af369d098de70e9) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Scenes/Sua HUD 2.unity using Guid(49a0780c6d15a7149af369d098de70e9) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '6c9e18b3b99e93e1fc1cc6abdbf0487d') in 0.0338417 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e72f08666c4b563549e524b5801a4011 DependenciesID=ff5328193595a877a3d29c62043c702c StaticDependenciesID=47f24f91a91bb9d067c355fecc9c12d0 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Scenes/21 - Script Example.unity
+  importAddress: Guid(50f52f9274434ecfb34dd87f0836f323) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/TextMesh Pro/Examples & Extras/Scenes/21 - Script Example.unity using Guid(50f52f9274434ecfb34dd87f0836f323) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '991910db228ce37bce1ecf3ca2bb22cc') in 0.0285725 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6954c3b893e0c4ce2951d54aa36e81bc DependenciesID=b8875061f9ac460249c03c5b23331149 StaticDependenciesID=cd8c7c90dcdbde5fda6fd2fd2841fcda 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Scenes/22 - Basic Scripting Example.unity
+  importAddress: Guid(6250f98e58fe4abbaada5d84b7ca846d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/TextMesh Pro/Examples & Extras/Scenes/22 - Basic Scripting Example.unity using Guid(6250f98e58fe4abbaada5d84b7ca846d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '34c5ffbc4737f5f8b8b41459ab0546ff') in 0.0263249 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=124fa1d17cb42499256c28fb66df5ef6 DependenciesID=af6f7bb202d5efa49979b3e697a844b4 StaticDependenciesID=b9bab6d37712722e6d54d894f6ed7df5 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Scripts/TMP_PhoneNumberValidator.cs
+  importAddress: Guid(83680ab1a69f4102ac67d1459fe76e1f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/TextMesh Pro/Examples & Extras/Scripts/TMP_PhoneNumberValidator.cs using Guid(83680ab1a69f4102ac67d1459fe76e1f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '8b55c37d85f3d0e638ddeb54d86c8eb9') in 0.0147055 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7322490226e0260f95b424b76f76658d DependenciesID=37e496b8869399e4402877bf7e6dfb5e StaticDependenciesID=76d07b81dcfd75c65ce257be7d158fbb 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Scripts/SimpleScript.cs
+  importAddress: Guid(9eff140b25d64601aabc6ba32245d099) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/TextMesh Pro/Examples & Extras/Scripts/SimpleScript.cs using Guid(9eff140b25d64601aabc6ba32245d099) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '874f39356d0d8fe19cd82039cbe1c1ab') in 0.0148412 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c14a6532d7523254fd2f8d5650456da9 DependenciesID=3c527580020fa96737c557b09beb211d StaticDependenciesID=cb89a71d8f2398590845fb8fcd4c7130 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Scripts/TextConsoleSimulator.cs
+  importAddress: Guid(43bcd35a1c0c40ccb6d472893fe2093f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/TextMesh Pro/Examples & Extras/Scripts/TextConsoleSimulator.cs using Guid(43bcd35a1c0c40ccb6d472893fe2093f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '5900a0ca368aa89f81181c078b02ff35') in 0.0140321 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9ecc4e5dcb0e8ebeebefc82f409fe003 DependenciesID=68097cb87ba10edd7935d143733966a2 StaticDependenciesID=126c30f4869623543779e73809b54af5 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Scripts/CameraController.cs
+  importAddress: Guid(2d687537154440a3913a9a3c7977978c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/TextMesh Pro/Examples & Extras/Scripts/CameraController.cs using Guid(2d687537154440a3913a9a3c7977978c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '49e0700e511b501b09ce550caf688a35') in 0.0141582 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0f4dc38cb280b94907add54baf1e3c5e DependenciesID=f3a4056423a0bd4748737bcdd72845be StaticDependenciesID=b36a3a13c5394907432796e653e3f53f 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Scripts/VertexColorCycler.cs
+  importAddress: Guid(91b8ba3d52e041fab2d0e0f169855539) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/TextMesh Pro/Examples & Extras/Scripts/VertexColorCycler.cs using Guid(91b8ba3d52e041fab2d0e0f169855539) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '4d3a875dfa543cd4db4fc72828f4ec4c') in 0.0155882 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2a2cabfb39ab98b6d765edee3ffe3d60 DependenciesID=93bc73866901c19262ecbcffffd1d82e StaticDependenciesID=7e8acb7d800c85a2de306c482345e735 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Scenes/19 - Masking Texture & Soft Mask.unity
+  importAddress: Guid(9abcd5bd764646568a6ea70d00f9264c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/TextMesh Pro/Examples & Extras/Scenes/19 - Masking Texture & Soft Mask.unity using Guid(9abcd5bd764646568a6ea70d00f9264c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '77266e2be156920c5a4489df1af4d2ca') in 0.0275466 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=bc531826a70a60ad531297d5a134782a DependenciesID=9e509f7be9d284a1e956bedbea86ec92 StaticDependenciesID=2ddf27ea22cfa8460aa8c416c231ec23 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Fonts/Roboto-Bold - License.txt
+  importAddress: Guid(f0303f887b8fa7243a51432c478ff2f3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/TextMesh Pro/Examples & Extras/Fonts/Roboto-Bold - License.txt using Guid(f0303f887b8fa7243a51432c478ff2f3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'e2052dc07797a6875cc6288e49fbaf6e') in 0.0256713 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a839cc7ac98ab6cd1efee12f4da2b56a DependenciesID=b98ea7ab3fcb300c59c92bb4fed3d710 StaticDependenciesID=203aa40010505cfc5a4f7bfd7e34df78 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Textures/Wipe Pattern - Radial Double.psd
+  importAddress: Guid(7631f4eff8f74ed38eb3eb9db17134e1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/TextMesh Pro/Examples & Extras/Textures/Wipe Pattern - Radial Double.psd using Guid(7631f4eff8f74ed38eb3eb9db17134e1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '2d217015786fd24d481b95ea3efe5896') in 0.0309116 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=03f373af619af8dc063fa8d534e6d7d6 DependenciesID=cc7924d50c189356c03c502712c2bb7a StaticDependenciesID=3ab2a76d0a4a3b19b05f8dfe3626420f 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Updated Assets/Coc Kien Troi/Sound/Collect item.mp3
+  importAddress: Guid(9a0db3ec5c9532647b9eaa4a8064b9f4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Updated Assets/Coc Kien Troi/Sound/Collect item.mp3 using Guid(9a0db3ec5c9532647b9eaa4a8064b9f4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '56f0fc0dcb1d9c8cb24e6cea7c6c536a') in 0.0264303 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f258d02585f618bd08c2285211b75347 DependenciesID=cb4e2052b32b859c8141b9f1d9c78639 StaticDependenciesID=25a1abcae6afd3247f3133775dadb303 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Textures/Text Overflow - Linked Text UI Screenshot.png
+  importAddress: Guid(c76d18757a194d618355f05f815cb0a1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/TextMesh Pro/Examples & Extras/Textures/Text Overflow - Linked Text UI Screenshot.png using Guid(c76d18757a194d618355f05f815cb0a1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '3707b2c977cf1d145ae4efac56663995') in 0.0272703 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7b22e4851abb15401467d7d230d21a17 DependenciesID=e7e0653a0e049bd853e74ce60d36f610 StaticDependenciesID=5ff6f350b9c472096380093d56c2a99a 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset
+  importAddress: Guid(f952c082cb03451daed3ee968ac6c63e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset using Guid(f952c082cb03451daed3ee968ac6c63e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '25d2054bff2569a6b47d52289cda75aa') in 0.0173136 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5e060d3e8921fc29316c50aade7d8092 DependenciesID=0e8390b4bfc02cba46d73a4c16687a28 StaticDependenciesID=29fce2b362eaf2efde4abff3423e70dc 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Scenes/08 - Improved Text Alignment.unity
+  importAddress: Guid(5fe2257128d9401fad0790f581dc8a6f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/TextMesh Pro/Examples & Extras/Scenes/08 - Improved Text Alignment.unity using Guid(5fe2257128d9401fad0790f581dc8a6f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '5c43ae855aba9982f7463160291fdb7c') in 0.0270189 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ed275d5db9ce670e0bd1e8b6179ee417 DependenciesID=0ba5ddbd271141c7248b5e06bf4e6b9f StaticDependenciesID=1ea4cbdb9c5e5008c3ddd409263273c3 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Updated Assets/Coc Kien Troi/Sound/Xe Cóc.mp3
+  importAddress: Guid(18dcaaa20a59354499004b9cca1d6baa) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Updated Assets/Coc Kien Troi/Sound/Xe Cóc.mp3 using Guid(18dcaaa20a59354499004b9cca1d6baa) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'c260b40763b355869d0ef42a9d95dbe2') in 0.0245797 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c5d34d61ce26dd14e8e2517f2b90b57c DependenciesID=2dfcb3d61a39668132627c21cfcefc5e StaticDependenciesID=27d1f5875ad09c4e140d89f43760787f 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/(6) CÓC KIỆN TRỜI/character/final Animation/Cáo/New Animation.anim
+  importAddress: Guid(ea9d40b2eaa4cac4c881a578f0fc0bac) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/(6) CÓC KIỆN TRỜI/character/final Animation/Cáo/New Animation.anim using Guid(ea9d40b2eaa4cac4c881a578f0fc0bac) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '653741e44ed9ca61fe352aa776cf6883') in 0.0418335 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=bf0c07f4e3241351e2323687b04bf23a DependenciesID=a957884d89cce9bc6dd25c113891531f StaticDependenciesID=33672d23595d5b64a0563f773907e42c 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Assets/Updated Assets/Coc Kien Troi/Sound/Xe Cọp.mp3
+  importAddress: Guid(79624e3df890b294fb7e8657cba5b1b0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Updated Assets/Coc Kien Troi/Sound/Xe Cọp.mp3 using Guid(79624e3df890b294fb7e8657cba5b1b0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '8e8fad9af3e65516ad1720a98de7aea7') in 0.0306856 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=35525ba6281a30995a8c73927c0b9808 DependenciesID=f572d5246f9f307ed0d9e6b04ec4cd6e StaticDependenciesID=420b849d8be7043f102a2702fb2cedc9 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/(6) CÓC KIỆN TRỜI/character/final Animation/Cọp/cọp.png
+  importAddress: Guid(bc2ed15cd0420834dadc5b811be9ba17) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/(6) CÓC KIỆN TRỜI/character/final Animation/Cọp/cọp.png using Guid(bc2ed15cd0420834dadc5b811be9ba17) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '56f0101eb15d945443a16a692138f7d7') in 0.2581027 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=064b21f83f45a3552a71a54380d4fb90 DependenciesID=a24766f00b7d04323142e82c1d9df311 StaticDependenciesID=d6b58adbc5f4139f1abe25106999b26c 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 146
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000077 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/LiberationSans SDF - Overlay.mat
+  importAddress: Guid(9ad269c99dcf42b7aedefd83dd5a7b9d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/LiberationSans SDF - Overlay.mat using Guid(9ad269c99dcf42b7aedefd83dd5a7b9d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '33030e346b3fe5a83d03b2c8abfd0dca') in 0.0533783 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d0302af370320ca911246a54b90121ad DependenciesID=694f8a42dcfdbd0528d66e8a807075d6 StaticDependenciesID=b12370158cd59ea0cedd0383185db829 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Electronic Highway Sign SDF.asset
+  importAddress: Guid(dc36b3fdc14f47ebb36fd484a67e268a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Electronic Highway Sign SDF.asset using Guid(dc36b3fdc14f47ebb36fd484a67e268a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'e5490ff8c3a720ff48ce7d9ab9e1b86e') in 0.0745244 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=14de475d8ffa218e9eec0a142307dd7f DependenciesID=962b410842e54db981a24fed686f8b25 StaticDependenciesID=102d107649bff6fb9c58417a180a7ebb 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 5
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Bangers SDF Logo.mat
+  importAddress: Guid(f4e195ac1e204eff960149d1cb34e18c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Bangers SDF Logo.mat using Guid(f4e195ac1e204eff960149d1cb34e18c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '6016b800edabc8c1dd2e4ce4b4e3ea30') in 0.0333448 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=944d1a475b90848dafa2d95775ee090b DependenciesID=e0c89ad956253ce5989317209e1e19a3 StaticDependenciesID=39037423b12da3f6a221630b088b1928 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Roboto-Bold SDF - URP.mat
+  importAddress: Guid(90722b8bd74d9aa49958562aff7bdf76) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Roboto-Bold SDF - URP.mat using Guid(90722b8bd74d9aa49958562aff7bdf76) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'a3442627bd9c70b4d8af74fbc8677fae') in 0.0467247 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=dae72ee5725d57354a8a2741c1a20aa8 DependenciesID=20f98dbfde31241d46d41be11df7f308 StaticDependenciesID=4f613cd65e3ec92bb3d75c414fb9b10d 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000155 seconds.
+  path: Assets/(6) CÓC KIỆN TRỜI/character/final Animation/Coc/New Animation.anim
+  importAddress: Guid(2b4aebca3ea48304798412b243cbfee8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/(6) CÓC KIỆN TRỜI/character/final Animation/Coc/New Animation.anim using Guid(2b4aebca3ea48304798412b243cbfee8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '1e9aaa0f28a8cc721906cbc4a2b325e1') in 0.0201489 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=278bfdb867631520414afe5a434d99ed DependenciesID=683487515ec37cb93d88590765a567b2 StaticDependenciesID=3369ffc3edde741ac8f94399937ed74d 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Unity SDF.asset
+  importAddress: Guid(c9adb1f542a93ae489bacfeae21e8394) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Unity SDF.asset using Guid(c9adb1f542a93ae489bacfeae21e8394) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '163f6baaa0609c5f9a4ab64389a5e53b') in 0.0663071 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=29abc41d4b62f32eec894a23e8578924 DependenciesID=b1f53c9adf7fff1641d08971213ba74b StaticDependenciesID=17acdb9c598f190c622fe3b9a349f8ac 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/(6) CÓC KIỆN TRỜI/UI - ingame/padlock.png
+  importAddress: Guid(ab47046772484464587ff787063cd42e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/(6) CÓC KIỆN TRỜI/UI - ingame/padlock.png using Guid(ab47046772484464587ff787063cd42e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '024f6f701ab6f12dc3b26a9199f5ff4c') in 0.0366106 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5f06560aa7080e3252faeb5bcfd40852 DependenciesID=0554b084ced43c4b2987f089e7c36418 StaticDependenciesID=88115afeb3377837b114d761b9657d90 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000116 seconds.
+  path: Assets/(6) CÓC KIỆN TRỜI/UI - chọn nhân vật/infor/gia tốc 3.png
+  importAddress: Guid(e35de138b1050f24d8164492429b1439) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/(6) CÓC KIỆN TRỜI/UI - chọn nhân vật/infor/gia tốc 3.png using Guid(e35de138b1050f24d8164492429b1439) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'a741eb9121c0c8258e27165404301f15') in 0.0487716 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ed4ad07b9ab6407e891b19cf4f715737 DependenciesID=fe94083422f660f2a12d9f39d2579948 StaticDependenciesID=059ca328e500a19a1c8e7ad738a02e80 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile-2-Pass.shader
+  importAddress: Guid(0178fcb869bafef4690d177d31d17db8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile-2-Pass.shader using Guid(0178fcb869bafef4690d177d31d17db8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '85567c7a4a75bc1b5513484428b0d9a3') in 0.0180107 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e6dfdfbe8f9739f7c7b45191dd270a8a DependenciesID=d1c71ed3e276b6c6cd13167baca13b3f StaticDependenciesID=9121a80a1e20ad10065941938061f954 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/(6) CÓC KIỆN TRỜI/UI - ingame/mini xe 1.png
+  importAddress: Guid(cea4f943ece3bdf41bcd6646f69c9a54) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/(6) CÓC KIỆN TRỜI/UI - ingame/mini xe 1.png using Guid(cea4f943ece3bdf41bcd6646f69c9a54) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '16ff15af0e97f9ebdc273c64a3b1b959') in 0.0244744 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4cc40f3991c15adcd464ebc51a249038 DependenciesID=99720a90a392e9232b8777bb92f3adc7 StaticDependenciesID=7a2efa6a170efafa05228958de091c64 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Scenes/15 - Inline Graphics & Sprites.unity
+  importAddress: Guid(e76e6c0f81964cbda3fe0b7d26ed8060) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/TextMesh Pro/Examples & Extras/Scenes/15 - Inline Graphics & Sprites.unity using Guid(e76e6c0f81964cbda3fe0b7d26ed8060) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'eb777f5bf9a0b1367d23235f342f2fe4') in 0.0306663 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4b26afbf434c78ed57957b5baa938749 DependenciesID=c42ded84413835bd9e6779c869b94a51 StaticDependenciesID=89c838c887de0d3a8c2d649352751d00 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Script/CarDrift.cs
+  importAddress: Guid(cf4ec128293dadf488817d21e43b98be) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Script/CarDrift.cs using Guid(cf4ec128293dadf488817d21e43b98be) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '75bea1a7f5f69c37fa34c0638357b3fe') in 0.0144413 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c01d11f21af4e14eb88b5f7879cf7acb DependenciesID=2cbe8c0ac99f6ed9bbfed87a9f92ccb9 StaticDependenciesID=8ae04337349e64cf984ecabbe95422bb 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/TextMesh Pro/Shaders/TMP_Sprite.shader
+  importAddress: Guid(cf81c85f95fe47e1a27f6ae460cf182c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/TextMesh Pro/Shaders/TMP_Sprite.shader using Guid(cf81c85f95fe47e1a27f6ae460cf182c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '3c851e77d68ea870aa94217adda91a83') in 0.0159734 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=47d7e46f8e5800c0517d8594cf8bd003 DependenciesID=649afb1b09a2f38981528aee5a89e751 StaticDependenciesID=ad6564d1c78dd666825542a2243279c8 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Textures/Gradient Horizontal (Color).jpg
+  importAddress: Guid(6eb184de103d4b3f812b38561065192f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/TextMesh Pro/Examples & Extras/Textures/Gradient Horizontal (Color).jpg using Guid(6eb184de103d4b3f812b38561065192f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '66d234904b82dae5b81be107cdca5398') in 0.0245938 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1cb7e15dd3868eb150650f8ce90dd229 DependenciesID=82d5958aa75dbda816e46190bd350394 StaticDependenciesID=e2f1dbcf4b68cf4227d3635544794bf1 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Script/AICarController.cs
+  importAddress: Guid(239fafb764f1e274aa59829278105ff6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/AICarController.cs using Guid(239fafb764f1e274aa59829278105ff6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '3b0504fca462c61c002e5ee02f9d4c85') in 0.0017441 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1a4b719da74170473321740687e18f1b DependenciesID=3e62f82b220d1eecc3c4cc941074540d StaticDependenciesID=dd7e91719302628ee30c94f45620c817 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader
+  importAddress: Guid(1e3b057af24249748ff873be7fafee47) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader using Guid(1e3b057af24249748ff873be7fafee47) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'd5bd1146debb46277c952b33f73cd5c9') in 0.0164155 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=41122bb24daef6a238bcabc42cf98847 DependenciesID=8e0acce4ecc68cf062271dde58b71297 StaticDependenciesID=da0986976ce7c63446a412f72c47623b 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000079 seconds.
+  path: Assets/Updated Assets/Coc Kien Troi/DIN Round Pro.zip
+  importAddress: Guid(d9661a6b5c82c594a9da7e69cc438ae8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Updated Assets/Coc Kien Troi/DIN Round Pro.zip using Guid(d9661a6b5c82c594a9da7e69cc438ae8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '876589a3478b44f95aecac42517e4b06') in 0.0153687 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=44c186c2db1b5160f8da836736383887 DependenciesID=3891867ae2b02f112f24b36f98682fe2 StaticDependenciesID=e07d8c8cb356884612864da23fde3209 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Fonts/Unity.ttf
+  importAddress: Guid(f4eec857a4fdf2f43be0e9f3d1a984e7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/TextMesh Pro/Examples & Extras/Fonts/Unity.ttf using Guid(f4eec857a4fdf2f43be0e9f3d1a984e7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '92fef7d36313b33b38da89252b6c5bd7') in 0.0259523 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=871198dc232a09ce6cb1cc931a4af656 DependenciesID=652ca4f0d20fb4ba58d340c9ecf905b5 StaticDependenciesID=5edbc479125594a29df3c4cb5ddab8bd 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/(6) CÓC KIỆN TRỜI/UI - chọn nhân vật/infor/gia tốc 5.png
+  importAddress: Guid(ff88313b95dd6504d893c2fb13542556) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/(6) CÓC KIỆN TRỜI/UI - chọn nhân vật/infor/gia tốc 5.png using Guid(ff88313b95dd6504d893c2fb13542556) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'fae27e4d1b5d724ad79667d5e0df75d4') in 0.0349131 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6c617bf10f7c7a23de5e18448005307a DependenciesID=3b4f7de73e10c3d987573fddfc8a9039 StaticDependenciesID=0b5201da4cd314d46d076838d421c757 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Updated Assets/Coc Kien Troi/Sound/Xe ong.mp3
+  importAddress: Guid(f753ba2674bb9744ca9ddf8b02713073) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Updated Assets/Coc Kien Troi/Sound/Xe ong.mp3 using Guid(f753ba2674bb9744ca9ddf8b02713073) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '35ff2926ebe5e72bdfd3e8fec3402c50') in 0.0246184 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f24827683d55450f4552156a3cb8d4dd DependenciesID=9ef11fdc985fab6bbbecfd23435e2c8d StaticDependenciesID=e50a635cf462adfdd0ed2963ed5c8ea1 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Script/Player/Controller.cs
+  importAddress: Guid(fde98af4455fa854f934366a3b5ef5d0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Script/Player/Controller.cs using Guid(fde98af4455fa854f934366a3b5ef5d0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'fa76c6961fb11a76e23943f16b79fc40') in 0.0145472 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=eab2c8d8172f62bad0535950420a9493 DependenciesID=91de29baafb3fceb863ac24d04b61556 StaticDependenciesID=98bba4306d14697ad5d1a911a42360de 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/(6) CÓC KIỆN TRỜI/UI - chọn nhân vật/infor/drift 3.png
+  importAddress: Guid(2f9ac289265a76b4fbf22338f3d9aa51) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/(6) CÓC KIỆN TRỜI/UI - chọn nhân vật/infor/drift 3.png using Guid(2f9ac289265a76b4fbf22338f3d9aa51) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'bc876caaee8ab802eb704bac82734bd9') in 0.0329758 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5d4ed578668fe8f4d57c9bfcd7f8e4ae DependenciesID=afd42107406ebe9a969403946287d524 StaticDependenciesID=909ef7b669b13eed8064f25e4b47bef1 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
