@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 1545973764821146439}
   - component: {fileID: 7622573867441556901}
   - component: {fileID: 7922434007261653979}
-  - component: {fileID: 7208089293613153211}
   - component: {fileID: 7195512231661400737}
   m_Layer: 12
   m_Name: Cop AI
@@ -34,7 +33,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7225009, w: 0.69136995}
   m_LocalPosition: {x: 1.54, y: 10.6, z: 0}
-  m_LocalScale: {x: 0.535, y: 0.535, z: 0.535}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3667482172443462501}
@@ -227,41 +226,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   circuit: {fileID: 0}
-  waypointThreshold: 5
+  waypointThreshold: 8
   circuitName: Map3_Circuit
-  acceleration: 2.9
-  maxSpeed: 6.5
-  turnSpeed: 80
-  driftTurnMultiplier: 2.3
-  driftFactor: 0.6
-  driftSlide: 0.68
+  acceleration: 14
+  maxSpeed: 27
+  turnSpeed: 85
+  driftTurnMultiplier: 1.9
+  driftFactor: 0.62
+  driftSlide: 0.72
   minTurnSpeed: 0.4
   animator: {fileID: 2542539060620892130}
-  minAnimSpeed: 0.5
-  maxAnimSpeed: 2
---- !u!114 &7208089293613153211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 36048206740407760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 557e598d19cdad74d8ea41e9742f049d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  circuit: {fileID: 0}
-  waypointThreshold: 5
-  circuitName: Map3_Circuit
-  acceleration: 4.3
-  maxSpeed: 6
-  turnSpeed: 70
-  driftTurnMultiplier: 1.3
-  driftFactor: 0.5
-  driftSlide: 0.63
-  minTurnSpeed: 0.2
-  animator: {fileID: 0}
   minAnimSpeed: 0.5
   maxAnimSpeed: 2
 --- !u!114 &7195512231661400737

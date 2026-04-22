@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 3332643482131649962}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.008, y: 0.056, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -195,7 +195,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7225009, w: 0.69136995}
   m_LocalPosition: {x: -0.34, y: 10.47, z: 0}
-  m_LocalScale: {x: 0.535, y: 0.535, z: 0.535}
+  m_LocalScale: {x: 1.47, y: 1.47, z: 1.47}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7848676693660463445}
@@ -358,8 +358,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3d53241587331548aceba4addeaaf20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: 4
-  maxSpeed: 8
+  acceleration: 10
+  maxSpeed: 25
   turnSpeed: 70
   driftTurnMultiplier: 1.6
   driftFactor: 0.4
@@ -423,7 +423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   acceleration: 3
-  maxSpeed: 7
+  maxSpeed: 14
   turnSpeed: 70
   driftTurnMultiplier: 1.8
   driftFactor: 0.6

@@ -23,12 +23,6 @@ public class WinScreenUI : MonoBehaviour
     [Header("Win Canvas Element")]
     public Image winnerNameImageDisplay; // Kéo thả cục ảnh WinnerName vào đây!
 
-    [Header("Floating Animation")]
-    [SerializeField] private bool enableFloatingAnimation = true;
-    [SerializeField] private int floatingTopCount = 3;
-    [SerializeField] private float floatingAmplitude = 10f;
-    [SerializeField] private float floatingFrequency = 1.5f;
-
     // Lưu tên object con trong mỗi rank slot (dùng khi cần truyền dữ liệu qua scene khác)
     public List<string> childObjectNames = new List<string>();
 
@@ -151,8 +145,6 @@ public class WinScreenUI : MonoBehaviour
             card.localPosition = Vector3.zero;
             card.localRotation = Quaternion.identity;
             card.localScale = Vector3.one;
-
-            ConfigureFloatingAnimation(card, enableFloatingAnimation && rank < floatingTopCount);
         }
 
         if (lastRankedCarIndex != null && current.Length == lastRankedCarIndex.Length)
@@ -168,30 +160,6 @@ public class WinScreenUI : MonoBehaviour
                 // KHÔNG call SetNativeSize() nữa để giữ nguyên khung hình Width/Height gốc do user scale tay!
             }
         }
-    }
-
-    void ConfigureFloatingAnimation(Transform card, bool shouldFloat)
-    {
-        if (card == null)
-            return;
-
-        FloatingChar floating = card.GetComponent<FloatingChar>();
-
-        if (!shouldFloat)
-        {
-            if (floating != null)
-                floating.isFloating = false;
-            return;
-        }
-
-        if (floating == null)
-            floating = card.gameObject.AddComponent<FloatingChar>();
-
-        floating.charPreviewImage = card.GetComponent<Image>();
-        floating.amplitude = floatingAmplitude;
-        floating.frequency = floatingFrequency;
-        floating.isFloating = true;
-        floating.ResetStartPosition();
     }
 
     void CacheRankData()

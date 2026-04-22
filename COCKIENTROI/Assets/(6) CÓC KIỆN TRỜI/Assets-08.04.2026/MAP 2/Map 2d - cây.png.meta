@@ -1,0 +1,531 @@
+fileFormatVersion: 2
+guid: 68b23c17b2ee09b45a2f8a79bff355a9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3210374132239826144
+    second: "Map 2d - c\xE2y_0"
+  - first:
+      213: 4358017653435409561
+    second: "Map 2d - c\xE2y_1"
+  - first:
+      213: -682124172916033462
+    second: "Map 2d - c\xE2y_2"
+  - first:
+      213: -8977757212853335849
+    second: "Map 2d - c\xE2y_3"
+  - first:
+      213: -4139458358465015409
+    second: "Map 2d - c\xE2y_4"
+  - first:
+      213: 3954987897251854393
+    second: "Map 2d - c\xE2y_5"
+  - first:
+      213: -5015707199314438767
+    second: "Map 2d - c\xE2y_6"
+  - first:
+      213: 6427608783985956737
+    second: "Map 2d - c\xE2y_7"
+  - first:
+      213: 9944032623338830
+    second: "Map 2d - c\xE2y_8"
+  - first:
+      213: 6317820526427013264
+    second: "Map 2d - c\xE2y_9"
+  - first:
+      213: -7856957721963635325
+    second: "Map 2d - c\xE2y_10"
+  - first:
+      213: -3037828998437963750
+    second: "Map 2d - c\xE2y_11"
+  - first:
+      213: -6322545354402140138
+    second: "Map 2d - c\xE2y_12"
+  - first:
+      213: 1718401994767682569
+    second: "Map 2d - c\xE2y_13"
+  - first:
+      213: 2846960280365976029
+    second: "Map 2d - c\xE2y_14"
+  - first:
+      213: 3998490413477895693
+    second: "Map 2d - c\xE2y_15"
+  - first:
+      213: -5687077125672742846
+    second: "Map 2d - c\xE2y_16"
+  - first:
+      213: 7446541698263898703
+    second: "Map 2d - c\xE2y_17"
+  - first:
+      213: 4486287842340287893
+    second: "Map 2d - c\xE2y_18"
+  - first:
+      213: 2968695455469194342
+    second: "Map 2d - c\xE2y_19"
+  - first:
+      213: 1578967383182015537
+    second: "Map 2d - c\xE2y_20"
+  - first:
+      213: -5188614268609968828
+    second: "Map 2d - c\xE2y_21"
+  - first:
+      213: -8987066201208145647
+    second: "Map 2d - c\xE2y_22"
+  - first:
+      213: -632356135567536100
+    second: "Map 2d - c\xE2y_23"
+  - first:
+      213: 7226901446479136594
+    second: "Map 2d - c\xE2y_24"
+  - first:
+      213: 6350111900103500144
+    second: "Map 2d - c\xE2y_25"
+  - first:
+      213: -668565185749008121
+    second: "Map 2d - c\xE2y_26"
+  - first:
+      213: 5271901423027378166
+    second: "Map 2d - c\xE2y_27"
+  - first:
+      213: 3705465876807006028
+    second: "Map 2d - c\xE2y_28"
+  - first:
+      213: -3698307626794114937
+    second: "Map 2d - c\xE2y_29"
+  - first:
+      213: 8476967846098935889
+    second: "Map 2d - c\xE2y_30"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Map 2d - c\xE2y_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4581
+        width: 2378
+        height: 4924
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0230ebb6cb57273d0800000000000000
+      internalID: -3210374132239826144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Map 2d - c\xE2y_1"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10132
+        width: 4584
+        height: 2728
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd3df8252e2090e4e8ae8daf8be3c063
+      internalID: 4358017653435409561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Map 2d - c\xE2y_2"
+      rect:
+        serializedVersion: 2
+        x: 5648
+        y: 11158
+        width: 6964
+        height: 1817
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 002e1e83b55451642a23e84dd89a2536
+      internalID: -682124172916033462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Map 2d - c\xE2y_3"
+      rect:
+        serializedVersion: 2
+        x: 13946
+        y: 3211
+        width: 6354
+        height: 7343
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ad7a469b6f7bf743add5d599e1b860b
+      internalID: -8977757212853335849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Map 2d - c\xE2y_4"
+      rect:
+        serializedVersion: 2
+        x: 7298
+        y: 5055
+        width: 6314
+        height: 5537
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f0e4bbe489e1c041a6bc5ab3018afb5
+      internalID: -4139458358465015409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Map 2d - c\xE2y_5"
+      rect:
+        serializedVersion: 2
+        x: 2684
+        y: 3280
+        width: 1819
+        height: 2087
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 717d12362f9ef414887813ca40a4b9bb
+      internalID: 3954987897251854393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Map 2d - c\xE2y_6"
+      rect:
+        serializedVersion: 2
+        x: 9377
+        y: 2931
+        width: 3943
+        height: 2101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba6d3c637032ac44b9109ccedaecb9f3
+      internalID: -5015707199314438767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Map 2d - c\xE2y_7"
+      rect:
+        serializedVersion: 2
+        x: 12694
+        y: 428
+        width: 5560
+        height: 2330
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 710a368025ad85443973a8b59495238c
+      internalID: 6427608783985956737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Map 2d - c\xE2y_8"
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 5336
+        width: 4178
+        height: 5343
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a0c8c96e5d30794aaea37ea1bcaef47
+      internalID: 9944032623338830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Map 2d - c\xE2y_9"
+      rect:
+        serializedVersion: 2
+        x: 5654
+        y: 0
+        width: 3568
+        height: 5119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c5563dc4f1644a4ead1f18f9305f115
+      internalID: 6317820526427013264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Map 2d - c\xE2y_10"
+      rect:
+        serializedVersion: 2
+        x: 9331
+        y: 1034
+        width: 1671
+        height: 2002
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d7aff69a8a30994f864cffdbc41f582
+      internalID: -7856957721963635325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Map 2d - c\xE2y_11"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 23111
+        height: 13000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a295749535a12f24e9f9274ad12be019
+      internalID: -3037828998437963750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 7ab910603245e9c45900d1beea236e93
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "Map 2d - c\xE2y_0": -3210374132239826144
+      "Map 2d - c\xE2y_1": 4358017653435409561
+      "Map 2d - c\xE2y_10": -7856957721963635325
+      "Map 2d - c\xE2y_11": -3037828998437963750
+      "Map 2d - c\xE2y_12": -6322545354402140138
+      "Map 2d - c\xE2y_13": 1718401994767682569
+      "Map 2d - c\xE2y_14": 2846960280365976029
+      "Map 2d - c\xE2y_15": 3998490413477895693
+      "Map 2d - c\xE2y_16": -5687077125672742846
+      "Map 2d - c\xE2y_17": 7446541698263898703
+      "Map 2d - c\xE2y_18": 4486287842340287893
+      "Map 2d - c\xE2y_19": 2968695455469194342
+      "Map 2d - c\xE2y_2": -682124172916033462
+      "Map 2d - c\xE2y_20": 1578967383182015537
+      "Map 2d - c\xE2y_21": -5188614268609968828
+      "Map 2d - c\xE2y_22": -8987066201208145647
+      "Map 2d - c\xE2y_23": -632356135567536100
+      "Map 2d - c\xE2y_24": 7226901446479136594
+      "Map 2d - c\xE2y_25": 6350111900103500144
+      "Map 2d - c\xE2y_26": -668565185749008121
+      "Map 2d - c\xE2y_27": 5271901423027378166
+      "Map 2d - c\xE2y_28": 3705465876807006028
+      "Map 2d - c\xE2y_29": -3698307626794114937
+      "Map 2d - c\xE2y_3": -8977757212853335849
+      "Map 2d - c\xE2y_30": 8476967846098935889
+      "Map 2d - c\xE2y_4": -4139458358465015409
+      "Map 2d - c\xE2y_5": 3954987897251854393
+      "Map 2d - c\xE2y_6": -5015707199314438767
+      "Map 2d - c\xE2y_7": 6427608783985956737
+      "Map 2d - c\xE2y_8": 9944032623338830
+      "Map 2d - c\xE2y_9": 6317820526427013264
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
