@@ -36,8 +36,11 @@ public class CarItemManager : MonoBehaviour
     private float origMobileSlide;
     private float origAiSlide;
 
+    private float spawnTime;
+
     void Start()
     {
+        spawnTime = Time.time;
         rb = GetComponent<Rigidbody2D>();
         if (rb == null) rb = GetComponentInParent<Rigidbody2D>();
         if (rb == null) rb = GetComponentInChildren<Rigidbody2D>();
@@ -64,17 +67,6 @@ public class CarItemManager : MonoBehaviour
         if (speedAnimController != null) origSpeedAnimSlide = speedAnimController.driftSlide;
         if (mobileController != null) origMobileSlide = mobileController.driftSlide;
         if (aiController != null) origAiSlide = aiController.driftSlide;
-
-        // Khởi động thời gian chờ 1.5s không cho nhặt đồ đầu game
-        StartCoroutine(EnableItemPickupCooldown());
-    }
-
-    private bool canPickUpItems = false; // Thời gian chờ đầu game
-
-    IEnumerator EnableItemPickupCooldown()
-    {
-        yield return new WaitForSeconds(1.5f);
-        canPickUpItems = true;
     }
 
     void Update()
@@ -93,8 +85,9 @@ public class CarItemManager : MonoBehaviour
 
     public bool CanPickUpItem()
     {
-        // Không cho phép nhặt nếu chưa hết thời gian chờ đầu game hoặc đã có vật phẩm
-        return canPickUpItems && !HasItem();
+        // Không cho phép nhặt nếu chưa hết thời gian chờ đầu game (1.5s) hoặc đã có vật phẩm
+        bool isCooldownFinished = (Time.time - spawnTime) > 1.5f;
+        return isCooldownFinished && !HasItem();
     }
 
     // Hàm nhận vật phẩm (Gọi từ ItemBox)

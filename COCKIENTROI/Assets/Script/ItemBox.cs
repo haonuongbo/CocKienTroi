@@ -48,19 +48,25 @@ public class ItemBox : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (isRespawning) return; // Đã bị ăn rồi thì bỏ qua
+        if (isRespawning) return; 
 
-        // CHỈ cho phép va chạm với thân xe thật (Solid Collider), bỏ qua các vùng quét (Radar) hoặc vũ khí (Trigger)
-        if (other.isTrigger) return;
+        // Ngăn vũ khí/hiệu ứng vô tình ăn mất hộp
+        if (other.gameObject.name.Contains("Hammer") || other.gameObject.name.Contains("VFX")) return;
 
-        // Tìm CarItemManager ở object này hoặc object cha của nó (để hỗ trợ trường hợp Collider nằm ở object con)
         CarItemManager carItem = other.GetComponentInParent<CarItemManager>();
         
-        if (carItem != null && carItem.CanPickUpItem())
+        if (carItem != null)
         {
-            isRespawning = true; // KHÓA NGAY LẬP TỨC TRONG CÙNG FRAME để tránh lỗi
-            carItem.ReceiveItem(currentItem); 
-            StartCoroutine(RespawnRoutine());
+            if (carItem.CanPickUpItem())
+            {
+                isRespawning = true; 
+                carItem.ReceiveItem(currentItem); 
+                StartCoroutine(RespawnRoutine());
+            }
+            else
+            {
+                Debug.Log($"[ItemBox] Xe {carItem.gameObject.name} chạm vào hộp nhưng không thể nhặt (Chưa hết 1.5s đầu game HOẶC xe đang có sẵn đồ trên tay chưa xài!)");
+            }
         }
     }
 
