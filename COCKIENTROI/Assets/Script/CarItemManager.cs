@@ -176,36 +176,66 @@ public class CarItemManager : MonoBehaviour
         EnableControls(); 
     }
 
-    // --- 4. BÚA ---
+    // --- 4. BÚA (Búa xoay xung quanh xe) ---
     IEnumerator HammerStrike()
     {
+        float hammerDuration = 5f; // Thời gian búa xoay
+        float rotationSpeed = 360f; // Tốc độ xoay
+        
+        // Tạo trục xoay
+        GameObject hammerPivot = new GameObject("HammerPivot");
+        hammerPivot.transform.SetParent(this.transform);
+        hammerPivot.transform.localPosition = Vector3.zero;
+
+        // Nếu có prefab hammerVFX thì tạo ra, đặt cách xe một khoảng
         if (hammerVFX != null) 
-            Instantiate(hammerVFX, transform.position, Quaternion.identity, transform);
+        {
+            GameObject activeHammer = Instantiate(hammerVFX, hammerPivot.transform);
+            activeHammer.transform.localPosition = new Vector3(2f, 0, 0); // Khoảng cách búa xoay quanh xe
+        }
 
         // Phóng to dựa trên kích thước gốc
         transform.localScale = originalScale * 1.2f; 
 
-        Collider2D[] hitCars = Physics2D.OverlapCircleAll(transform.position, 4f);
-        foreach (Collider2D hit in hitCars)
+        float timer = 0f;
+        while (timer < hammerDuration)
         {
-            if (hit.gameObject != gameObject) 
+            timer += Time.deltaTime;
+            
+            // Xoay búa
+            if (hammerPivot != null)
             {
-                Rigidbody2D enemyRb = hit.GetComponent<Rigidbody2D>();
-                CarItemManager enemyCar = hit.GetComponent<CarItemManager>();
-                
-                if (enemyRb != null && enemyCar != null)
+                hammerPivot.transform.Rotate(0, 0, rotationSpeed * Time.deltaTime);
+            }
+
+            // Kiểm tra va chạm liên tục trong lúc xoay
+            Collider2D[] hitCars = Physics2D.OverlapCircleAll(transform.position, 3f);
+            foreach (Collider2D hit in hitCars)
+            {
+                if (hit.gameObject != gameObject) 
                 {
-                    Vector2 pushDirection = (hit.transform.position - transform.position).normalized;
-                    enemyRb.AddForce(pushDirection * 20f, ForceMode2D.Impulse);
-                    enemyCar.StartCoroutine(enemyCar.ReceiveLightningShock()); 
+                    Rigidbody2D enemyRb = hit.GetComponent<Rigidbody2D>();
+                    CarItemManager enemyCar = hit.GetComponent<CarItemManager>();
+                    
+                    if (enemyRb != null && enemyCar != null)
+                    {
+                        Vector2 pushDirection = (hit.transform.position - transform.position).normalized;
+                        enemyRb.AddForce(pushDirection * 20f, ForceMode2D.Impulse);
+                        
+                        // Cho kẻ địch dính sát thương
+                        enemyCar.StartCoroutine(enemyCar.ReceiveLightningShock()); 
+                    }
                 }
             }
+            yield return null;
         }
 
-        yield return new WaitForSeconds(0.2f);
-        
-        // Trả về đúng kích thước gốc
+        // Trả về đúng kích thước gốc và xóa búa xoay
         transform.localScale = originalScale; 
+        if (hammerPivot != null)
+        {
+            Destroy(hammerPivot);
+        }
     }
 
     // --- 5. LÒ XO ---

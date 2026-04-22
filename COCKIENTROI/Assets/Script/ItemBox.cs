@@ -7,24 +7,53 @@ public class ItemBox : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Collider2D boxCollider;
 
+    [Header("Mini Icon Settings")]
+    public Sprite[] itemIcons; // Kéo thả 6 icon vào đây: 0=Tăng tốc, 1=Chuối, 2=Sét, 3=Búa, 4=Lò xo, 5=Mưa
+    public Vector3 iconOffset = new Vector3(0, 1f, 0); // Vị trí icon lơ lửng trên hộp
+    public float iconScale = 0.5f; // Kích thước của mini icon
+    
+    private int currentItem;
+    private SpriteRenderer iconSpriteRenderer;
+
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         boxCollider = GetComponent<Collider2D>();
+
+        // Tạo một GameObject con để hiển thị mini icon
+        GameObject iconObj = new GameObject("MiniItemIcon");
+        iconObj.transform.SetParent(this.transform);
+        iconObj.transform.localPosition = iconOffset;
+        iconObj.transform.localScale = new Vector3(iconScale, iconScale, iconScale);
+        
+        iconSpriteRenderer = iconObj.AddComponent<SpriteRenderer>();
+        iconSpriteRenderer.sortingLayerName = spriteRenderer.sortingLayerName;
+        iconSpriteRenderer.sortingOrder = spriteRenderer.sortingLayerName == "Default" ? spriteRenderer.sortingOrder + 1 : 5;
+
+        // Random item đầu tiên khi game bắt đầu
+        GenerateRandomItem();
+    }
+
+    void GenerateRandomItem()
+    {
+        // 1=Tăng tốc, 2=Chuối, 3=Sét, 4=Búa, 5=Lò xo, 6=Mưa
+        currentItem = Random.Range(1, 7); 
+        
+        // Hiển thị icon tương ứng nếu mảng itemIcons đã được gán (mảng tính từ 0)
+        if (itemIcons != null && itemIcons.Length >= 6)
+        {
+            iconSpriteRenderer.sprite = itemIcons[currentItem - 1];
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        // Kiểm tra xem đối tượng chạm vào có script CarItemManager không (tìm trong cả bản thân vật chạm và Root cha của xe)
+        // Kiểm tra xem đối tượng chạm vào có script CarItemManager không
         CarItemManager carItem = other.GetComponentInParent<CarItemManager>();
         
         if (carItem != null && !carItem.HasItem())
         {
-            // Random từ 1 đến 2 (Tạm thời làm 2 món cơ bản: 1=Tăng tốc, 2=Chuối)
-            // Sau này bạn có thể tăng số lượng lên để thêm Tia sét, Búa...
-            int randomItem = Random.Range(1, 7); 
-            
-            carItem.ReceiveItem(randomItem); // Tặng vật phẩm cho xe
+            carItem.ReceiveItem(currentItem); // Tặng vật phẩm cho xe
 
             // Ẩn hộp đi và bắt đầu đếm ngược để hiện lại
             StartCoroutine(RespawnRoutine());
@@ -36,11 +65,16 @@ public class ItemBox : MonoBehaviour
         // Tắt hình ảnh và va chạm
         spriteRenderer.enabled = false;
         boxCollider.enabled = false;
+        iconSpriteRenderer.enabled = false;
 
         yield return new WaitForSeconds(respawnTime);
+
+        // Tạo item mới
+        GenerateRandomItem();
 
         // Bật lại
         spriteRenderer.enabled = true;
         boxCollider.enabled = true;
+        iconSpriteRenderer.enabled = true;
     }
 }
