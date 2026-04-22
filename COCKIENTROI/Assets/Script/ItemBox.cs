@@ -14,6 +14,7 @@ public class ItemBox : MonoBehaviour
     
     private int currentItem;
     private SpriteRenderer iconSpriteRenderer;
+    private bool isRespawning = false;
 
     void Start()
     {
@@ -48,6 +49,8 @@ public class ItemBox : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        if (isRespawning) return; // Nếu hộp đang ẩn thì không cho ăn nữa để tránh lỗi nhiều xe ăn cùng lúc
+
         // Kiểm tra xem đối tượng chạm vào có script CarItemManager không
         CarItemManager carItem = other.GetComponentInParent<CarItemManager>();
         
@@ -62,19 +65,23 @@ public class ItemBox : MonoBehaviour
 
     IEnumerator RespawnRoutine()
     {
+        isRespawning = true; // Đánh dấu là đang ẩn
+
         // Tắt hình ảnh và va chạm
         spriteRenderer.enabled = false;
         boxCollider.enabled = false;
-        iconSpriteRenderer.enabled = false;
+        if (iconSpriteRenderer != null) iconSpriteRenderer.enabled = false;
 
-        yield return new WaitForSeconds(respawnTime);
+        yield return new WaitForSeconds(respawnTime); // Đợi 3s
 
-        // Tạo item mới
+        // Tạo item mới ngẫu nhiên
         GenerateRandomItem();
 
         // Bật lại
         spriteRenderer.enabled = true;
         boxCollider.enabled = true;
-        iconSpriteRenderer.enabled = true;
+        if (iconSpriteRenderer != null) iconSpriteRenderer.enabled = true;
+        
+        isRespawning = false; // Đánh dấu là đã hiện lại
     }
 }
