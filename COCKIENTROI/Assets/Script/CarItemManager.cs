@@ -74,7 +74,15 @@ public class CarItemManager : MonoBehaviour
         // Nếu là Người chơi và đang có vật phẩm -> Nhấn Space để sử dụng
         if (isPlayer && HasItem() && Input.GetKeyDown(KeyCode.Space))
         {
-            UseItem();
+            RaceProgressTracker tracker = GetComponent<RaceProgressTracker>();
+            if (tracker == null || tracker.CurrentLap > 0)
+            {
+                UseItem();
+            }
+            else
+            {
+                Debug.Log($"[CarItemManager] {gameObject.name} chưa đi qua vạch đích lần đầu, bị cấm dùng vật phẩm!");
+            }
         }
     }
 
@@ -102,16 +110,34 @@ public class CarItemManager : MonoBehaviour
         currentItem = itemId;
         Debug.Log(">>> " + gameObject.name + " vừa nhặt được vật phẩm số: " + itemId);
 
-        if (isPlayer)
+        RaceProgressTracker tracker = GetComponent<RaceProgressTracker>();
+        bool canUseNow = (tracker == null || tracker.CurrentLap > 0);
+
+        if (canUseNow)
         {
-            // Tự động sử dụng vật phẩm ngay lập tức khi nhặt được (Khôi phục theo yêu cầu)
-            UseItem();
+            if (isPlayer) UseItem();
+            else StartCoroutine(AIUseItemRoutine());
         }
         else
         {
-            // AI mới tự động dùng sau một khoảng thời gian
-            StartCoroutine(AIUseItemRoutine());
+            Debug.Log($"[CarItemManager] {gameObject.name} nhặt đồ ở Lap 0. Sẽ tự động dùng khi qua vạch đích!");
+            if (isPlayer) StartCoroutine(WaitLapToUsePlayer());
+            else StartCoroutine(WaitLapToUseAI());
         }
+    }
+
+    IEnumerator WaitLapToUsePlayer()
+    {
+        RaceProgressTracker tracker = GetComponent<RaceProgressTracker>();
+        while (tracker != null && tracker.CurrentLap == 0) yield return null;
+        if (HasItem()) UseItem(); // Tự động xài khi qua vạch đích nếu là Player Auto
+    }
+
+    IEnumerator WaitLapToUseAI()
+    {
+        RaceProgressTracker tracker = GetComponent<RaceProgressTracker>();
+        while (tracker != null && tracker.CurrentLap == 0) yield return null;
+        if (HasItem()) StartCoroutine(AIUseItemRoutine());
     }
 
     // Bộ não AI tự dùng đồ sau 1 đến 3 giây
