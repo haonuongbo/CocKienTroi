@@ -26,6 +26,13 @@ public class CarItemManager : MonoBehaviour
     private float originalMaxSpeed;
     private Vector3 originalScale; // Lưu kích thước gốc của xe
 
+    private int slipperyCount = 0;
+    private float origPlayerSlide;
+    private float origPcSlide;
+    private float origSpeedAnimSlide;
+    private float origMobileSlide;
+    private float origAiSlide;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
