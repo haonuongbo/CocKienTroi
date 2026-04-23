@@ -25,6 +25,12 @@ public class LapManager2D : MonoBehaviour
         if (winCanvasData != null)
             winCanvasBehaviours = winCanvasData.GetComponentsInChildren<MonoBehaviour>(true);
 
+        if (lapText == null)
+            lapText = FindLapText();
+
+        if (winLapText == null)
+            winLapText = FindWinLapText();
+
         UpdateLapText();
 
         if (hideFinishCanvasOnStart && finishCanvas != null)
@@ -32,6 +38,39 @@ public class LapManager2D : MonoBehaviour
 
         if (winCanvasData != null)
             winCanvasData.SetActive(true); // đảm bảo đang hoạt động lúc đầu
+    }
+
+    private TextMeshProUGUI FindLapText()
+    {
+        TextMeshProUGUI[] texts = FindObjectsByType<TextMeshProUGUI>(FindObjectsSortMode.None);
+        for (int i = 0; i < texts.Length; i++)
+        {
+            if (texts[i] != null && texts[i].name == "Txt_LapCount")
+                return texts[i];
+        }
+
+        for (int i = 0; i < texts.Length; i++)
+        {
+            if (texts[i] != null && texts[i].text != null && texts[i].text.Contains("Lap"))
+                return texts[i];
+        }
+
+        return null;
+    }
+
+    private TextMeshProUGUI FindWinLapText()
+    {
+        if (finishCanvas != null)
+        {
+            TextMeshProUGUI[] texts = finishCanvas.GetComponentsInChildren<TextMeshProUGUI>(true);
+            for (int i = 0; i < texts.Length; i++)
+            {
+                if (texts[i] != null && texts[i].name == "RaceLapText")
+                    return texts[i];
+            }
+        }
+
+        return null;
     }
 
     public bool CountLap()

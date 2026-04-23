@@ -1144,9 +1144,9 @@ MonoBehaviour:
   miniMapRect: {fileID: 0}
   playerDotTemplate: {fileID: 2739229065843679310}
   aiDotTemplate: {fileID: 5777428031136711610}
-  worldMin: {x: -12000, y: -12000}
-  worldMax: {x: 12000, y: 12000}
-  autoCalculateWorldBounds: 0
+  worldMin: {x: -1200, y: -1200}
+  worldMax: {x: 1200, y: 1200}
+  autoCalculateWorldBounds: 1
   mapColliderLayers:
     serializedVersion: 2
     m_Bits: 4294967295
