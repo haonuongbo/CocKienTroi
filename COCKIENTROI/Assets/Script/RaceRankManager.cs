@@ -41,4 +41,29 @@ public class RaceRankManager : MonoBehaviour
             return A.DistanceToNextCheckpoint.CompareTo(B.DistanceToNextCheckpoint);
         });
     }
+
+    public int GetPlayerRank()
+    {
+        if (trackers == null || trackers.Length == 0)
+            return -1;
+
+        if (rankedCarIndex == null || rankedCarIndex.Length == 0)
+            return -1;
+
+        for (int i = 0; i < rankedCarIndex.Length; i++)
+        {
+            int trackerIndex = rankedCarIndex[i];
+            if (trackerIndex < 0 || trackerIndex >= trackers.Length)
+                continue;
+
+            RaceProgressTracker tracker = trackers[trackerIndex];
+            if (tracker == null)
+                continue;
+
+            if (tracker.CompareTag("Player") || tracker.GetComponent<ControlSpeedAnim>() != null || tracker.GetComponent<ControlSpeedAnimMobile>() != null)
+                return i + 1;
+        }
+
+        return -1;
+    }
 }
