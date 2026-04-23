@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public class RaceRankManager : MonoBehaviour
 {
@@ -8,9 +8,17 @@ public class RaceRankManager : MonoBehaviour
     [Header("Runtime ranking result")]
     public int[] rankedCarIndex = new int[5]; // 0 = 1st place
 
+    [Header("Lock Status")]
+    public bool isPlayerFinished = false; // Khi player đã finish thì dừng cập nhật để không bị tuột rank
+    public int playerFinalRankIndex = -1;
+
     void Update()
     {
         if (trackers == null || trackers.Length != 5) return;
+        
+        // NẾU NGƯỜI CHƠI ĐÃ XONG VÀ ĐANG THƯỞNG THỨC 5S PHÁO BÔNG -> ĐÓNG BĂNG BẢNG XẾP HẠNG!
+        if (isPlayerFinished) return;
+
         CalculateRanking();
     }
 
