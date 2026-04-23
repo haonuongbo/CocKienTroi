@@ -9,17 +9,34 @@ public class ResolutionManager : MonoBehaviour
     [Header("---- CÀI ĐẶT ĐỘ PHÂN GIẢI ----")]
     [SerializeField] private Vector2Int[] supportedResolutions = new Vector2Int[]
     {
+        // Desktop / common landscape presets
         new Vector2Int(1024, 768),
         new Vector2Int(1280, 720),
         new Vector2Int(1280, 1024),
         new Vector2Int(1600, 900),
         new Vector2Int(1920, 1080),
         new Vector2Int(2560, 1440),
-        new Vector2Int(3840, 2160)
+        new Vector2Int(3840, 2160),
+
+        // Mobile / tablet presets
+        new Vector2Int(720, 1280),
+        new Vector2Int(750, 1334),
+        new Vector2Int(1080, 1920),
+        new Vector2Int(1125, 2436),
+        new Vector2Int(1170, 2532),
+        new Vector2Int(1179, 2556),
+        new Vector2Int(1242, 2688),
+        new Vector2Int(1284, 2778),
+        new Vector2Int(1440, 3040),
+        new Vector2Int(1440, 3200),
+        new Vector2Int(1536, 2048),
+        new Vector2Int(1668, 2224),
+        new Vector2Int(2048, 2732)
     };
 
     [SerializeField] private int defaultResolutionIndex = 4; // 1920x1080
     [SerializeField] private bool fullscreen = true;
+    [SerializeField] private bool forceLandscape = true;
     [SerializeField] private int targetFramerate = 60;
 
     [Header("---- CÀI ĐẶT QUALITY ----")]
@@ -39,6 +56,8 @@ public class ResolutionManager : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(gameObject);
 
+        ApplyOrientation();
+
         // Áp dụng cài đặt ban đầu
         ApplyResolution(defaultResolutionIndex);
         ApplyQualityLevel(qualityLevel);
@@ -56,6 +75,7 @@ public class ResolutionManager : MonoBehaviour
         }
 
         Vector2Int resolution = supportedResolutions[resolutionIndex];
+        resolution = NormalizeResolutionForOrientation(resolution);
         Screen.SetResolution(resolution.x, resolution.y, fullscreen);
 
         Debug.Log($"[ResolutionManager] Áp dụng độ phân giải: {resolution.x}x{resolution.y} | Fullscreen: {fullscreen}");
@@ -66,10 +86,13 @@ public class ResolutionManager : MonoBehaviour
     /// </summary>
     public void SetResolution(int width, int height, bool isFullscreen)
     {
+        Vector2Int resolution = NormalizeResolutionForOrientation(new Vector2Int(width, height));
         Screen.SetResolution(width, height, isFullscreen);
         fullscreen = isFullscreen;
 
-        Debug.Log($"[ResolutionManager] Thay đổi độ phân giải thành: {width}x{height} | Fullscreen: {isFullscreen}");
+        Screen.SetResolution(resolution.x, resolution.y, isFullscreen);
+
+        Debug.Log($"[ResolutionManager] Thay đổi độ phân giải thành: {resolution.x}x{resolution.y} | Fullscreen: {isFullscreen}");
     }
 
     /// <summary>
@@ -107,6 +130,7 @@ public class ResolutionManager : MonoBehaviour
     {
         fullscreen = !fullscreen;
         Vector2Int resolution = supportedResolutions[defaultResolutionIndex];
+        resolution = NormalizeResolutionForOrientation(resolution);
         Screen.SetResolution(resolution.x, resolution.y, fullscreen);
 
         Debug.Log($"[ResolutionManager] Fullscreen: {fullscreen}");
@@ -142,5 +166,28 @@ public class ResolutionManager : MonoBehaviour
     public static ResolutionManager Instance
     {
         get { return instance; }
+    }
+
+    private void ApplyOrientation()
+    {
+        if (!forceLandscape)
+            return;
+
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
+        Screen.autorotateToPortrait = false;
+        Screen.autorotateToPortraitUpsideDown = false;
+        Screen.autorotateToLandscapeLeft = true;
+        Screen.autorotateToLandscapeRight = true;
+    }
+
+    private Vector2Int NormalizeResolutionForOrientation(Vector2Int resolution)
+    {
+        if (!forceLandscape)
+            return resolution;
+
+        if (resolution.y > resolution.x)
+            return new Vector2Int(resolution.y, resolution.x);
+
+        return resolution;
     }
 }

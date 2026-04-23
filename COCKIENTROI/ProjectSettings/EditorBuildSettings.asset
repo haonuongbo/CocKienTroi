@@ -6,26 +6,32 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Complete/Begin.unity
-    guid: 3e208ecec3a4065468c221e01d54645b
+    path: Assets/Scenes/Demo/SPLASH ART.unity
+    guid: d8214cd4fa1838c4bb9c999196744a1a
   - enabled: 1
-    path: Assets/Scenes/Complete/CharacterSelection.unity
-    guid: fa15c3b01f73f77409e6beb020520052
+    path: Assets/Scenes/Demo/INTRO.unity
+    guid: 37e1897aff3297b40b82deeba3328adf
   - enabled: 1
-    path: Assets/Scenes/Complete/ChonMap.unity
-    guid: f2ba624a15c81b642b46c39107f7a5d6
+    path: Assets/Scenes/Demo/CHARACTER SELECTION.unity
+    guid: 875e42107cca4334286cba91169d6951
   - enabled: 1
-    path: Assets/Scenes/Complete/Loading.unity
-    guid: 6535e0232cda2504586d551d67534871
+    path: Assets/Scenes/Demo/Loading.unity
+    guid: f5113d695afe13741a0d1261cf3edac9
   - enabled: 1
-    path: Assets/Scenes/Complete/Intro.unity
-    guid: 50a8e17612fc70e40b9a7ba1fa230c13
+    path: Assets/Scenes/Demo/MAP 1 RUNG.unity
+    guid: 5475e59df0f27c74489a8092765ffaaf
   - enabled: 1
-    path: Assets/Scenes/Complete/Outro.unity
-    guid: e503c0b254d4aa04d824c0b7430a391c
+    path: Assets/Scenes/Demo/MAP 2 SA MAC.unity
+    guid: 32b2d970e70c49744a53ba85930a0e4f
   - enabled: 1
-    path: Assets/Scenes/Complete/FINAL WIN.unity
-    guid: 3e45a3aaf28288b4eac1c64da1fc52bc
+    path: Assets/Scenes/Demo/MAP 3 THIEN DINH.unity
+    guid: 10fb6036ebc17e74ab4c4fba8cb2fb13
+  - enabled: 1
+    path: Assets/Scenes/Demo/OUTRO.unity
+    guid: 5874f3f9fdc73a441bbae2f359c6f7e3
+  - enabled: 1
+    path: Assets/Scenes/Demo/FINAL WIN.unity
+    guid: e37c0b3637a165c45aaa9c86636005ac
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
