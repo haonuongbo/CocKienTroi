@@ -4424,6 +4424,62 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2030797912017132257, guid: 5ca24fa958a8f964196c05acd422f6a4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 331
+      objectReference: {fileID: 0}
+    - target: {fileID: 2030797912017132257, guid: 5ca24fa958a8f964196c05acd422f6a4, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 398
+      objectReference: {fileID: 0}
+    - target: {fileID: 2030797912017132257, guid: 5ca24fa958a8f964196c05acd422f6a4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2030797912017132257, guid: 5ca24fa958a8f964196c05acd422f6a4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2293472385675625848, guid: 5ca24fa958a8f964196c05acd422f6a4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 265.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 2293472385675625848, guid: 5ca24fa958a8f964196c05acd422f6a4, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 264.1789
+      objectReference: {fileID: 0}
+    - target: {fileID: 2293472385675625848, guid: 5ca24fa958a8f964196c05acd422f6a4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2293472385675625848, guid: 5ca24fa958a8f964196c05acd422f6a4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 3505887662971559035, guid: 5ca24fa958a8f964196c05acd422f6a4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 213.6046
+      objectReference: {fileID: 0}
+    - target: {fileID: 3505887662971559035, guid: 5ca24fa958a8f964196c05acd422f6a4, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 213.6046
+      objectReference: {fileID: 0}
+    - target: {fileID: 3505887662971559035, guid: 5ca24fa958a8f964196c05acd422f6a4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3505887662971559035, guid: 5ca24fa958a8f964196c05acd422f6a4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 38
+      objectReference: {fileID: 0}
+    - target: {fileID: 3857332435125076646, guid: 5ca24fa958a8f964196c05acd422f6a4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 660
+      objectReference: {fileID: 0}
+    - target: {fileID: 3857332435125076646, guid: 5ca24fa958a8f964196c05acd422f6a4, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 467.71
+      objectReference: {fileID: 0}
     - target: {fileID: 5418487006300706414, guid: 5ca24fa958a8f964196c05acd422f6a4, type: 3}
       propertyPath: m_Name
       value: JoyStick HUD
@@ -4507,6 +4563,22 @@ PrefabInstance:
     - target: {fileID: 8895816104176791059, guid: 5ca24fa958a8f964196c05acd422f6a4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100735621206354596, guid: 5ca24fa958a8f964196c05acd422f6a4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -25
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100735621206354596, guid: 5ca24fa958a8f964196c05acd422f6a4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -30
+      objectReference: {fileID: 0}
+    - target: {fileID: 9178327689341220535, guid: 5ca24fa958a8f964196c05acd422f6a4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 660
+      objectReference: {fileID: 0}
+    - target: {fileID: 9178327689341220535, guid: 5ca24fa958a8f964196c05acd422f6a4, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 467.71
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
