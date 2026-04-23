@@ -6011,10 +6011,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3265837819456243195, guid: 59cf890837989d946b4e6337abbd3632, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Outro
-      objectReference: {fileID: 0}
     - target: {fileID: 5612351396870839003, guid: 59cf890837989d946b4e6337abbd3632, type: 3}
       propertyPath: firstPlaceImage
       value: 

@@ -47,16 +47,6 @@ public class LapManager2D : MonoBehaviour
         {
             hasFinished = true;
 
-            RaceRankManager rankManager = FindFirstObjectByType<RaceRankManager>();
-            if (rankManager != null)
-            {
-                int playerRank = rankManager.GetPlayerRank();
-                if (playerRank > 0)
-                {
-                    ChampionshipProgress.RecordRankForCurrentScene(playerRank);
-                }
-            }
-
             // show win UI
             if (finishCanvas != null)
                 finishCanvas.SetActive(true);

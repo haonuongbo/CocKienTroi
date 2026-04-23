@@ -190,8 +190,8 @@ public class CharacterSelection : MonoBehaviour
     }
 
     [Header("Cấu hình Scene Tiếp Theo")]
-    [Tooltip("Tên scene sẽ load sau khi bấm Chọn. Set trong Inspector.")]
-    public string nextSceneName;
+    [Tooltip("Tên Scene Chọn Map (VD: ChonMap)")]
+    public string nextSceneName = "ChonMap";
 
     public void ConfirmAndPlay()
     {
@@ -204,18 +204,7 @@ public class CharacterSelection : MonoBehaviour
             
             // ĐÂY LÀ DÒNG LƯU NHÂN VẬT! Phải chạy qua đây máy mới nhớ là Cáo!
             PlayerPrefs.SetInt("SelectedCharacter", selectedIndex);
-            string selectedCharacterName = selectedIndex >= 0 && selectedIndex < characterList.Length
-                ? characterList[selectedIndex].name
-                : string.Empty;
-            ChampionshipProgress.SetSelectedCharacter(selectedIndex, selectedCharacterName);
-            ChampionshipProgress.ResetCampaign();
             PlayerPrefs.Save();
-
-            if (string.IsNullOrWhiteSpace(nextSceneName))
-            {
-                Debug.LogWarning("Bạn chưa setup nextSceneName trong Inspector cho CharacterSelection.");
-                return;
-            }
             
             // Chuyển sang màn hình chọn Map thay vì SampleScene
             SceneManager.LoadScene(nextSceneName);
