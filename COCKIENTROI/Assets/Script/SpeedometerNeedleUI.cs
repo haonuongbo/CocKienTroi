@@ -1,7 +1,9 @@
 using UnityEngine;
+using TMPro;
 
 public class SpeedometerNeedleUI : MonoBehaviour
 {
+    private TMP_Text speedTextComponent;
     [Header("UI")]
     [SerializeField] private RectTransform needle;
     [SerializeField] private GameObject speedNumberObject;
@@ -22,7 +24,7 @@ public class SpeedometerNeedleUI : MonoBehaviour
     private void Awake()
     {
         AutoBindReferences();
-        HideSpeedText();
+        // HideSpeedText();
     }
 
     private void Start()
@@ -32,6 +34,11 @@ public class SpeedometerNeedleUI : MonoBehaviour
         {
             baseNeedleAngle = NormalizeSignedAngle(needle.localEulerAngles.z);
             currentAngle = baseNeedleAngle;
+        }
+
+        if (speedNumberObject != null)
+        {
+            speedTextComponent = speedNumberObject.GetComponent<TMP_Text>();
         }
     }
 
@@ -55,6 +62,15 @@ public class SpeedometerNeedleUI : MonoBehaviour
         float targetAngle = baseNeedleAngle + targetTilt;
         currentAngle = Mathf.LerpAngle(currentAngle, targetAngle, Time.deltaTime * smoothSpeed);
         needle.localRotation = Quaternion.Euler(0f, 0f, currentAngle);
+
+        // --- Cập nhật con số Tốc độ hiển thị ---
+        if (speedTextComponent != null)
+        {
+            // Tốc độ ảo (tối đa hiển thị là 120km/h) dựa trên tỉ lệ chuẩn normalized
+            // Xe đứng yên = 0.0 , Xe max speed = 120.0
+            float displayedSpeed = normalized * 120f;
+            speedTextComponent.text = displayedSpeed.ToString("F1");
+        }
     }
 
     private void AutoBindReferences()

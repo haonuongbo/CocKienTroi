@@ -63,6 +63,18 @@ public class PlayerSpawner : MonoBehaviour
                     camFollow.targetRb = spawnedPlayer.GetComponent<Rigidbody2D>();
                 }
                 
+                // --- THÊM TIẾNG XE ---
+                AudioClip engineClip = GetEngineSound(prefabToSpawn.name);
+                if (engineClip != null)
+                {
+                    AudioSource audioSrc = spawnedPlayer.AddComponent<AudioSource>();
+                    audioSrc.clip = engineClip;
+                    audioSrc.loop = true;
+                    audioSrc.volume = 0.5f; 
+                    audioSrc.spatialBlend = 0f; // 2D
+                    audioSrc.Play();
+                }
+                
                 // Tự động gán Checkpoints vào RaceProgressTracker của Player mới
                 RaceProgressTracker progressTracker = spawnedPlayer.GetComponent<RaceProgressTracker>();
                 if (progressTracker == null)
@@ -132,5 +144,20 @@ public class PlayerSpawner : MonoBehaviour
                 }
             }
         }
+    }
+
+    private AudioClip GetEngineSound(string characterName)
+    {
+        string path = "Audio/";
+        string lower = characterName.ToLower();
+        
+        if (lower.Contains("cao") || lower.Contains("cáo")) path += "engine_cao";
+        else if (lower.Contains("coc") || lower.Contains("cóc")) path += "engine_coc";
+        else if (lower.Contains("cop") || lower.Contains("cọp")) path += "engine_cop";
+        else if (lower.Contains("gau") || lower.Contains("gấu")) path += "engine_gau";
+        else if (lower.Contains("ong")) path += "engine_ong";
+        else return null;
+
+        return Resources.Load<AudioClip>(path);
     }
 }

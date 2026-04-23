@@ -131,6 +131,19 @@ public class WinScreenUI : MonoBehaviour
                     allImages[0].enabled = true;
                     allImages[0].sprite = winCharacterSprites[carIndex];
                     allImages[0].color = Color.white;
+
+                    // Thêm nhún nhún cho Top 1, 2, 3
+                    if (rank < 3) 
+                    {
+                        FloatingChar floating = allImages[0].gameObject.GetComponent<FloatingChar>();
+                        if (floating == null) 
+                        {
+                            floating = allImages[0].gameObject.AddComponent<FloatingChar>();
+                        }
+                        floating.amplitude = 15f; 
+                        floating.frequency = 1.2f;
+                        floating.isFloating = true;
+                    }
                 }
 
                 // Dọn luôn mấy cái chữ tên nhỏ xíu ở dưới xe (vì đã có tên Winner Name bự rồi)
@@ -144,7 +157,14 @@ public class WinScreenUI : MonoBehaviour
             card.SetParent(slot, false);
             card.localPosition = Vector3.zero;
             card.localRotation = Quaternion.identity;
-            card.localScale = Vector3.one;
+            
+            // Cho Top 1 bự, Top 2 và 3 nhỏ lại
+            if (rank == 0) 
+                card.localScale = new Vector3(1.2f, 1.2f, 1.2f);
+            else if (rank == 1 || rank == 2) 
+                card.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+            else 
+                card.localScale = Vector3.one;
         }
 
         if (lastRankedCarIndex != null && current.Length == lastRankedCarIndex.Length)
