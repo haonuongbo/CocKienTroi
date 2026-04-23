@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class AICarController : MonoBehaviour
+public class AICarController : MonoBehaviour, ICarController
 {
     [Header("Cài đặt AI - Đường đi")]
     public WaypointCircuit circuit;
@@ -17,6 +17,11 @@ public class AICarController : MonoBehaviour
     public float driftFactor = 0.95f;
     public float driftSlide = 0.4f;
     public float minTurnSpeed = 0.2f;
+
+    // ===== ICarController =====
+    public float MaxSpeed { get => maxSpeed; set => maxSpeed = value; }
+    public float DriftSlide { get => driftSlide; set => driftSlide = value; }
+    public void SetControlEnabled(bool enabled) { this.enabled = enabled; }
 
     [Header("Animation")]
     public Animator animator;

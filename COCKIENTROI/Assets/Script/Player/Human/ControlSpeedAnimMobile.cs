@@ -7,7 +7,7 @@ using UnityEngine.Events;
 /// Steering and drift are driven entirely by UI buttons.
 /// Drift activates when the Drift button is held AND a Turn button is also held.
 /// </summary>
-public class ControlSpeedAnimMobile : MonoBehaviour
+public class ControlSpeedAnimMobile : MonoBehaviour, ICarController
 {
     [Header("Stats")]
     public float acceleration = 3f;
@@ -17,6 +17,11 @@ public class ControlSpeedAnimMobile : MonoBehaviour
     public float driftFactor = 0.6f;
     public float driftSlide = 0.7f;
     public float minTurnSpeed = 0f;
+
+    // ===== ICarController =====
+    public float MaxSpeed { get => maxSpeed; set => maxSpeed = value; }
+    public float DriftSlide { get => driftSlide; set => driftSlide = value; }
+    public void SetControlEnabled(bool enabled) { this.enabled = enabled; }
 
     [Header("Mobile Button Names")]
     public string btnLeftName  = "BtnLeft";

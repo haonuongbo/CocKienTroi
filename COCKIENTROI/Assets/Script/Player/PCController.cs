@@ -1,6 +1,6 @@
-﻿using UnityEngine;
+using UnityEngine;
 using Unity.Netcode;
-public class PCController : NetworkBehaviour
+public class PCController : NetworkBehaviour, ICarController
 {
     [Header("Stats")] public float acceleration = 10.1f;
     public float maxSpeed = 8f;
@@ -9,7 +9,12 @@ public class PCController : NetworkBehaviour
     public float driftFactor = 0.9f;
     public float driftSlide = 0.6f;
     public float minTurnSpeed = 0.2f;
-    [Header("Drift")] public float minDriftSpeed = 3f; // minimum speed to allow drifting 
+    [Header("Drift")] public float minDriftSpeed = 3f; // minimum speed to allow drifting
+
+    // ===== ICarController =====
+    public float MaxSpeed { get => maxSpeed; set => maxSpeed = value; }
+    public float DriftSlide { get => driftSlide; set => driftSlide = value; }
+    public void SetControlEnabled(bool enabled) { this.enabled = enabled; }
     [Header("Animation")]
     public Animator animator;
     public float minAnimSpeed = 0.5f;

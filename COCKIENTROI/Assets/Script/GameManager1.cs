@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
 
     // [BIẾN HỆ THỐNG]
     private float raceTime = 0f;
-    private bool isRacing = false;
+    public static bool IsRacing = false;
     private float uiUpdateTimer = 0f;
 
     // [BIẾN QUẢN LÍ XE]
@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         raceTime = 0f;
-        isRacing = false;
+        IsRacing = false;
 
         // ===== SETUP AUDIO =====
         audioSource = GetComponent<AudioSource>();
@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (isRacing)
+        if (IsRacing)
         {
             raceTime += Time.deltaTime;
 
@@ -159,9 +159,9 @@ public class GameManager : MonoBehaviour
         
         if (goHolder) goHolder.SetActive(false);
 
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(1.8f);
 
-        isRacing = true;
+        IsRacing = true;
     }
 
     /// <summary>
@@ -177,7 +177,7 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void StopRaceTime()
     {
-        isRacing = false;
+        IsRacing = false;
         
         // Đẩy thẳng thời gian cuối cùng sang màn hình Win Nếu có gắn thẻ winTimeText
         if (winTimeText != null && timeText != null)

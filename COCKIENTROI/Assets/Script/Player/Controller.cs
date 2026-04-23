@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Controller : MonoBehaviour
+public class Controller : MonoBehaviour, ICarController
 {
     [Header("Stats")]
     public float acceleration = 10f;
@@ -10,6 +10,11 @@ public class Controller : MonoBehaviour
     public float driftFactor = 0.9f;
     public float driftSlide = 0.5f;
     public float minTurnSpeed = 0.2f;
+
+    // ===== ICarController =====
+    public float MaxSpeed { get => maxSpeed; set => maxSpeed = value; }
+    public float DriftSlide { get => driftSlide; set => driftSlide = value; }
+    public void SetControlEnabled(bool enabled) { this.enabled = enabled; }
 
     private Rigidbody2D rb;
     private bool drifting;

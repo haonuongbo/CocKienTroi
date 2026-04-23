@@ -1,6 +1,6 @@
-﻿using UnityEngine;
+using UnityEngine;
 
-public class ControlSpeedAnim : MonoBehaviour
+public class ControlSpeedAnim : MonoBehaviour, ICarController
 {
     [Header("Stats")]
     public float acceleration = 3f  ;
@@ -10,6 +10,11 @@ public class ControlSpeedAnim : MonoBehaviour
     public float driftFactor = 0.6f;
     public float driftSlide = 0.7f;
     public float minTurnSpeed = 0f;
+
+    // ===== ICarController =====
+    public float MaxSpeed { get => maxSpeed; set => maxSpeed = value; }
+    public float DriftSlide { get => driftSlide; set => driftSlide = value; }
+    public void SetControlEnabled(bool enabled) { this.enabled = enabled; }
 
     [Header("Drift")]
     public float minDriftSpeed = 3f;
