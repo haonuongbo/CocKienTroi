@@ -37,7 +37,15 @@ public class IntroVideoToScene : MonoBehaviour
         }
     }
 
-    private void HandleVideoFinished(VideoPlayer source)
+    private void Update()
+    {
+        if (Input.anyKeyDown || Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.touchCount > 0)
+        {
+            SkipVideo();
+        }
+    }
+
+    private void SkipVideo()
     {
         if (hasLoadedNextScene || string.IsNullOrWhiteSpace(nextSceneName))
         {
@@ -47,5 +55,10 @@ public class IntroVideoToScene : MonoBehaviour
         hasLoadedNextScene = true;
         Time.timeScale = 1f;
         SceneManager.LoadScene(nextSceneName);
+    }
+
+    private void HandleVideoFinished(VideoPlayer source)
+    {
+        SkipVideo();
     }
 }
