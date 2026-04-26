@@ -49,6 +49,27 @@ public class GameManager : MonoBehaviour
         raceTime = 0f;
         isRacing = false;
 
+        // Tự động tìm timeText nếu bị rớt reference
+        if (timeText == null)
+        {
+            TMP_Text[] allTexts = FindObjectsByType<TMP_Text>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+            foreach (var t in allTexts)
+            {
+                if (t.name == "Txt_Time")
+                {
+                    timeText = t;
+                    break;
+                }
+            }
+        }
+
+        if (timeText != null)
+        {
+            timeText.text = "00:00:00";
+        }
+
+        PlayMapBGM();
+
         // ===== SETUP AUDIO =====
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
@@ -57,6 +78,27 @@ public class GameManager : MonoBehaviour
         // ===== SETUP CANVAS & CAMERA =====
         canvasResponsive = FindFirstObjectByType<CanvasResponsive>();
         cameraFollow = FindFirstObjectByType<TopDownCameraFollow>();
+
+        // ===== AUTO FIND WIN TIME TEXT NẾU CHƯA GÁN =====
+        if (winTimeText == null)
+        {
+            GameObject findFinishCanvas = GameObject.Find("Victory Canvas"); // Thay tên nếu nó đổi
+            if(findFinishCanvas == null) findFinishCanvas = GameObject.Find("Win Map Canvas");
+            if(findFinishCanvas == null) findFinishCanvas = GameObject.Find("FinishCanvas");
+
+            if (findFinishCanvas != null)
+            {
+                TMP_Text[] texts = findFinishCanvas.GetComponentsInChildren<TMP_Text>(true);
+                for (int i = 0; i < texts.Length; i++)
+                {
+                    if (texts[i].name == "RaceTimeText")
+                    {
+                        winTimeText = texts[i];
+                        break;
+                    }
+                }
+            }
+        }
 
         // ===== SETUP PLAYER CAR =====
         playerCar = FindFirstObjectByType<ControlSpeedAnim>();
@@ -194,4 +236,30 @@ public class GameManager : MonoBehaviour
         // Code này giữ lại nhưng không dùng, vì Time.timeScale = 1 khởi động mọi thứ rồi
     }
 
+    private void PlayMapBGM()
+    {
+        string sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name.ToLower();
+        string path = "Audio/";
+        
+        if (sceneName.Contains("map 1") || sceneName.Contains("map1") || sceneName.Contains("rung")) 
+            path += "map1_bgm";
+        else if (sceneName.Contains("map 2") || sceneName.Contains("map2") || sceneName.Contains("sa mac") || sceneName.Contains("samac")) 
+            path += "map2_bgm";
+        else if (sceneName.Contains("map 3") || sceneName.Contains("map3") || sceneName.Contains("thien dinh") || sceneName.Contains("thiên đình")) 
+            path += "map3_bgm";
+        else 
+            return; // Không nhận diện được Map, không bật nhạc
+
+        AudioClip bgmClip = Resources.Load<AudioClip>(path);
+        if (bgmClip != null)
+        {
+            AudioSource bgmSource = gameObject.AddComponent<AudioSource>();
+            bgmSource.clip = bgmClip;
+            bgmSource.loop = true;
+            bgmSource.volume = 0.45f; // BGM nhỏ lại tí xíu
+            bgmSource.playOnAwake = true;
+            bgmSource.spatialBlend = 0f; // 2D Sound
+            bgmSource.Play();
+        }
+    }
 }

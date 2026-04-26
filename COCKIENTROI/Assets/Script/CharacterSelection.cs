@@ -191,7 +191,7 @@ public class CharacterSelection : MonoBehaviour
 
     [Header("Cấu hình Scene Tiếp Theo")]
     [Tooltip("Tên Scene Chọn Map (VD: ChonMap)")]
-    public string nextSceneName = "ChonMap";
+    public string nextSceneName = "MAP 1 RUNG";
 
     public void ConfirmAndPlay()
     {

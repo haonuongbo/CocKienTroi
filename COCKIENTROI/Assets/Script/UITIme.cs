@@ -1,4 +1,4 @@
-﻿using TMPro;
+using TMPro;
 using UnityEngine;
 
 public class UITime : MonoBehaviour
@@ -7,7 +7,7 @@ public class UITime : MonoBehaviour
 
     private float elapsedTime = 0f;   // replaces raceTime
     private float uiUpdateTimer = 0f;
-    private bool isRunning = true;    // control when timer runs
+    private bool isRunning = false;    // control when timer runs
 
     void Update()
     {

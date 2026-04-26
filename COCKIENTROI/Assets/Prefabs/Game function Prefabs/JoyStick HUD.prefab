@@ -660,8 +660,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7, y: 3}
-  m_SizeDelta: {x: 206.3361, y: 164.0941}
+  m_AnchoredPosition: {x: -9, y: -35}
+  m_SizeDelta: {x: 257.57, y: 256.7043}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &362733845036662674
 CanvasRenderer:
@@ -780,7 +780,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 700, y: 300}
+  m_SizeDelta: {x: 700, y: 467.71}
   m_Pivot: {x: 1, y: 0}
 --- !u!1 &1732707309020063515
 GameObject:
@@ -965,8 +965,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 97, y: 19}
-  m_SizeDelta: {x: 253.8674, y: 253.8698}
+  m_AnchoredPosition: {x: 38, y: 19}
+  m_SizeDelta: {x: 331, y: 398}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &276081852130615234
 CanvasRenderer:
@@ -1144,9 +1144,9 @@ MonoBehaviour:
   miniMapRect: {fileID: 0}
   playerDotTemplate: {fileID: 2739229065843679310}
   aiDotTemplate: {fileID: 5777428031136711610}
-  worldMin: {x: -12000, y: -12000}
-  worldMax: {x: 12000, y: 12000}
-  autoCalculateWorldBounds: 0
+  worldMin: {x: -1200, y: -1200}
+  worldMax: {x: 1200, y: 1200}
+  autoCalculateWorldBounds: 1
   mapColliderLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -3059,8 +3059,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7, y: 3}
-  m_SizeDelta: {x: 206.3361, y: 164.0941}
+  m_AnchoredPosition: {x: -15, y: -38.1013}
+  m_SizeDelta: {x: 220.2605, y: 220.2605}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7031281952676839556
 CanvasRenderer:
@@ -3945,5 +3945,5 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 700, y: 300}
+  m_SizeDelta: {x: 700, y: 467.71}
   m_Pivot: {x: 0, y: 0}

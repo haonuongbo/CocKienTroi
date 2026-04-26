@@ -53,5 +53,34 @@ public class WinSceneDisplay : MonoBehaviour
             thirdPlaceImage.sprite = thirdSprite;
         else if (thirdPlaceImage != null)
             Debug.LogWarning("No sprite found for 3rd place or thirdPlaceImage is not assigned!");
+
+        // --- MỚI: Tùy chỉnh tỷ lệ kích thước (Scale) cho Top 1 to ra, Top 2 và 3 nhỏ lại ---
+        if (firstPlaceImage != null) firstPlaceImage.transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
+        if (secondPlaceImage != null) secondPlaceImage.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+        if (thirdPlaceImage != null) thirdPlaceImage.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+
+        // --- MỚI: Thêm nhún nhún cho Top 1, 2, 3 ---
+        AddFloatingEffect(firstPlaceImage);
+        AddFloatingEffect(secondPlaceImage);
+        AddFloatingEffect(thirdPlaceImage);
+    }
+
+    /// <summary>
+    /// Thêm component FloatingChar để nhân vật nhún thả ga như ở màn hình chọn nhân vật
+    /// </summary>
+    private void AddFloatingEffect(Image img)
+    {
+        if (img == null || img.gameObject == null) return;
+        
+        FloatingChar floating = img.gameObject.GetComponent<FloatingChar>();
+        if (floating == null)
+        {
+            floating = img.gameObject.AddComponent<FloatingChar>();
+        }
+        
+        // Set tham số nhún tương tự CharacterSelection
+        floating.amplitude = 15f; 
+        floating.frequency = 1.2f;
+        floating.isFloating = true;
     }
 }
