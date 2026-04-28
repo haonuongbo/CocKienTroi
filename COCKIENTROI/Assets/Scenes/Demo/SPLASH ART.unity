@@ -589,7 +589,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2613774746206992188, guid: 1b1503a4dec82724bb4f3e9d52c6909e, type: 3}
       propertyPath: supportedResolutions.Array.data[4].x
-      value: 1920
+      value: 1900
       objectReference: {fileID: 0}
     - target: {fileID: 2613774746206992188, guid: 1b1503a4dec82724bb4f3e9d52c6909e, type: 3}
       propertyPath: supportedResolutions.Array.data[4].y

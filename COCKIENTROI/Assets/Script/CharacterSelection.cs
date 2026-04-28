@@ -206,8 +206,9 @@ public class CharacterSelection : MonoBehaviour
             PlayerPrefs.SetInt("SelectedCharacter", selectedIndex);
             PlayerPrefs.Save();
             
-            // Chuyển sang màn hình chọn Map thay vì SampleScene
-            SceneManager.LoadScene(nextSceneName);
+            // Chuyển sang màn hình chọn Map qua Loading scene
+            PlayerPrefs.SetString("NextSceneToLoad", nextSceneName);
+            SceneManager.LoadScene("Loading");
         }
         else
         {
