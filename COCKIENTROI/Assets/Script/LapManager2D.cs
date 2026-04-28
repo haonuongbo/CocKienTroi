@@ -165,7 +165,7 @@ public class LapManager2D : MonoBehaviour
         // ===================================
         // 2. CHỜ 5 GIÂY CHO XE CHẠY THÊM
         // ===================================
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(2.96f);
 
         // (Tùy chọn) Ẩn video pháo bông sau khi kết thúc 5s
         if (gifObj != null) Destroy(gifObj);
