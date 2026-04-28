@@ -372,18 +372,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6831563449029009740, guid: 59cf890837989d946b4e6337abbd3632, type: 3}
   m_PrefabInstance: {fileID: 8536001816987624328}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &648500992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 648500991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c27781d37726584e8607001918798de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &776847449
 GameObject:
   m_ObjectHideFlags: 0
@@ -729,7 +717,6 @@ MonoBehaviour:
   finishCanvas: {fileID: 648500991}
   winCanvasData: {fileID: 1922100197}
   winLapText: {fileID: 2032339569}
-  hudToHide: {fileID: 0}
   hideFinishCanvasOnStart: 1
   currentLap: 0
   lapText: {fileID: 7666314630026672394}
@@ -974,8 +961,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   rankedCarIndex: 0000000000000000000000000000000000000000
-  isPlayerFinished: 0
-  playerFinalRankIndex: -1
 --- !u!4 &1278474285
 Transform:
   m_ObjectHideFlags: 0
@@ -6119,14 +6104,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3265837819456243195, guid: 59cf890837989d946b4e6337abbd3632, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 648500992}
-    - target: {fileID: 3265837819456243195, guid: 59cf890837989d946b4e6337abbd3632, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SwitchMap, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3265837819456243195, guid: 59cf890837989d946b4e6337abbd3632, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: OUTRO
       objectReference: {fileID: 0}
@@ -6149,10 +6126,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6831563449029009740, guid: 59cf890837989d946b4e6337abbd3632, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 648500992}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59cf890837989d946b4e6337abbd3632, type: 3}
 --- !u!58 &8616941145729328363
 CircleCollider2D:

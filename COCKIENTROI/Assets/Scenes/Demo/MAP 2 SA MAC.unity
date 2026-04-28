@@ -2218,18 +2218,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6831563449029009740, guid: 59cf890837989d946b4e6337abbd3632, type: 3}
   m_PrefabInstance: {fileID: 1154796045}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &578280414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 578280413}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c27781d37726584e8607001918798de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &631728195
 GameObject:
   m_ObjectHideFlags: 0
@@ -3961,18 +3949,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3265837819456243195, guid: 59cf890837989d946b4e6337abbd3632, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 578280414}
-    - target: {fileID: 3265837819456243195, guid: 59cf890837989d946b4e6337abbd3632, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 3265837819456243195, guid: 59cf890837989d946b4e6337abbd3632, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SwitchMap, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3265837819456243195, guid: 59cf890837989d946b4e6337abbd3632, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: MAP 3 THIEN DINH
       objectReference: {fileID: 0}
@@ -3992,17 +3968,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Victory Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 6831563449029009740, guid: 59cf890837989d946b4e6337abbd3632, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6831563449029009740, guid: 59cf890837989d946b4e6337abbd3632, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 578280414}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59cf890837989d946b4e6337abbd3632, type: 3}
 --- !u!114 &1154796046 stripped
 MonoBehaviour:
