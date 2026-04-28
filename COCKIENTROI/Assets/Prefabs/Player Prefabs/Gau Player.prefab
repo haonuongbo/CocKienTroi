@@ -17,7 +17,6 @@ GameObject:
   - component: {fileID: 528314702354111271}
   - component: {fileID: 7121311118343710968}
   - component: {fileID: 4851619072954346541}
-  - component: {fileID: 12114246228161160}
   m_Layer: 3
   m_Name: Gau Player
   m_TagString: Player
@@ -274,37 +273,6 @@ MonoBehaviour:
   btnDriftName: Nut_Drift
   minDriftSpeed: 3
   animator: {fileID: 8276197770231853667, guid: 960578fd41cf2e344bbc1361e819d9ef, type: 3}
-  minAnimSpeed: 0.5
-  maxAnimSpeed: 1.25
---- !u!114 &12114246228161160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 536155627501846788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e174b47b4a5b0f4eb4d9e696c5f5730, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  acceleration: 10
-  maxSpeed: 26
-  turnSpeed: 70
-  driftTurnMultiplier: 1.8
-  driftFactor: 0.6
-  driftSlide: 0.7
-  minTurnSpeed: 0
-  joystickBackground: {fileID: 0}
-  joystickThumb: {fileID: 0}
-  joystickBackgroundName: JoystickBackground
-  joystickThumbName: JoystickThumb
-  deadZone: 0.4
-  btnDriftName: BtnDrift
-  autoBindRetryCount: 20
-  autoBindRetryInterval: 0.1
-  minDriftSpeed: 3
-  animator: {fileID: 0}
   minAnimSpeed: 0.5
   maxAnimSpeed: 1.25
 --- !u!1 &8576541415947347166

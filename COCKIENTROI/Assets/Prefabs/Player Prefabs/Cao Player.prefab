@@ -178,7 +178,6 @@ GameObject:
   - component: {fileID: 8257696910296121239}
   - component: {fileID: 6595107688026428000}
   - component: {fileID: 289758322444152211}
-  - component: {fileID: 4273816292917411993}
   m_Layer: 3
   m_Name: Cao Player
   m_TagString: Player
@@ -435,36 +434,5 @@ MonoBehaviour:
   btnDriftName: Nut_Drift
   minDriftSpeed: 3
   animator: {fileID: 8276197770231853667}
-  minAnimSpeed: 0.5
-  maxAnimSpeed: 1.25
---- !u!114 &4273816292917411993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7358174622869808086}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e174b47b4a5b0f4eb4d9e696c5f5730, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  acceleration: 10
-  maxSpeed: 26
-  turnSpeed: 70
-  driftTurnMultiplier: 1.8
-  driftFactor: 0.6
-  driftSlide: 0.7
-  minTurnSpeed: 0
-  joystickBackground: {fileID: 0}
-  joystickThumb: {fileID: 0}
-  joystickBackgroundName: JoystickBackground
-  joystickThumbName: JoystickThumb
-  deadZone: 0.4
-  btnDriftName: BtnDrift
-  autoBindRetryCount: 20
-  autoBindRetryInterval: 0.1
-  minDriftSpeed: 3
-  animator: {fileID: 0}
   minAnimSpeed: 0.5
   maxAnimSpeed: 1.25
