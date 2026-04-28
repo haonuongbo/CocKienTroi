@@ -55,6 +55,7 @@ public class ControlSpeedAnimMobileJoystick : MonoBehaviour
     // ── runtime ──────────────────────────────────────────────
     private Rigidbody2D rb;
     private Vector2 joystickInput;
+    private bool    joystickDragging;
     private bool    driftHeld;
     private bool    drifting;
 
@@ -153,6 +154,7 @@ public class ControlSpeedAnimMobileJoystick : MonoBehaviour
 
         AddEntry(trigger, EventTriggerType.PointerDown, OnJoystickDown);
         AddEntry(trigger, EventTriggerType.Drag,        OnJoystickDrag);
+        AddEntry(trigger, EventTriggerType.EndDrag,     OnJoystickUp);
         AddEntry(trigger, EventTriggerType.PointerUp,   OnJoystickUp);
     }
 
@@ -172,11 +174,21 @@ public class ControlSpeedAnimMobileJoystick : MonoBehaviour
     }
 
     // ── Xử lý sự kiện joystick ───────────────────────────────
-    void OnJoystickDown(BaseEventData data) => MoveThumb(((PointerEventData)data).position);
-    void OnJoystickDrag(BaseEventData data)  => MoveThumb(((PointerEventData)data).position);
+    void OnJoystickDown(BaseEventData data)
+    {
+        joystickDragging = true;
+        MoveThumb(((PointerEventData)data).position);
+    }
+
+    void OnJoystickDrag(BaseEventData data)
+    {
+        if (!joystickDragging) return;
+        MoveThumb(((PointerEventData)data).position);
+    }
 
     void OnJoystickUp(BaseEventData data)
     {
+        joystickDragging = false;
         joystickInput = Vector2.zero;
         if (joystickThumb != null)
             joystickThumb.anchoredPosition = thumbDefaultPos;
@@ -251,6 +263,10 @@ public class ControlSpeedAnimMobileJoystick : MonoBehaviour
 
     void FixedUpdate()
     {
+        // Rotation is controlled manually via joystick; cancel physics spin from collisions.
+        if (joystickInput.sqrMagnitude <= 0.0001f)
+            rb.angularVelocity = 0f;
+
         // Tăng tốc
         if (rb.linearVelocity.magnitude < maxSpeed)
             rb.AddForce(-transform.up * acceleration);
@@ -258,6 +274,7 @@ public class ControlSpeedAnimMobileJoystick : MonoBehaviour
         // Lái
         if (rb.linearVelocity.magnitude > minTurnSpeed && joystickInput.sqrMagnitude > 0.0001f)
         {
+            rb.angularVelocity = 0f;
             float ts = drifting ? turnSpeed * driftTurnMultiplier : turnSpeed;
 
             // Map hướng joystick sang hướng mặt xe:

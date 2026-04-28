@@ -193,12 +193,6 @@ public class CharacterSelection : MonoBehaviour
     [Tooltip("Tên Scene Chọn Map (VD: ChonMap)")]
     public string nextSceneName = "MAP 1 RUNG";
 
-    [Header("Loading Trung Gian")]
-    [Tooltip("Bật để đi qua Loading scene trước khi vào scene chính")]
-    public bool useLoadingScene = true;
-    [Tooltip("Tên Loading scene trong Build Settings")]
-    public string loadingSceneName = "Loading";
-
     public void ConfirmAndPlay()
     {
         int costPerGame = 10;
@@ -210,19 +204,11 @@ public class CharacterSelection : MonoBehaviour
             
             // ĐÂY LÀ DÒNG LƯU NHÂN VẬT! Phải chạy qua đây máy mới nhớ là Cáo!
             PlayerPrefs.SetInt("SelectedCharacter", selectedIndex);
-
-            if (useLoadingScene)
-            {
-                // Truyền scene đích cho LoadingScene.cs
-                PlayerPrefs.SetString("NextSceneToLoad", nextSceneName);
-                PlayerPrefs.Save();
-                SceneManager.LoadScene(loadingSceneName);
-            }
-            else
-            {
-                PlayerPrefs.Save();
-                SceneManager.LoadScene(nextSceneName);
-            }
+            PlayerPrefs.Save();
+            
+            // Chuyển sang màn hình chọn Map qua Loading scene
+            PlayerPrefs.SetString("NextSceneToLoad", nextSceneName);
+            SceneManager.LoadScene("Loading");
         }
         else
         {

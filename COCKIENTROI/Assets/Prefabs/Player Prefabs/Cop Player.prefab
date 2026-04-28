@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1692278141546079792}
   - component: {fileID: 4984390548207413603}
   - component: {fileID: 56322172979984417}
+  - component: {fileID: -3056369220426808313}
   m_Layer: 3
   m_Name: Cop Player
   m_TagString: Player
@@ -233,7 +234,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1760142152373480722}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f3d53241587331548aceba4addeaaf20, type: 3}
   m_Name: 
@@ -256,7 +257,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1760142152373480722}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f69565d8113fff344b76eb479c0a0fc4, type: 3}
   m_Name: 
@@ -273,6 +274,37 @@ MonoBehaviour:
   btnDriftName: Nut_Drift
   minDriftSpeed: 3
   animator: {fileID: 8276197770231853667, guid: 960578fd41cf2e344bbc1361e819d9ef, type: 3}
+  minAnimSpeed: 0.5
+  maxAnimSpeed: 1.25
+--- !u!114 &-3056369220426808313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760142152373480722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e174b47b4a5b0f4eb4d9e696c5f5730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acceleration: 10
+  maxSpeed: 26
+  turnSpeed: 70
+  driftTurnMultiplier: 1.8
+  driftFactor: 0.6
+  driftSlide: 0.7
+  minTurnSpeed: 0
+  joystickBackground: {fileID: 0}
+  joystickThumb: {fileID: 0}
+  joystickBackgroundName: JoystickBackground
+  joystickThumbName: JoystickThumb
+  deadZone: 0.4
+  btnDriftName: BtnDrift
+  autoBindRetryCount: 20
+  autoBindRetryInterval: 0.1
+  minDriftSpeed: 3
+  animator: {fileID: 0}
   minAnimSpeed: 0.5
   maxAnimSpeed: 1.25
 --- !u!1 &8740812582171312388

@@ -132,7 +132,6 @@ GameObject:
   - component: {fileID: 35147767}
   - component: {fileID: 35147766}
   - component: {fileID: 35147771}
-  - component: {fileID: 35147772}
   m_Layer: 5
   m_Name: Final Win Canvas
   m_TagString: Untagged
@@ -248,48 +247,36 @@ MonoBehaviour:
   loopMusic: 1
   musicVolume: 0.7
   backgroundImagePath: Background
---- !u!114 &35147772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 35147765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fa21418142dfdd4da633b661cc81eb4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterSprites:
+  playerCharacterImage: {fileID: 2060854341}
+  titleImage: {fileID: 1822917990}
+  starsImage: {fileID: 1101724070}
+  rankBadgeImage: {fileID: 1543323034}
+  titleText: {fileID: 0}
+  rankText: {fileID: 0}
+  characterSpritesByIndex:
   - {fileID: 1465697385274520445, guid: 0de3951bbfac5c54385710677dca1e84, type: 3}
   - {fileID: 4071505637746041617, guid: f35907b5e3feb274d90f3a07cd0f5796, type: 3}
   - {fileID: -5590046621623114549, guid: 98be18ed6df10e346badd8d835e5080c, type: 3}
   - {fileID: 8132612752382221523, guid: 47958dfa6f6fd1c4cbb55aaed03f8a2b, type: 3}
   - {fileID: -8741337210212082326, guid: 8dac25e1e4f3d42459c335bf6721e930, type: 3}
-  titleSprites:
+  titleSpritesByIndex:
   - {fileID: 7771388800110588912, guid: 3b8144488386336469992654baed8ff8, type: 3}
   - {fileID: -6150037897273465561, guid: dc0ce539c136d0d4c94986c32fe9b519, type: 3}
   - {fileID: -8132629034110512677, guid: 9d54cbeeb52343f4c893f94abd5df172, type: 3}
   - {fileID: -636398042809606495, guid: 9671b3ed31d21df45b4b9f69ed2c88c1, type: 3}
   - {fileID: -7538763946595312121, guid: 188f6f169bda1434cbd7010e6b7667f5, type: 3}
-  starSprites:
+  starsSpritesByCount:
   - {fileID: 812289441534308212, guid: ae2fbc4012c735246ae14925c327cec6, type: 3}
   - {fileID: -6071213930011602404, guid: 3b9dbc6d7c53d844593aefadef4ae542, type: 3}
   - {fileID: -7750558322176943539, guid: faa160ce3b763bf44bbf0fe3634cc9d3, type: 3}
   - {fileID: -9073948194247264198, guid: a843e21ae21a04140bf700e3603716ef, type: 3}
   - {fileID: -2658733336962687998, guid: a9186647f4031ab478db051bc67b0d66, type: 3}
-  rankBadgeSprites:
+  rankBadgeSpritesByRank:
   - {fileID: 2536640416717999757, guid: 824fecfaa620ab846a12d1d1fe7e079f, type: 3}
   - {fileID: 1129152969067687416, guid: 8f79dd19a87ff7f47aba8b4ec2f7221e, type: 3}
   - {fileID: 7970707515016066210, guid: 0af12ac84143d3e46ab6a498990881a1, type: 3}
   - {fileID: 43453018193239051, guid: ebe25178c9da8604f8b2549f076056b8, type: 3}
   - {fileID: 4727746255557863206, guid: 9cc719c2786f4274a84b4f2d1cb37f49, type: 3}
-  playerAvatarImage: {fileID: 2060854341}
-  titleImage: {fileID: 1822917990}
-  starsImage: {fileID: 1101724070}
-  rankBadgeImage: {fileID: 0}
-  retryButton: {fileID: 349489164}
-  menuButton: {fileID: 731320615}
 --- !u!1 &349489160
 GameObject:
   m_ObjectHideFlags: 0
@@ -1036,8 +1023,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 37, y: 38}
-  m_SizeDelta: {x: 545.3867, y: 737.3333}
+  m_AnchoredPosition: {x: 5, y: 38}
+  m_SizeDelta: {x: 611.1, y: 666.6}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &2060854341
 MonoBehaviour:

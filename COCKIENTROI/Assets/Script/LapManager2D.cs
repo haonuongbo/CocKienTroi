@@ -111,33 +111,6 @@ public class LapManager2D : MonoBehaviour
                     hudToHide.SetActive(false);
             }
 
-            // LƯU HẠNG CỦA NGƯỜI CHƠI VÀO BỘ NHỚ
-            RaceRankManager rankManager = FindFirstObjectByType<RaceRankManager>();
-            if (rankManager != null)
-            {
-                int playerCharIndex = PlayerPrefs.GetInt("SelectedCharacter", 0);
-                int finalRank = 1;
-                for (int i = 0; i < rankManager.rankedCarIndex.Length; i++)
-                {
-                    if (rankManager.rankedCarIndex[i] == playerCharIndex)
-                    {
-                        finalRank = i + 1; 
-                        break;
-                    }
-                }
-                
-                string sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
-                int mapId = 1; // Mặc định Map 1
-                if (sceneName.Contains("2")) mapId = 2;
-                else if (sceneName.Contains("3")) mapId = 3;
-                
-                PlayerPrefs.SetInt("PlayerRank_Map" + mapId, finalRank);
-                PlayerPrefs.Save();
-                
-                // Đóng băng bảng xếp hạng ngay lập tức để AI chạy phía sau không đè lên rank lúc chờ 5s !!!
-                rankManager.isPlayerFinished = true;
-            }
-
             // Dừng game manager đếm giờ và lấy giờ đẩy lên Win Canvas
             if (GameManager.Instance != null)
                 GameManager.Instance.StopRaceTime();
@@ -192,7 +165,7 @@ public class LapManager2D : MonoBehaviour
         // ===================================
         // 2. CHỜ 5 GIÂY CHO XE CHẠY THÊM
         // ===================================
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(2.96f);
 
         // (Tùy chọn) Ẩn video pháo bông sau khi kết thúc 5s
         if (gifObj != null) Destroy(gifObj);
