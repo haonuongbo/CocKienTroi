@@ -1,265 +1,338 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
+/// <summary>
+/// Gắn lên từng xe đua (Player + AI).
+/// Nhận item từ ItemBox và kích hoạt hiệu ứng ngay lập tức.
+/// Sử dụng ICarController để tương thích với mọi loại script điều khiển.
+/// </summary>
 public class CarItemManager : MonoBehaviour
 {
-    [Header("Cài đặt Cơ bản")]
-    public bool isPlayer = false; 
-    public GameObject bananaPrefab; 
+    [Header("VFX Prefabs")]
+    public GameObject bananaPrefab;
+    public GameObject lightningVFX;
+    public GameObject hammerVFX;
+    public GameObject rainVFX;
 
-    [Header("Cài đặt Hiệu ứng (VFX)")]
-    public GameObject lightningVFX; 
-    public GameObject hammerVFX;    
-    public GameObject rainVFX;      
-
-    // --- Thông tin nội bộ ---
-    private int currentItem = 0; // 0: Trống, 1: Tăng tốc, 2: Chuối, 3: Sét, 4: Búa, 5: Lò xo, 6: Mưa
+    // --- Dữ liệu nội bộ ---
     private Rigidbody2D rb;
+    private List<ICarController> controllers = new List<ICarController>();
 
-    private Controller playerController;
-    private AICarController aiController;
-    
-    // Biến lưu trữ trạng thái gốc để khôi phục
+    // Giá trị gốc — cache lại một lần trong Start()
     private float originalMaxSpeed;
-    private Vector3 originalScale; // Lưu kích thước gốc của xe
+    private float originalDriftSlide;
+    private Vector3 originalScale;
+
+    // Bộ đếm để hỗ trợ nhiều effect xếp chồng (stacking)
+    private int stunCount = 0;
+    private int slipCount = 0;
+
+    // Lưu controller đang active trước khi bị stun
+    private List<ICarController> activeControllersBeforeStun = new List<ICarController>();
+
+    // ==========================================
+    // KHỞI TẠO
+    // ==========================================
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        playerController = GetComponent<Controller>();
-        aiController = GetComponent<AICarController>();
+        if (rb == null) rb = GetComponentInParent<Rigidbody2D>();
+        if (rb == null) rb = GetComponentInChildren<Rigidbody2D>();
 
-        // Lưu lại tốc độ ban đầu
-        if (playerController != null) originalMaxSpeed = playerController.maxSpeed;
-        if (aiController != null) originalMaxSpeed = aiController.maxSpeed;
+        // Thu thập ICarController — dùng HashSet để tránh duplicate
+        // (GetComponentsInChildren bao gồm cả root nên sẽ trùng với GetComponents)
+        var seen = new HashSet<ICarController>();
+        foreach (var c in GetComponents<ICarController>())          if (seen.Add(c)) controllers.Add(c);
+        foreach (var c in GetComponentsInChildren<ICarController>()) if (seen.Add(c)) controllers.Add(c);
 
-        // Lưu lại kích thước ban đầu của xe (để sửa lỗi teo nhỏ/phình to)
+        if (controllers.Count == 0)
+            Debug.LogWarning($"[CarItemManager] '{gameObject.name}' không tìm thấy ICarController nào!");
+
+        // Cache giá trị gốc từ controller đầu tiên tìm được
+        if (controllers.Count > 0)
+        {
+            originalMaxSpeed   = controllers[0].MaxSpeed;
+            originalDriftSlide = controllers[0].DriftSlide;
+        }
+
         originalScale = transform.localScale;
     }
 
-    void Update()
-    {
-        // Nếu là Người chơi và đang có vật phẩm -> Nhấn Space để sử dụng
-        if (isPlayer && HasItem() && Input.GetKeyDown(KeyCode.Space))
-        {
-            UseItem();
-        }
-    }
-
-    public bool HasItem()
-    {
-        return currentItem != 0;
-    }
-
-    // Hàm nhận vật phẩm (Gọi từ ItemBox)
-    public void ReceiveItem(int itemId)
-    {
-        if (HasItem()) return; 
-
-        currentItem = itemId;
-        Debug.Log(">>> " + gameObject.name + " vừa nhặt được vật phẩm số: " + itemId);
-
-        if (!isPlayer)
-        {
-            StartCoroutine(AIUseItemRoutine());
-        }
-    }
-
-    // Bộ não AI tự dùng đồ sau 1 đến 3 giây
-    IEnumerator AIUseItemRoutine()
-    {
-        float randomDelay = Random.Range(1f, 3f);
-        yield return new WaitForSeconds(randomDelay);
-        
-        if (HasItem()) 
-        {
-            UseItem();
-        }
-    }
-
-    // Hàm thực thi Vật phẩm
-    public void UseItem()
-    {
-        if (currentItem == 0) return;
-
-        Debug.Log("=== " + gameObject.name + " ĐÃ SỬ DỤNG vật phẩm số: " + currentItem);
-
-        switch (currentItem)
-        {
-            case 1: StartCoroutine(SpeedBoostEffect()); break; 
-            case 2: DropBanana(); break;                       
-            case 3: CastLightning(); break;                    
-            case 4: StartCoroutine(HammerStrike()); break;     
-            case 5: StartCoroutine(SpringJump()); break;       
-            case 6: CastRain(); break;                         
-        }
-
-        // Dùng xong thì xóa đồ trên tay
-        currentItem = 0; 
-    }
-
-
     // ==========================================
-    // CÁC CHIÊU THỨC VÀ HIỆU ỨNG (SKILLS)
+    // ĐIỂM VÀO DUY NHẤT — GọI TỪ ItemBox
     // ==========================================
 
-    // --- 1. TĂNG TỐC ---
-    IEnumerator SpeedBoostEffect()
+    /// <summary>Kích hoạt item ngay lập tức. itemId: 1-6.</summary>
+    public void GiveItem(int itemId)
     {
-        ChangeMaxSpeed(5f); 
-        rb.AddForce(-transform.up * 15f, ForceMode2D.Impulse); 
-
-        yield return new WaitForSeconds(2f); 
-
-        ChangeMaxSpeed(0f); 
-    }
-
-    // --- 2. VỎ CHUỐI ---
-    void DropBanana()
-    {
-        if (bananaPrefab != null)
+        Debug.Log($"[CarItemManager] '{gameObject.name}' nhận item #{itemId}");
+        switch (itemId)
         {
-            Vector3 dropPos = transform.position + (transform.up * 1.5f);
-            Instantiate(bananaPrefab, dropPos, transform.rotation);
+            case 1: StartCoroutine(Effect_SpeedBoost());   break;
+            case 2: Effect_DropBanana();                   break;
+            case 3: Effect_Lightning();                    break;
+            case 4: StartCoroutine(Effect_Hammer());       break;
+            case 5: StartCoroutine(Effect_SpringJump());   break;
+            case 6: Effect_Rain();                         break;
+            default: Debug.LogWarning($"[CarItemManager] Item #{itemId} không hợp lệ!"); break;
         }
     }
 
-    // --- 3. TIA SÉT ---
-    void CastLightning()
+    // ==========================================
+    // ITEM 1 — TĂNG TỐC (2 giây)
+    // ==========================================
+
+    IEnumerator Effect_SpeedBoost()
     {
-        CarItemManager[] allCars = FindObjectsOfType<CarItemManager>();
-        foreach (CarItemManager car in allCars)
+        SetAllMaxSpeed(originalMaxSpeed * 2f);
+        yield return new WaitForSeconds(2f);
+        SetAllMaxSpeed(originalMaxSpeed);
+    }
+
+    // ==========================================
+    // ITEM 2 — VỎ CHUỐI
+    // ==========================================
+
+    void Effect_DropBanana()
+    {
+        if (bananaPrefab == null) { Debug.LogWarning("[CarItemManager] Chưa gán bananaPrefab!"); return; }
+
+        // Thả ra phía sau xe (transform.up là hướng tiến, -up là phía sau)
+        Vector3 dropPos = transform.position + (transform.up * 1.5f);
+        GameObject banana = Instantiate(bananaPrefab, dropPos, transform.rotation);
+        IgnoreCollisionWith(banana);
+    }
+
+    // ==========================================
+    // ITEM 3 — TIA SÉT (làm tê liệt tất cả xe khác 1.5s)
+    // ==========================================
+
+    void Effect_Lightning()
+    {
+        CarItemManager[] all = FindObjectsOfType<CarItemManager>();
+        foreach (var car in all)
         {
             if (car != this)
-            {
-                car.StartCoroutine(car.ReceiveLightningShock());
-            }
+                car.StartCoroutine(car.ReceiveStun(lightningVFX, 1.5f, 0.3f, 200f));
         }
     }
 
-    public IEnumerator ReceiveLightningShock()
+    // ==========================================
+    // ITEM 4 — BÚA XOAY (5 giây, bán kính 3f)
+    // ==========================================
+
+    IEnumerator Effect_Hammer()
     {
-        if (lightningVFX != null) 
-            Instantiate(lightningVFX, transform.position + Vector3.up * 1.5f, Quaternion.identity, transform);
+        float duration    = 5f;
+        float rotSpeed    = 360f;
+        float radius      = 3f;
+        float hitCooldown = 1.5f;
 
-        DisableControls(); 
-        rb.linearVelocity = rb.linearVelocity * 0.2f; 
-        rb.angularVelocity = 1000f; 
+        // Tạo trục xoay
+        GameObject pivot = new GameObject("HammerPivot");
+        pivot.transform.SetParent(transform);
+        pivot.transform.localPosition = Vector3.zero;
 
-        yield return new WaitForSeconds(1.5f); 
+        if (hammerVFX != null)
+        {
+            GameObject h = Instantiate(hammerVFX, pivot.transform);
+            h.transform.localPosition = new Vector3(2f, 0f, 0f);
+            IgnoreCollisionWith(h);
+        }
 
-        rb.angularVelocity = 0f; 
-        EnableControls(); 
+        Dictionary<CarItemManager, float> lastHit = new Dictionary<CarItemManager, float>();
+        float timer = 0f;
+
+        while (timer < duration)
+        {
+            timer += Time.deltaTime;
+            if (pivot != null) pivot.transform.Rotate(0f, 0f, rotSpeed * Time.deltaTime);
+
+            // Kiểm tra xe lân cận
+            Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, radius);
+            foreach (var hit in hits)
+            {
+                CarItemManager enemy = hit.GetComponent<CarItemManager>()
+                                    ?? hit.GetComponentInParent<CarItemManager>();
+
+                // Bỏ qua nếu là chính xe mình (kể cả child collider)
+                if (enemy == null || enemy == this) continue;
+
+                // Cooldown mỗi xe
+                if (lastHit.TryGetValue(enemy, out float lastTime) && Time.time - lastTime < hitCooldown)
+                    continue;
+
+                lastHit[enemy] = Time.time;
+
+                // Chỉ đẩy xe địch ra xa — không stun, không hiệu ứng sét
+                Rigidbody2D enemyRb = enemy.GetComponent<Rigidbody2D>()
+                                   ?? enemy.GetComponentInParent<Rigidbody2D>();
+                if (enemyRb != null)
+                {
+                    Vector2 push = (enemy.transform.position - transform.position).normalized;
+                    enemyRb.AddForce(push * 15f, ForceMode2D.Impulse); // Lực vừa đủ văng xa
+                }
+            }
+
+            yield return null;
+        }
+
+        if (pivot != null) Destroy(pivot);
     }
 
-    // --- 4. BÚA ---
-    IEnumerator HammerStrike()
+    // ==========================================
+    // ITEM 5 — LÒ XO / PHÓNG TO (1.5 giây)
+    // ==========================================
+
+    IEnumerator Effect_SpringJump()
     {
-        if (hammerVFX != null) 
-            Instantiate(hammerVFX, transform.position, Quaternion.identity, transform);
+        // Tắt collider để tránh kẹt tường khi phóng to
+        Collider2D[] cols = GetComponentsInChildren<Collider2D>();
+        foreach (var c in cols) if (c != null) c.enabled = false;
 
-        // Phóng to dựa trên kích thước gốc
-        transform.localScale = originalScale * 1.2f; 
+        transform.localScale = originalScale * 1.5f;
 
-        Collider2D[] hitCars = Physics2D.OverlapCircleAll(transform.position, 4f);
-        foreach (Collider2D hit in hitCars)
+        yield return new WaitForSeconds(1.5f);
+
+        transform.localScale = originalScale;
+        foreach (var c in cols) if (c != null) c.enabled = true;
+    }
+
+    // ==========================================
+    // ITEM 6 — MƯA (làm trơn tất cả xe khác 3s)
+    // ==========================================
+
+    void Effect_Rain()
+    {
+        CarItemManager[] all = FindObjectsOfType<CarItemManager>();
+        foreach (var car in all)
         {
-            if (hit.gameObject != gameObject) 
+            if (car != this)
+                car.StartCoroutine(car.ReceiveSlip(rainVFX, 3f));
+        }
+    }
+
+    // ==========================================
+    // HIỆU ỨNG NHẬN (PUBLIC — xe khác gọi vào)
+    // ==========================================
+
+    /// <summary>Tê liệt xe: giảm tốc + spin + tắt điều khiển trong <duration> giây.</summary>
+    public IEnumerator ReceiveStun(GameObject vfxPrefab, float duration, float speedMult, float spin)
+    {
+        stunCount++;
+
+        // Spawn VFX
+        GameObject vfxObj = null;
+        if (vfxPrefab != null)
+        {
+            vfxObj = Instantiate(vfxPrefab, transform.position + Vector3.up * 1.5f, Quaternion.identity, transform);
+            IgnoreCollisionWith(vfxObj);
+        }
+
+        // Tắt điều khiển và áp lực vật lý
+        SetAllControlEnabled(false);
+        if (rb != null)
+        {
+            rb.linearVelocity *= speedMult;
+            rb.angularVelocity = spin;
+        }
+
+        yield return new WaitForSeconds(duration);
+
+        if (rb != null) rb.angularVelocity = 0f;
+
+        stunCount--;
+        if (stunCount <= 0)
+        {
+            stunCount = 0;
+            SetAllControlEnabled(true);
+        }
+
+        if (vfxObj != null) Destroy(vfxObj);
+    }
+
+    /// <summary>Làm xe trơn (giảm driftSlide) trong <duration> giây.</summary>
+    public IEnumerator ReceiveSlip(GameObject vfxPrefab, float duration)
+    {
+        slipCount++;
+
+        // Spawn VFX
+        GameObject vfxObj = null;
+        if (vfxPrefab != null)
+        {
+            vfxObj = Instantiate(vfxPrefab, transform.position + Vector3.up * 2f, Quaternion.identity, transform);
+            IgnoreCollisionWith(vfxObj);
+        }
+
+        // Áp dụng slip
+        SetAllDriftSlide(0.05f);
+
+        yield return new WaitForSeconds(duration);
+
+        slipCount--;
+        if (slipCount <= 0)
+        {
+            slipCount = 0;
+            SetAllDriftSlide(originalDriftSlide);
+        }
+
+        if (vfxObj != null) Destroy(vfxObj);
+    }
+
+    // ==========================================
+    // TIỆN ÍCH NỘI BỘ
+    // ==========================================
+
+    void SetAllMaxSpeed(float speed)
+    {
+        foreach (var c in controllers) c.MaxSpeed = speed;
+    }
+
+    void SetAllDriftSlide(float slide)
+    {
+        foreach (var c in controllers) c.DriftSlide = slide;
+    }
+
+    void SetAllControlEnabled(bool enabled)
+    {
+        if (!enabled)
+        {
+            if (stunCount == 1) // Lần đầu tiên bị stun
             {
-                Rigidbody2D enemyRb = hit.GetComponent<Rigidbody2D>();
-                CarItemManager enemyCar = hit.GetComponent<CarItemManager>();
-                
-                if (enemyRb != null && enemyCar != null)
+                activeControllersBeforeStun.Clear();
+                foreach (var c in controllers)
                 {
-                    Vector2 pushDirection = (hit.transform.position - transform.position).normalized;
-                    enemyRb.AddForce(pushDirection * 20f, ForceMode2D.Impulse);
-                    enemyCar.StartCoroutine(enemyCar.ReceiveLightningShock()); 
+                    if (c is MonoBehaviour mb && mb.enabled)
+                    {
+                        activeControllersBeforeStun.Add(c);
+                        c.SetControlEnabled(false);
+                    }
                 }
             }
         }
-
-        yield return new WaitForSeconds(0.2f);
-        
-        // Trả về đúng kích thước gốc
-        transform.localScale = originalScale; 
-    }
-
-    // --- 5. LÒ XO ---
-    IEnumerator SpringJump()
-    {
-        Collider2D col = GetComponent<Collider2D>();
-        
-        if (col != null) col.enabled = false; 
-        
-        // Phóng to dựa trên kích thước gốc
-        transform.localScale = originalScale * 1.5f;
-
-        rb.AddForce(-transform.up * 15f, ForceMode2D.Impulse);
-
-        yield return new WaitForSeconds(1.5f); 
-
-        // Trả về đúng kích thước gốc
-        transform.localScale = originalScale;
-        
-        if (col != null) col.enabled = true; 
-    }
-
-    // --- 6. MƯA ---
-    void CastRain()
-    {
-        CarItemManager[] allCars = FindObjectsOfType<CarItemManager>();
-        foreach (CarItemManager car in allCars)
+        else
         {
-            if (car != this)
+            if (stunCount == 0) // Hết stun
             {
-                car.StartCoroutine(car.ReceiveRainSlippery());
+                foreach (var c in activeControllersBeforeStun)
+                {
+                    c.SetControlEnabled(true);
+                }
+                activeControllersBeforeStun.Clear();
             }
         }
     }
 
-    public IEnumerator ReceiveRainSlippery()
+    /// <summary>Tắt va chạm giữa VFX vừa tạo và xe này — tránh xe bị văng.</summary>
+    void IgnoreCollisionWith(GameObject vfx)
     {
-        if (rainVFX != null) 
-            Instantiate(rainVFX, transform.position + Vector3.up * 2f, Quaternion.identity, transform);
-
-        float oldSlide = 0.5f;
-        if (playerController != null) { oldSlide = playerController.driftSlide; playerController.driftSlide = 0.1f; }
-        if (aiController != null) { oldSlide = aiController.driftSlide; aiController.driftSlide = 0.1f; }
-
-        yield return new WaitForSeconds(3f); 
-
-        if (playerController != null) playerController.driftSlide = oldSlide;
-        if (aiController != null) aiController.driftSlide = oldSlide;
-    }
-
-
-    // ==========================================
-    // HÀM HỖ TRỢ CHUNG (TOOLS)
-    // ==========================================
-
-    void ChangeMaxSpeed(float amountAdded)
-    {
-        if (amountAdded == 0) 
-        {
-            if (playerController != null) playerController.maxSpeed = originalMaxSpeed;
-            if (aiController != null) aiController.maxSpeed = originalMaxSpeed;
-        }
-        else 
-        {
-            if (playerController != null) playerController.maxSpeed = originalMaxSpeed + amountAdded;
-            if (aiController != null) aiController.maxSpeed = originalMaxSpeed + amountAdded;
-        }
-    }
-
-    void DisableControls()
-    {
-        if (playerController != null) playerController.enabled = false;
-        if (aiController != null) aiController.enabled = false;
-    }
-
-    void EnableControls()
-    {
-        if (playerController != null) playerController.enabled = true;
-        if (aiController != null) aiController.enabled = true;
+        if (vfx == null) return;
+        Collider2D[] carCols = GetComponentsInChildren<Collider2D>();
+        Collider2D[] vfxCols = vfx.GetComponentsInChildren<Collider2D>();
+        foreach (var cc in carCols)
+            foreach (var vc in vfxCols)
+                if (cc != null && vc != null) Physics2D.IgnoreCollision(cc, vc);
     }
 }

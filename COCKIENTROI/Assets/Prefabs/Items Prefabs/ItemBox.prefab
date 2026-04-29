@@ -30,7 +30,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10.35, y: 10.36, z: 0}
   m_LocalScale: {x: 0.2825781, y: 0.27771208, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.8930817, g: 0.1261638, b: 0.06459388, a: 1}
   m_FlipX: 0
@@ -133,7 +133,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 5, y: 5}
   m_EdgeRadius: 0
 --- !u!114 &7847784499864907162
 MonoBehaviour:
@@ -148,3 +148,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnTime: 3
+  itemIcons:
+  - {fileID: -2036090364998163076, guid: 9cbb82226f9653f44b9dd1c1c121c1a3, type: 3}
+  - {fileID: -9159803712831926577, guid: 3a5e09eb08f17354faccf90d70b3991b, type: 3}
+  - {fileID: 2563943834138434210, guid: f7a510530f270a245a9f04e05dd9debc, type: 3}
+  - {fileID: 8396112816902035518, guid: e96baa60372d0324f8ce4f68835b3e81, type: 3}
+  - {fileID: -2501552740940021579, guid: a53e5f9b5914fa64cadc326a794beaa0, type: 3}
+  - {fileID: 3869623144873128038, guid: 7286d04e9f55d67489b29279a7304e26, type: 3}
+  iconOffset: {x: 0, y: 1, z: 0}
+  iconScale: 0.5
