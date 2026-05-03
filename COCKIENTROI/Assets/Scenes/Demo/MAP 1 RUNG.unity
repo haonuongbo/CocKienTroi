@@ -1101,6 +1101,14 @@ PrefabInstance:
       propertyPath: 'rankSlots.Array.data[4]'
       value: 
       objectReference: {fileID: 1154796047}
+    - target: {fileID: 3374440004570415770, guid: 9875bd312157d554f90565e565597ab4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 3374440004570415770, guid: 9875bd312157d554f90565e565597ab4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.79
+      objectReference: {fileID: 0}
     - target: {fileID: 4049923770965481854, guid: 9875bd312157d554f90565e565597ab4, type: 3}
       propertyPath: 'nameCards.Array.data[0]'
       value: 
@@ -1170,16 +1178,24 @@ PrefabInstance:
       value: -180.172
       objectReference: {fileID: 0}
     - target: {fileID: 6050903284858450018, guid: 9875bd312157d554f90565e565597ab4, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5518452
+      objectReference: {fileID: 0}
+    - target: {fileID: 6050903284858450018, guid: 9875bd312157d554f90565e565597ab4, type: 3}
       propertyPath: m_Size.y
-      value: 6.1529474
+      value: 6.8579383
+      objectReference: {fileID: 0}
+    - target: {fileID: 6050903284858450018, guid: 9875bd312157d554f90565e565597ab4, type: 3}
+      propertyPath: m_Offset.x
+      value: 1.4509194
       objectReference: {fileID: 0}
     - target: {fileID: 6050903284858450018, guid: 9875bd312157d554f90565e565597ab4, type: 3}
       propertyPath: m_Offset.y
-      value: -0.3716607
+      value: -0.19816041
       objectReference: {fileID: 0}
     - target: {fileID: 7512864150350114945, guid: 9875bd312157d554f90565e565597ab4, type: 3}
       propertyPath: maxLap
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7512864150350114945, guid: 9875bd312157d554f90565e565597ab4, type: 3}
       propertyPath: lapText
@@ -1697,7 +1713,7 @@ GameObject:
   m_Component:
   - component: {fileID: 743680175}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: ITEMS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3933,7 +3949,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2613774746206992188, guid: 1b1503a4dec82724bb4f3e9d52c6909e, type: 3}
       propertyPath: supportedResolutions.Array.data[4].x
-      value: 1920
+      value: 1900
       objectReference: {fileID: 0}
     - target: {fileID: 2613774746206992188, guid: 1b1503a4dec82724bb4f3e9d52c6909e, type: 3}
       propertyPath: supportedResolutions.Array.data[4].y
@@ -4531,7 +4547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bb2bfeb9fee01e499bbd06693d34efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnTime: 3
+  respawnTime: 5
   itemIcons:
   - {fileID: -2036090364998163076, guid: 9cbb82226f9653f44b9dd1c1c121c1a3, type: 3}
   - {fileID: -9159803712831926577, guid: 3a5e09eb08f17354faccf90d70b3991b, type: 3}
@@ -4539,8 +4555,8 @@ MonoBehaviour:
   - {fileID: 8396112816902035518, guid: e96baa60372d0324f8ce4f68835b3e81, type: 3}
   - {fileID: -2501552740940021579, guid: a53e5f9b5914fa64cadc326a794beaa0, type: 3}
   - {fileID: 3869623144873128038, guid: 7286d04e9f55d67489b29279a7304e26, type: 3}
-  iconOffset: {x: 0, y: 1, z: 0}
-  iconScale: 0.5
+  iconOffset: {x: 0, y: 0, z: 0}
+  iconScale: 0.7
 --- !u!4 &667270326901705407
 Transform:
   m_ObjectHideFlags: 0
@@ -4550,7 +4566,7 @@ Transform:
   m_GameObject: {fileID: 2260665874702367420}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -32.369507, y: -5.609253, z: -0.0817501}
+  m_LocalPosition: {x: -38.96, y: 0.55, z: -0.0817501}
   m_LocalScale: {x: 0.2825781, y: 0.27771208, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -4717,7 +4733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bb2bfeb9fee01e499bbd06693d34efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnTime: 3
+  respawnTime: 5
   itemIcons:
   - {fileID: -2036090364998163076, guid: 9cbb82226f9653f44b9dd1c1c121c1a3, type: 3}
   - {fileID: -9159803712831926577, guid: 3a5e09eb08f17354faccf90d70b3991b, type: 3}
@@ -4725,8 +4741,8 @@ MonoBehaviour:
   - {fileID: 8396112816902035518, guid: e96baa60372d0324f8ce4f68835b3e81, type: 3}
   - {fileID: -2501552740940021579, guid: a53e5f9b5914fa64cadc326a794beaa0, type: 3}
   - {fileID: 3869623144873128038, guid: 7286d04e9f55d67489b29279a7304e26, type: 3}
-  iconOffset: {x: 0, y: 1, z: 0}
-  iconScale: 0.5
+  iconOffset: {x: 0, y: 0, z: 0}
+  iconScale: 0.7
 --- !u!212 &3057844075130204479
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4791,7 +4807,7 @@ Transform:
   m_GameObject: {fileID: 7364188262539819020}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -35.799072, y: 5.426697, z: -0.0817501}
+  m_LocalPosition: {x: -7.57, y: 7.24, z: -0.0817501}
   m_LocalScale: {x: 0.2825781, y: 0.27771208, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -4985,7 +5001,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bb2bfeb9fee01e499bbd06693d34efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnTime: 3
+  respawnTime: 5
   itemIcons:
   - {fileID: -2036090364998163076, guid: 9cbb82226f9653f44b9dd1c1c121c1a3, type: 3}
   - {fileID: -9159803712831926577, guid: 3a5e09eb08f17354faccf90d70b3991b, type: 3}
@@ -4993,8 +5009,8 @@ MonoBehaviour:
   - {fileID: 8396112816902035518, guid: e96baa60372d0324f8ce4f68835b3e81, type: 3}
   - {fileID: -2501552740940021579, guid: a53e5f9b5914fa64cadc326a794beaa0, type: 3}
   - {fileID: 3869623144873128038, guid: 7286d04e9f55d67489b29279a7304e26, type: 3}
-  iconOffset: {x: 0, y: 1, z: 0}
-  iconScale: 0.5
+  iconOffset: {x: 0, y: 0, z: 0}
+  iconScale: 0.7
 --- !u!224 &3897740954053540405 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7244942333681371587, guid: 5ca24fa958a8f964196c05acd422f6a4, type: 3}
@@ -5060,7 +5076,7 @@ Transform:
   m_GameObject: {fileID: 8456641660768558424}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -36.289062, y: 0.45672607, z: -0.0817501}
+  m_LocalPosition: {x: 6.9, y: 0.67, z: -0.0817501}
   m_LocalScale: {x: 0.2825781, y: 0.27771208, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -5138,7 +5154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bb2bfeb9fee01e499bbd06693d34efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnTime: 3
+  respawnTime: 5
   itemIcons:
   - {fileID: -2036090364998163076, guid: 9cbb82226f9653f44b9dd1c1c121c1a3, type: 3}
   - {fileID: -9159803712831926577, guid: 3a5e09eb08f17354faccf90d70b3991b, type: 3}
@@ -5146,8 +5162,8 @@ MonoBehaviour:
   - {fileID: 8396112816902035518, guid: e96baa60372d0324f8ce4f68835b3e81, type: 3}
   - {fileID: -2501552740940021579, guid: a53e5f9b5914fa64cadc326a794beaa0, type: 3}
   - {fileID: 3869623144873128038, guid: 7286d04e9f55d67489b29279a7304e26, type: 3}
-  iconOffset: {x: 0, y: 1, z: 0}
-  iconScale: 0.5
+  iconOffset: {x: 0, y: 0, z: 0}
+  iconScale: 0.7
 --- !u!114 &4761880221801236958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5160,7 +5176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bb2bfeb9fee01e499bbd06693d34efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnTime: 3
+  respawnTime: 5
   itemIcons:
   - {fileID: -2036090364998163076, guid: 9cbb82226f9653f44b9dd1c1c121c1a3, type: 3}
   - {fileID: -9159803712831926577, guid: 3a5e09eb08f17354faccf90d70b3991b, type: 3}
@@ -5168,8 +5184,8 @@ MonoBehaviour:
   - {fileID: 8396112816902035518, guid: e96baa60372d0324f8ce4f68835b3e81, type: 3}
   - {fileID: -2501552740940021579, guid: a53e5f9b5914fa64cadc326a794beaa0, type: 3}
   - {fileID: 3869623144873128038, guid: 7286d04e9f55d67489b29279a7304e26, type: 3}
-  iconOffset: {x: 0, y: 1, z: 0}
-  iconScale: 0.5
+  iconOffset: {x: 0, y: 0, z: 0}
+  iconScale: 0.7
 --- !u!114 &4800704004835160627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5182,7 +5198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bb2bfeb9fee01e499bbd06693d34efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnTime: 3
+  respawnTime: 5
   itemIcons:
   - {fileID: -2036090364998163076, guid: 9cbb82226f9653f44b9dd1c1c121c1a3, type: 3}
   - {fileID: -9159803712831926577, guid: 3a5e09eb08f17354faccf90d70b3991b, type: 3}
@@ -5190,8 +5206,8 @@ MonoBehaviour:
   - {fileID: 8396112816902035518, guid: e96baa60372d0324f8ce4f68835b3e81, type: 3}
   - {fileID: -2501552740940021579, guid: a53e5f9b5914fa64cadc326a794beaa0, type: 3}
   - {fileID: 3869623144873128038, guid: 7286d04e9f55d67489b29279a7304e26, type: 3}
-  iconOffset: {x: 0, y: 1, z: 0}
-  iconScale: 0.5
+  iconOffset: {x: 0, y: 0, z: 0}
+  iconScale: 0.7
 --- !u!212 &5150086014530351834
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5351,7 +5367,7 @@ Transform:
   m_GameObject: {fileID: 222790734552827616}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.049072, y: 13.886719, z: -0.0817501}
+  m_LocalPosition: {x: -15.99, y: 0.22, z: -0.0817501}
   m_LocalScale: {x: 0.2825781, y: 0.27771208, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -5404,7 +5420,7 @@ MonoBehaviour:
   - {fileID: -2501552740940021579, guid: a53e5f9b5914fa64cadc326a794beaa0, type: 3}
   - {fileID: 3869623144873128038, guid: 7286d04e9f55d67489b29279a7304e26, type: 3}
   iconOffset: {x: 0, y: 0, z: 0}
-  iconScale: 1
+  iconScale: 0.7
 --- !u!212 &6341099579484283778
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5477,7 +5493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bb2bfeb9fee01e499bbd06693d34efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnTime: 3
+  respawnTime: 5
   itemIcons:
   - {fileID: -2036090364998163076, guid: 9cbb82226f9653f44b9dd1c1c121c1a3, type: 3}
   - {fileID: -9159803712831926577, guid: 3a5e09eb08f17354faccf90d70b3991b, type: 3}
@@ -5485,8 +5501,8 @@ MonoBehaviour:
   - {fileID: 8396112816902035518, guid: e96baa60372d0324f8ce4f68835b3e81, type: 3}
   - {fileID: -2501552740940021579, guid: a53e5f9b5914fa64cadc326a794beaa0, type: 3}
   - {fileID: 3869623144873128038, guid: 7286d04e9f55d67489b29279a7304e26, type: 3}
-  iconOffset: {x: 0, y: 1, z: 0}
-  iconScale: 0.5
+  iconOffset: {x: 0, y: 0, z: 0}
+  iconScale: 0.7
 --- !u!61 &6520594676641776187
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5712,7 +5728,7 @@ Transform:
   m_GameObject: {fileID: 3373887064903787103}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -34.699097, y: 12.786682, z: -0.0817501}
+  m_LocalPosition: {x: -32.56, y: 14.08, z: -0.0817501}
   m_LocalScale: {x: 0.2825781, y: 0.27771208, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -5855,7 +5871,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bb2bfeb9fee01e499bbd06693d34efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnTime: 3
+  respawnTime: 5
   itemIcons:
   - {fileID: -2036090364998163076, guid: 9cbb82226f9653f44b9dd1c1c121c1a3, type: 3}
   - {fileID: -9159803712831926577, guid: 3a5e09eb08f17354faccf90d70b3991b, type: 3}
@@ -5863,8 +5879,8 @@ MonoBehaviour:
   - {fileID: 8396112816902035518, guid: e96baa60372d0324f8ce4f68835b3e81, type: 3}
   - {fileID: -2501552740940021579, guid: a53e5f9b5914fa64cadc326a794beaa0, type: 3}
   - {fileID: 3869623144873128038, guid: 7286d04e9f55d67489b29279a7304e26, type: 3}
-  iconOffset: {x: 0, y: 1, z: 0}
-  iconScale: 0.5
+  iconOffset: {x: 0, y: 0, z: 0}
+  iconScale: 0.7
 --- !u!224 &8061074967507867729 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5560857275449331312, guid: 5ca24fa958a8f964196c05acd422f6a4, type: 3}
@@ -5937,7 +5953,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bb2bfeb9fee01e499bbd06693d34efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnTime: 3
+  respawnTime: 5
   itemIcons:
   - {fileID: -2036090364998163076, guid: 9cbb82226f9653f44b9dd1c1c121c1a3, type: 3}
   - {fileID: -9159803712831926577, guid: 3a5e09eb08f17354faccf90d70b3991b, type: 3}
@@ -5945,8 +5961,8 @@ MonoBehaviour:
   - {fileID: 8396112816902035518, guid: e96baa60372d0324f8ce4f68835b3e81, type: 3}
   - {fileID: -2501552740940021579, guid: a53e5f9b5914fa64cadc326a794beaa0, type: 3}
   - {fileID: 3869623144873128038, guid: 7286d04e9f55d67489b29279a7304e26, type: 3}
-  iconOffset: {x: 0, y: 1, z: 0}
-  iconScale: 0.5
+  iconOffset: {x: 0, y: 0, z: 0}
+  iconScale: 0.7
 --- !u!1 &8456641660768558424
 GameObject:
   m_ObjectHideFlags: 0
@@ -5985,7 +6001,7 @@ Transform:
   m_GameObject: {fileID: 3670137072632083029}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 28.13086, y: 9.476685, z: -0.0817501}
+  m_LocalPosition: {x: 30.47, y: 8.64, z: -0.0817501}
   m_LocalScale: {x: 0.2825781, y: 0.27771208, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []

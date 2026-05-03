@@ -1,103 +1,206 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 /// <summary>
-/// Quản lý độ phân giải và cài đặt màn hình toàn cục
+/// Quản lý độ phân giải và cài đặt màn hình toàn cục.
+/// Tự động dùng độ phân giải native của thiết bị và điều chỉnh
+/// CanvasScaler theo tỉ lệ màn hình thực tế.
 /// </summary>
 public class ResolutionManager : MonoBehaviour
 {
-    [Header("---- CÀI ĐẶT ĐỘ PHÂN GIẢI ----")]
-    [SerializeField] private Vector2Int[] supportedResolutions = new Vector2Int[]
-    {
-        // Desktop / common landscape presets
-        new Vector2Int(1024, 768),
-        new Vector2Int(1280, 720),
-        new Vector2Int(1280, 1024),
-        new Vector2Int(1600, 900),
-        new Vector2Int(1920, 1080),
-        new Vector2Int(2560, 1440),
-        new Vector2Int(3840, 2160),
-
-        // Mobile / tablet presets
-        new Vector2Int(720, 1280),
-        new Vector2Int(750, 1334),
-        new Vector2Int(1080, 1920),
-        new Vector2Int(1125, 2436),
-        new Vector2Int(1170, 2532),
-        new Vector2Int(1179, 2556),
-        new Vector2Int(1242, 2688),
-        new Vector2Int(1284, 2778),
-        new Vector2Int(1440, 3040),
-        new Vector2Int(1440, 3200),
-        new Vector2Int(1536, 2048),
-        new Vector2Int(1668, 2224),
-        new Vector2Int(2048, 2732)
-    };
-
-    [SerializeField] private int defaultResolutionIndex = 4; // 1920x1080
-    [SerializeField] private bool fullscreen = true;
+    [Header("---- HƯỚNG MÀN HÌNH ----")]
     [SerializeField] private bool forceLandscape = true;
-    [SerializeField] private int targetFramerate = 60;
 
-    [Header("---- CÀI ĐẶT QUALITY ----")]
-    [SerializeField] private int qualityLevel = 2; // 0-5
+    [Header("---- CANVAS SCALER (UI ADAPT) ----")]
+    // Độ phân giải thiết kế UI gốc (landscape)
+    [SerializeField] private Vector2 referenceResolution = new Vector2(1920, 1080);
+    // 0 = match width, 1 = match height, 0.5 = blend
+    [SerializeField] [Range(0f, 1f)] private float matchWidthOrHeight = 0.5f;
+
+    [Header("---- HIỆU NĂNG ----")]
+    [SerializeField] private int targetFramerate = 60;
+    // Giới hạn DPI render để tiết kiệm GPU (0 = không giới hạn)
+    [SerializeField] [Range(0, 600)] private int maxRenderDpi = 400;
+
+    [Header("---- QUALITY ----")]
+    [SerializeField] private int qualityLevel = 2;
 
     // Singleton
-    private static ResolutionManager instance;
+    public static ResolutionManager Instance { get; private set; }
+
+    // Tỉ lệ màn hình thực tế tính sau khi Awake
+    public float ScreenAspect { get; private set; }
+    public Vector2Int NativeResolution { get; private set; }
 
     void Awake()
     {
-        // Singleton pattern
-        if (instance != null && instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        instance = this;
+        if (Instance != null && Instance != this) { Destroy(gameObject); return; }
+        Instance = this;
         DontDestroyOnLoad(gameObject);
 
+        // Đặt orientation trước, sau đó chờ orientation ổn định mới apply resolution
         ApplyOrientation();
-
-        // Áp dụng cài đặt ban đầu
-        ApplyResolution(defaultResolutionIndex);
         ApplyQualityLevel(qualityLevel);
+        Application.targetFrameRate = targetFramerate;
+
+        SceneManager.sceneLoaded += HandleSceneLoaded;
+    }
+
+    void OnDestroy()
+    {
+        if (Instance == this)
+        {
+            SceneManager.sceneLoaded -= HandleSceneLoaded;
+        }
+    }
+
+    void Start()
+    {
+        // Dùng coroutine để chờ orientation thực sự thay đổi trước khi đọc Screen size
+        StartCoroutine(ApplyAfterOrientationSettled());
     }
 
     /// <summary>
-    /// Áp dụng độ phân giải
+    /// Chờ cho đến khi màn hình đã xoay sang landscape rồi mới apply resolution và canvas.
     /// </summary>
-    public void ApplyResolution(int resolutionIndex)
+    private IEnumerator ApplyAfterOrientationSettled()
     {
-        if (resolutionIndex < 0 || resolutionIndex >= supportedResolutions.Length)
+        if (forceLandscape)
         {
-            Debug.LogError($"[ResolutionManager] Index {resolutionIndex} ngoài phạm vi!");
-            return;
+            // Chờ tối đa 1 giây cho orientation thay đổi
+            float timeout = 1f;
+            float elapsed = 0f;
+            while (Screen.width < Screen.height && elapsed < timeout)
+            {
+                yield return null;
+                elapsed += Time.unscaledDeltaTime;
+            }
+
+            // Thêm 1 frame nữa để Screen.width/height ổn định hoàn toàn
+            yield return new WaitForEndOfFrame();
         }
 
-        Vector2Int resolution = supportedResolutions[resolutionIndex];
-        resolution = NormalizeResolutionForOrientation(resolution);
-        Screen.SetResolution(resolution.x, resolution.y, fullscreen);
-
-        Debug.Log($"[ResolutionManager] Áp dụng độ phân giải: {resolution.x}x{resolution.y} | Fullscreen: {fullscreen}");
+        UseNativeResolution();
+        AdaptAllCanvasScalers();
     }
 
+    // ─────────────────────────────────────────────
+    // ĐỘ PHÂN GIẢI NATIVE
+    // ─────────────────────────────────────────────
+
     /// <summary>
-    /// Thay đổi độ phân giải thủ công
+    /// Dùng độ phân giải native của thiết bị. Nếu maxRenderDpi > 0,
+    /// scale xuống để giữ hiệu năng trên màn hình QHD/4K.
     /// </summary>
-    public void SetResolution(int width, int height, bool isFullscreen)
+    private void UseNativeResolution()
     {
-        Vector2Int resolution = NormalizeResolutionForOrientation(new Vector2Int(width, height));
-        Screen.SetResolution(width, height, isFullscreen);
-        fullscreen = isFullscreen;
+        int nativeW = Screen.currentResolution.width;
+        int nativeH = Screen.currentResolution.height;
 
-        Screen.SetResolution(resolution.x, resolution.y, isFullscreen);
+        // Trên mobile Screen.currentResolution trả về native hardware res.
+        // Trên editor dùng Screen.width/height thay thế.
+#if UNITY_EDITOR
+        nativeW = Screen.width;
+        nativeH = Screen.height;
+#endif
 
-        Debug.Log($"[ResolutionManager] Thay đổi độ phân giải thành: {resolution.x}x{resolution.y} | Fullscreen: {isFullscreen}");
+        if (forceLandscape && nativeH > nativeW)
+            (nativeW, nativeH) = (nativeH, nativeW);
+
+        // Scale xuống nếu DPI quá cao
+        int renderW = nativeW;
+        int renderH = nativeH;
+        if (maxRenderDpi > 0 && Screen.dpi > maxRenderDpi)
+        {
+            float scale = maxRenderDpi / Screen.dpi;
+            renderW = Mathf.RoundToInt(nativeW * scale);
+            renderH = Mathf.RoundToInt(nativeH * scale);
+        }
+
+        NativeResolution = new Vector2Int(nativeW, nativeH);
+        ScreenAspect = (float)renderW / renderH;
+
+    #if UNITY_ANDROID || UNITY_IOS
+        // Trên mobile, tránh ép SetResolution để không làm gián đoạn render/video pipeline khi đổi scene.
+        renderW = Screen.width;
+        renderH = Screen.height;
+        NativeResolution = new Vector2Int(renderW, renderH);
+        ScreenAspect = (float)renderW / renderH;
+    #else
+        Screen.SetResolution(renderW, renderH, FullScreenMode.FullScreenWindow);
+    #endif
+        Debug.Log($"[ResolutionManager] Native: {nativeW}x{nativeH} | Render: {renderW}x{renderH} | DPI: {Screen.dpi:F0} | Aspect: {ScreenAspect:F3}");
+    }
+
+    // ─────────────────────────────────────────────
+    // CANVAS SCALER AUTO-ADAPT
+    // ─────────────────────────────────────────────
+
+    /// <summary>
+    /// Tìm tất cả CanvasScaler trong scene và cấu hình Scale With Screen Size
+    /// với match value phù hợp tỉ lệ màn hình thực tế.
+    /// </summary>
+    public void AdaptAllCanvasScalers()
+    {
+        CanvasScaler[] scalers = FindObjectsByType<CanvasScaler>(FindObjectsSortMode.None);
+        foreach (CanvasScaler scaler in scalers)
+            ConfigureCanvasScaler(scaler);
+
+        Debug.Log($"[ResolutionManager] Đã adapt {scalers.Length} CanvasScaler(s).");
     }
 
     /// <summary>
-    /// Áp dụng mức chất lượng
+    /// Cấu hình một CanvasScaler cụ thể.
     /// </summary>
+    public void ConfigureCanvasScaler(CanvasScaler scaler)
+    {
+        scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+        scaler.referenceResolution = referenceResolution;
+        scaler.screenMatchMode = CanvasScaler.ScreenMatchMode.MatchWidthOrHeight;
+
+        // Tự động tính match dựa trên tỉ lệ màn hình so với reference
+        float refAspect = referenceResolution.x / referenceResolution.y;
+        float deviceAspect = ScreenAspect > 0 ? ScreenAspect : (float)Screen.width / Screen.height;
+
+        // Nếu device rộng hơn reference → ưu tiên match height (1)
+        // Nếu device hẹp hơn reference  → ưu tiên match width  (0)
+        float autoMatch = deviceAspect >= refAspect ? 1f : 0f;
+
+        // Blend với matchWidthOrHeight do designer cài (để designer vẫn có quyền điều chỉnh)
+        scaler.matchWidthOrHeight = Mathf.Lerp(autoMatch, matchWidthOrHeight, 0.5f);
+    }
+
+    // ─────────────────────────────────────────────
+    // ORIENTATION
+    // ─────────────────────────────────────────────
+
+    private void ApplyOrientation()
+    {
+        if (forceLandscape)
+        {
+            Screen.orientation = ScreenOrientation.LandscapeLeft;
+            Screen.autorotateToPortrait = false;
+            Screen.autorotateToPortraitUpsideDown = false;
+            Screen.autorotateToLandscapeLeft = true;
+            Screen.autorotateToLandscapeRight = true;
+        }
+        else
+        {
+            Screen.orientation = ScreenOrientation.AutoRotation;
+            Screen.autorotateToPortrait = true;
+            Screen.autorotateToPortraitUpsideDown = true;
+            Screen.autorotateToLandscapeLeft = true;
+            Screen.autorotateToLandscapeRight = true;
+        }
+    }
+
+    // ─────────────────────────────────────────────
+    // QUALITY / FRAMERATE
+    // ─────────────────────────────────────────────
+
     public void ApplyQualityLevel(int level)
     {
         if (level < 0 || level >= QualitySettings.names.Length)
@@ -105,89 +208,31 @@ public class ResolutionManager : MonoBehaviour
             Debug.LogError($"[ResolutionManager] Mức chất lượng {level} không tồn tại!");
             return;
         }
-
         QualitySettings.SetQualityLevel(level);
         qualityLevel = level;
-
-        Debug.Log($"[ResolutionManager] Áp dụng chất lượng: {QualitySettings.names[level]}");
+        Debug.Log($"[ResolutionManager] Chất lượng: {QualitySettings.names[level]}");
     }
 
-    /// <summary>
-    /// Đặt target framerate
-    /// </summary>
     public void SetTargetFramerate(int fps)
     {
         Application.targetFrameRate = fps;
         targetFramerate = fps;
-
-        Debug.Log($"[ResolutionManager] Đặt target framerate: {fps}");
+        Debug.Log($"[ResolutionManager] Target framerate: {fps}");
     }
 
-    /// <summary>
-    /// Toggle fullscreen
-    /// </summary>
-    public void ToggleFullscreen()
-    {
-        fullscreen = !fullscreen;
-        Vector2Int resolution = supportedResolutions[defaultResolutionIndex];
-        resolution = NormalizeResolutionForOrientation(resolution);
-        Screen.SetResolution(resolution.x, resolution.y, fullscreen);
+    // ─────────────────────────────────────────────
+    // PUBLIC HELPERS
+    // ─────────────────────────────────────────────
 
-        Debug.Log($"[ResolutionManager] Fullscreen: {fullscreen}");
-    }
+    public Vector2Int GetCurrentResolution() => new Vector2Int(Screen.width, Screen.height);
+    public bool IsFullscreen() => Screen.fullScreen;
 
-    /// <summary>
-    /// Lấy danh sách độ phân giải hỗ trợ
-    /// </summary>
-    public Vector2Int[] GetSupportedResolutions()
+    private void HandleSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        return supportedResolutions;
-    }
-
-    /// <summary>
-    /// Lấy độ phân giải hiện tại
-    /// </summary>
-    public Vector2Int GetCurrentResolution()
-    {
-        return new Vector2Int(Screen.width, Screen.height);
-    }
-
-    /// <summary>
-    /// Lấy trạng thái fullscreen
-    /// </summary>
-    public bool IsFullscreen()
-    {
-        return fullscreen;
-    }
-
-    /// <summary>
-    /// Lấy instance
-    /// </summary>
-    public static ResolutionManager Instance
-    {
-        get { return instance; }
-    }
-
-    private void ApplyOrientation()
-    {
-        if (!forceLandscape)
+        if (!isActiveAndEnabled)
             return;
 
-        Screen.orientation = ScreenOrientation.LandscapeLeft;
-        Screen.autorotateToPortrait = false;
-        Screen.autorotateToPortraitUpsideDown = false;
-        Screen.autorotateToLandscapeLeft = true;
-        Screen.autorotateToLandscapeRight = true;
-    }
-
-    private Vector2Int NormalizeResolutionForOrientation(Vector2Int resolution)
-    {
-        if (!forceLandscape)
-            return resolution;
-
-        if (resolution.y > resolution.x)
-            return new Vector2Int(resolution.y, resolution.x);
-
-        return resolution;
+        // Chỉ adapt UI ở scene mới, không đụng resolution để tránh ảnh hưởng VideoPlayer.
+        AdaptAllCanvasScalers();
     }
 }

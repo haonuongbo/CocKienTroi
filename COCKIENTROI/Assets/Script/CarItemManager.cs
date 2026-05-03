@@ -120,14 +120,14 @@ public class CarItemManager : MonoBehaviour
     }
 
     // ==========================================
-    // ITEM 4 — BÚA XOAY (5 giây, bán kính 3f)
+    // ITEM 4 — BÚA XOAY (5 giây, bán kính 8f)
     // ==========================================
 
     IEnumerator Effect_Hammer()
     {
         float duration    = 5f;
         float rotSpeed    = 360f;
-        float radius      = 3f;
+        float radius      = 8f;
         float hitCooldown = 1.5f;
 
         // Tạo trục xoay

@@ -584,6 +584,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2613774746206992188, guid: 1b1503a4dec82724bb4f3e9d52c6909e, type: 3}
+      propertyPath: maxRenderDpi
+      value: 342
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613774746206992188, guid: 1b1503a4dec82724bb4f3e9d52c6909e, type: 3}
+      propertyPath: matchWidthOrHeight
+      value: 0.106
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613774746206992188, guid: 1b1503a4dec82724bb4f3e9d52c6909e, type: 3}
+      propertyPath: referenceResolution.x
+      value: 1900
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613774746206992188, guid: 1b1503a4dec82724bb4f3e9d52c6909e, type: 3}
       propertyPath: defaultResolutionIndex
       value: 4
       objectReference: {fileID: 0}
@@ -695,7 +707,7 @@ MonoBehaviour:
   backgroundVideo: {fileID: 32900000, guid: 88389061b01b62e4b8e466f52d625d49, type: 3}
   loopVideo: 1
   backgroundMusic: {fileID: 8300000, guid: 8d45a1d9198174f43a4ad84a904a4f1c, type: 3}
-  musicVolume: 0.7
+  musicVolume: 0.541
   loopMusic: 1
 --- !u!1 &2075071464
 GameObject:
