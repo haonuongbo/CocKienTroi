@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -21,6 +22,8 @@ public class GameManager : MonoBehaviour
     [Header("---- CÀI ĐẶT ÂM THANH ----")]
     public AudioClip countdownGoSound;  // Âm thanh 3-2-1 bíp + GO (khoảng 4 giây)
     private AudioSource audioSource;
+    [SerializeField] [Range(0f, 1f)] private float bgmVolume = 0.7f;
+    private AudioSource bgmSource;
 
     [Header("---- CÀI ĐẶT RESPONSIVE UI ----")]
     private CanvasResponsive canvasResponsive; // Reference tới script CanvasResponsive
@@ -54,6 +57,8 @@ public class GameManager : MonoBehaviour
         if (audioSource == null)
             audioSource = gameObject.AddComponent<AudioSource>();
 
+        SetupMapBgm();
+
         // ===== SETUP CANVAS & CAMERA =====
         canvasResponsive = FindFirstObjectByType<CanvasResponsive>();
         cameraFollow = FindFirstObjectByType<TopDownCameraFollow>();
@@ -75,6 +80,41 @@ public class GameManager : MonoBehaviour
 
         // Bắt đầu countdown (Time.timeScale sẽ được set = 0 trong coroutine)
         StartCoroutine(StartCountdown());
+    }
+
+    private void SetupMapBgm()
+    {
+        string sceneName = SceneManager.GetActiveScene().name;
+        string clipPath = null;
+
+        if (sceneName.Contains("MAP 1"))
+            clipPath = "Audio/map1_bgm";
+        else if (sceneName.Contains("MAP 2"))
+            clipPath = "Audio/map2_bgm";
+        else if (sceneName.Contains("MAP 3"))
+            clipPath = "Audio/map3_bgm";
+
+        if (string.IsNullOrEmpty(clipPath))
+            return;
+
+        AudioClip bgmClip = Resources.Load<AudioClip>(clipPath);
+        if (bgmClip == null)
+            return;
+
+        if (bgmSource == null)
+        {
+            bgmSource = gameObject.AddComponent<AudioSource>();
+            bgmSource.playOnAwake = false;
+            bgmSource.loop = true;
+            bgmSource.spatialBlend = 0f;
+        }
+
+        if (bgmSource.clip == bgmClip && bgmSource.isPlaying)
+            return;
+
+        bgmSource.clip = bgmClip;
+        bgmSource.volume = bgmVolume;
+        bgmSource.Play();
     }
 
     void Update()
