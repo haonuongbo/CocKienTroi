@@ -11,6 +11,11 @@ public class ItemBox : MonoBehaviour
     [Header("Cài Đặt Cơ Bản")]
     public float respawnTime = 3f;
 
+    [Header("Debug / Testing")]
+    [Tooltip("Set to 1–6 to always give that item. Set to 0 for normal random behaviour.")]
+    [Range(0, 6)]
+    public int forceItemId = 0;
+
     [Header("Mini Icon (icon nhỏ nổi trên hộp)")]
     [Tooltip("Kéo 6 sprite icon vào đây theo thứ tự: 1=Tăng tốc, 2=Chuối, 3=Sét, 4=Búa, 5=Lò xo, 6=Mưa")]
     public Sprite[] itemIcons;          // 6 phần tử, index 0 → item 1
@@ -121,17 +126,25 @@ public class ItemBox : MonoBehaviour
     /// <summary>Random item 1–6 và cập nhật icon ngay lập tức.</summary>
     void RollNewItem()
     {
-        // Giảm tỉ lệ xuất hiện của Sét (item 3) xuống còn khoảng 1/10 (10%)
-        int roll = Random.Range(1, 101); // 1 đến 100
-        if (roll <= 10)
+        // If a forced item is set (1–6), always use it — useful for testing.
+        if (forceItemId >= 1 && forceItemId <= 6)
         {
-            currentItemId = 3; // Sét (10%)
+            currentItemId = forceItemId;
         }
         else
         {
-            // 5 item còn lại chia đều 90% còn lại
-            int[] otherItems = { 1, 2, 4, 5, 6 };
-            currentItemId = otherItems[Random.Range(0, otherItems.Length)];
+            // Giảm tỉ lệ xuất hiện của Sét (item 3) xuống còn khoảng 1/10 (10%)
+            int roll = Random.Range(1, 101); // 1 đến 100
+            if (roll <= 10)
+            {
+                currentItemId = 3; // Sét (10%)
+            }
+            else
+            {
+                // 5 item còn lại chia đều 90% còn lại
+                int[] otherItems = { 1, 2, 4, 5, 6 };
+                currentItemId = otherItems[Random.Range(0, otherItems.Length)];
+            }
         }
 
         // Cập nhật mini icon — index 0 = item 1, nên trừ 1

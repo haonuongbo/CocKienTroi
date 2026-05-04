@@ -138,7 +138,8 @@ public class CarItemManager : MonoBehaviour
         if (hammerVFX != null)
         {
             GameObject h = Instantiate(hammerVFX, pivot.transform);
-            h.transform.localPosition = new Vector3(2f, 0f, 0f);
+            h.transform.localPosition = new Vector3(2.4f, 0f, 0f);
+            h.transform.localScale    = Vector3.one * 1.3f;
             IgnoreCollisionWith(h);
         }
 
@@ -188,16 +189,49 @@ public class CarItemManager : MonoBehaviour
 
     IEnumerator Effect_SpringJump()
     {
-        // Tắt collider để tránh kẹt tường khi phóng to
-        Collider2D[] cols = GetComponentsInChildren<Collider2D>();
-        foreach (var c in cols) if (c != null) c.enabled = false;
+        const float scaleFactor = 1.5f;
 
-        transform.localScale = originalScale * 1.5f;
+        // Collect all colliders and cache their original sizes
+        Collider2D[] cols = GetComponentsInChildren<Collider2D>();
+        var boxSizes      = new System.Collections.Generic.Dictionary<BoxCollider2D,     (Vector2 size, Vector2 offset)>();
+        var circleSizes   = new System.Collections.Generic.Dictionary<CircleCollider2D,  (float radius, Vector2 offset)>();
+        var capsuleSizes  = new System.Collections.Generic.Dictionary<CapsuleCollider2D, (Vector2 size, Vector2 offset)>();
+
+        foreach (var c in cols)
+        {
+            if      (c is BoxCollider2D     b) boxSizes[b]     = (b.size, b.offset);
+            else if (c is CircleCollider2D  r) circleSizes[r]  = (r.radius, r.offset);
+            else if (c is CapsuleCollider2D p) capsuleSizes[p] = (p.size, p.offset);
+        }
+
+        // Scale the visual up — then immediately counter-scale each collider so
+        // its world-space footprint stays the same size.
+        transform.localScale = originalScale * scaleFactor;
+
+        foreach (var kv in boxSizes)
+        {
+            kv.Key.size   = kv.Value.size   / scaleFactor;
+            kv.Key.offset = kv.Value.offset / scaleFactor;
+        }
+        foreach (var kv in circleSizes)
+        {
+            kv.Key.radius = kv.Value.radius / scaleFactor;
+            kv.Key.offset = kv.Value.offset / scaleFactor;
+        }
+        foreach (var kv in capsuleSizes)
+        {
+            kv.Key.size   = kv.Value.size   / scaleFactor;
+            kv.Key.offset = kv.Value.offset / scaleFactor;
+        }
 
         yield return new WaitForSeconds(1.5f);
 
+        // Restore everything
         transform.localScale = originalScale;
-        foreach (var c in cols) if (c != null) c.enabled = true;
+
+        foreach (var kv in boxSizes)    { kv.Key.size = kv.Value.size;     kv.Key.offset = kv.Value.offset; }
+        foreach (var kv in circleSizes) { kv.Key.radius = kv.Value.radius; kv.Key.offset = kv.Value.offset; }
+        foreach (var kv in capsuleSizes){ kv.Key.size = kv.Value.size;     kv.Key.offset = kv.Value.offset; }
     }
 
     // ==========================================
