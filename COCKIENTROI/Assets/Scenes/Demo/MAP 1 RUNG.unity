@@ -3964,6 +3964,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b1503a4dec82724bb4f3e9d52c6909e, type: 3}
+--- !u!224 &1962878197 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3435415432355219122, guid: 5ca24fa958a8f964196c05acd422f6a4, type: 3}
+  m_PrefabInstance: {fileID: 580180503645895886}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &2000093402 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3460895120379354416, guid: 59cf890837989d946b4e6337abbd3632, type: 3}
@@ -4014,6 +4019,11 @@ Transform:
   - {fileID: 950490086}
   m_Father: {fileID: 1036145142}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!224 &2044136198 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 997277345435328122, guid: 5ca24fa958a8f964196c05acd422f6a4, type: 3}
+  m_PrefabInstance: {fileID: 580180503645895886}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2091794222
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4414,6 +4424,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1727777134803504865, guid: 5ca24fa958a8f964196c05acd422f6a4, type: 3}
+      propertyPath: miniMap
+      value: 
+      objectReference: {fileID: 1962878197}
+    - target: {fileID: 1727777134803504865, guid: 5ca24fa958a8f964196c05acd422f6a4, type: 3}
+      propertyPath: infoPanel
+      value: 
+      objectReference: {fileID: 2044136198}
     - target: {fileID: 1827435757927246324, guid: 5ca24fa958a8f964196c05acd422f6a4, type: 3}
       propertyPath: m_Name
       value: JoyStick HUD

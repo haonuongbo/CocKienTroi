@@ -233,7 +233,14 @@ public class ResolutionManager : MonoBehaviour
         if (!isActiveAndEnabled)
             return;
 
-        // Chỉ adapt UI ở scene mới, không đụng resolution để tránh ảnh hưởng VideoPlayer.
+        // Scene Loading có thanh progress bar căn chỉnh chính xác theo video nền.
+        if (scene.name == "Loading")
+        {
+            Debug.Log($"[ResolutionManager] Bỏ qua adapt CanvasScaler cho scene '{scene.name}'.");
+            return;
+        }
+
+        // Tất cả scene khác (kể cả Map 1, 2, 3) → adapt bình thường giống Character Selection
         AdaptAllCanvasScalers();
     }
 }
