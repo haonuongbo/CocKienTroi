@@ -10,10 +10,13 @@ public class IntroVideoToScene : MonoBehaviour
     private VideoPlayer videoPlayer;
     private bool hasLoadedNextScene;
 
+    private float sceneLoadTime;
+
     private void Awake()
     {
         videoPlayer = GetComponent<VideoPlayer>();
         videoPlayer.isLooping = false;
+        sceneLoadTime = Time.unscaledTime;
     }
 
     private void OnEnable()
@@ -39,7 +42,15 @@ public class IntroVideoToScene : MonoBehaviour
 
     private void Update()
     {
-        if (Input.anyKeyDown || Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.touchCount > 0)
+        // Chờ 0.5s sau khi load scene để tránh nhận diện nhầm thao tác chạm còn sót lại từ scene trước (Splash Art)
+        if (Time.unscaledTime - sceneLoadTime < 0.5f) return;
+
+        // Chỉ nhận diện các thao tác chạm MỚI (Began) hoặc nhấn nút MỚI (Down)
+        bool isTouchBegan = Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began;
+        bool isMouseDown = Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1);
+        bool isKeyDown = Input.anyKeyDown;
+
+        if (isTouchBegan || isMouseDown || isKeyDown)
         {
             SkipVideo();
         }

@@ -165,12 +165,12 @@ public class ResolutionManager : MonoBehaviour
         float refAspect = referenceResolution.x / referenceResolution.y;
         float deviceAspect = ScreenAspect > 0 ? ScreenAspect : (float)Screen.width / Screen.height;
 
-        // Nếu device rộng hơn reference → ưu tiên match height (1)
-        // Nếu device hẹp hơn reference  → ưu tiên match width  (0)
+        // Nếu device rộng hơn reference (điện thoại siêu dài) → ưu tiên match height (1) để chống cắt dọc
+        // Nếu device hẹp hơn reference (iPad) → ưu tiên match width (0) để chống cắt ngang
         float autoMatch = deviceAspect >= refAspect ? 1f : 0f;
 
-        // Blend với matchWidthOrHeight do designer cài (để designer vẫn có quyền điều chỉnh)
-        scaler.matchWidthOrHeight = Mathf.Lerp(autoMatch, matchWidthOrHeight, 0.5f);
+        // Bỏ qua Lerp, ép buộc dùng autoMatch tuyệt đối để đảm bảo UI không bao giờ bị cắt xén (Cropped) trên mọi tỷ lệ màn hình
+        scaler.matchWidthOrHeight = autoMatch;
     }
 
     // ─────────────────────────────────────────────
