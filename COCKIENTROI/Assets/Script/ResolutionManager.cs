@@ -123,8 +123,9 @@ public class ResolutionManager : MonoBehaviour
         NativeResolution = new Vector2Int(nativeW, nativeH);
         ScreenAspect = (float)renderW / renderH;
 
-    #if UNITY_ANDROID || UNITY_IOS
-        // Trên mobile, tránh ép SetResolution để không làm gián đoạn render/video pipeline khi đổi scene.
+    #if UNITY_EDITOR || UNITY_ANDROID || UNITY_IOS
+        // Trên mobile VÀ trong Editor Simulator, tuyệt đối không dùng SetResolution 
+        // để tránh phá vỡ khung hình (gây viền xanh/đen) của Simulator.
         renderW = Screen.width;
         renderH = Screen.height;
         NativeResolution = new Vector2Int(renderW, renderH);
@@ -166,10 +167,10 @@ public class ResolutionManager : MonoBehaviour
         float deviceAspect = ScreenAspect > 0 ? ScreenAspect : (float)Screen.width / Screen.height;
 
         // Nếu device rộng hơn reference (điện thoại siêu dài) → ưu tiên match height (1) để chống cắt dọc
-        // Nếu device hẹp hơn reference (iPad) → ưu tiên match width (0) để chống cắt ngang
-        float autoMatch = deviceAspect >= refAspect ? 1f : 0f;
+        // Nếu device hẹp hơn reference (iPad) → dùng 0.5 (Blend) để phóng to UI, giúp chữ dễ đọc hơn và giao diện dàn đều ra mép
+        float autoMatch = deviceAspect >= refAspect ? 1f : 0.5f;
 
-        // Bỏ qua Lerp, ép buộc dùng autoMatch tuyệt đối để đảm bảo UI không bao giờ bị cắt xén (Cropped) trên mọi tỷ lệ màn hình
+        // Bỏ qua Lerp, ép buộc dùng autoMatch tuyệt đối để đảm bảo UI không bị sai lệch trên iPhone
         scaler.matchWidthOrHeight = autoMatch;
     }
 

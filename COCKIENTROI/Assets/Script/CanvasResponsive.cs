@@ -74,8 +74,8 @@ public class CanvasResponsive : MonoBehaviour
             canvasScaler.referenceResolution = new Vector2(baseWidth, baseHeight);
             canvasScaler.screenMatchMode = CanvasScaler.ScreenMatchMode.MatchWidthOrHeight;
             
-            // Đảm bảo không bị cắt mất phần đỉnh đầu hoặc đuôi xe (Match 1 = Height) trên màn hình siêu dài (iPhone/Samsung)
-            canvasScaler.matchWidthOrHeight = currentAspectRatio >= (baseWidth / baseHeight) ? 1f : 0f;
+            // Đảm bảo không bị cắt dọc trên màn dài (Match 1) và phóng to UI, dàn trải mép trên màn vuông iPad (Match 0.5)
+            canvasScaler.matchWidthOrHeight = currentAspectRatio >= (baseWidth / baseHeight) ? 1f : 0.5f;
         }
 
         // Cập nhật vị trí các UI elements

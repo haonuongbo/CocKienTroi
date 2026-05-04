@@ -47,7 +47,7 @@ public class CharacterSelectionBackgroundMedia : MonoBehaviour
         videoPlayer.clip = backgroundVideo;
         videoPlayer.renderMode = VideoRenderMode.CameraNearPlane;
         videoPlayer.targetCamera = Camera.main;
-        videoPlayer.aspectRatio = VideoAspectRatio.FitHorizontally;
+        videoPlayer.aspectRatio = VideoAspectRatio.Stretch;
         videoPlayer.audioOutputMode = VideoAudioOutputMode.None;
         videoPlayer.Play();
     }

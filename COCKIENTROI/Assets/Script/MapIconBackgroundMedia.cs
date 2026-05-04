@@ -60,7 +60,7 @@ public class MapIconBackgroundMedia : MonoBehaviour
         videoPlayer.isLooping = loopVideo;
         videoPlayer.renderMode = VideoRenderMode.CameraNearPlane;
         videoPlayer.targetCamera = mainCamera;
-        videoPlayer.aspectRatio = VideoAspectRatio.FitHorizontally;
+        videoPlayer.aspectRatio = VideoAspectRatio.Stretch;
         videoPlayer.audioOutputMode = VideoAudioOutputMode.None; // Disable video audio for separate track
         videoPlayer.Play();
     }
