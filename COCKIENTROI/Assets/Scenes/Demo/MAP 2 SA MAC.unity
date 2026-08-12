@@ -570,6 +570,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnTime: 5
+  forceItemId: 0
   itemIcons:
   - {fileID: -2036090364998163076, guid: 9cbb82226f9653f44b9dd1c1c121c1a3, type: 3}
   - {fileID: -9159803712831926577, guid: 3a5e09eb08f17354faccf90d70b3991b, type: 3}
@@ -2225,6 +2226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnTime: 5
+  forceItemId: 0
   itemIcons:
   - {fileID: -2036090364998163076, guid: 9cbb82226f9653f44b9dd1c1c121c1a3, type: 3}
   - {fileID: -9159803712831926577, guid: 3a5e09eb08f17354faccf90d70b3991b, type: 3}
@@ -2476,6 +2478,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnTime: 5
+  forceItemId: 0
   itemIcons:
   - {fileID: -2036090364998163076, guid: 9cbb82226f9653f44b9dd1c1c121c1a3, type: 3}
   - {fileID: -9159803712831926577, guid: 3a5e09eb08f17354faccf90d70b3991b, type: 3}
@@ -4506,6 +4509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnTime: 5
+  forceItemId: 0
   itemIcons:
   - {fileID: -2036090364998163076, guid: 9cbb82226f9653f44b9dd1c1c121c1a3, type: 3}
   - {fileID: -9159803712831926577, guid: 3a5e09eb08f17354faccf90d70b3991b, type: 3}
@@ -4703,6 +4707,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnTime: 5
+  forceItemId: 0
   itemIcons:
   - {fileID: -2036090364998163076, guid: 9cbb82226f9653f44b9dd1c1c121c1a3, type: 3}
   - {fileID: -9159803712831926577, guid: 3a5e09eb08f17354faccf90d70b3991b, type: 3}
@@ -5871,6 +5876,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnTime: 5
+  forceItemId: 0
   itemIcons:
   - {fileID: -2036090364998163076, guid: 9cbb82226f9653f44b9dd1c1c121c1a3, type: 3}
   - {fileID: -9159803712831926577, guid: 3a5e09eb08f17354faccf90d70b3991b, type: 3}
@@ -7017,6 +7023,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnTime: 5
+  forceItemId: 0
   itemIcons:
   - {fileID: -2036090364998163076, guid: 9cbb82226f9653f44b9dd1c1c121c1a3, type: 3}
   - {fileID: -9159803712831926577, guid: 3a5e09eb08f17354faccf90d70b3991b, type: 3}
@@ -7226,6 +7233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnTime: 5
+  forceItemId: 0
   itemIcons:
   - {fileID: -2036090364998163076, guid: 9cbb82226f9653f44b9dd1c1c121c1a3, type: 3}
   - {fileID: -9159803712831926577, guid: 3a5e09eb08f17354faccf90d70b3991b, type: 3}
@@ -7383,6 +7391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnTime: 5
+  forceItemId: 0
   itemIcons:
   - {fileID: -2036090364998163076, guid: 9cbb82226f9653f44b9dd1c1c121c1a3, type: 3}
   - {fileID: -9159803712831926577, guid: 3a5e09eb08f17354faccf90d70b3991b, type: 3}
@@ -7588,6 +7597,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 751871077}
     m_Modifications:
+    - target: {fileID: 3877582712241169856, guid: 3616db77a6bf8da488b31eb87ddb8a98, type: 3}
+      propertyPath: 'aiPrefabs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 5132635946344110034, guid: 34060f00d7e8bae4db1af6cfbee17fe8, type: 3}
+    - target: {fileID: 3877582712241169856, guid: 3616db77a6bf8da488b31eb87ddb8a98, type: 3}
+      propertyPath: 'aiPrefabs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 3391146218972146595, guid: d8bf90d9178fb434c9a6cfd78bff66e1, type: 3}
+    - target: {fileID: 3877582712241169856, guid: 3616db77a6bf8da488b31eb87ddb8a98, type: 3}
+      propertyPath: 'aiPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 6913995479947177016, guid: 2f90fb14999ef9845831a3de9860e8e6, type: 3}
+    - target: {fileID: 3877582712241169856, guid: 3616db77a6bf8da488b31eb87ddb8a98, type: 3}
+      propertyPath: 'aiPrefabs.Array.data[3]'
+      value: 
+      objectReference: {fileID: 6425797484166019084, guid: f48634c7877b12440bc1701b92013192, type: 3}
+    - target: {fileID: 3877582712241169856, guid: 3616db77a6bf8da488b31eb87ddb8a98, type: 3}
+      propertyPath: 'aiPrefabs.Array.data[4]'
+      value: 
+      objectReference: {fileID: 36048206740407760, guid: b9a09d3c948ab044aa20f8d564f742d4, type: 3}
     - target: {fileID: 3877582712241169856, guid: 3616db77a6bf8da488b31eb87ddb8a98, type: 3}
       propertyPath: 'aiSpawnPoints.Array.data[0]'
       value: 
@@ -7849,6 +7878,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2013209968}
     m_Modifications:
+    - target: {fileID: 441910409971539809, guid: 0fb5938e5880ca149b2097a1639260ef, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 664134891250866639, guid: 0fb5938e5880ca149b2097a1639260ef, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.6696409

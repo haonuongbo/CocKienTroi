@@ -229,8 +229,8 @@ MonoBehaviour:
   circuit: {fileID: 0}
   waypointThreshold: 8
   circuitName: Map3_Circuit
-  acceleration: 14
-  maxSpeed: 27
+  acceleration: 10
+  maxSpeed: 21
   turnSpeed: 85
   driftTurnMultiplier: 1.9
   driftFactor: 0.62

@@ -195,7 +195,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -7088368753665033051, guid: 6e7e3dcb70c90e747979f3c12ef96cc7, type: 3}
+  m_Sprite: {fileID: -7088368753665033051, guid: e1022b37c2eb341408e6ab873300fa6c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -393,6 +393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnTime: 5
+  forceItemId: 0
   itemIcons:
   - {fileID: -2036090364998163076, guid: 9cbb82226f9653f44b9dd1c1c121c1a3, type: 3}
   - {fileID: -9159803712831926577, guid: 3a5e09eb08f17354faccf90d70b3991b, type: 3}
@@ -947,6 +948,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnTime: 5
+  forceItemId: 0
   itemIcons:
   - {fileID: -2036090364998163076, guid: 9cbb82226f9653f44b9dd1c1c121c1a3, type: 3}
   - {fileID: -9159803712831926577, guid: 3a5e09eb08f17354faccf90d70b3991b, type: 3}
@@ -1411,6 +1413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnTime: 5
+  forceItemId: 0
   itemIcons:
   - {fileID: -2036090364998163076, guid: 9cbb82226f9653f44b9dd1c1c121c1a3, type: 3}
   - {fileID: -9159803712831926577, guid: 3a5e09eb08f17354faccf90d70b3991b, type: 3}
@@ -1568,6 +1571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnTime: 5
+  forceItemId: 0
   itemIcons:
   - {fileID: -2036090364998163076, guid: 9cbb82226f9653f44b9dd1c1c121c1a3, type: 3}
   - {fileID: -9159803712831926577, guid: 3a5e09eb08f17354faccf90d70b3991b, type: 3}
@@ -1862,6 +1866,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnTime: 5
+  forceItemId: 0
   itemIcons:
   - {fileID: -2036090364998163076, guid: 9cbb82226f9653f44b9dd1c1c121c1a3, type: 3}
   - {fileID: -9159803712831926577, guid: 3a5e09eb08f17354faccf90d70b3991b, type: 3}
@@ -2019,6 +2024,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnTime: 5
+  forceItemId: 0
   itemIcons:
   - {fileID: -2036090364998163076, guid: 9cbb82226f9653f44b9dd1c1c121c1a3, type: 3}
   - {fileID: -9159803712831926577, guid: 3a5e09eb08f17354faccf90d70b3991b, type: 3}
@@ -2176,6 +2182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnTime: 5
+  forceItemId: 0
   itemIcons:
   - {fileID: -2036090364998163076, guid: 9cbb82226f9653f44b9dd1c1c121c1a3, type: 3}
   - {fileID: -9159803712831926577, guid: 3a5e09eb08f17354faccf90d70b3991b, type: 3}
@@ -2409,6 +2416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnTime: 5
+  forceItemId: 0
   itemIcons:
   - {fileID: -2036090364998163076, guid: 9cbb82226f9653f44b9dd1c1c121c1a3, type: 3}
   - {fileID: -9159803712831926577, guid: 3a5e09eb08f17354faccf90d70b3991b, type: 3}
@@ -2566,6 +2574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnTime: 5
+  forceItemId: 0
   itemIcons:
   - {fileID: -2036090364998163076, guid: 9cbb82226f9653f44b9dd1c1c121c1a3, type: 3}
   - {fileID: -9159803712831926577, guid: 3a5e09eb08f17354faccf90d70b3991b, type: 3}
@@ -4241,6 +4250,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1725910583}
     m_Modifications:
+    - target: {fileID: 3877582712241169856, guid: 3616db77a6bf8da488b31eb87ddb8a98, type: 3}
+      propertyPath: 'aiPrefabs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 5132635946344110034, guid: 5b3d27b54515968448b48555037bebc8, type: 3}
+    - target: {fileID: 3877582712241169856, guid: 3616db77a6bf8da488b31eb87ddb8a98, type: 3}
+      propertyPath: 'aiPrefabs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 3391146218972146595, guid: 53f6742206dd7b2498bcc5c6c2c2f54d, type: 3}
+    - target: {fileID: 3877582712241169856, guid: 3616db77a6bf8da488b31eb87ddb8a98, type: 3}
+      propertyPath: 'aiPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 6913995479947177016, guid: 8da087c84442a1a409c43c94378e61b9, type: 3}
+    - target: {fileID: 3877582712241169856, guid: 3616db77a6bf8da488b31eb87ddb8a98, type: 3}
+      propertyPath: 'aiPrefabs.Array.data[3]'
+      value: 
+      objectReference: {fileID: 6425797484166019084, guid: 18f93e60b18de6147baebc6473f43fff, type: 3}
+    - target: {fileID: 3877582712241169856, guid: 3616db77a6bf8da488b31eb87ddb8a98, type: 3}
+      propertyPath: 'aiPrefabs.Array.data[4]'
+      value: 
+      objectReference: {fileID: 36048206740407760, guid: d1a247d104d9b4d459740f7b814c5597, type: 3}
     - target: {fileID: 3877582712241169856, guid: 3616db77a6bf8da488b31eb87ddb8a98, type: 3}
       propertyPath: 'aiSpawnPoints.Array.data[0]'
       value: 

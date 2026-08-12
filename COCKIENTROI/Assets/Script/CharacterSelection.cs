@@ -49,6 +49,9 @@ public class CharacterSelection : MonoBehaviour
     public Image statAccel;
     public TMP_Text descriptionText;
     public Image[] leftButtons;
+    public Transform selectedContainer; // Gán object "Selected" từ Hierarchy
+
+    private Transform listContainer; // Parent gốc của danh sách icon
 
     [Header("Top Right UI")]
     public Text moneyText;
@@ -63,6 +66,8 @@ public class CharacterSelection : MonoBehaviour
     void Start()
     {
         selectedIndex = PlayerPrefs.GetInt("SelectedCharacter", 0);
+        if (leftButtons.Length > 0)
+            listContainer = leftButtons[0].transform.parent;
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
         {
@@ -89,6 +94,27 @@ public class CharacterSelection : MonoBehaviour
             audioSource.PlayOneShot(selectCharacterSound);
         }
         UpdateUI();
+    }
+
+    void SnapToContainer(Image button, Transform targetParent)
+    {
+        if (button == null || targetParent == null)
+        {
+            return;
+        }
+
+        button.transform.SetParent(targetParent, false);
+
+        RectTransform buttonRect = button.rectTransform;
+        RectTransform parentRect = targetParent as RectTransform;
+        if (buttonRect != null && parentRect != null)
+        {
+            buttonRect.anchorMin = new Vector2(0.5f, 0.5f);
+            buttonRect.anchorMax = new Vector2(0.5f, 0.5f);
+            buttonRect.pivot = new Vector2(0.5f, 0.5f);
+            buttonRect.anchoredPosition = Vector2.zero;
+            buttonRect.localPosition = Vector3.zero;
+        }
     }
 
     void UpdateUI()
@@ -167,25 +193,26 @@ public class CharacterSelection : MonoBehaviour
 
         if (descriptionText) descriptionText.text = data.description;
 
-        // Xử lý logic sắp xếp nút bên trái (như cũ)
-        for (int i = 0; i < leftButtons.Length; i++)
+        // Đưa tất cả icon về lại listContainer với đúng thứ tự
+        if (listContainer != null)
         {
-            leftButtons[i].transform.SetSiblingIndex(i);
+            for (int i = 0; i < leftButtons.Length; i++)
+            {
+                leftButtons[i].transform.SetParent(listContainer, false);
+                leftButtons[i].transform.SetSiblingIndex(i);
+                leftButtons[i].sprite = characterList[i].iconImage;
+                leftButtons[i].transform.localScale = Vector3.one;
+                leftButtons[i].SetNativeSize();
+            }
         }
 
-        leftButtons[selectedIndex].transform.SetAsFirstSibling();
-
-        for (int i = 0; i < leftButtons.Length; i++)
+        // Di chuyển icon nhân vật được chọn sang container "Selected"
+        if (selectedContainer != null)
         {
-            if (i == selectedIndex)
-            {
-                leftButtons[i].sprite = characterList[i].tabImage;
-            }
-            else
-            {
-                leftButtons[i].sprite = characterList[i].iconImage;
-            }
-            leftButtons[i].SetNativeSize();
+            SnapToContainer(leftButtons[selectedIndex], selectedContainer);
+            leftButtons[selectedIndex].transform.localScale = Vector3.one;
+            leftButtons[selectedIndex].sprite = characterList[selectedIndex].tabImage;
+            leftButtons[selectedIndex].SetNativeSize();
         }
     }
 
