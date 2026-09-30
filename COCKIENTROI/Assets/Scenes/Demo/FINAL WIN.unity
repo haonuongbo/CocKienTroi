@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 35147767}
   - component: {fileID: 35147766}
   - component: {fileID: 35147771}
+  - component: {fileID: 35147772}
   m_Layer: 5
   m_Name: Final Win Canvas
   m_TagString: Untagged
@@ -277,6 +278,18 @@ MonoBehaviour:
   - {fileID: 7970707515016066210, guid: 0af12ac84143d3e46ab6a498990881a1, type: 3}
   - {fileID: 43453018193239051, guid: ebe25178c9da8604f8b2549f076056b8, type: 3}
   - {fileID: 4727746255557863206, guid: 9cc719c2786f4274a84b4f2d1cb37f49, type: 3}
+--- !u!114 &35147772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35147765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c27781d37726584e8607001918798de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &349489160
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,7 +409,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 349489162}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 35147772}
+        m_TargetAssemblyTypeName: SwitchMap, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: CHARACTER SELECTION
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &731320611
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,7 +541,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 731320613}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 35147772}
+        m_TargetAssemblyTypeName: SwitchMap, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SPLASH ART
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1101724068
 GameObject:
   m_ObjectHideFlags: 0

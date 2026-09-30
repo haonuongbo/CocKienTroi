@@ -9,7 +9,7 @@ public class AICarController : MonoBehaviour
     [Tooltip("Optional name used when auto-finding a circuit (e.g. Map3_Circuit)")]
     public string circuitName = "Map3_Circuit";
 
-    [Header("Stats (Giống Controller.cs)")]
+    [Header("Stats")]
     public float acceleration = 12f;
     public float maxSpeed = 10f;
     public float turnSpeed = 150f;
